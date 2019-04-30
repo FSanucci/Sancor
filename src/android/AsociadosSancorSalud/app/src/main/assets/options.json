@@ -1,0 +1,32 @@
+{
+  "aporte_legal": [
+    {
+      "title": "Aporte obra social",
+      "id": "1"
+    },
+    {
+      "title": "Remuneración bruta",
+      "id": "2"
+    }
+  ],
+  "conyuge_tipo_uni": [
+    {
+      "title": "Titular nuevo con conyuge nuevo",
+      "id": "1"
+    },
+    {
+      "title": "Titular nuevo con conyuge asociado",
+      "id": "2"
+    }
+  ],
+  "aportantes_grupo": [
+    {
+      "title": "Igual al número de integrantes",
+      "id": "1"
+    },
+    {
+      "title": "Menor al número de integrantes",
+      "id": "2"
+    }
+  ]
+}

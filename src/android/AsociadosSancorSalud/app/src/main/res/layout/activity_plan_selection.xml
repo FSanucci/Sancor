@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_half_margin">
+
+
+        <TextView
+            android:id="@+id/plan_selection_title"
+            style="@style/SectionContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="@string/des_plan_selection" />
+
+
+        <TextView
+            android:id="@+id/plan_plan"
+            style="@style/SectionContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/plan_selection_title"
+            android:layout_marginLeft="@dimen/activity_horizontal_double_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="@string/des_plan_plan" />
+
+
+        <TextView
+            android:id="@+id/plan_value"
+            style="@style/SectionContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/plan_selection_title"
+            android:layout_marginRight="@dimen/activity_horizontal_double_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="@string/des_plan_value" />
+
+
+        <RelativeLayout
+            android:id="@+id/plan_recycler_view_box"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_below="@+id/plan_plan">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/plan_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginBottom="@dimen/activity_vertical_half_margin"
+                android:layout_marginTop="@dimen/activity_vertical_half_margin" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/plan_recycler_view_box"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/cancel_button"
+                style="@style/ButtonAppearence"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_weight="1"
+                android:background="@drawable/button_background_accent"
+                android:gravity="center"
+                android:text="@string/option_cancel" />
+
+            <Button
+                android:id="@+id/accept_button"
+                style="@style/ButtonAppearence"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_weight="1"
+                android:background="@drawable/button_background_accent"
+                android:gravity="center"
+                android:text="@string/option_accept" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

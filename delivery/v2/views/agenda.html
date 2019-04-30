@@ -1,0 +1,47 @@
+<div class="bg-menu"></div>
+
+<section class="content agenda">
+  <div class="container">
+    <p ng-if="loading"><i class="fa fa-refresh fa-spin"></i> Cargando la lista de potenciales asociados agendados...</p>
+    <p ng-if="!loading && Object.keys(associatedPotentialAssignedList).length == 0">No tienes ningun potencial agendado aún, por favor agenda alguno.</p>
+
+    <div ng-repeat="(fecha, potentialList) in associatedPotentialAssignedList">
+    <div class="row">
+      <div class="col-md-1">
+        <div class="fecha">{{getDayDescription(fecha)}}<span> {{getMonthDescription(fecha)}}</span></div>
+      </div>
+      <div class="col-md-11">
+
+        <div class="item-list">
+
+          <div class="row">
+            <div class="col-xs-12">
+
+              <div ng-repeat="associatedPotential in potentialList | filter: filterSearchedData">
+
+                <article class="item" data-filter="{{getState(associatedPotential)}}">
+                  <div class="item-text" data-modalnum="asignado1" ng-click="setSelectedAssociatedPotencial(associatedPotential)">
+                    <div class="nombre">{{associatedPotential.nombre}} {{associatedPotential.apellido}}</div>
+                    <div class="datos">{{getTimeDescription(associatedPotential.fecha_agenda)}}hs</div>
+                    <div class="descripcion">{{associatedPotential.direccion_encuentro}}</div>
+                  </div>
+                  <div class="item-icons">
+                    <i ng-show="associatedPotential.dias_asig_ref<=1" class="material-icons error">report_problem</i>
+                    <button type="button" class="btn-cal" ng-click="openMapUrl(associatedPotential)"><i class="material-icons">place</i></button>
+                  </div>
+                </article>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+
+
+      </div>
+    </div>
+
+  </div>
+</section>

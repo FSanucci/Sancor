@@ -1,0 +1,252 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ar.com.sancorsalud.asociados.fragments.affiliation.AffiliationTitularAddressDataFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ScrollView
+            android:id="@+id/scroll"
+            style="@style/ScrollAppearence">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/affiliation_address_data"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="14sp" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/street_wrapper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/street_input"
+                        style="@style/TextAppearence.EditText"
+                        android:hint="@string/affiliation_address_street" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/orientation_wrapper"
+                        style="@style/TextAppearence.TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/orientation_input"
+                            style="@style/TextAppearence.EditText"
+                            android:focusable="false"
+                            android:hint="@string/affiliation_address_orientation" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/orientation_button"
+                        style="@style/buttonSpinner">
+
+                        <ImageView
+                            style="@style/arrowSpinner"
+                            app:srcCompat="@drawable/ic_expand" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/number_wrapper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/number_input"
+                        style="@style/TextAppearence.EditText"
+                        android:hint="@string/affiliation_address_number"
+                        android:inputType="number" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/floor_wrapper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/floor_input"
+                        style="@style/TextAppearence.EditText"
+                        android:hint="@string/affiliation_address_floor"
+                        android:inputType="number" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/depto_wrapper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/depto_input"
+                        style="@style/TextAppearence.EditText"
+                        android:hint="@string/affiliation_address_depto" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/other_data_row_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/address_code1_wrapper"
+                            style="@style/TextAppearence.TextInputLayout">
+
+                            <EditText
+                                android:id="@+id/address_code1_input"
+                                style="@style/TextAppearence.EditText"
+                                android:focusable="false"
+                                android:hint="@string/affiliation_address_others" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/address_code1_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_alignParentTop="true">
+
+                            <ImageView
+                                style="@style/arrowSpinner"
+                                app:srcCompat="@drawable/ic_expand" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/address_code1_desc_wrapper"
+                        style="@style/TextAppearence.TextInputLayout"
+                        android:layout_marginRight="@dimen/activity_horizontal_half_margin"
+                        android:layout_weight="1">
+
+                        <EditText
+                            android:id="@+id/address_code1_desc_input"
+                            style="@style/TextAppearence.EditText"
+                            android:hint="" />
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/other_data_row_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/address_code2_wrapper"
+                            style="@style/TextAppearence.TextInputLayout">
+
+                            <EditText
+                                android:id="@+id/address_code2_input"
+                                style="@style/TextAppearence.EditText"
+                                android:focusable="false"
+                                android:hint="@string/affiliation_address_others" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/address_code2_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_alignParentTop="true">
+
+                            <ImageView
+                                style="@style/arrowSpinner"
+                                app:srcCompat="@drawable/ic_expand" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/address_code2_desc_wrapper"
+                        style="@style/TextAppearence.TextInputLayout"
+                        android:layout_marginRight="@dimen/activity_horizontal_half_margin"
+                        android:layout_weight="1">
+
+                        <EditText
+                            android:id="@+id/address_code2_desc_input"
+                            style="@style/TextAppearence.EditText"
+                            android:hint="" />
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/barrio_wrapper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/barrio_input"
+                        style="@style/TextAppearence.EditText"
+                        android:hint="@string/affiliation_address_barrio" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/location_wrapper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/location_input"
+                        style="@style/TextAppearence.EditText"
+                        android:hint="@string/affiliation_address_location" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"></View>
+            </LinearLayout>
+
+        </ScrollView>
+
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</FrameLayout>

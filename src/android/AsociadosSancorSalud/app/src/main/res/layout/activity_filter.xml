@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_container">
+
+    <ImageView
+        android:id="@+id/close_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:padding="@dimen/activity_vertical_margin"
+        android:src="@drawable/ic_close" />
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="3"
+        android:orientation="vertical"
+        android:layout_marginTop="-16dp"
+        android:layout_below="@+id/close_button">
+
+        <TextView
+            android:id="@+id/filter_pa_title"
+            style="@style/FilterTitle"
+            android:layout_marginTop="@dimen/activity_vertical_half_margin"
+            android:gravity="start"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:text="@string/filter_pa_title"/>
+
+        <LinearLayout
+            android:id="@+id/first_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:weightSum="3"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/no_scheduled"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:alpha="0">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_event_not_scheduled" />
+
+                <TextView
+                    style="@style/FilterTitle"
+                    android:text="@string/filter_no_scheduled" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/scheduled"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical"
+                android:alpha="0">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_interviewed" />
+
+                <TextView
+                    style="@style/FilterTitle"
+                    android:text="@string/filter_interviewed" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/quoted"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:alpha="0">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_quoted" />
+
+                <TextView
+                    style="@style/FilterTitle"
+                    android:text="@string/filter_quoted" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/first_separator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:background="@color/colorWhite"/>
+
+        <TextView
+            android:id="@+id/filter_state_title"
+            android:layout_marginTop="@dimen/activity_vertical_half_margin"
+            style="@style/FilterTitle"
+            android:gravity="start"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:text="@string/filter_state_title"/>
+
+        <LinearLayout
+            android:id="@+id/second_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/cards_in_process"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:alpha="0">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_cards_in_process" />
+
+                <TextView
+                    style="@style/FilterTitle"
+                    android:text="@string/filter_process_cards" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/incorrect_cards"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:alpha="0">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_cards_to_correct" />
+
+                <TextView
+                    style="@style/FilterTitle"
+                    android:text="@string/filter_incorrect_cards" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/send_promo_control_support_cards"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:alpha="0">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_cards_prom_control_support" />
+
+                <TextView
+                    style="@style/FilterTitle"
+                    android:text="@string/filter_prom_control_support" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/second_separator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:background="@color/colorWhite"/>
+
+        <TextView
+            android:id="@+id/filter_trace_title"
+            android:layout_marginTop="@dimen/activity_vertical_half_margin"
+            style="@style/FilterTitle"
+            android:gravity="start"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:text="@string/filter_trace_title"/>
+
+        <LinearLayout
+            android:id="@+id/third_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/pending_send_promo_control_support"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:alpha="0">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_cards_in_process" />
+
+                <TextView
+                    style="@style/FilterTitle"
+                    android:text="@string/pending_send_control_support" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/send_control_support"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:alpha="0">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_cards_to_correct" />
+
+                <TextView
+                    style="@style/FilterTitle"
+                    android:text="@string/send_control_support" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pending_docs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:alpha="0">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_cards_prom_control_support" />
+
+                <TextView
+                    style="@style/FilterTitle"
+                    android:text="@string/pending_docs" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

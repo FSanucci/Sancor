@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <include
+        android:id="@+id/error_data"
+        layout="@layout/view_error_no_internet_connection"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/all_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/scroll"
+            style="@style/ScrollAppearence"
+            android:layout_above="@+id/add_button">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:orientation="vertical">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/dni_wrapper"
+                    style="@style/TextAppearence.TextInputLayout"
+                    android:layout_marginTop="20dp">
+
+                    <EditText
+                        android:id="@+id/dni_input"
+                        style="@style/TextAppearence.EditText"
+                        android:hint="@string/add_contact_dni"
+                        android:inputType="number"
+                        android:maxLength="8" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <LinearLayout
+                    android:id="@+id/buttons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/dni_wrapper">
+
+                    <Button
+                        android:id="@+id/dni_button"
+                        style="@style/ButtonAppearence"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:background="@drawable/button_background_orange"
+                        android:text="@string/search"
+                        android:textSize="@dimen/app_button_txt_size" />
+
+                    <Button
+                        android:id="@+id/qrcode_button"
+                        style="@style/ButtonAppearence"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:background="@drawable/button_background_orange"
+                        android:text="@string/add_contact_dni_qrcode"
+                        android:textSize="@dimen/app_button_txt_size" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/titular_title"
+                    style="@style/SectionTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/field_titular"
+                    android:layout_below="@+id/buttons"/>
+
+                <TextView
+                    android:id="@+id/titular_description"
+                    style="@style/SectionContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text=""
+                    android:layout_below="@+id/titular_title"/>
+
+                <TextView
+                    android:id="@+id/quoted_title"
+                    style="@style/SectionTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/field_quoted"
+                    android:layout_below="@+id/titular_description"/>
+
+                <TextView
+                    android:id="@+id/quoted_description"
+                    style="@style/SectionContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text=""
+                    android:layout_below="@+id/quoted_title"/>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

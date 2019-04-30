@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "data": {
+    "tipo_cuenta": [
+      {
+        "descripcion": "Cuenta Corriente",
+        "id": "1"
+      },
+      {
+        "descripcion": "Caja Ahorro",
+        "id": "2"
+      }
+    ]
+  },
+  "errorCode": 0,
+  "message": null
+}

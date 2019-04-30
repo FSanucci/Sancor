@@ -1,0 +1,691 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="ar.com.sancorsalud.asociados.fragments.affiliation.AffiliationTitularDataFragment">
+
+    <ScrollView
+        android:id="@+id/scroll"
+        style="@style/ScrollAppearence"
+        android:layout_above="@+id/add_button">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_double_margin"
+                android:text="@string/affiliation_conyuge_os"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp" />
+
+
+            <RelativeLayout
+                android:id="@+id/os_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/os_wrapper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/os_input"
+                        style="@style/TextAppearence.EditText"
+                        android:focusable="false"
+                        android:hint="@string/affiliation_os" />
+                </android.support.design.widget.TextInputLayout>
+
+            </RelativeLayout>
+
+
+            <!-- VERIFY SITUACION PREVISIONAL -->
+            <TextView
+                android:id="@+id/os_afip_verify_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_double_margin"
+                android:text="@string/affiliation_afip_verify_title"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                android:layout_marginTop="@dimen/activity_vertical_double_margin">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/afip_verify_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/afip_verify_recycler_view"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                    <ImageView
+                        android:id="@+id/afip_verify_img"
+                        style="@style/attach_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:src="@drawable/ic_attach" />
+
+                    <ImageView
+                        android:id="@+id/afip_verify_file"
+                        style="@style/attach_img"
+                        android:layout_alignTop="@+id/afip_verify_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/afip_verify_img"
+                        android:src="@drawable/ic_file" />
+
+                    <Button
+                        android:id="@+id/afip_verify_button"
+                        style="@style/attach_button"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/afip_verify_file"
+                        android:text="@string/affiliation_afip_verify" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <!-- APORTES -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/affiliation_afip_veify_aportes"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp" />
+
+                <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/afip_aportes_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/activity_horizontal_half_margin">
+
+                    <RadioButton
+                        android:id="@+id/afip_day_aportes_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:checked="false"
+                        android:text="@string/affiliation_afip_day_aportes"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp" />
+
+                    <RadioButton
+                        android:id="@+id/afip_month_aportes_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="@string/affiliation_afip_month_aportes"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/afip_cant_month_wrapper"
+                style="@style/TextAppearence.TextInputLayout"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:id="@+id/afip_cant_month_input"
+                    style="@style/TextAppearence.EditText"
+                    android:hint="@string/affiliation_afip_cant_month_value"
+                    android:inputType="number" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <!-- Conyuge Auth cobr = f(Aportes)
+            <Button
+                android:id="@+id/auth_cobranzas_button"
+                style="@style/ButtonAppearence"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@drawable/button_background_accent"
+                android:text="@string/affiliation_auth_cobranzas"
+                android:visibility="gone"/>
+            -->
+
+            <!-- OS VERIFICATION -->
+            <TextView
+                android:id="@+id/os_origin_verify_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_double_margin"
+                android:text="@string/affiliation_os_verify_title"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                android:layout_marginTop="@dimen/activity_vertical_double_margin">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/os_verify_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/os_verify_recycler_view"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                    <ImageView
+                        android:id="@+id/os_verify_img"
+                        style="@style/attach_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:src="@drawable/ic_attach" />
+
+                    <ImageView
+                        android:id="@+id/os_verify_file"
+                        style="@style/attach_img"
+                        android:layout_alignTop="@+id/os_verify_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/os_verify_img"
+                        android:src="@drawable/ic_file" />
+
+                    <Button
+                        android:id="@+id/os_verify_button"
+                        style="@style/attach_button"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/os_verify_file"
+                        android:text="@string/affiliation_os_verify" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <!-- STATE -->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/os_state_wrapper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/os_state_input"
+                        style="@style/TextAppearence.EditText"
+                        android:focusable="false"
+                        android:hint="@string/affiliation_os_state" />
+                </android.support.design.widget.TextInputLayout>
+
+                <RelativeLayout
+                    android:id="@+id/os_state_button"
+                    style="@style/buttonSpinner">
+
+                    <ImageView
+                        style="@style/arrowSpinner"
+                        app:srcCompat="@drawable/ic_expand" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/os_date_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/os_date_wrapper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/os_date_input"
+                        style="@style/TextAppearence.EditText"
+                        android:hint="@string/affiliation_os_date" />
+                </android.support.design.widget.TextInputLayout>
+
+                <RelativeLayout
+                    android:id="@+id/os_date_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp" />
+
+            </RelativeLayout>
+
+            <!-- OS ACTUAL SELECTION -->
+            <RelativeLayout
+                android:id="@+id/os_actual_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/os_actual_wrapper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/os_actual_input"
+                        style="@style/TextAppearence.EditText"
+                        android:focusable="false"
+                        android:hint="@string/affiliation_titular_os_actual" />
+                </android.support.design.widget.TextInputLayout>
+
+                <RelativeLayout
+                    android:id="@+id/os_actual_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_alignParentTop="true">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        app:srcCompat="@drawable/ic_expand" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <!-- OS DATA -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_double_margin"
+                android:text="@string/affiliation_os_data"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp" />
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/os_form_wrapper"
+                style="@style/TextAppearence.TextInputLayout"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:id="@+id/os_form_input"
+                    style="@style/TextAppearence.EditText"
+                    android:hint="@string/affiliation_os_form_sss"
+                    android:inputType="number" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <!-- OS SINDICAL CHANGE -->
+            <RelativeLayout
+                android:id="@+id/os_change_option_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                android:layout_marginTop="@dimen/activity_vertical_double_margin"
+                android:visibility="gone">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/os_change_option_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/os_change_option_recycler_view"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                    <ImageView
+                        android:id="@+id/os_change_option_img"
+                        style="@style/attach_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:src="@drawable/ic_attach" />
+
+                    <ImageView
+                        android:id="@+id/os_change_option_file"
+                        style="@style/attach_img"
+                        android:layout_alignTop="@+id/os_change_option_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/os_change_option_img"
+                        android:src="@drawable/ic_file" />
+
+                    <Button
+                        android:id="@+id/os_change_option_button"
+                        style="@style/attach_button"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/os_change_option_file"
+                        android:text="@string/affiliation_os_change_option" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <!-- OS SINDICAL CARD RECEPTION -->
+            <RelativeLayout
+                android:id="@+id/os_card_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                android:layout_marginTop="@dimen/activity_vertical_double_margin"
+                android:visibility="gone">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/os_card_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/os_card_recycler_view"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                    <ImageView
+                        android:id="@+id/os_card_img"
+                        style="@style/attach_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:src="@drawable/ic_attach" />
+
+                    <ImageView
+                        android:id="@+id/os_card_file"
+                        style="@style/attach_img"
+                        android:layout_alignTop="@+id/os_card_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/os_card_img"
+                        android:src="@drawable/ic_file" />
+
+                    <Button
+                        android:id="@+id/os_card_button"
+                        style="@style/attach_button"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/os_card_file"
+                        android:text="@string/affiliation_os_accept_form" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <!-- OS SINDICAL CERT OPCION CAMBIO -->
+            <RelativeLayout
+                android:id="@+id/os_cert_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                android:layout_marginTop="@dimen/activity_vertical_double_margin"
+                android:visibility="gone">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/os_cert_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/os_cert_recycler_view"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                    <ImageView
+                        android:id="@+id/os_cert_img"
+                        style="@style/attach_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:src="@drawable/ic_attach" />
+
+                    <ImageView
+                        android:id="@+id/os_cert_file"
+                        style="@style/attach_img"
+                        android:layout_alignTop="@+id/os_cert_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/os_cert_img"
+                        android:src="@drawable/ic_file" />
+
+                    <Button
+                        android:id="@+id/os_cert_button"
+                        style="@style/attach_button"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/os_cert_file"
+                        android:text="@string/affiliation_os_cert_change_option" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <!-- OS DIRECCION EMAIL -->
+            <RelativeLayout
+                android:id="@+id/os_email_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                android:layout_marginTop="@dimen/activity_vertical_double_margin"
+                android:visibility="gone">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/os_email_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/os_email_recycler_view"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                    <ImageView
+                        android:id="@+id/os_email_img"
+                        style="@style/attach_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:src="@drawable/ic_attach" />
+
+                    <ImageView
+                        android:id="@+id/os_email_file"
+                        style="@style/attach_img"
+                        android:layout_alignTop="@+id/os_email_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/os_email_img"
+                        android:src="@drawable/ic_file" />
+
+                    <Button
+                        android:id="@+id/os_email_button"
+                        style="@style/attach_button"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/os_email_file"
+                        android:text="@string/affiliation_os_email" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <!-- OS FOM 5.3 -->
+            <RelativeLayout
+                android:id="@+id/os_form_5_3_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                android:layout_marginTop="@dimen/activity_vertical_double_margin"
+                android:visibility="gone">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/os_form_5_3_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/os_form_5_3_recycler_view"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                    <ImageView
+                        android:id="@+id/os_form_5_3_img"
+                        style="@style/attach_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:src="@drawable/ic_attach" />
+
+                    <ImageView
+                        android:id="@+id/os_form_5_3_file"
+                        style="@style/attach_img"
+                        android:layout_alignTop="@+id/os_form_5_3_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/os_form_5_3_img"
+                        android:src="@drawable/ic_file" />
+
+                    <Button
+                        android:id="@+id/os_form_5_3_button"
+                        style="@style/attach_button"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/os_form_5_3_file"
+                        android:text="@string/affiliation_os_form_5_3" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <!-- OS FOM 5.9 -->
+            <RelativeLayout
+                android:id="@+id/os_form_5_9_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                android:layout_marginTop="@dimen/activity_vertical_double_margin"
+                android:visibility="gone">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/os_form_5_9_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/os_form_5_9_recycler_view"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                    <ImageView
+                        android:id="@+id/os_form_5_9_img"
+                        style="@style/attach_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:src="@drawable/ic_attach" />
+
+                    <ImageView
+                        android:id="@+id/os_form_5_9_file"
+                        style="@style/attach_img"
+                        android:layout_alignTop="@+id/os_form_5_9_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/os_form_5_9_img"
+                        android:src="@drawable/ic_file" />
+
+                    <Button
+                        android:id="@+id/os_form_5_9_button"
+                        style="@style/attach_button"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/os_form_5_9_file"
+                        android:text="@string/affiliation_os_form_5_9" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <!-- OS MODEL NOTE -->
+            <RelativeLayout
+                android:id="@+id/os_note_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                android:layout_marginTop="@dimen/activity_vertical_double_margin"
+                android:visibility="gone">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/os_note_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/os_note_recycler_view"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                    <ImageView
+                        android:id="@+id/os_note_img"
+                        style="@style/attach_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:src="@drawable/ic_attach" />
+
+                    <ImageView
+                        android:id="@+id/os_note_file"
+                        style="@style/attach_img"
+                        android:layout_alignTop="@+id/os_note_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/os_note_img"
+                        android:src="@drawable/ic_file" />
+
+                    <Button
+                        android:id="@+id/os_note_button"
+                        style="@style/attach_button"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/os_note_file"
+                        android:text="@string/affiliation_note" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/os_conyuge_button"
+                style="@style/ButtonAppearence"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@drawable/button_background_orange"
+                android:text="@string/affiliation_conyuge_data"
+                android:visibility="gone"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp"></View>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+</FrameLayout>

@@ -1,0 +1,59 @@
+{
+  "status": "success",
+  "data": {
+    "tarjetas": [
+      {
+        "tarjeta_id": 4,
+        "tarjeta_tipo": "CABAL",
+        "tarjeta_descripcion": "N"
+      },
+      {
+        "tarjeta_id": 9,
+        "tarjeta_tipo": "MARCOS JUÁREZ",
+        "tarjeta_descripcion": "R"
+      },
+      {
+        "tarjeta_id": 2,
+        "tarjeta_tipo": "MASTERCARD",
+        "tarjeta_descripcion": "N"
+      },
+      {
+        "tarjeta_id": 3,
+        "tarjeta_tipo": "NARANJA",
+        "tarjeta_descripcion": "N"
+      },
+      {
+        "tarjeta_id": 6,
+        "tarjeta_tipo": "SUCREDITO",
+        "tarjeta_descripcion": "R"
+      },
+      {
+        "tarjeta_id": 8,
+        "tarjeta_tipo": "Tarjeta CrediGuia",
+        "tarjeta_descripcion": "R"
+      },
+      {
+        "tarjeta_id": 7,
+        "tarjeta_tipo": "TARJETA NEVADA",
+        "tarjeta_descripcion": "R"
+      },
+      {
+        "tarjeta_id": 13,
+        "tarjeta_tipo": "TC CLUB CRED",
+        "tarjeta_descripcion": "R"
+      },
+      {
+        "tarjeta_id": 12,
+        "tarjeta_tipo": "TC TALOR",
+        "tarjeta_descripcion": "R"
+      },
+      {
+        "tarjeta_id": 1,
+        "tarjeta_tipo": "VISA",
+        "tarjeta_descripcion": "N"
+      }
+    ]
+  },
+  "errorCode": 0,
+  "message": null
+}

@@ -1,0 +1,171 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ar.com.sancorsalud.asociados.fragments.salesman.SalesmanIndicatorFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/dates"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:weightSum="2">
+
+
+                <RelativeLayout
+                    android:id="@+id/from_date_box"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/activity_horizontal_half_margin"
+                    android:layout_weight="1">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/from_date_wrapper"
+                        style="@style/TextAppearence.TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/from_date_input"
+                            style="@style/TextAppearence.EditText"
+                            android:focusable="false"
+                            android:hint="@string/from_date" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/arrow1"
+                        style="@style/buttonSpinner">
+
+                        <ImageView
+                            style="@style/arrowSpinner"
+                            app:srcCompat="@drawable/ic_expand" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/from_date_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/to_date_box"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                    android:layout_weight="1">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/to_date_wrapper"
+                        style="@style/TextAppearence.TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/to_date_input"
+                            style="@style/TextAppearence.EditText"
+                            android:focusable="false"
+                            android:hint="@string/to_date" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/arrow2"
+                        style="@style/buttonSpinner">
+
+                        <ImageView
+                            style="@style/arrowSpinner"
+                            app:srcCompat="@drawable/ic_expand" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/to_date_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button"
+                style="@style/ButtonAppearence"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/dates"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@drawable/button_background_accent"
+                android:text="@string/get_indicators" />
+
+
+            <LinearLayout
+                android:id="@+id/indicator_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_double_margin"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/indicators_title1"
+                    android:textColor="@color/colorAccent" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/cantidad_fichas_wrapper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/cantidad_fichas"
+                        style="@style/TextAppearence.EditText"
+                        android:focusable="false"
+                        android:hint="@string/indicators_cantidad" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <TextView
+                    android:id="@+id/produccion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/indicators_title2"
+                    android:textColor="@color/colorAccent" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/cantidad_grav_wrapper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/cantidad_grav"
+                        style="@style/TextAppearence.EditText"
+                        android:focusable="false"
+                        android:hint="@string/indicators_grav" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/cantidad_no_grav_wrapper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/cantidad_no_grav"
+                        style="@style/TextAppearence.EditText"
+                        android:focusable="false"
+                        android:hint="@string/indicators_no_grav" />
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

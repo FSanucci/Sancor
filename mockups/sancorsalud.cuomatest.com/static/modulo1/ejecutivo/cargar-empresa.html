@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sancor Salud</title>
+  <!-- Material Design fonts -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- Bootstrap Material Design -->
+  <link rel="stylesheet" type="text/css" href="../../assets/css/bootstrap-material-design.css">
+  <link rel="stylesheet" type="text/css" href="../../assets/css/ripples.min.css">
+  <link rel="stylesheet" type="text/css" href="../../assets/css/styles.css">
+</head>
+
+<body>
+  <header class="header">
+    <nav class="menu">
+      <div class="head">
+        <img src="../../assets/images/logo.png" alt="">
+        <h3 class="name">Inés Duarte</h3>
+      </div>
+      <ul>
+        <li class="active"><a href="#"><i class="material-icons">add_circle</i>Cargar empresa</a></li>
+        <li class="active"><a href="listado-de-empresas.html"><i class="material-icons">view_list</i>Listado de empresas</a></li>
+        <li><a href="#"><i class="material-icons">exit_to_app</i>Salir</a></li>
+      </ul>
+    </nav>
+    <button type="button" name="button" class="btn btn-menu btn-nav"><i class="material-icons">menu</i> <h3>Ejecutivo de cuentas</h3></button>
+    <button type="button" name="button" class="btn btn-menu btn-search"><i class="material-icons">arrow_back</i> <h3>Volver</h3></button>
+    <div class="container">
+      <div class="row">
+      </div>
+    </div>
+
+    <button type="button" name="button" class="btn smart-search visible-xs"><i class="material-icons">search</i></button>
+    <div class="user hidden-xs">
+      <i class="material-icons">account_circle</i>
+      <div class="name">Inés Duarte</div>
+    </div>
+  </header>
+
+  <div class="bg-menu"></div>
+
+  <section id="afiliacion" class="content">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <form action="#">
+            <div class="pasos paso-1">
+              <div class="divisor">
+                Datos de la empresa
+              </div>
+              <div class="form-group label-floating">
+                <label for="fecha-inicio" class="control-label">Fecha de inicio del convenio</label>
+                <input type="date" class="form-control" id="fecha-inicio" name="fecha-inicio" required="required">
+              </div>
+              <div class="form-group label-floating">
+                <label for="forma-ingreso" class="control-label">Forma de ingreso</label>
+                <input type="text" class="form-control" id="forma-ingreso" name="forma-ingreso" required="required" value="Forma de ingreso precargado">
+                <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+              </div>
+              <div class="form-group label-floating">
+                <label for="cuit" class="control-label">CUIT/CUIL</label>
+                <input type="number" class="form-control" id="cuit" name="cuit" required="required">
+                <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+              </div>
+              <div class="form-group label-floating">
+                <label for="razon-social" class="control-label">Razón social</label>
+                <input type="text" class="form-control" id="razon-social" name="razon-social" required="required" value="Categoría precargado">
+                <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+              </div>
+              <div class="form-group label-floating">
+                <label for="empresa" class="control-label">Empresa</label>
+                <input type="text" class="form-control" id="empresa" name="empresa" required="required" value="Grupo SOCMA">
+                <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+              </div>
+              <div class="form-group input-group">
+                <input type="file" name="file-constancia" id="file-constancia" class="inputfile" />
+                <label for="file-constancia" class="title"><span>Constancia de situación</span></label>
+                <label for="file-constancia" class="name"><span>Constancia de situación</span></label>
+                <div class="remove"><i class="material-icons">close</i></div>
+              </div>
+              <p>Empresa morosa,no puede efectuar convenio. Comunicarsecon cobranzas.</p>
+              <div class="form-group label-floating">
+                <label for="numer-solicitud" class="control-label">Número de solicitud</label>
+                <input type="number" class="form-control" id="numer-solicitud" name="numer-solicitud" required="required" value="7550">
+                <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+              </div>
+              <div class="form-group label-floating select-group">
+                <select class="entidad" name="sexo" required="required">
+                  <option value="">Ingresa bajo la forma</option>
+                </select>
+                <div class="arrow"><i class="material-icons">keyboard_arrow_down</i></div>
+              </div>
+              <div class="form-group mt0">
+                <div class="checkbox form-inline">
+                  <label class="control-label dark">Con compensación</label>
+                  <div class="form-group">
+                    <input type="radio" name="compensacion" value="si" id="compensacion-si">
+                    <label for="compensacion-si">SI</label>
+                  </div>
+                  <div class="form-group">
+                    <input type="radio" name="compensacion" value="no" id="compensacion-no">
+                    <label for="compensacion-no">NO</label>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div class="form-group label-floating select-group">
+                <select class="entidad" name="sexo" required="required">
+                  <option value="">Condición de IVA</option>
+                  <option value="Masculino">Inscripto</option>
+                  <option value="Femenino">Monotributista</option>
+                </select>
+                <div class="arrow"><i class="material-icons">keyboard_arrow_down</i></div>
+              </div>
+              <div class="form-group label-floating">
+                <label for="domicilio-sede" class="control-label">Domicilio de la sede central</label>
+                <input type="text" class="form-control" id="domicilio-sede" name="domicilio-sede" required="required" value="Categoría precargado">
+                <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+              </div>
+              <div class="postal-group">
+                <div class="form-group label-floating half">
+                  <label for="cod-postal" class="control-label">Código postal</label>
+                  <input type="number" class="form-control" id="cod-postal" name="cod-postal" required="required">
+                  <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+
+                </div>
+                <div class="form-group label-floating half">
+                  <label for="cod-postal-arg" class="control-label">Código postal argentino</label>
+                  <input type="number" class="form-control" id="cod-postal-arg" name="cod-postal-arg" required="required">
+                  <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div class="form-group label-floating">
+                <label for="localidad" class="control-label">Localidad</label>
+                <input type="text" class="form-control" id="localidad" name="localidad" required="required" >
+                <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+              </div>
+              <div class="form-group label-floating">
+                <label for="email" class="control-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required="required" >
+                <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+              </div>
+              <div class="tel-group">
+                <div class="form-group label-floating cod">
+                  <label for="cod-area-1" class="control-label">Código de área</label>
+                  <input type="number" class="form-control" id="cod-area-1" name="cod-area-1" required="required">
+                  <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+                </div>
+                <div class="form-group label-floating tel">
+                  <label for="tel-1" class="control-label">Teléfono fijo</label>
+                  <input type="number" class="form-control" id="tel-1" name="tel-1" required="required">
+                  <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+                </div>
+              </div>
+              <div class="tel-group">
+                <div class="form-group label-floating cod">
+                  <label for="cod-area-2" class="control-label">Código de área</label>
+                  <input type="number" class="form-control" id="cod-area-2" name="cod-area-2" required="required">
+                  <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+                </div>
+                <div class="form-group label-floating tel">
+                  <label for="tel-2" class="control-label">Teléfono celular</label>
+                  <input type="number" class="form-control" id="tel-2" name="tel-2" required="required">
+                  <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+                </div>
+              </div>
+              <div class="clearfix"></div>
+              <div class="horario-group">
+                <div class="form-group label-floating half">
+                  <label for="horario-atencion" class="control-label">Horarios de atención</label>
+                  <input type="number" class="form-control" id="horario-atencion" name="horario-atencion" required="required">
+                  <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+
+                </div>
+                <div class="form-group label-floating half">
+                  <label for="horario-comentarios" class="control-label">Comentarios</label>
+                  <input type="number" class="form-control" id="horario-comentarios" name="horario-comentarios" required="required">
+                  <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div class="form-group label-floating">
+                <label for="cantidad-empleados" class="control-label">Cantidad de empleados</label>
+                <input type="number" class="form-control" id="cantidad-empleados" name="cantidad-empleados" required="required" >
+                <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+              </div>
+              <div class="form-group label-floating select-group">
+                <select class="entidad" name="envio-credenciales" required="required">
+                  <option value="">Modo de envío de credenciales</option>
+                </select>
+                <div class="arrow"><i class="material-icons">keyboard_arrow_down</i></div>
+              </div>
+              <div class="form-group label-floating">
+                <label for="numero-actividad-afip" class="control-label">Número de actividad principal según AFIP</label>
+                <input type="number" class="form-control" id="numero-actividad-afip" name="numero-actividad-afip" required="required" >
+                <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+              </div>
+            </div><!-- end paso 1 -->
+            <div class="pasos paso-2">
+              <div class="divisor">
+                Productos a ofrecer
+              </div>
+              <div class="int-nuevo combo plan">
+                <div class="checkbox planes">
+                  <div class="form-group mt0">
+                    <input type="radio" class="radio-plan" name="plan" value="plan1" id="plan-1">
+                    <label for="plan-1"></label>
+                  </div>
+                </div>
+                <!--i class="material-icons">person</i--><p>Plan 1</p>
+                <div class="arrow"></div>
+                <div class="clearfix"></div>
+                <div class="imc">
+                  <div class="form-group label-floating select-group">
+                    <select class="entidad" name="farmacias" required="required">
+                      <option value="">% en farmacias</option>
+                    </select>
+                    <div class="arrow"><i class="material-icons">keyboard_arrow_down</i></div>
+                  </div>
+                  <div class="form-group">
+                    <div class="checkbox form-inline">
+                      <label class="control-label dark">Módulo adicional de cobertura</label>
+                      <div class="form-group">
+                        <input type="radio" name="modulo-adicional" value="si" id="modulo-adicional-si">
+                        <label for="modulo-adicional-si">SI</label>
+                      </div>
+                      <div class="form-group">
+                        <input type="radio" name="modulo-adicional" value="no" id="modulo-adicional-no">
+                        <label for="modulo-adicional-no">NO</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grupos">
+                    <div class="form-group mt0 half">
+                      <div class="checkbox form-inline">
+                        <label class="control-label dark">Módulo odoltoligía</label>
+                        <div class="form-group">
+                          <input type="radio" name="modulo-odontologia" value="si" id="modulo-odontologia-si">
+                          <label for="modulo-odontologia-si">SI</label>
+                        </div>
+                        <div class="form-group">
+                          <input type="radio" name="modulo-odontologia" value="no" id="modulo-odontologia-no">
+                          <label for="modulo-odontologia-no">NO</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group mt0 half">
+                      <div class="checkbox form-inline">
+                        <label class="control-label dark">Mostrar opción de bonificar</label>
+                        <div class="form-group">
+                          <input type="radio" name="opcion-bonificar-1" value="si" id="opcion-bonificar-1-si">
+                          <label for="opcion-bonificar-1-si">SI</label>
+                        </div>
+                        <div class="form-group">
+                          <input type="radio" name="opcion-bonificar-1" value="no" id="opcion-bonificar-1-no">
+                          <label for="opcion-bonificar-1-no">NO</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="grupos">
+                    <div class="form-group mt0 half">
+                      <div class="checkbox form-inline">
+                        <label class="control-label dark">Módulo óptica</label>
+                        <div class="form-group">
+                          <input type="radio" name="modulo-optica" value="si" id="modulo-optica-si">
+                          <label for="modulo-optica-si">SI</label>
+                        </div>
+                        <div class="form-group">
+                          <input type="radio" name="modulo-optica" value="no" id="modulo-optica-no">
+                          <label for="modulo-optica-no">NO</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group mt0 half">
+                      <div class="checkbox form-inline">
+                        <label class="control-label dark">Mostrar opción de bonificar</label>
+                        <div class="form-group">
+                          <input type="radio" name="opcion-bonificar-2" value="si" id="opcion-bonificar-2-si">
+                          <label for="opcion-bonificar-2-si">SI</label>
+                        </div>
+                        <div class="form-group">
+                          <input type="radio" name="opcion-bonificar-2" value="no" id="opcion-bonificar-2-no">
+                          <label for="opcion-bonificar-2-no">NO</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="grupos">
+                    <div class="form-group mt0 half">
+                      <div class="checkbox form-inline">
+                        <label class="control-label dark">Módulo terapia alternativa</label>
+                        <div class="form-group">
+                          <input type="radio" name="modulo-terapia-alt" value="si" id="modulo-terapia-alt-si">
+                          <label for="modulo-terapia-alt-si">SI</label>
+                        </div>
+                        <div class="form-group">
+                          <input type="radio" name="modulo-terapia-alt" value="no" id="modulo-terapia-alt-no">
+                          <label for="modulo-terapia-alt-no">NO</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group mt0 half">
+                      <div class="checkbox form-inline">
+                        <label class="control-label dark">Mostrar opción de bonificar</label>
+                        <div class="form-group">
+                          <input type="radio" name="opcion-bonificar-3" value="si" id="opcion-bonificar-3-si">
+                          <label for="opcion-bonificar-3-si">SI</label>
+                        </div>
+                        <div class="form-group">
+                          <input type="radio" name="opcion-bonificar-3" value="no" id="opcion-bonificar-3-no">
+                          <label for="opcion-bonificar-3-no">NO</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="grupos">
+                    <div class="form-group mt0 half">
+                      <div class="checkbox form-inline">
+                        <label class="control-label dark">SUF</label>
+                        <div class="form-group">
+                          <input type="radio" name="suf" value="si" id="suf-si">
+                          <label for="suf-si">SI</label>
+                        </div>
+                        <div class="form-group">
+                          <input type="radio" name="suf" value="no" id="suf-no">
+                          <label for="suf-no">NO</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group mt0 half">
+                      <div class="checkbox form-inline">
+                        <label class="control-label dark">Mostrar opción de bonificar</label>
+                        <div class="form-group">
+                          <input type="radio" name="opcion-bonificar-4" value="si" id="opcion-bonificar-4-si">
+                          <label for="opcion-bonificar-4-si">SI</label>
+                        </div>
+                        <div class="form-group">
+                          <input type="radio" name="opcion-bonificar-4" value="no" id="opcion-bonificar-4-no">
+                          <label for="opcion-bonificar-4-no">NO</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="grupos">
+                    <div class="form-group mt0 half">
+                      <div class="checkbox form-inline">
+                        <label class="control-label dark">S10 o S20</label>
+                        <div class="form-group">
+                          <input type="radio" name="s10-s20" value="si" id="s10-s20-si">
+                          <label for="s10-s20-si">SI</label>
+                        </div>
+                        <div class="form-group">
+                          <input type="radio" name="s10-s20" value="no" id="s10-s20-no">
+                          <label for="s10-s20-no">NO</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group mt0 half">
+                      <div class="checkbox form-inline">
+                        <label class="control-label dark">Mostrar opción de bonificar</label>
+                        <div class="form-group">
+                          <input type="radio" name="opcion-bonificar-5" value="si" id="opcion-bonificar-5-si">
+                          <label for="opcion-bonificar-5-si">SI</label>
+                        </div>
+                        <div class="form-group">
+                          <input type="radio" name="opcion-bonificar-5" value="no" id="opcion-bonificar-5-no">
+                          <label for="opcion-bonificar-5-no">NO</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="grupos">
+                    <div class="form-group mt0 half">
+                      <div class="checkbox form-inline">
+                        <label class="control-label dark">SSAC</label>
+                        <div class="form-group">
+                          <input type="radio" name="ssac" value="si" id="ssac-si">
+                          <label for="ssac-si">SI</label>
+                        </div>
+                        <div class="form-group">
+                          <input type="radio" name="ssac" value="no" id="ssac-no">
+                          <label for="ssac-no">NO</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group mt0 half">
+                      <div class="checkbox form-inline">
+                        <label class="control-label dark">Mostrar opción de bonificar</label>
+                        <div class="form-group">
+                          <input type="radio" name="opcion-bonificar-6" value="si" id="opcion-bonificar-6-si">
+                          <label for="opcion-bonificar-6-si">SI</label>
+                        </div>
+                        <div class="form-group">
+                          <input type="radio" name="opcion-bonificar-6" value="no" id="opcion-bonificar-6-no">
+                          <label for="opcion-bonificar-6-no">NO</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="grupos">
+                    <div class="form-group mt0 half">
+                      <div class="checkbox form-inline">
+                        <label class="control-label dark">SPRO</label>
+                        <div class="form-group">
+                          <input type="radio" name="spro" value="si" id="spro-si">
+                          <label for="spro-si">SI</label>
+                        </div>
+                        <div class="form-group">
+                          <input type="radio" name="spro" value="no" id="spro-no">
+                          <label for="spro-no">NO</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group mt0 half">
+                      <div class="checkbox form-inline">
+                        <label class="control-label dark">Mostrar opción de bonificar</label>
+                        <div class="form-group">
+                          <input type="radio" name="opcion-bonificar-7" value="si" id="opcion-bonificar-7-si">
+                          <label for="opcion-bonificar-7-si">SI</label>
+                        </div>
+                        <div class="form-group">
+                          <input type="radio" name="opcion-bonificar-7" value="no" id="opcion-bonificar-7-no">
+                          <label for="opcion-bonificar-7-no">NO</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="form-group mt0">
+                    <div class="checkbox form-inline">
+                      <label class="control-label dark">GEN</label>
+                      <div class="form-group">
+                        <input type="radio" name="gen" value="si" id="gen-si">
+                        <label for="gen-si">SI</label>
+                      </div>
+                      <div class="form-group">
+                        <input type="radio" name="gen" value="no" id="gen-no">
+                        <label for="gen-no">NO</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- end integrante -->
+              <div class="int-nuevo combo plan">
+                <div class="checkbox planes">
+                  <div class="form-group mt0">
+                    <input type="radio" class="radio-plan" name="plan" value="plan2" id="plan-2">
+                    <label for="plan-2"></label>
+                  </div>
+                </div>
+                <!--i class="material-icons">person</i--><p>Plan 2</p>
+                <div class="arrow"></div>
+                <div class="clearfix"></div>
+                <div class="imc">
+                  <div class="form-group label-floating select-group">
+                    <select class="entidad" name="farmacias" required="required">
+                      <option value="">% en farmacias</option>
+                    </select>
+                    <div class="arrow"><i class="material-icons">keyboard_arrow_down</i></div>
+                  </div>
+                  <div class="form-group">
+                    <div class="checkbox form-inline">
+                      <label class="control-label dark">Módulo adicional de cobertura</label>
+                      <div class="form-group">
+                        <input type="radio" name="modulo-adicional-2" value="si" id="modulo-adicional-2-si">
+                        <label for="modulo-adicional-2-si">SI</label>
+                      </div>
+                      <div class="form-group">
+                        <input type="radio" name="modulo-adicional-2" value="no" id="modulo-adicional-2-no">
+                        <label for="modulo-adicional-2-no">NO</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grupos">
+                    <div class="form-group mt0 half">
+                      <div class="checkbox form-inline">
+                        <label class="control-label dark">Módulo odoltoligía</label>
+                        <div class="form-group">
+                          <input type="radio" name="modulo-odontologia-2" value="si" id="modulo-odontologia-2-si">
+                          <label for="modulo-odontologia-2-si">SI</label>
+                        </div>
+                        <div class="form-group">
+                          <input type="radio" name="modulo-odontologia-2" value="no" id="modulo-odontologia-2-no">
+                          <label for="modulo-odontologia-2-no">NO</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group mt0 half">
+                      <div class="checkbox form-inline">
+                        <label class="control-label dark">Mostrar opción de bonificar</label>
+                        <div class="form-group">
+                          <input type="radio" name="opcion-bonificar-1-2" value="si" id="opcion-bonificar-1-2-si">
+                          <label for="opcion-bonificar-1-2-si">SI</label>
+                        </div>
+                        <div class="form-group">
+                          <input type="radio" name="opcion-bonificar-1-2" value="no" id="opcion-bonificar-1-2-no">
+                          <label for="opcion-bonificar-1-2-no">NO</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="grupos">
+                    <div class="form-group mt0 half">
+                      <div class="checkbox form-inline">
+                        <label class="control-label dark">Módulo óptica</label>
+                        <div class="form-group">
+                          <input type="radio" name="modulo-optica-2" value="si" id="modulo-optica-2-si">
+                          <label for="modulo-optica-2-si">SI</label>
+                        </div>
+                        <div class="form-group">
+                          <input type="radio" name="modulo-optica-2" value="no" id="modulo-optica-2-no">
+                          <label for="modulo-optica-2-no">NO</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group mt0 half">
+                      <div class="checkbox form-inline">
+                        <label class="control-label dark">Mostrar opción de bonificar</label>
+                        <div class="form-group">
+                          <input type="radio" name="opcion-bonificar-2-2" value="si" id="opcion-bonificar-2-2-si">
+                          <label for="opcion-bonificar-2-2-si">SI</label>
+                        </div>
+                        <div class="form-group">
+                          <input type="radio" name="opcion-bonificar-2-2" value="no" id="opcion-bonificar-2-2-no">
+                          <label for="opcion-bonificar-2-2-no">NO</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="grupos">
+                    <div class="form-group mt0 half">
+                      <div class="checkbox form-inline">
+                        <label class="control-label dark">Módulo terapia alternativa</label>
+                        <div class="form-group">
+                          <input type="radio" name="modulo-terapia-alt-2" value="si" id="modulo-terapia-alt-2-si">
+                          <label for="modulo-terapia-alt-2-si">SI</label>
+                        </div>
+                        <div class="form-group">
+                          <input type="radio" name="modulo-terapia-alt-2" value="no" id="modulo-terapia-alt-2-no">
+                          <label for="modulo-terapia-alt-2-no">NO</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group mt0 half">
+                      <div class="checkbox form-inline">
+                        <label class="control-label dark">Mostrar opción de bonificar</label>
+                        <div class="form-group">
+                          <input type="radio" name="opcion-bonificar-3-2" value="si" id="opcion-bonificar-3-2-si">
+                          <label for="opcion-bonificar-3-2-si">SI</label>
+                        </div>
+                        <div class="form-group">
+                          <input type="radio" name="opcion-bonificar-3-2" value="no" id="opcion-bonificar-3-2-no">
+                          <label for="opcion-bonificar-3-2-no">NO</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="grupos">
+                    <div class="form-group mt0 half">
+                      <div class="checkbox form-inline">
+                        <label class="control-label dark">SUF</label>
+                        <div class="form-group">
+                          <input type="radio" name="suf-2" value="si" id="suf-2-si">
+                          <label for="suf-2-si">SI</label>
+                        </div>
+                        <div class="form-group">
+                          <input type="radio" name="suf-2" value="no" id="suf-2-no">
+                          <label for="suf-2-no">NO</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group mt0 half">
+                      <div class="checkbox form-inline">
+                        <label class="control-label dark">Mostrar opción de bonificar</label>
+                        <div class="form-group">
+                          <input type="radio" name="opcion-bonificar-4-2" value="si" id="opcion-bonificar-4-2-si">
+                          <label for="opcion-bonificar-4-2-si">SI</label>
+                        </div>
+                        <div class="form-group">
+                          <input type="radio" name="opcion-bonificar-4-2" value="no" id="opcion-bonificar-4-2-no">
+                          <label for="opcion-bonificar-4-2-no">NO</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="grupos">
+                    <div class="form-group mt0 half">
+                      <div class="checkbox form-inline">
+                        <label class="control-label dark">S10 o S20</label>
+                        <div class="form-group">
+                          <input type="radio" name="s10-s20-2" value="si" id="s10-s20-2-si">
+                          <label for="s10-s20-2-si">SI</label>
+                        </div>
+                        <div class="form-group">
+                          <input type="radio" name="s10-s20-2" value="no" id="s10-s20-2-no">
+                          <label for="s10-s20-2-no">NO</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group mt0 half">
+                      <div class="checkbox form-inline">
+                        <label class="control-label dark">Mostrar opción de bonificar</label>
+                        <div class="form-group">
+                          <input type="radio" name="opcion-bonificar-5-2" value="si" id="opcion-bonificar-5-2-si">
+                          <label for="opcion-bonificar-5-2-si">SI</label>
+                        </div>
+                        <div class="form-group">
+                          <input type="radio" name="opcion-bonificar-5-2" value="no" id="opcion-bonificar-5-2-no">
+                          <label for="opcion-bonificar-5-2-no">NO</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="grupos">
+                    <div class="form-group mt0 half">
+                      <div class="checkbox form-inline">
+                        <label class="control-label dark">SSAC</label>
+                        <div class="form-group">
+                          <input type="radio" name="ssac-2" value="si" id="ssac-2-si">
+                          <label for="ssac-2-si">SI</label>
+                        </div>
+                        <div class="form-group">
+                          <input type="radio" name="ssac-2" value="no" id="ssac-2-no">
+                          <label for="ssac-2-no">NO</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group mt0 half">
+                      <div class="checkbox form-inline">
+                        <label class="control-label dark">Mostrar opción de bonificar</label>
+                        <div class="form-group">
+                          <input type="radio" name="opcion-bonificar-6-2" value="si" id="opcion-bonificar-6-2-si">
+                          <label for="opcion-bonificar-6-2-si">SI</label>
+                        </div>
+                        <div class="form-group">
+                          <input type="radio" name="opcion-bonificar-6-2" value="no" id="opcion-bonificar-6-2-no">
+                          <label for="opcion-bonificar-6-2-no">NO</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="grupos">
+                    <div class="form-group mt0 half">
+                      <div class="checkbox form-inline">
+                        <label class="control-label dark">SPRO</label>
+                        <div class="form-group">
+                          <input type="radio" name="spro-2" value="si" id="spro-2-si">
+                          <label for="spro-2-si">SI</label>
+                        </div>
+                        <div class="form-group">
+                          <input type="radio" name="spro-2" value="no" id="spro-2-no">
+                          <label for="spro-2-no">NO</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group mt0 half">
+                      <div class="checkbox form-inline">
+                        <label class="control-label dark">Mostrar opción de bonificar</label>
+                        <div class="form-group">
+                          <input type="radio" name="opcion-bonificar-7-2" value="si" id="opcion-bonificar-7-2-si">
+                          <label for="opcion-bonificar-7-2-si">SI</label>
+                        </div>
+                        <div class="form-group">
+                          <input type="radio" name="opcion-bonificar-7-2" value="no" id="opcion-bonificar-7-2-no">
+                          <label for="opcion-bonificar-7-2-no">NO</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="form-group mt0">
+                    <div class="checkbox form-inline">
+                      <label class="control-label dark">GEN</label>
+                      <div class="form-group">
+                        <input type="radio" name="gen-2" value="si" id="gen-2-si">
+                        <label for="gen-2-si">SI</label>
+                      </div>
+                      <div class="form-group">
+                        <input type="radio" name="gen-2" value="no" id="gen-2-no">
+                        <label for="gen-2-no">NO</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- end integrante -->
+
+            </div><!-- end paso 2 -->
+            <div class="pasos paso-3">
+              <div class="divisor">
+                Forma de pago de empresa
+              </div>
+              <div class="form-group label-floating select-group">
+                <select class="entidad" name="forma-pago" required="required">
+                  <option value="">Forma de pago</option>
+                  <option value="TC">TC</option>
+                  <option value="CBU">CBU</option>
+                  <option value="PR">PR</option>
+                  <option value="ECR">ECR</option>
+                </select>
+                <div class="arrow"><i class="material-icons">keyboard_arrow_down</i></div>
+              </div>
+              <div class="form-group input-group tc">
+                <input type="file" name="file-tarjeta-frente" id="file-tarjeta-frente" class="inputfile" />
+                <label for="file-tarjeta-frente" class="title"><span>Frente tarjeta</span></label>
+                <label for="file-tarjeta-frente" class="name"><span>Frente tarjeta</span></label>
+                <div class="remove"><i class="material-icons">close</i></div>
+              </div>
+              <div class="form-group label-floating tc">
+                <label for="tarjeta-num" class="control-label">Número de tarjeta</label>
+                <input type="number" class="form-control" id="tarjeta-num" name="tarjeta-num" required="required">
+                <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+              </div>
+              <div class="form-group label-floating tc">
+                <label for="banco" class="control-label">Banco</label>
+                <input type="text" class="form-control" id="banco" name="banco" required="required">
+                <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+              </div>
+              <div class="form-group label-floating tc">
+                <label for="fecha-vencimiento-int-1" class="control-label">Fecha de vencimiento</label>
+                <input type="date" class="form-control" id="fecha-vencimiento-int-1" name="fecha-vencimiento-int-1" required="required">
+              </div>
+              <div class="form-group tc">
+                <div class="checkbox form-inline" style="position:relative;">
+                  <label class="control-label dark">Mismo titular de tarjeta que de afiliación</label>
+                  <div class="form-group">
+                    <input type="radio" name="titular-tarjeta" value="si" id="titular-tarjeta-si">
+                    <label for="titular-tarjeta-si">SI</label>
+                  </div>
+                  <div class="form-group">
+                    <input type="radio" name="titular-tarjeta" value="no" id="titular-tarjeta-no">
+                    <label for="titular-tarjeta-no">NO</label>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+
+              <div class="form-group label-floating cbu">
+                <label for="cbu-num" class="control-label">Número de CBU</label>
+                <input type="number" class="form-control" id="cbu-num" name="cbu-num" required="required">
+                <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+              </div>
+              <div class="form-group label-floating select-group cbu">
+                <select class="entidad" name="tipo-cbu" required="required">
+                  <option value="">Tipo de cuenta</option>
+                  <option value="Cuenta Corriente">Cuenta Corriente</option>
+                  <option value="Caja de Ahorro">Caja de Ahorro</option>
+                </select>
+                <div class="arrow"><i class="material-icons">keyboard_arrow_down</i></div>
+              </div>
+              <div class="form-group label-floating pr">
+                <label for="tambo-num" class="control-label">Número de Tambo</label>
+                <input type="number" class="form-control" id="tambo-num" name="tambo-num" required="required">
+                <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+              </div>
+
+              <div class="form-group label-floating ecr">
+                <label for="entidad-num" class="control-label">Número de Entidad</label>
+                <input type="number" class="form-control" id="entidad-num" name="entidad-num" required="required">
+                <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+              </div>
+              <div class="divisor">Otros datos</div>
+              <div class="form-group label-floating">
+                <label for="grilla" class="control-label">Nº de grilla</label>
+                <input type="text" class="form-control" id="grilla" name="grilla">
+              </div>
+              <div class="form-group label-floating">
+                <label for="ejecutivo" class="control-label">Ejecutivo de relacionamiento</label>
+                <input type="text" class="form-control" id="ejecutivo" name="ejecutivo">
+              </div>
+              <div class="form-group label-floating">
+                <label for="ejecutivo-atencion" class="control-label">Ejecutivo de atención al cliente</label>
+                <input type="text" class="form-control" id="ejecutivo-atencion" name="ejecutivo-atencion">
+              </div>
+
+            </div><!-- end paso 3 -->
+            <div class="pasos paso-4">
+              <div class="contacto-bloque">
+                <div class="divisor">
+                  Datos de contacto
+                </div>
+                <div class="form-group label-floating">
+                  <label for="nombre-contacto" class="control-label">Nombre</label>
+                  <input type="text" class="form-control" id="nombre-contacto" name="nombre-contacto" required="required">
+                </div>
+                <div class="form-group label-floating">
+                  <label for="apellido-contacto" class="control-label">Apellido</label>
+                  <input type="text" class="form-control" id="apellido-contacto" name="apellido-contacto" required="required">
+                </div>
+                <div class="form-group label-floating">
+                  <label for="dni-contacto" class="control-label">DNI</label>
+                  <input type="number" class="form-control" id="dni-contacto" name="dni-contacto" required="required">
+                </div>
+                <div class="form-group label-floating">
+                  <label for="fecha-nacimiento" class="control-label">Fecha de Nacimiento</label>
+                  <input type="date" class="form-control" id="fecha-nacimiento" name="fecha-nacimiento" required="required">
+                  <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+                </div>
+                <div class="form-group label-floating">
+                  <label for="cargo-contacto" class="control-label">Cargo en la empresa</label>
+                  <input type="text" class="form-control" id="cargo-contacto" name="cargo-contacto" required="required">
+                </div>
+                <div class="tel-group">
+                  <div class="form-group label-floating cod">
+                    <label for="cod-area-contacto" class="control-label">Código de área</label>
+                    <input type="number" class="form-control" id="cod-area-contacto" name="cod-area-contacto" required="required">
+                    <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+                  </div>
+                  <div class="form-group label-floating tel">
+                    <label for="tel-contacto" class="control-label">Teléfono fijo</label>
+                    <input type="number" class="form-control" id="tel-contacto" name="tel-contacto" required="required">
+                    <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group label-floating">
+                  <label for="email-contacto" class="control-label">Email</label>
+                  <input type="email" class="form-control" id="email-contacto" name="email-contacto" required="required">
+                </div>
+                <div class="form-group label-floating">
+                  <label for="hobbies-contacto" class="control-label">Hobbies</label>
+                  <input type="text" class="form-control" id="hobbies-contacto" name="hobbies-contacto" required="required">
+                </div>
+                <div class="form-group label-floating">
+                  <label for="deportes-contacto" class="control-label">Deportes que practica</label>
+                  <input type="text" class="form-control" id="deportes-contacto" name="deportes-contacto" required="required">
+                </div>
+              </div>
+              <button type="button" class="btn invert right" id="add-contact">Sumar otro contacto</button>
+              <div class="clearfix"></div>
+
+
+
+            </div><!-- end paso 4 -->
+            <div class="pasos paso-5">
+              <div class="anexo">
+                <div class="divisor">
+                  Anexo I
+                </div>
+                <div class="form-group label-floating">
+                  <label for="dni-anexo-1" class="control-label">DNI</label>
+                  <input type="number" class="form-control" id="dni-anexo-1" name="dni-anexo-1" required="required">
+                </div>
+                <div class="form-group label-floating">
+                  <label for="nombre-anexo-1" class="control-label">Nombre</label>
+                  <input type="text" class="form-control" id="nombre-anexo-1" name="nombre-anexo-1" required="required">
+                </div>
+                <div class="form-group label-floating">
+                  <label for="apellido-anexo-1" class="control-label">Apellido</label>
+                  <input type="text" class="form-control" id="apellido-anexo-1" name="apellido-anexo-1" required="required">
+                </div>
+                <div class="form-group label-floating">
+                  <label for="grupo-familiar-anexo-1" class="control-label">Grupo familiar</label>
+                  <input type="text" class="form-control" id="grupo-familiar-anexo-1" name="grupo-familiar-anexo-1" required="required">
+                </div>
+                <div class="form-group label-floating">
+                  <label for="plan-familiar-anexo-1" class="control-label">Plan</label>
+                  <input type="text" class="form-control" id="plan-familiar-anexo-1" name="plan-familiar-anexo-1" required="required">
+                </div>
+                <div class="form-group label-floating">
+                  <label for="grilla-familiar-anexo-1" class="control-label">Grilla</label>
+                  <input type="text" class="form-control" id="grilla-familiar-anexo-1" name="grilla-familiar-anexo-1" required="required">
+                </div>
+              </div>
+              <button id="add-anexo" type="button" class="btn invert right">Agregar más personas</button>
+              <div class="clearfix"></div>
+              <button type="button" class="btn">Imprimir formulario</button><br>
+              <button type="button" class="btn">Enviar aprobación</button>
+
+            </div><!-- end paso 5 -->
+
+          </form>
+
+          <div class="next">
+            <div class="pagination">
+              <div class="dot selected"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+            <button class="button btn prev left"><i class="material-icons">keyboard_arrow_left</i>ANTERIOR</button>
+            <button class="button btn next right">Siguiente<i class="material-icons">keyboard_arrow_right</i></button>
+            <div class="clearfix"></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="alert-efactura" class="modal fade" tabindex="-1">
+    <div class="modal-dialog" style="max-width:400px;">
+      <div class="modal-content">
+        <div class="modal-body">
+          <p>Indicaste adherir a e-factura.<br>El campo <strong>E-mail</strong> es obligatorio.</p>
+          <p class="integrante"></p>
+          <a href="#" class="btn btn-int cerrar">Aceptar</a>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="../../assets/js/material.js"></script>
+  <script src="../../assets/js/ripples.js"></script>
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/ejecutivo.js"></script>
+  <script>
+  $(document).ready(function() {
+    var today = new Date();
+    var day = ("0" + today.getDate()).slice(-2);
+    var month = ("0" + (today.getMonth() + 1)).slice(-2);
+
+    // var currentDate = (day)+"/"+(month)+"/"+today.getFullYear() ;
+    var currentDate = today.getFullYear()+"-"+(month)+"-"+(day) ;
+    console.log(currentDate);
+
+    $('#fecha-inicio').val(currentDate);
+    $('#fecha-inicio').parent().removeClass('is-empty');
+  });
+  </script>
+</body>
+</html>

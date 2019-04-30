@@ -1,0 +1,21 @@
+
+<section class="login">
+  <form class="login">
+    <img src="images/logo.png" alt="" class="logo">
+    <div class="form-group label-floating">
+      <label for="user" class="control-label">Usuario</label>
+      <input type="text" class="form-control" id="user" ng-model="userData.username" name="user" required="required">
+      <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+    </div>
+    <div class="form-group label-floating">
+      <label for="pass" class="control-label">Contraseña</label>
+      <input type="password" class="form-control" id="pass" name="pass" ng-model="userData.password" required="required">
+      <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+    </div>
+    <button class="btn" ng-click="doLogin()">Ingresar</button>
+
+    <div class="clearfix">{{message}}</div>
+  </form>
+</section>
+
+

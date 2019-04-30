@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorBackground">
+
+    <TextView
+        android:id="@+id/item_title"
+        style="@style/ListItemTitle"
+        android:textSize="14sp"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:text="Reynaldo Sietecase" />
+
+    <TextView
+        android:id="@+id/item_separator"
+        style="@style/ListItemSeparator"
+        android:layout_alignLeft="@+id/item_title"
+        android:layout_below="@+id/item_title" />
+
+    <ImageView
+        android:id="@+id/item_icon"
+        style="@style/ListItemIcon"
+        android:src="@drawable/ic_no_checked" />
+
+</RelativeLayout>

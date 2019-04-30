@@ -1,0 +1,281 @@
+{
+  "status": "success",
+  "data": {
+    "bancos": [
+      {
+        "banco_id": 265,
+        "banco_descripcion": "BANCA NACIONAL DEL LABORO"
+      },
+      {
+        "banco_id": 426,
+        "banco_descripcion": "BANCO BICCA"
+      },
+      {
+        "banco_id": 304,
+        "banco_descripcion": "BANCO CASEROS S.A."
+      },
+      {
+        "banco_id": 431,
+        "banco_descripcion": "BANCO COINAG S.A."
+      },
+      {
+        "banco_id": 389,
+        "banco_descripcion": "BANCO COLUMBIA"
+      },
+      {
+        "banco_id": 299,
+        "banco_descripcion": "BANCO COMNAFI"
+      },
+      {
+        "banco_id": 448,
+        "banco_descripcion": "BANCO CORDOBA"
+      },
+      {
+        "banco_id": 19,
+        "banco_descripcion": "BANCO CREDICOP"
+      },
+      {
+        "banco_id": 94,
+        "banco_descripcion": "BANCO DE CORRIENTES"
+      },
+      {
+        "banco_id": 501,
+        "banco_descripcion": "BANCO DE FORMOSA S.A."
+      },
+      {
+        "banco_id": 11,
+        "banco_descripcion": "BANCO DE LA NACION"
+      },
+      {
+        "banco_id": 93,
+        "banco_descripcion": "BANCO DE LA PAMPA"
+      },
+      {
+        "banco_id": 140,
+        "banco_descripcion": "BANCO DE LA PCIA DE BS AS"
+      },
+      {
+        "banco_id": 36,
+        "banco_descripcion": "BANCO DE SANTA CRUZ S.A."
+      },
+      {
+        "banco_id": 86,
+        "banco_descripcion": "BANCO DE SANTA CRUZ S.A."
+      },
+      {
+        "banco_id": 268,
+        "banco_descripcion": "BANCO DE TIERRA DEL FUEGO"
+      },
+      {
+        "banco_id": 303,
+        "banco_descripcion": "BANCO FINANSUR"
+      },
+      {
+        "banco_id": 315,
+        "banco_descripcion": "BANCO FORMOSA S.A."
+      },
+      {
+        "banco_id": 7,
+        "banco_descripcion": "BANCO GALICIA"
+      },
+      {
+        "banco_id": 77,
+        "banco_descripcion": "BANCO GALICIA"
+      },
+      {
+        "banco_id": 301,
+        "banco_descripcion": "BANCO GALICIA"
+      },
+      {
+        "banco_id": 2,
+        "banco_descripcion": "BANCO GALICIA (USHUAIA)"
+      },
+      {
+        "banco_id": 44,
+        "banco_descripcion": "BANCO HIPOTECARIO"
+      },
+      {
+        "banco_id": 322,
+        "banco_descripcion": "BANCO INDUSTRIAL DE AZUL"
+      },
+      {
+        "banco_id": 259,
+        "banco_descripcion": "BANCO ITAU"
+      },
+      {
+        "banco_id": 305,
+        "banco_descripcion": "BANCO JULIO S.A."
+      },
+      {
+        "banco_id": 309,
+        "banco_descripcion": "BANCO LA RIOJA"
+      },
+      {
+        "banco_id": 341,
+        "banco_descripcion": "BANCO MASVENTAS S.A."
+      },
+      {
+        "banco_id": 65,
+        "banco_descripcion": "BANCO MUNICIPAL DE ROSARIO"
+      },
+      {
+        "banco_id": 34,
+        "banco_descripcion": "BANCO PATAGONIA"
+      },
+      {
+        "banco_id": 79,
+        "banco_descripcion": "BANCO REGIONAL DE CUYO"
+      },
+      {
+        "banco_id": 72,
+        "banco_descripcion": "BANCO RIO S.A."
+      },
+      {
+        "banco_id": 247,
+        "banco_descripcion": "BANCO ROELA S.A."
+      },
+      {
+        "banco_id": 4,
+        "banco_descripcion": "BANCO SAN JUAN"
+      },
+      {
+        "banco_id": 46,
+        "banco_descripcion": "BANCO SAN JUAN"
+      },
+      {
+        "banco_id": 26,
+        "banco_descripcion": "BANCO SANTANDER RIO"
+      },
+      {
+        "banco_id": 321,
+        "banco_descripcion": "BANCO SANTIAGO DEL ESTERO"
+      },
+      {
+        "banco_id": 27,
+        "banco_descripcion": "BANCO SOCIETE GENERALE"
+      },
+      {
+        "banco_id": 60,
+        "banco_descripcion": "BANDA DEL RIO SALI"
+      },
+      {
+        "banco_id": 17,
+        "banco_descripcion": "BBV BANCO FRANCES S.A."
+      },
+      {
+        "banco_id": 665,
+        "banco_descripcion": "BCO PCIA BS AS SUC CNEL CHARLO"
+      },
+      {
+        "banco_id": 14,
+        "banco_descripcion": "BCO. PROV. DE BUENOS AIRES"
+      },
+      {
+        "banco_id": 388,
+        "banco_descripcion": "BISEL GRUPO MACRO"
+      },
+      {
+        "banco_id": 314,
+        "banco_descripcion": "BISEL S.A."
+      },
+      {
+        "banco_id": 16,
+        "banco_descripcion": "CITIBANK N.A."
+      },
+      {
+        "banco_id": 406,
+        "banco_descripcion": "COMPANIA FINANCIERA METROPOLIS"
+      },
+      {
+        "banco_id": 413,
+        "banco_descripcion": "COMPANIA FINANCIERA MONTEMAR"
+      },
+      {
+        "banco_id": 191,
+        "banco_descripcion": "CREDICOOP COOP. LTDA."
+      },
+      {
+        "banco_id": 15,
+        "banco_descripcion": "DE BOSTON"
+      },
+      {
+        "banco_id": 20,
+        "banco_descripcion": "DE LA PROVINCIA DE CORDOBA"
+      },
+      {
+        "banco_id": 33,
+        "banco_descripcion": "DEL CHUBUT SA"
+      },
+      {
+        "banco_id": 83,
+        "banco_descripcion": "DEL CHUBUT SA"
+      },
+      {
+        "banco_id": 255,
+        "banco_descripcion": "DEL SUQUIA S.A."
+      },
+      {
+        "banco_id": 150,
+        "banco_descripcion": "HSBC"
+      },
+      {
+        "banco_id": 300,
+        "banco_descripcion": "INVERSION Y COMERCIO EXTERIOR"
+      },
+      {
+        "banco_id": 285,
+        "banco_descripcion": "MACROBAND SUD"
+      },
+      {
+        "banco_id": 254,
+        "banco_descripcion": "MARIVA S.A."
+      },
+      {
+        "banco_id": 38,
+        "banco_descripcion": "NUEVO BANCO BERSA"
+      },
+      {
+        "banco_id": 183,
+        "banco_descripcion": "NUEVO BANCO DE ENTRE RIOS"
+      },
+      {
+        "banco_id": 330,
+        "banco_descripcion": "NUEVO BANCO DE SANTA FE S.A."
+      },
+      {
+        "banco_id": 311,
+        "banco_descripcion": "NUEVO BANCO DEL CHACO"
+      },
+      {
+        "banco_id": 387,
+        "banco_descripcion": "NUEVO BANCO DEL SUQUIA"
+      },
+      {
+        "banco_id": 45,
+        "banco_descripcion": "NUEVO BANCO SAN JUAN"
+      },
+      {
+        "banco_id": 386,
+        "banco_descripcion": "NUEVO BCO. ENTRE RIOS S.A."
+      },
+      {
+        "banco_id": 97,
+        "banco_descripcion": "PCIA. NEUQUEN"
+      },
+      {
+        "banco_id": 29,
+        "banco_descripcion": "SUCURSAL DE LA CIUDAD DE BS.AS"
+      },
+      {
+        "banco_id": 297,
+        "banco_descripcion": "SUPER VILLE"
+      },
+      {
+        "banco_id": 0,
+        "banco_descripcion": "TIERRA DEL FUEGO"
+      }
+    ]
+  },
+  "errorCode": 0,
+  "message": null
+}

@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:background="@color/colorBackground">
+
+        <ScrollView
+            android:id="@+id/container"
+            style="@style/ScrollAppearence"
+            android:layout_above="@+id/buttons_box">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+                <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/card_view_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    card_view:cardElevation="2dp"
+                    card_view:cardPreventCornerOverlap="false"
+                    card_view:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/activity_vertical_margin"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/fullname_wrapper"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/edit_profile"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                                android:tint="@color/colorPrimary"
+                                app:srcCompat="@drawable/ic_edit" />
+
+                            <ImageView
+                                android:id="@+id/imageView0"
+                                style="@style/detail_icon"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                app:srcCompat="@drawable/ic_person" />
+
+                            <android.support.design.widget.TextInputLayout
+                                style="@style/TextAppearence.TextInputLayout"
+                                android:layout_marginRight="@dimen/activity_horizontal_half_margin"
+                                android:layout_marginTop="0dp"
+                                android:layout_toLeftOf="@+id/edit_profile"
+                                android:layout_toRightOf="@+id/imageView0">
+
+                                <EditText
+                                    android:id="@+id/fullname_input"
+                                    style="@style/TextAppearence.EditText"
+                                    android:background="@null"
+                                    android:enabled="false"
+                                    android:focusable="false"
+                                    android:hint="@string/add_contact_full_name"
+                                    android:paddingTop="4dp" />
+
+                            </android.support.design.widget.TextInputLayout>
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/dni_wrapper"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/imageView1"
+                                style="@style/detail_icon"
+                                app:srcCompat="@drawable/ic_fingerprint" />
+
+                            <android.support.design.widget.TextInputLayout style="@style/TextAppearence.TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/dni_input"
+                                    style="@style/TextAppearence.EditText"
+                                    android:background="@null"
+                                    android:enabled="false"
+                                    android:focusable="false"
+                                    android:hint="@string/add_contact_dni"
+                                    android:inputType="number"
+                                    android:paddingTop="4dp" />
+
+                            </android.support.design.widget.TextInputLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/birth_day_wrapper"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/imageView2"
+                                style="@style/detail_icon"
+                                app:srcCompat="@drawable/ic_event" />
+
+                            <android.support.design.widget.TextInputLayout style="@style/TextAppearence.TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/birthday_input"
+                                    style="@style/TextAppearence.EditText"
+                                    android:background="@null"
+                                    android:enabled="false"
+                                    android:focusable="false"
+                                    android:hint="@string/add_contact_birth_day"
+                                    android:paddingTop="4dp" />
+                            </android.support.design.widget.TextInputLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/email_wrapper"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/imageView3"
+                                style="@style/detail_icon"
+                                app:srcCompat="@drawable/ic_email" />
+
+                            <android.support.design.widget.TextInputLayout style="@style/TextAppearence.TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/email_input"
+                                    style="@style/TextAppearence.EditText"
+                                    android:background="@null"
+                                    android:enabled="false"
+                                    android:focusable="false"
+                                    android:hint="@string/add_contact_email"
+                                    android:inputType="textEmailAddress"
+                                    android:paddingTop="4dp" />
+
+                            </android.support.design.widget.TextInputLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/phone_wrapper"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/imageView4"
+                                style="@style/detail_icon"
+                                app:srcCompat="@drawable/ic_phone" />
+
+                            <android.support.design.widget.TextInputLayout style="@style/TextAppearence.TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/phone_input"
+                                    style="@style/TextAppearence.EditText"
+                                    android:background="@null"
+                                    android:enabled="false"
+                                    android:focusable="false"
+                                    android:hint="@string/add_contact_phones"
+                                    android:inputType="phone"
+                                    android:paddingTop="4dp" />
+
+                            </android.support.design.widget.TextInputLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/address_wrapper"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/imageView5"
+                                style="@style/detail_icon"
+                                app:srcCompat="@drawable/ic_location" />
+
+                            <android.support.design.widget.TextInputLayout style="@style/TextAppearence.TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/address_input"
+                                    style="@style/TextAppearence.EditText"
+                                    android:background="@null"
+                                    android:enabled="false"
+                                    android:focusable="false"
+                                    android:hint="@string/add_contact_address"
+                                    android:paddingTop="4dp" />
+
+                            </android.support.design.widget.TextInputLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/zone_code_wrapper"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/imageView6"
+                                style="@style/detail_icon"
+                                app:srcCompat="@drawable/ic_location" />
+
+                            <android.support.design.widget.TextInputLayout style="@style/TextAppearence.TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/zone_input"
+                                    style="@style/TextAppearence.EditText"
+                                    android:background="@null"
+                                    android:enabled="false"
+                                    android:focusable="false"
+                                    android:hint="@string/add_contact_zone"
+                                    android:inputType="number"
+                                    android:paddingTop="4dp" />
+
+                            </android.support.design.widget.TextInputLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+
+                <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/schedule_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/card_view_profile"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    card_view:cardElevation="2dp"
+                    card_view:cardPreventCornerOverlap="false"
+                    card_view:cardUseCompatPadding="true">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/activity_horizontal_margin">
+
+                        <ImageView
+                            android:id="@+id/imageView8"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:tint="@color/colorPrimary"
+                            app:srcCompat="@drawable/ic_event_scheduled" />
+
+                        <ImageView
+                            android:id="@+id/edit_event"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:tint="@color/colorPrimary"
+                            app:srcCompat="@drawable/ic_edit" />
+
+                        <TextView
+                            android:id="@+id/appointment_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                            android:layout_toEndOf="@+id/imageView8"
+                            android:layout_toRightOf="@+id/imageView8"
+                            android:text="Reunión:"
+                            android:textColor="@color/colorPrimary" />
+
+                        <TextView
+                            android:id="@+id/appointment_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/appointment_title"
+                            android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                            android:layout_marginTop="4dp"
+                            android:layout_toEndOf="@+id/imageView8"
+                            android:layout_toRightOf="@+id/imageView8"
+                            android:text="14:00 2/3/2017" />
+
+                        <TextView
+                            android:id="@+id/appointment_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/appointment_date"
+                            android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                            android:layout_marginTop="4dp"
+                            android:layout_toEndOf="@+id/imageView8"
+                            android:layout_toRightOf="@+id/imageView8"
+                            android:text="Directorio 98" />
+
+                        <TextView
+                            android:id="@+id/appointment_notes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/appointment_address"
+                            android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                            android:layout_marginTop="4dp"
+                            android:layout_toEndOf="@+id/imageView8"
+                            android:layout_toRightOf="@+id/imageView8"
+                            android:text="Loreom ipsum adfsdf sdfsdf ssdfsdfsdf sfsdfsdfsd" />
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/quote_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/schedule_detail"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:visibility="gone"
+                    card_view:cardElevation="2dp"
+                    card_view:cardPreventCornerOverlap="false"
+                    card_view:cardUseCompatPadding="true">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="@dimen/activity_horizontal_margin"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:id="@+id/imageView10"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:tint="@color/colorPrimary"
+                            app:srcCompat="@drawable/ic_quoted" />
+
+                        <TextView
+                            android:id="@+id/quote_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                            android:layout_toEndOf="@+id/imageView10"
+                            android:layout_toRightOf="@+id/imageView10"
+                            android:text="@string/quote_plan_title"
+                            android:textColor="@color/colorPrimary" />
+
+                        <TextView
+                            android:id="@+id/quote_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/quote_title"
+                            android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                            android:layout_marginTop="4dp"
+                            android:layout_toEndOf="@+id/imageView10"
+                            android:layout_toRightOf="@+id/imageView10"
+                            android:text="14:00 2/3/2017" />
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/schedule_add"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/quote_card"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    card_view:cardElevation="2dp"
+                    card_view:cardPreventCornerOverlap="false"
+                    card_view:cardUseCompatPadding="true">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="@dimen/activity_horizontal_margin"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:id="@+id/imageView9"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:tint="@color/colorPrimary"
+                            app:srcCompat="@drawable/calendar_plus" />
+
+                        <TextView
+                            android:id="@+id/add_event"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                            android:layout_toEndOf="@+id/imageView9"
+                            android:layout_toRightOf="@+id/imageView9"
+                            android:text="@string/add_event"
+                            android:textColor="@color/colorPrimary" />
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/buttons_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorLightGrey">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <LinearLayout
+                android:id="@+id/close_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_background_grey"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/close_img"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_footer_close" />
+
+                <TextView
+                    android:id="@+id/close_txt"
+                    style="@style/DetailFooter"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:text="@string/button_close_case" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/quote_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_background_grey"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/quote_img"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_footer_quote" />
+
+                <TextView
+                    android:id="@+id/quote_txt"
+                    style="@style/DetailFooter"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:text="@string/button_quote" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/load_data_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_background_grey"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_footer_load_data" />
+
+                <TextView
+                    style="@style/DetailFooter"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:text="@string/button_confirm_data" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/subte_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_background_grey"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_subte" />
+
+                <TextView
+                    style="@style/DetailFooter"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:text="@string/subte" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="visible" />
+
+</RelativeLayout>
+
+
+

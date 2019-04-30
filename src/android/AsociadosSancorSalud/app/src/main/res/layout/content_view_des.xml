@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_list_height_50"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorLightGrey">
+
+      <LinearLayout
+          android:id="@+id/des_auditoria_button"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:layout_alignParentRight="true"
+          android:gravity="center_vertical"
+          android:visibility="gone"
+          android:orientation="horizontal">
+
+          <TextView
+              android:id="@+id/des_auditoria_title"
+              android:layout_width="wrap_content"
+              android:layout_height="match_parent"
+              android:gravity="center_vertical"
+              android:text="@string/des_auditoria_action"
+              android:textColor="@color/colorDarkGrey"
+              android:textSize="13sp" />
+
+          <ImageView
+              android:id="@+id/des_next_icon"
+              android:layout_width="24dp"
+              android:layout_height="24dp"
+              android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+              android:layout_marginRight="@dimen/activity_horizontal_margin"
+              android:src="@drawable/ic_right"
+              android:tint="@color/colorDarkGrey" />
+      </LinearLayout>
+
+
+      <LinearLayout
+          android:id="@+id/des_button"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:layout_alignParentRight="true"
+          android:gravity="center_vertical"
+          android:visibility="visible"
+          android:orientation="horizontal">
+
+          <TextView
+              android:id="@+id/des_button_title"
+              android:layout_width="wrap_content"
+              android:layout_height="match_parent"
+              android:gravity="center_vertical"
+              android:text="@string/des_finish"
+              android:textColor="@color/colorDarkGrey"
+              android:textSize="13sp" />
+
+          <ImageView
+              android:id="@+id/next_icon"
+              android:layout_width="24dp"
+              android:layout_height="24dp"
+              android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+              android:layout_marginRight="@dimen/activity_horizontal_margin"
+              android:src="@drawable/ic_right"
+              android:tint="@color/colorDarkGrey" />
+      </LinearLayout>
+
+  </RelativeLayout>
+
+  <ScrollView
+      android:id="@+id/scroll"
+      style="@style/ScrollAppearence"
+      android:layout_above="@+id/footer"
+      android:layout_marginTop="@dimen/header_list_height_50">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="@dimen/activity_horizontal_margin"
+          android:layout_marginRight="@dimen/activity_horizontal_margin"
+          android:orientation="vertical">
+
+          <TextView
+              android:id="@+id/imc_title"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/activity_vertical_margin"
+              android:text="@string/des_imc_title"
+              android:textColor="@color/colorPrimary" />
+
+
+          <android.support.v7.widget.RecyclerView
+              android:id="@+id/recycler_view"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="@dimen/activity_vertical_half_margin"
+              android:layout_marginTop="@dimen/activity_vertical_half_margin" />
+
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/activity_vertical_margin"
+              android:orientation="horizontal">
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="match_parent"
+                  android:gravity="center_vertical"
+                  android:text="@string/des_pp"
+                  android:textColor="@color/colorBlack" />
+
+              <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:id="@+id/des_pp"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                  android:gravity="center"
+                  android:orientation="horizontal"
+                  android:padding="@dimen/activity_horizontal_half_margin">
+
+                  <RadioButton
+                      android:id="@+id/des_pp_yes_button"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginRight="@dimen/activity_horizontal_margin"
+                      android:checked="false"
+                      android:text="@string/option_yes"
+                      android:textColor="@color/colorBlack" />
+
+                  <RadioButton
+                      android:id="@+id/des_pp_no_button"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:checked="false"
+                      android:text="@string/option_no"
+                      android:textColor="@color/colorBlack" />
+              </RadioGroup>
+
+          </LinearLayout>
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/activity_vertical_margin"
+              android:orientation="horizontal">
+
+              <ImageView
+                  android:id="@+id/des_notes_img"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentLeft="true"
+                  android:layout_centerVertical="true"
+                  android:layout_marginTop="@dimen/activity_vertical_margin"
+                  app:srcCompat="@drawable/ic_menu_person" />
+
+
+              <android.support.design.widget.TextInputLayout
+                  android:id="@+id/des_notes_wrapper"
+                  style="@style/TextAppearence.TextInputLayout"
+                  android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                  android:layout_marginRight="@dimen/activity_horizontal_half_margin">
+
+                  <EditText
+                      android:id="@+id/des_notes_input"
+                      style="@style/TextAppearence.TextIMC"
+                      android:hint="@string/des_general_notes" />
+              </android.support.design.widget.TextInputLayout>
+
+          </LinearLayout>
+
+
+            <!--DES FILES  -->
+            <RelativeLayout
+                android:id="@+id/des_file_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_double_margin">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/des_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/des_recycler_view"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                    <ImageView
+                        android:id="@+id/des_attach_img"
+                        style="@style/attach_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:src="@drawable/ic_attach" />
+
+                    <ImageView
+                        android:id="@+id/des_attach_file"
+                        style="@style/attach_img"
+                        android:layout_alignTop="@+id/des_attach_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/des_attach_img"
+                        android:src="@drawable/ic_file" />
+
+                    <Button
+                        android:id="@+id/des_add_button"
+                        style="@style/attach_button"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/des_attach_file"
+                        android:text="@string/des_add_des_file" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/des_request_number_wrapper"
+                style="@style/TextAppearence.TextInputLayout"
+                android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_half_margin">
+
+                <EditText
+                    android:id="@+id/des_request_number_input"
+                    style="@style/TextAppearence.TextIMC"
+                    android:inputType="number"
+                    android:hint="@string/des_number" />
+            </android.support.design.widget.TextInputLayout>
+
+          <Button
+              android:id="@+id/des_num_verif_button"
+              style="@style/ButtonAppearence"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/activity_vertical_margin"
+              android:background="@drawable/button_background_orange"
+              android:text="@string/des_verify_number"
+              android:textSize="@dimen/app_button_txt_size" />
+
+            <Button
+                android:id="@+id/barcode_button"
+                style="@style/ButtonAppearence"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@drawable/button_background_orange"
+                android:text="@string/validate_code"
+                android:textSize="@dimen/app_button_txt_size" />
+
+
+          <!-- HEALTH CERT FILES -->
+          <TextView
+              android:id="@+id/healthCert_title"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/activity_vertical_margin"
+              android:text="@string/des_healthCert_info"
+              android:textColor="@color/colorAccent" />
+
+          <RelativeLayout
+              android:id="@+id/healthCert_file_box"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/activity_vertical_double_margin">
+
+              <android.support.v7.widget.RecyclerView
+                  android:id="@+id/healthCert_recycler_view"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content" />
+
+              <RelativeLayout
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/healthCert_recycler_view"
+                  android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                  <ImageView
+                      android:id="@+id/healthCert_attach_img"
+                      style="@style/attach_img"
+                      android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                      android:src="@drawable/ic_attach" />
+
+                  <ImageView
+                      android:id="@+id/healthCert_attach_file"
+                      style="@style/attach_img"
+                      android:layout_alignTop="@+id/healthCert_attach_img"
+                      android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                      android:layout_toRightOf="@+id/healthCert_attach_img"
+                      android:src="@drawable/ic_file" />
+
+                  <Button
+                      android:id="@+id/healthCert_add_button"
+                      style="@style/attach_button"
+                      android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                      android:layout_toRightOf="@+id/healthCert_attach_file"
+                      android:text="@string/des_add_healthCert_file" />
+
+              </RelativeLayout>
+
+          </RelativeLayout>
+
+            <!--ATTACHS files  -->
+            <TextView
+                android:id="@+id/attach_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="@string/des_aux_info"
+                android:textColor="@color/colorAccent" />
+
+            <RelativeLayout
+                android:id="@+id/attach_file_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                android:layout_marginTop="@dimen/activity_vertical_double_margin">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/attachs_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/attachs_recycler_view"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin">
+
+                    <ImageView
+                        android:id="@+id/aux_attach_img"
+                        style="@style/attach_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:src="@drawable/ic_attach" />
+
+                    <ImageView
+                        android:id="@+id/aux_attach_file"
+                        style="@style/attach_img"
+                        android:layout_alignTop="@+id/aux_attach_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/aux_attach_img"
+                        android:src="@drawable/ic_file" />
+
+                    <Button
+                        android:id="@+id/attach_add_button"
+                        style="@style/attach_button"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/aux_attach_file"
+                        android:text="@string/des_add_attach_file" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <!--ANEXO FILES  -->
+            <TextView
+                android:id="@+id/anexo_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_double_margin"
+                android:text="@string/des_anexo_info"
+                android:textColor="@color/colorAccent" />
+
+            <RelativeLayout
+                android:id="@+id/anexo_file_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_double_margin"
+                android:layout_marginTop="@dimen/activity_vertical_double_margin">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/anexo_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/anexo_recycler_view"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                    <ImageView
+                        android:id="@+id/anexo_attach_img"
+                        style="@style/attach_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:src="@drawable/ic_attach" />
+
+                    <ImageView
+                        android:id="@+id/anexo_attach_file"
+                        style="@style/attach_img"
+                        android:layout_alignTop="@+id/anexo_attach_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/anexo_attach_img"
+                        android:src="@drawable/ic_file" />
+
+                    <Button
+                        android:id="@+id/anexo_add_button"
+                        style="@style/attach_button"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/anexo_attach_file"
+                        android:text="@string/des_add_anexo_file" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

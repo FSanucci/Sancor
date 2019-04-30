@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sancor Salud</title>
+  <!-- Material Design fonts -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- Bootstrap Material Design -->
+  <link rel="stylesheet" type="text/css" href="../../assets/css/bootstrap-material-design.css">
+  <link rel="stylesheet" type="text/css" href="../../assets/css/ripples.min.css">
+  <link rel="stylesheet" type="text/css" href="../../assets/css/styles.css">
+</head>
+
+<body>
+  <header class="header">
+    <nav class="menu">
+      <div class="head">
+        <img src="../../assets/images/logo.png" alt="">
+        <h3 class="name">Inés Duarte</h3>
+      </div>
+      <ul>
+        <li class="active"><a href="cargar-asociado.html"><i class="material-icons">group</i>Listado de promotores</a></li>
+        <li><a href="#"><i class="material-icons">exit_to_app</i>Salir</a></li>
+      </ul>
+    </nav>
+    <button type="button" name="button" class="btn btn-menu btn-nav"><i class="material-icons">menu</i> <h3>Promotores</h3></button>
+    <button type="button" name="button" class="btn btn-menu btn-search"><i class="material-icons">arrow_back</i> <h3>Volver</h3></button>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <form action="#" class="search">
+            <button type="submit" name="button" class="btn hidden-xs"><i class="material-icons">search</i></button>
+            <input type="text" placeholder="Buscar" class="hidden-xs">
+            <input type="text" placeholder="Buscar" class="smart visible-xs">
+          </form>
+          <!-- <div class="filtros dropdown">
+            <button type="button" name="button" class="btn btn-filter dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="material-icons">more_vert</i></button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><a id="sin-agendar" href="#"><i class="material-icons">event_note</i>Sin agendar</a></li>
+              <li><a id="entrevistados" href="#"><i class="material-icons">assignment_turned_in</i>Entrevistados</a></li>
+              <li><a id="cotizados" href="#"><i class="material-icons">monetization_on</i>Cotizados</a></li>
+            </ul>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <button type="button" name="button" class="btn smart-search visible-xs"><i class="material-icons">search</i></button>
+    <div class="user hidden-xs">
+      <i class="material-icons">account_circle</i>
+      <div class="name">Inés Duarte</div>
+    </div>
+  </header>
+
+  <div class="bg-menu"></div>
+
+  <section class="content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="filtro">
+            <div class="sin-agendar">
+              <i class="material-icons">event_note</i>Sin agendar
+              <div class="cerrar">Limpiar filtro
+                <i class="material-icons">close</i>
+              </div>
+            </div>
+            <div class="entrevistados">
+              <i class="material-icons">assignment_turned_in</i>Entrevistados
+              <div class="cerrar">Limpiar filtro
+                <i class="material-icons">close</i>
+              </div>
+            </div>
+            <div class="cotizados">
+              <i class="material-icons">monetization_on</i>Cotizados
+              <div class="cerrar">Limpiar filtro
+                <i class="material-icons">close</i>
+              </div>
+            </div>
+          </div>
+
+          <div class="mensaje-promotor">Seleccioná los promotores y si quedan o no habilitados para realizar la cotización manual</div>
+          <div class="item-list promotores">
+            <article class="item" data-filter="sin-agendar">
+              <div class="checkbox planes">
+                <div class="form-group mt0">
+                  <input type="checkbox" class="check" name="promotor" value="promotor" id="promotor-1">
+                  <label for="promotor-1"></label>
+                </div>
+              </div>
+              <div class="item-text">
+                <div class="nombre">Reynaldo Sietecase</div>
+                <div class="datos">34 años - Wilde</div>
+              </div>
+              <div class="item-icons">
+                <p>Cotiza manualmente</p>
+                <button type="button" class="btn-cal"><i class="material-icons">mode_edit</i></button>
+              </div>
+            </article>
+            <article class="item" data-filter="sin-agendar">
+              <div class="checkbox planes">
+                <div class="form-group mt0">
+                  <input type="checkbox" class="check" name="promotor" value="promotor" id="promotor-2">
+                  <label for="promotor-2"></label>
+                </div>
+              </div>
+              <div class="item-text">
+                <div class="nombre">Victor Hugo Miralles</div>
+                <div class="datos">64 años - Wilde</div>
+              </div>
+              <div class="item-icons">
+                <p>Cotiza manualmente</p>
+                <button type="button" class="btn-cal"><i class="material-icons">mode_edit</i></button>
+              </div>
+            </article>
+            <article class="item" data-filter="sin-agendar">
+              <div class="checkbox planes">
+                <div class="form-group mt0">
+                  <input type="checkbox" class="check" name="promotor" value="promotor" id="promotor-3">
+                  <label for="promotor-3"></label>
+                </div>
+              </div>
+              <div class="item-text">
+                <div class="nombre">Jorge Ferraresi</div>
+                <div class="datos">52 años - Wilde</div>
+              </div>
+              <div class="item-icons">
+                <p>Cotiza manualmente</p>
+                <button type="button" class="btn-cal"><i class="material-icons">mode_edit</i></button>
+              </div>
+            </article>
+            <article class="item" data-filter="sin-agendar">
+              <div class="checkbox planes">
+                <div class="form-group mt0">
+                  <input type="checkbox" class="check" name="promotor" value="promotor" id="promotor-4">
+                  <label for="promotor-4"></label>
+                </div>
+              </div>
+              <div class="item-text">
+                <div class="nombre">Diana Contil</div>
+                <div class="datos">59 años - Wilde</div>
+              </div>
+              <div class="item-icons">
+                <p>Cotiza manualmente</p>
+                <button type="button" class="btn-cal"><i class="material-icons">mode_edit</i></button>
+              </div>
+            </article>
+
+          </div>
+          <button type="button" class="btn" id="promotor-habilitar">Habilitar</button>
+          <button type="button" class="btn" id="promotor-deshabilitar">Deshabilitar</button>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="../../assets/js/material.js"></script>
+  <script src="../../assets/js/ripples.js"></script>
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/promotor-admin.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,312 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ar.com.sancorsalud.asociados.fragments.affiliation.AffiliationTitularDataFragment">
+
+    <ScrollView
+        android:id="@+id/scroll"
+        style="@style/ScrollAppearence"
+        android:layout_above="@+id/add_button">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <!-- SUF  TITULAR-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="@string/affiliation_suf_titular"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/titular_qrcode_button"
+                style="@style/ButtonAppearence"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@drawable/button_background_orange"
+                android:text="@string/add_contact_dni_qrcode"
+                android:textSize="@dimen/app_button_txt_size" />
+
+            <TextView
+                android:id="@+id/conyuge_button"
+                style="@style/ButtonAppearence"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@color/colorAccent"
+                android:text="@string/add_conyuge_data" />
+
+
+            <LinearLayout
+                android:id="@+id/titular_document_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/titular_dni_type_wrapper"
+                        style="@style/TextAppearence.TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/titular_dni_type_input"
+                            style="@style/TextAppearence.EditText"
+                            android:focusable="false"
+                            android:hint="@string/affiliation_doc_type" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/titular_dni_type_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_alignParentTop="true">
+
+                        <ImageView
+                            style="@style/arrowSpinner"
+                            app:srcCompat="@drawable/ic_expand" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/titular_dni_number_wrapper"
+                    style="@style/TextAppearence.TextInputLayout"
+                    android:layout_marginRight="@dimen/activity_horizontal_half_margin"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:id="@+id/titular_dni_number_input"
+                        style="@style/TextAppearence.EditText"
+                        android:hint="@string/affiliation_doc_number"
+                        android:inputType="number"
+                        android:maxLength="8" />
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/titular_last_name_wrapper"
+                style="@style/TextAppearence.TextInputLayout">
+
+                <EditText
+                    android:id="@+id/titular_last_name_input"
+                    style="@style/TextAppearence.EditText"
+                    android:hint="@string/affiliation_last_name" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/titular_first_name_wrapper"
+                style="@style/TextAppearence.TextInputLayout">
+
+                <EditText
+                    android:id="@+id/titular_first_name_input"
+                    style="@style/TextAppearence.EditText"
+                    android:hint="@string/affiliation_first_name" />
+            </android.support.design.widget.TextInputLayout>
+
+            <RelativeLayout
+                android:id="@+id/titular_birthDay_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/titular_birthDay_wrapper"
+                    style="@style/TextAppearence.TextInputLayout"
+                    android:layout_marginTop="8dp">
+
+                    <EditText
+                        android:id="@+id/titular_birthDay_input"
+                        style="@style/TextAppearence.EditText"
+                        android:focusable="false"
+                        android:hint="@string/affiliation_birth_day"
+                        android:maxLength="100" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <RelativeLayout
+                    android:id="@+id/titular_birthDay_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+
+            <!-- SUF  CONYUGE-->
+            <RelativeLayout
+                android:id="@+id/suf_conyuge_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/conyuge_qrcode_button"
+                        style="@style/ButtonAppearence"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:background="@drawable/button_background_orange"
+                        android:text="@string/add_contact_dni_qrcode"
+                        android:textSize="@dimen/app_button_txt_size" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:text="@string/affiliation_suf_conyuge"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="14sp" />
+
+
+                    <TextView
+                        android:id="@+id/titular_button"
+                        style="@style/ButtonAppearence"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:background="@color/colorAccent"
+                        android:text="@string/add_titular_data" />
+
+
+                    <LinearLayout
+                        android:id="@+id/conyuge_document_row"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:id="@+id/conyuge_dni_type_wrapper"
+                                style="@style/TextAppearence.TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/conyuge_dni_type_input"
+                                    style="@style/TextAppearence.EditText"
+                                    android:focusable="false"
+                                    android:hint="@string/affiliation_doc_type" />
+                            </android.support.design.widget.TextInputLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/conyuge_dni_type_button"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_alignParentTop="true">
+
+                                <ImageView
+                                    style="@style/arrowSpinner"
+                                    app:srcCompat="@drawable/ic_expand" />
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/conyuge_dni_number_wrapper"
+                            style="@style/TextAppearence.TextInputLayout"
+                            android:layout_marginRight="@dimen/activity_horizontal_half_margin"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/conyuge_dni_number_input"
+                                style="@style/TextAppearence.EditText"
+                                android:hint="@string/affiliation_doc_number"
+                                android:inputType="number"
+                                android:maxLength="8" />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/conyuge_last_name_wrapper"
+                        style="@style/TextAppearence.TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/conyuge_last_name_input"
+                            style="@style/TextAppearence.EditText"
+                            android:hint="@string/affiliation_last_name" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/conyuge_first_name_wrapper"
+                        style="@style/TextAppearence.TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/conyuge_first_name_input"
+                            style="@style/TextAppearence.EditText"
+                            android:hint="@string/affiliation_first_name" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/conyuge_birthDay_box"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/conyuge_birthDay_wrapper"
+                            style="@style/TextAppearence.TextInputLayout"
+                            android:layout_marginTop="8dp">
+
+                            <EditText
+                                android:id="@+id/conyuge_birthDay_input"
+                                style="@style/TextAppearence.EditText"
+                                android:focusable="false"
+                                android:hint="@string/affiliation_birth_day"
+                                android:maxLength="100" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/conyuge_birthDay_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+</FrameLayout>

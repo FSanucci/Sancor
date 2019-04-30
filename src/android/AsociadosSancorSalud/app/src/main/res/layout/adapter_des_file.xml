@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_remove"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:id="@+id/remove_button" />
+
+    <RelativeLayout
+        android:id="@+id/attach_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/remove_button">
+
+    <ImageView
+        android:id="@+id/attach_img"
+        style="@style/attach_img"
+        android:layout_marginTop="@dimen/activity_vertical_half_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+        android:src="@drawable/ic_attach" />
+
+     <TextView
+            android:id="@+id/attach_txt"
+            style="@style/attach_txt"
+            android:text="file.png"
+            android:layout_toRightOf="@+id/attach_img"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/item_separator"
+        style="@style/ListItemSeparator"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_below="@+id/attach_box" />
+
+</RelativeLayout>

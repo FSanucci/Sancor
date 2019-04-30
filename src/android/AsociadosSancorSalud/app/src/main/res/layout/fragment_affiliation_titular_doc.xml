@@ -1,0 +1,389 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ar.com.sancorsalud.asociados.fragments.affiliation.AffiliationTitularDataFragment">
+
+    <ScrollView
+        android:id="@+id/scroll"
+        style="@style/ScrollAppearence">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/doc_titular_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="@string/affiliation_doc_title"
+                android:textColor="@color/colorAccent" />
+
+            <RelativeLayout
+                android:id="@+id/dni_front_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                android:layout_marginTop="@dimen/activity_vertical_double_margin">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/dni_front_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dni_front_recycler_view"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                    <ImageView
+                        android:id="@+id/dni_front_img"
+                        style="@style/attach_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:src="@drawable/ic_attach" />
+
+                    <ImageView
+                        android:id="@+id/dni_front_file"
+                        style="@style/attach_img"
+                        android:layout_alignTop="@+id/dni_front_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/dni_front_img"
+                        android:src="@drawable/ic_file" />
+
+                    <Button
+                        android:id="@+id/dni_front_button"
+                        style="@style/attach_button"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/dni_front_file"
+                        android:text="@string/affiliation_dni_front" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/dni_back_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                android:layout_marginTop="@dimen/activity_vertical_double_margin">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/dni_back_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dni_back_recycler_view"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                    <ImageView
+                        android:id="@+id/dni_back_img"
+                        style="@style/attach_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:src="@drawable/ic_attach" />
+
+                    <ImageView
+                        android:id="@+id/dni_back_file"
+                        style="@style/attach_img"
+                        android:layout_alignTop="@+id/dni_back_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/dni_back_img"
+                        android:src="@drawable/ic_file" />
+
+                    <Button
+                        android:id="@+id/dni_back_button"
+                        style="@style/attach_button"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/dni_back_file"
+                        android:text="@string/affiliation_dni_back" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/affiliation_cuil_question"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp" />
+
+                <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/cuil_dorso_option"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/activity_horizontal_half_margin">
+
+                    <RadioButton
+                        android:id="@+id/yes_cuil_dorso_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:checked="false"
+                        android:text="@string/option_yes"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp" />
+
+                    <RadioButton
+                        android:id="@+id/no_cuil_dorso_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="@string/option_no"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/cuil_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                android:layout_marginTop="@dimen/activity_vertical_double_margin">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/cuil_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cuil_recycler_view"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                    <ImageView
+                        android:id="@+id/cuil_img"
+                        style="@style/attach_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:src="@drawable/ic_attach" />
+
+                    <ImageView
+                        android:id="@+id/cuil_file"
+                        style="@style/attach_img"
+                        android:layout_alignTop="@+id/cuil_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/cuil_img"
+                        android:src="@drawable/ic_file" />
+
+                    <Button
+                        android:id="@+id/cuil_button"
+                        style="@style/attach_button"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/cuil_file"
+                        android:text="@string/affiliation_cuil_constancy" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/cuil_anses_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_double_margin"
+                android:text="@string/affiliation_anses_title"
+                android:textColor="@color/colorAccent" />
+
+            <RelativeLayout
+                android:id="@+id/iva_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                android:layout_marginTop="@dimen/activity_vertical_double_margin">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/iva_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iva_recycler_view"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                    <ImageView
+                        android:id="@+id/iva_img"
+                        style="@style/attach_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:src="@drawable/ic_attach" />
+
+                    <ImageView
+                        android:id="@+id/iva_file"
+                        style="@style/attach_img"
+                        android:layout_alignTop="@+id/iva_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/iva_img"
+                        android:src="@drawable/ic_file" />
+
+                    <Button
+                        android:id="@+id/iva_button"
+                        style="@style/attach_button"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/iva_file"
+                        android:text="@string/affiliation_iva_constancy" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/coverage_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                android:layout_marginTop="@dimen/activity_vertical_double_margin">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/coverage_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/coverage_recycler_view"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                    <ImageView
+                        android:id="@+id/coverage_img"
+                        style="@style/attach_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:src="@drawable/ic_attach" />
+
+                    <ImageView
+                        android:id="@+id/coverage_file"
+                        style="@style/attach_img"
+                        android:layout_alignTop="@+id/coverage_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/coverage_img"
+                        android:src="@drawable/ic_file" />
+
+                    <Button
+                        android:id="@+id/coverage_button"
+                        style="@style/attach_button"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/coverage_file"
+                        android:text="@string/affiliation_coverage_constancy" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/plan_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                android:layout_marginTop="@dimen/activity_vertical_double_margin">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/plan_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/plan_recycler_view"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                    <ImageView
+                        android:id="@+id/plan_img"
+                        style="@style/attach_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:src="@drawable/ic_attach" />
+
+                    <ImageView
+                        android:id="@+id/plan_file"
+                        style="@style/attach_img"
+                        android:layout_alignTop="@+id/plan_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/plan_img"
+                        android:src="@drawable/ic_file" />
+
+                    <Button
+                        android:id="@+id/plan_button"
+                        style="@style/attach_button"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/plan_file"
+                        android:text="@string/affiliation_plan_recognition" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/plan_form_code_wrapper"
+                style="@style/TextAppearence.TextInputLayout"
+                android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_half_margin">
+
+                <EditText
+                    android:id="@+id/plan_form_code_input"
+                    style="@style/TextAppearence.EditText"
+                    android:inputType="number"
+                    android:hint="@string/affiliation_form_code" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/barcode_button"
+                style="@style/ButtonAppearence"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@drawable/button_background_orange"
+                android:text="@string/validate_code"
+                android:textSize="@dimen/app_button_txt_size" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp"></View>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+</FrameLayout>

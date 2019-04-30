@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorBackground">
+
+
+    <ImageView
+        android:id="@+id/item_icon"
+        style="@style/ListItemIcon"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_no_checked" />
+
+    <RelativeLayout
+        android:id="@+id/item_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/item_icon">
+
+    <TextView
+        android:id="@+id/item_title"
+        style="@style/ListItemTitle"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_half_margin"
+        android:layout_toLeftOf="@+id/item_priority"
+        android:textSize="14sp"
+        android:maxLines="3"
+        android:layout_centerVertical="true"
+        android:text="Reynaldo Sietecase"
+        android:minHeight="@dimen/list_item_min_height"
+        android:gravity="center_vertical"/>
+
+    <TextView
+        android:id="@+id/item_separator"
+        style="@style/ListItemSeparator"
+        android:layout_alignLeft="@+id/item_title"
+        android:layout_below="@+id/item_title" />
+
+
+    <TextView
+        android:id="@+id/item_date"
+        style="@style/ListItemAccesoryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:text="20 sept"
+        android:layout_centerVertical="true"
+        android:textColor="@color/colorAccent" />
+
+    <ImageView
+        android:id="@+id/item_priority"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_priority"
+        android:layout_toLeftOf="@+id/item_date"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="8dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

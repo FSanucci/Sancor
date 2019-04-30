@@ -1,0 +1,1054 @@
+<resources>
+    <string name="app_name">Abacom</string>
+    <string name="share_chooser">Compartir con</string>
+    <string name="validate_code">Validar código</string>
+
+    <string name="option_ok">OK</string>
+    <string name="option_no">NO</string>
+
+    <string name="option_no_thanks_upper">NO,GRACIAS</string>
+    <string name="option_yes_upper">ACEPTAR</string>
+
+    <string name="option_yes">SI</string>
+    <string name="option_save">Guardar</string>
+    <string name="option_cancel">Cancelar</string>
+    <string name="option_accept">Aceptar</string>
+    <string name="option_confirm">Confirmar</string>
+    <string name="option_continue">Continuar</string>
+    <string name="option_validate">Validar</string>
+    <string name="option_years">años</string>
+
+    <string name="option_share">Compartir usando:</string>
+
+    <string name="response_successful">Datos actualizados con exito.</string>
+    <string name="version_number">Versión %1$s</string>
+
+    <string name="cancel_request">El usuario cancelo la acción</string>
+
+    <string name="warning_alert">Cuidado!</string>
+
+
+    <!-- Picker -->
+    <string name="ip_picker_image_source_title">Añadir imagen desde</string>
+    <string name="ip_picker_image_source_gallery_option">Galería</string>
+    <string name="ip_picker_image_source_camera_option">Cámara</string>
+    <string name="image_source_title">Seleccione una opción</string>
+
+    <!-- Errors -->
+    <string name="error_assignment_mandatory">Debes seleccionar al menos 1 potencial asociado para realizar esta operación</string>
+    <string name="error_promoter_selection_mandatory">Debes seleccionar al menos 1 promotor para realizar esta operación</string>
+    <string name="error_notif_selection_mandatory">Debes seleccionar al menos 1 notificación para realizar esta operación</string>
+
+
+    <string name="no_sd_card_msg">SD card no encontrada</string>
+    <string name="error">Error</string>
+    <string name="http_exception_msg">Error, por favor intente nuevamente.</string>
+    <string name="no_internet_title">Error de conexión.</string>
+    <string name="no_internet_msg">Compruebe su conexión a internet e intentenlo nuevamente.</string>
+    <string name="permision_error_no_write_calendar">Habilite los permisos desde los settings de la aplicación para poder usar la agenda</string>
+    <string name="permision_error_no_camara">Habilite los permisos desde los settings de la aplicación para poder usar la camara.</string>
+    <string name="permision_error_no_write_data">Habilite los permisos desde los settings de la aplicación.</string>
+
+    <string name="affil_copagos_error_title">Error de copago</string>
+    <string name="affil_copagos_error_message">No se pudo procesar el copago asociado:</string>
+
+    <string name="compress_file_error">Error al comprimir el archivo</string>
+    <string name="encode_file_error">Error al codificar el archivo</string>
+
+
+    <!-- certificates -->
+
+    <string name="error_unexpected">Error inesperado</string>
+    <string name="error_missing_certificate">No se encuentra el certificado. Debes conectate con el Administrador para obtener uno</string>
+    <string name="error_invalid_certificate">Certificado Inválido. Debes conectate con el Administrador para obtener uno válido</string>
+    <string name="error_bad_certificate_keystore">Clave de certificado invalido o archivo corrupto. Debes conectate con el Administrador para obtener uno válido</string>
+
+
+    <!-- Login -->
+    <string name="login_title">Sistema de asociados</string>
+    <string name="prompt_email">Usuario</string>
+    <string name="prompt_password">Contraseña</string>
+    <string name="action_sign_in">Ingresar</string>
+    <string name="action_sign_in_short">Ingresar</string>
+    <string name="error_invalid_email">El campo email es inválido</string>
+    <string name="error_invalid_password">Contraseña muy pequeña</string>
+    <string name="error_incorrect_password">Contraseña incorrecta</string>
+    <string name="error_field_required">Este campo es requerido</string>
+    <string name="error_login">El inicio de sesión ha fallado. Compruebe su mail y contraseña</string>
+    <string name="error_login_detail">Compruebe su mail y contraseña: </string>
+
+
+    <string name="error_login_zone">El inicio de sesión ha fallado, no se pudieron obtener las zonas</string>
+    <string name="error_invalid_role_login">Usuario con rol no válido para ingresar en la aplicación movil</string>
+
+
+    <string name="permission_rationale">El permiso de contactos es necesario para autocompletar el mail</string>
+    <string name="error_cam_permission">Debes habilitar el permiso de la Camara desde la configuración</string>
+    <string name="error_calendar_read_permission">Debes habilitar el permiso de lectura de calendario desde la configuración</string>
+    <string name="error_calendar_write_permission">Debes habilitar el permiso de escritura de calendario desde la configuración</string>
+
+    <!-- Help -->
+    <string name="help_cobertura_list">Sólo podras seleccionar como \'cobertura proveniente\' las que figuran en el listado</string>
+
+    <string name="help_aporte_os">Ingresar importe que consta en el recibo de sueldo en el item Aporte Obra Social. Sólo completar este campo si posee recibo de sueldo</string>
+    <string name="help_remuneracion_bruta">Ingresar importe de remuneracion sujeta a aportes. Puede colocar una estimada o la que figura en el recibo de sueldo</string>
+
+    <string name="help_manual_quotation">Recuerde que en este modo de cotización están deshabilitadas todas las operaciones automáticas</string>
+
+    <string name="help_os_other_option">Las siguientes obras sociales no están habilitadas para desregular:\nOs del personal de dirección, del personal judicial, de empresas, de universidades nacionales, de fuerzas armadas, seguridad, policía y servicio penitenciario/municiplales/provinciales/PAMI y jubilados de otras obras sociales</string>
+
+    <string name="help_unification_new_existent_pago">Recuerde que debe mantener la forma de pago actual de la afiliación</string>
+
+
+    <!-- Main -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_search">Buscar</string>
+    <string name="action_filter">Filtrar</string>
+    <string name="title_profile">Perfil</string>
+    <string name="action_share">Compartir</string>
+
+    <string name="menu_header">MENU</string>
+    <string name="menu_prospective_client">Asignaciones</string>
+    <string name="menu_item_add_prospective_client">Cargar potencial asociado</string>
+    <string name="menu_item_edit_prospective_client">Editar potencial asociado</string>
+    <string name="menu_salesman">Listado de promotores</string>
+    <string name="menu_contact_detail">Detalle del Contacto</string>
+    <string name="menu_quote">Cotizar</string>
+    <string name="menu_quote_adic_opt">Cotizar Adicionales optativos</string>
+
+    <string name="menu_manual_quote">Cotización Manual</string>
+    <string name="menu_affiliation">Afiliación</string>
+    <string name="menu_conyuge">Datos del Conyuge</string>
+
+
+    <string name="menu_cobranzas">Cobranza</string>
+
+    <string name="menu_assigned">Asignados</string>
+    <string name="menu_schedule">Agenda</string>
+    <string name="menu_additional">Cotizar adicionales optativos</string>
+    <string name="menu_transferencia">Cotizar transferencia de segmento</string>
+    <string name="menu_notifications">Notificaciones</string>
+    <string name="menu_add_notification">Crear notificación</string>
+
+    <string name="menu_indicator">Indicadores</string>
+    <string name="menu_logout">Salir</string>
+    <string name="log_out_confirm">Estás seguro que deseas salir?</string>
+
+    <string name="activity_notification">Notificacion</string>
+    <string name="activity_notifications_sended">Notif Enviadas</string>
+    <string name="activity_web_link">Link Web</string>
+    <string name="button_assign">ASIGNAR</string>
+    <string name="button_send">ENVIAR</string>
+    <string name="button_attach">ADJUNTAR</string>
+
+    <string name="notification_add">Crear Notificación</string>
+    <string name="notification_add_loading">Creando notificación ...</string>
+
+    <string name="notification_title">Título de la notificación</string>
+    <string name="notification_text">Texto de la notificación</string>
+    <string name="notification_promoter_selection">Seleccionar los Asesores comerciales</string>
+
+    <string name="notification_link">Link de Notificación</string>
+    <string name="notification_hight_priority">PRIORIDAD ALTA</string>
+    <string name="notification_medium_priority">PRIORIDAD MEDIA</string>
+    <string name="notification_low_priority">PRIORIDAD BAJA</string>
+    <string name="notification_remove_confirm">Estas seguro que deseas borrar la notificación ?</string>
+    <string name="notification_list_remove_confirm">Estas seguro que deseas borrar la notificaciones seleccionadas ?</string>
+
+    <string name="notification_success_removed">La notificación ha sido eliminada con éxito</string>
+    <string name="notification_remove_error">Error al eliminar la notificación</string>
+    <string name="notifications_removing_data">Eliminando notificaciones ...</string>
+    <string name="notification_success_sended">La notificación ha sido enviada con éxito</string>
+
+    <string name="notifications_sending_data">Enviando notificaciones ...</string>
+
+    <string name="notifications_all">TODAS</string>
+    <string name="notifications_all_in_zone">TODAS en %1s</string>
+    <string name="notification_zone">Zona</string>
+    <string name="notifications_priority">Prioridad</string>
+    <string name="notification_send">REENVIAR</string>
+
+    <string name="error_notifications_loading_promoters">Error al cargar la lista de promotores.Intenta nuevamente</string>
+
+    <string name="quantity_to_assign_txt_plural">Hola %1$s, tenés %2$d potenciales asociados sin asignar</string>
+    <string name="quantity_to_assign_txt_singular">Hola %1$s, tenés 1 potencial asociado sin asignar</string>
+
+    <string name="accion_assign_txt_plural">Vas a asignar %1$d potenciales asociados a:</string>
+    <string name="accion_assign_txt_singular">Vas a asignar 1 potencial asociado a:</string>
+
+    <string name="expiration_day_singular">1 día</string>
+    <string name="expiration_day_plural">%1$s días</string>
+    <string name="entity_age_zone">%1$s años  (%2$s) - %3$s</string>
+    <string name="entity_age">%1$s años (%2$s)</string>
+
+    <string name="expired_today">VENCE HOY</string>
+    <string name="expired_tomorrow">VENCE MAÑANA</string>
+    <string name="defeated">VENCIDO</string>
+    <string name="new_item">NUEVO</string>
+
+    <string name="assingment_in_process">Asignando potenciales asociados ...</string>
+    <string name="assingment_confirmation">Vas a asignar %1$s potenciales asociados a %2$s</string>
+    <string name="my_new_assigment">Hola %1$s, tenes 1 nuevo asignado a contactar.</string>
+    <string name="my_new_assigments">Hola %1$s, tenes %2$d nuevos asignados a contactar.</string>
+    <string name="no_new_assigments">Hola %1$s, no tenes nuevos asignados.</string>
+
+    <!-- Add Contact -->
+    <string name="add_contact_full_name">Nombre y Apellido</string>
+    <string name="add_contact_first_name">Nombre</string>
+    <string name="add_contact_last_name">Apellido</string>
+    <string name="add_contact_dni">DNI</string>
+    <string name="add_contact_age">Edad</string>
+    <string name="add_contact_birth_day">Fecha de Nacimiento</string>
+    <string name="add_contact_city">Localidad</string>
+    <string name="add_contact_postal_code">Código Postal</string>
+    <string name="add_contact_phone">Teléfono</string>
+    <string name="add_contact_phones">Teléfonos</string>
+    <string name="add_contact_cellphone">Celular</string>
+    <string name="add_contact_address">Calle</string>
+    <string name="add_contact_address_number">Número</string>
+    <string name="add_contact_address_floor">Piso</string>
+    <string name="add_contact_address_dpto">Departamento</string>
+    <string name="add_contact_email">Mail</string>
+    <string name="add_contact_zone">Código de Zona</string>
+    <string name="add_contact_company">Empresa</string>
+    <string name="add_contact_start_date">Fecha de inicio de servicio</string>
+
+    <!-- Add Cotizacion -->
+    <string name="field_forma_pago">Forma de pago</string>
+    <string name="field_card">Tarjeta de Crédito</string>
+    <string name="field_card_type">Tipo de tarjeta </string>
+    <string name="field_fecha_vencimiento">Fecha de vencimiento</string>
+    <string name="field_banco">Banco</string>
+    <string name="field_cobertura">Cobertura proveniente</string>
+    <string name="field_categoria">Categoría</string>
+    <string name="field_condicion_iva">Condición frente al IVA</string>
+    <string name="field_segmento">Segmento</string>
+    <string name="field_sex">Sexo</string>
+    <string name="field_docType">Tipo Documento</string>
+    <string name="field_civil_status">Estado Civil</string>
+    <string name="field_nationality">Nacionalidad</string>
+    <string name="field_address_atribute">Atributo de Domicilio</string>
+    <string name="field_address_orientation">Orientación</string>
+    <string name="field_bank">Banco</string>
+    <string name="field_copagos">Copagos</string>
+    <string name="field_account_type">Tipo de Cuenta</string>
+    <string name="field_alta_type">Tipo de Alta</string>
+
+    <string name="field_segmento_transferencia">Segmento al que se transpasa</string>
+    <string name="field_forma_ingreso">Forma de ingreso</string>
+    <string name="field_empresa">Número o nombre de empresa</string>
+    <string name="field_afinidad">Número o nombre de afinidad</string>
+    <string name="field_aporte_legal">Cálculo del aporte legal</string>
+    <string name="field_monto">Monto $</string>
+    <string name="field_aporte_so">Aporte obra social</string>
+    <string name="field_remuneracion_bruta">Remuneración bruta</string>
+    <string name="field_os">Obra social</string>
+    <string name="field_state">Estado</string>
+    <string name="field_os_desregula">Obra social por la que desregula</string>
+    <string name="field_os_desregula_date">Fecha de ingreso (dd/mm/yyyyy)</string>
+    <string name="field_otra_remu">Percibe otra\nremuneración</string>
+    <string name="field_aporta_mono">Aporta a Monotributo</string>
+    <string name="field_aporte_unificados">Unifica aportes</string>
+    <string name="field_empleada_domestica">¿Es empleada doméstica?</string>
+    <string name="field_parentesco">Parentesco</string>
+    <string name="field_dato_conyuge">Datos del %1$s:</string>
+    <string name="field_dni">DNI</string>
+    <string name="field_tipo_unificacion">Tipo de unificación</string>
+    <string name="field_yes">Si</string>
+    <string name="field_no">No</string>
+    <string name="field_familiares_cargo">Familiares a cargo</string>
+    <string name="field_select_familiares_cargo">Seleccione los familiares a cargo:</string>
+    <string name="field_aporte_group">Aportantes del grupo</string>
+    <string name="field_aporte_imp_note">IMPORTANTE\nNo incluir el aporte del cónyuge en caso que unifiquen aportes</string>
+    <string name="field_cantidad_integrantes">Integrantes por los que aporta</string>
+    <string name="field_plan">Valor del plan de salud activo</string>
+    <string name="field_members">Integrantes</string>
+    <string name="field_titular">Titular</string>
+    <string name="field_quoted">Cotizaciones</string>
+
+    <string name="field_plan_title">Plan</string>
+    <string name="field_emergency">Emergencias</string>
+    <string name="field_supra_salud">Supra salud</string>
+    <string name="field_sepelio">Subsidio y sepelio</string>
+    <string name="field_service">Servicio</string>
+    <string name="search_empresa">Buscar empresa</string>
+    <string name="search_afinidad">Buscar afinidad</string>
+    <string name="conyugue_already_exist_error">Ya exisye conyugue o concubino</string>
+
+    <string name="filed_titular_main_affilliation">Titular es afiliado principal</string>
+
+
+    <!-- Add Error-->
+    <string name="add_zone_title">Seleccione una zona:</string>
+    <string name="add_first_name_error">Usted debe ingresar el Nombre</string>
+    <string name="add_last_name_error">Usted debe ingresar el Apellido</string>
+    <string name="add_dni_error">Usted debe ingresar el DNI</string>
+    <string name="add_age_error">Usted debe ingresar la edad</string>
+    <string name="add_birth_day_error">Usted debe ingresar la Fecha de Nacimiento</string>
+
+    <string name="add_dni_invalid">Usted debe ingresar un DNI válido</string>
+    <string name="add_postal_code_error">Usted debe ingresar el Código Postal</string>
+    <string name="add_incorrect_postal_code">Ingrese un Código Postal correcto</string>
+
+    <string name="add_phone_error">Usted debe ingresar el Teléfono o bien el Celular</string>
+    <string name="add_cellphone_error">Usted debe ingresar el Celular</string>
+    <string name="add_address_error">Usted debe ingresar la Dirección</string>
+    <string name="add_address_number_error">Usted debe ingresar el Número</string>
+    <string name="add_email_error">Usted debe ingresar el Mail</string>
+    <string name="add_email2_error">El formato del mail no es correcto</string>
+    <string name="add_zone_error">Usted debe ingresar el Código de Zona</string>
+    <string name="add_dni_no_valid">No puede ser cargado como potencial asociado a la persona con DNI: </string>
+
+    <string name="add_appointment_error">No pueden agendarse fechas pasadas.</string>
+    <string name="select_option_error">Usted debe seleccionar una opción</string>
+    <string name="add_date_error">Usted debe ingresar una fecha</string>
+    <string name="add_cant_aportante_error">Usted debe ingresar la cantidad de integrantes</string>
+
+    <string name="wrong_cant_aportante_error">la cantidad de aportantes no puede superar a la cantidad de integrantes</string>
+    <string name="null_cant_aportante_error">la cantidad de aportantes no puede ser nula </string>
+
+    <string name="member_max_age_error">La edad debe ser menor a %1$d años</string>
+    <string name="member_range_age_error">La edad debe estar comprendida entre %1$d y %2$d años</string>
+    <string name="member_min_age_error">La edad debe ser mayor a %1$d años</string>
+
+    <string name="notification_zone_error">Usted debe ingresar la Zona</string>
+    <string name="notification_priority_error">Usted debe ingresar la Prioridad</string>
+    <string name="notification_empty_salesman_selection">Usted debe seleccionar un promotor</string>
+    <string name="notification_title_error">Usted debe ingresar un Título</string>
+    <string name="notification_text_error">Usted debe ingresar un Texto</string>
+    <string name="notification_promoters_error">Usted debe ingresar los Asesores comerciales</string>
+
+    <!-- Cotizacion Error-->
+    <string name="seleccione_categoria">Seleccione una categoría</string>
+    <string name="seleccione_opcion">Seleccione una opcion</string>
+    <string name="seleccione_condicion_iva">Seleccione una condición frente al IVA</string>
+    <string name="seleccione_segmento">Seleccione un segmento</string>
+    <string name="seleccione_salesman">Seleccione un asesor comercial</string>
+    <string name="seleccione_segmento_distinto">Seleccione un segmento distinto al proveniente</string>
+    <string name="seleccione_ingreso">Seleccione una forma de ingreso</string>
+    <string name="seleccione_parentesco">Seleccione un parentesco </string>
+    <string name="seleccione_forma_pago">Seleccione la forma de pago </string>
+    <string name="seleccione_prioridad">Seleccione la prioridad </string>
+    <string name="seleccione_tipo_promotor">Seleccione tipo de asesor</string>
+    <string name="seleccione_zona">Seleccione la zona </string>
+    <string name="seleccione_tarjeta">Seleccione una tarjeta de credito </string>
+    <string name="seleccione_banco_error">Usted debe ingresar el banco</string>
+    <string name="seleccione_validity_date_error">Usted debe ingresar una fecha de vigencia</string>
+    <string name="seleccione_card_number_error">Usted debe ingresar un numero de tarjeta</string>
+    <string name="seleccione_cbu_error">Usted debe ingresar ub CBU </string>
+
+    <string name="reintegros_lenght_error">La acreditación de reintegros debe ser de 22 dígitos</string>
+    <string name="cbu_lenght_error">El CBU debe ser de 22 dígitos</string>
+
+    <string name="seleccione_copago_error">Usted debe indicar si es o no con copago</string>
+    <string name="seleccione_empresa_error">Usted debe indicar el nombre de la empresa</string>
+    <string name="seleccione_afinidad_error">Usted debe indicar nombre de afinidad</string>
+    <string name="seleccione_aporte_legal">Seleccione un cálculo de aporte legal </string>
+    <string name="seleccione_monto">Debe ingresar un monto </string>
+    <string name="seleccione_os_desregula">Debe ingresar la obra social por la que desregula </string>
+    <string name="seleccione_unifica_error">Usted debe indicar si unifica aportes</string>
+    <string name="seleccione_monotributo_error">Usted debe indicar si aporta monotributo</string>
+    <string name="seleccione_dni_error">Usted debe ingresar el dni</string>
+
+    <string name="seleccione_main_affilliation_error">Usted debe ingresar la afiliacion principal</string>
+    <string name="agregar_aporte">Agregue al menos un aporte</string>
+    <string name="agregar_os_mono_error">Si el unificante sólo es monotributista, no seleccionar la obra social por la que desregula</string>
+    <string name="agregar_aporte_mono_error">Si el unificante sólo es monotributista, no agregar aportes legales</string>
+
+    <string name="unifica_conyuge_error">Para unificar debe agregar un conyuge o concubino</string>
+    <string name="unifica_empleada_domestica_error">No está permitido el ingreso de una empleada domestica sin unificar aportes con otra persona</string>
+
+    <string name="manual_input_plan">Plan</string>
+    <string name="manual_input_plan_error">Ingrese el plan</string>
+    <string name="manual_input_plan_price">Importe</string>
+    <string name="manual_input_plan_price_error">Ingrese el importe</string>
+
+    <string name="validating_data">Validando datos...</string>
+    <string name="sending_data">Enviando datos...</string>
+
+    <string name="compress_file">Comprimiendo archivo...</string>
+
+    <string name="sending_file">Adjuntando archivo...</string>
+    <string name="download_image_file">Descargando Imagen...</string>
+    <string name="decode_image_file">Decodificando Imagen...</string>
+
+
+    <string name="add_contact_success">El cliente potencial se ha cargado con exito</string>
+    <string name="edit_contact_success">El cliente potencial se ha guardado con exito</string>
+    <string name="assing_success">Los clientes potenciales se han cargado con exito</string>
+
+    <string name="error_quote">Error de Cotización</string>
+    <string name="error_quote_params">Error obteniendo parámetros de cotización</string>
+    <string name="error_client_data">Error obteniendo los datos del cliente</string>
+    <string name="error_client_empty_data">No se obtuvieron los datos del Cliente</string>
+    <string name="error_conyuge_data">No se obtuvieron los datos del Conyuge/Concubino</string>
+    <string name="error_conyuge_empty_dni">Debe ingresar el dni del Conyuge/Concubino</string>
+    <string name="error_quote_optativos">Error obteniendo datos adicionales optativos</string>
+    <string name="error_download_file">Error al descargar el archivo de cotizacion</string>
+    <string name="error_decoding_file">Error al decodificar la imágen.Intenta nuevamente</string>
+    <string name="error_notification_add">Error al crear la notificación.Intenta nuevamente</string>
+
+
+    <string name="quoting_data">Cotizando datos...</string>
+    <string name="quote_saved_success">La cotizacion se guardó con éxito.</string>
+    <string name="quote_empty_link">Link de cotización vacio</string>
+    <string name="quoting_download">Descargando archivo de cotización...</string>
+
+
+    <string name="add_contact_dni_qrcode">LEER CODIGO QR</string>
+    <string name="add_contact_save">CARGAR</string>
+    <string name="search">BUSCAR</string>
+
+    <!-- No Data -->
+    <string name="error_title">Error inesperado</string>
+    <string name="no_internet_coneccion">Error de conexión.Intenta mas tarde o comprueba tu conexion a internet</string>
+    <string name="retry">REINTENTAR</string>
+    <string name="no_data">No se cargaron resultados</string>
+    <string name="error_no_zones">Error no hay zonas disponibles.</string>
+
+    <!-- Filters -->
+    <string name="filter_pa_title">GESTIÓN DE POTENCIALES ASOCIADOS</string>
+    <string name="filter_state_title">ESTADO DE AFILIACIONES</string>
+    <string name="filter_trace_title">TRAZABILIDAD DE FICHAS</string>
+
+
+    <string name="filter_scheduled">Agendados</string>
+    <string name="filter_no_scheduled">Sin agendar</string>
+    <string name="filter_interviewed">Entrevistados</string>
+    <string name="filter_quoted">Cotizados</string>
+    <string name="clear_filter">Limpiar filtro</string>
+
+    <!-- Quote Filters -->
+    <string name="filter_plan_salud">Planes de Salud</string>
+    <string name="filter_adicionales_opt">Adicionales optativos</string>
+    <string name="filter_manual_quote">Cotización manual</string>
+    <string name="filter_process_cards">Carga en\nproceso</string>
+    <string name="filter_incorrect_cards">A\ncorregir</string>
+    <!--<string name="filter_prom_control_support">Enviado a\nSop. Prom.</string>-->
+    <string name="filter_prom_control_support">Pendientes\nde control</string>
+
+    <string name="send_control_support">Enviado a\nSop.\nProm.</string>
+    <string name="send_control_support_title">Enviado a\nSop. Prom.</string>
+
+    <string name="pending_send_control_support">Fichas aprobadas,\nEnviar doc.</string>
+    <string name="pending_send_control_support_title">Fichas aprobadas,\nEnviar doc.</string>
+
+
+
+    <string name="sent_to_a_car">Enviadas\na CAR</string>
+
+    <string name="pending_docs">Docu-\nmentación\nfaltante</string>
+    <string name="pending_docs_title">Doc\nfaltante</string>
+
+
+    <!-- Client PlanDetail -->
+    <string name="celular">Movil</string>
+    <string name="phone">Casa</string>
+    <string name="email">Email</string>
+    <string name="address">Dirección</string>
+    <string name="interview_date">Fecha de entrevista</string>
+    <string name="interview_hour">Hora de entrevista</string>
+    <string name="interview_address">Dirección de entrevista</string>
+    <string name="notes">Notas</string>
+    <string name="save_button_title">GUARDAR</string>
+    <string name="cancel_button_title">CANCELAR</string>
+    <string name="close_button_title">Cerrar Caso</string>
+    <string name="quote_button_title">Cotizar</string>
+    <string name="close_reason_title">Indicá un motivo por el cual desea cerrar el caso:</string>
+    <string name="add_event">Agendar una reunión</string>
+    <string name="quote_plan_title">Plan y Cotización:</string>
+
+    <string name="button_close_case">CERRAR CASO</string>
+    <string name="button_quote">COTIZAR</string>
+    <string name="button_to_quote">RECOTIZAR</string>
+    <string name="button_schedule">AGENDAR</string>
+    <string name="button_confirm_data">CONFIRMAR</string>
+    <string name="button_card">FICHA</string>
+    <string name="button_view_quote">VER COTIZACION</string>
+
+    <!-- Quote -->
+    <string name="add_member_title">Agregar integrantes</string>
+    <string name="quote_add_aporte_title">Agregar aporte Legal</string>
+    <string name="quote_section_title">Planes de salud</string>
+    <string name="quote_additional_section_title">Adicionales optativos</string>
+    <string name="quote_transferencia_section_title">Transferencia de segmento</string>
+
+    <string name="quote_next">SIGUIENTE</string>
+    <string name="quote_prev">ANTERIOR</string>
+
+    <string name="affiliation_next">SIG</string>
+    <string name="affiliation_prev">ANT</string>
+
+    <string name="quote_back">ATRAS</string>
+    <string name="quote_save">GUARDAR</string>
+    <string name="quote_add_member">AGREGAR</string>
+    <string name="quote_add_member2">AGREGAR INTEGRANTE</string>
+    <string name="quote_see_quote">VER COTIZACION</string>
+    <string name="quote_add_salary">AGREGAR APORTE</string>
+
+    <string name="quote_members_data">Datos de integrantes</string>
+
+
+    <string name="quote_empresa_missing">Empresa con convenio pendiente de firma. Se cargará empresa con número XXXXXX, para que usted pueda continuar con la cotización</string>
+    <string name="quote_afinidad_missing">Afinidad con convenio pendiente de firma. Se cargará afinidad con número XXXXXX, para que usted pueda continuar con la cotización</string>
+
+    <string name="quote_incorrect_empresa">Ingrese empresa correcta</string>
+    <string name="quote_incorrect_afinidad">Ingrese Afinidad correcta</string>
+
+    <string name="quote_type_general">Cotización general</string>
+    <string name="quote_type_manual">Cotización manual</string>
+    <string name="quote_cancel_data">CANCELAR</string>
+    <string name="quote_save_data">GUARDAR</string>
+    <string name="quote_save_and_share_data">GUARDAR Y COMPARTIR</string>
+    <string name="quotation_file">Archivo de Cotización</string>
+
+    <string name="quote_optionals_message">Vas a cotizar para un potencial Asociado, ofrecele Productos Adicionales optativos</string>
+    <string name="quote_save_data_error">Debes seleccionar un plan para guardar la cotización</string>
+
+    <!-- Plan -->
+    <string name="plan_title">Plan</string>
+    <string name="plan_price">Costo</string>
+    <string name="plan_value">VALOR DEL PLAN</string>
+    <string name="plan_diff">DIFERENCIA A PAGAR</string>
+    <string name="plan_total">TOTAL A PAGAR</string>
+
+    <string name="plan_data">Plan: %1$s </string>
+    <string name="plan_value_data">$%1$s</string>
+
+    <string name="title_activity_edit_prospective_client">EditProspectiveClientActivity</string>
+    <string name="title_activity_add_appointment">AddAppointmentActivity</string>
+    <string name="title_activity_add_member">AddMemberActivity</string>
+
+    <string name="init_load_data">Inicio de Carga</string>
+    <string name="init_load_date">Fecha de confección</string>
+    <string name="init_load_des">DES</string>
+    <string name="init_load_affiliation">CARGA AFILIACIÓN</string>
+
+    <!-- PA CARD DETAIL -->
+    <string name="pa_card_segment">Segmento</string>
+    <string name="pa_card_group">Grupo (cantidad de integrantes)</string>
+    <string name="pa_card_load_date">Fecha de confección (inicio de carga)</string>
+    <string name="pa_card_validity_date">Fecha de vigencia (ingreso AMSS)</string>
+
+    <string name="error_card_detail">Error al obtener los datos de la ficha</string>
+    <string name="error_credit_card_verification">Error al verificar la tarjeta de Crédito</string>
+    <string name="error_des_verification">Error al verificar el número de DES</string>
+    <string name="error_des_data">Error al obtener la DES</string>
+    <string name="error_des_save">Error al guardar la DES</string>
+    <string name="error_des_state">Error al obtener el estado de la DES</string>
+    <string name="error_send_file">Error al enviar el archivo</string>
+    <string name="error_remove_file">Error al eliminar el archivo</string>
+    <string name="error_attaching_file">Error al Adjuntar archivo</string>
+    <string name="error_incompatible_scan_code">Codigo incompatible con el ingresado</string>
+    <string name="error_ok_scan_code">El codigo ingresado es correcto</string>
+    <string name="error_des_number_empty">No se ha ingresado Número de DES</string>
+
+    <string name="error_des_rejected">DES Desaprobada</string>
+
+    <!-- LINKS -->
+    <string name="downloading_link">Descargargando enlace...</string>
+    <string name="error_downloading_link">Error al descargar el enlace</string>
+
+    <!-- DES -->
+    <string name="error_init_load_check_plans">Error al consultar los planes</string>
+    <string name="error_init_load_empty_plans">No se obtuvieron planes para iniciar la carga</string>
+    <string name="error_init_load_saving_plan">Error al iniciar la carga</string>
+
+    <string name="des_verify_number">Verificar Nro DES</string>
+
+    <string name="des_verification_number_error">Ya existe el numero de solicitud en trazabilidad para otro Afiliado</string>
+    <string name="des_verification_number_pa_error">Ya existe el numero de solicitud en trazabilidad para el Afiliado: Nombre y Apellido y DNI: %1$s</string>
+    <string name="des_verification_number_ok">Numero de solicitud válida</string>
+
+    <string name="bad_capita_error">Para calcular el IMC el miembro debe ser mayor de edad y no activo</string>
+    <string name="add_des_request_number_error">Usted debe ingresar el número de solicitud</string>
+
+    <string name="des_plan_selection">Seleccioná con cual de los planes cotizados se inicia la carga</string>
+    <string name="des_plan_plan">Plan</string>
+    <string name="des_plan_value">Costo</string>
+
+    <string name="des_aux_info">Información auxiliar</string>
+    <string name="des_healthCert_info">Certificados de Salud</string>
+    <string name="des_anexo_info">Anexo III</string>
+
+    <string name="des_imc_title">Cálculo de IMC (Indice de masa corporal)</string>
+    <string name="des_imc_calculation">CALCULAR IMC</string>
+    <string name="des_imc_weight">Peso</string>
+    <string name="des_imc_height">Altura</string>
+    <string name="des_imc_delgadez">DELGADEZ</string>
+    <string name="des_imc_sobrepeso">SOBREPESO</string>
+    <string name="des_imc_normal">NORMAL</string>
+    <string name="des_imc_alert">Se debe solicitar Historia Clínica al potencial Asociado.Evalúa Médico auditor</string>
+    <string name="des_imc">IMC</string>
+    <string name="des_kg">Kg</string>
+    <string name="des_mts">Mts</string>
+
+
+    <string name="des_imc_weight_error">Usted debe ingresar el Peso</string>
+    <string name="des_imc_height_error">Usted debe ingresar la Altura</string>
+    <string name="des_pp">El grupo presenta PP\n(según formulario)</string>
+    <string name="des_general_notes">Notas generales sobre el caso</string>
+
+    <string name="des_add_des_file">Adjuntar DES</string>
+    <string name="des_add_healthCert_file">Cert de Salud</string>
+    <string name="des_add_attach_file">Historia clínica</string>
+    <string name="des_add_anexo_file">Adjuntar Anexo III</string>
+    <string name="des_number">Numero de DES</string>
+
+    <string name="des_auditoria_action">Derivar DES AUDITORIA</string>
+    <string name="des_send_auditoria_data">Enviando datos a Auditoria ...</string>
+    <string name="des_number_required">Usted debe ingresar el número de DES ...</string>
+
+    <string name="des_loading_state">Obteniendo estado de la DES ...</string>
+
+    <string name="des_loadind_file">Cargando Archivos de DES ...</string>
+    <string name="des_saving">Guardando la DES ...</string>
+    <string name="des_to_auditoria">Derivar DES a médico Auditor</string>
+    <string name="des_uncomplete_imc">Calcular el IMC de todos los integrantes</string>
+    <string name="des_add_des_files">Usted debe adjuntar archivos de DES, previamente validando el código</string>
+    <string name="des_add_health_cert_files">Usted debe adjuntar el certificado de buena salud</string>
+
+
+    <string name="des_no_auditoria">No es necesario derivar a auditoría médica. Seleccione Terminar DES</string>
+    <string name="attaching_file">Adjuntando archivo...</string>
+    <string name="removing_file">Eliminando archivo...</string>
+    <string name="removing_attach_file">Eliminando archivo adjunto...</string>
+
+    <string name="des_auditoria_error">Error al enviar datos a Auditoria.</string>
+    <string name="des_saved_ok">La DES fue guardada exitosamente.</string>
+    <string name="des_auditoria_ok">La DES fue derivada exitosamente.</string>
+    <string name="des_finish">GUARDAR DES</string>
+
+    <!-- AFFILIATION -->
+
+    <string name="error_affiliation_quot_update_request">Error al actualizar los valores de cotización</string>
+    <string name="error_affiliation_request">Error al actualizar la ficha</string>
+    <string name="error_affiliation_ticket_pago_request">Error al actualizar la ficha con el ticket de pago</string>
+
+    <string name="success_affiliation_request">la ficha ha sido actualizada correctamente</string>
+
+    <string name="error_forma_pago_request">Error al actualizar la forma de Pago</string>
+    <string name="error_ee_request">Error al actualizar la entidad empleadora</string>
+    <string name="error_ticket_pago_request">Error al actualizar el ticket de pago</string>
+    <string name="error_os_request">Error al actualizar la obra social</string>
+    <string name="error_monotributo_request">Error al actualizar el monotributo</string>
+    <string name="error_loading_ee">Error al levantar las Entidades Empleadoras</string>
+
+
+    <string name="error_verify_alta_inmed_request">Error al verificar la alta inmediata</string>
+    <string name="error_verify_card_request">Error al verificar la autorización pendiente</string>
+    <string name="error_affiliation_mandatory_ticket_pago_data">Para enviar a aprobacion todos los datos de ticket de pago son requeridos</string>
+
+    <string name="error_affiliation_update_ticket_pago_data">Para enviar a aprobacion debe anteriormente actualizar el ticket de pago</string>
+
+
+
+    <string name="success_saved_ee">la entidad empleadora se actualizo con éxito</string>
+    <string name="adding_ee_loading">Actualizando Entidad Empleadora...</string>
+
+    <string name="activity_anses">ANSES</string>
+    <string name="affiliation_modify_quotation_mssg">Debe modificar la forma de pago desde la cotización</string>
+    <string name="affiliation_promotion_mssg">Pedir autorización a promoción</string>
+    <string name="affiliation_edit_member">GUARDAR</string>
+
+    <string name="affiliation_doc_type_error">Usted debe ingresar un tipo de documento</string>
+
+    <string name="affiliation_loadind">Cargando datos de Afiliacion ...</string>
+    <string name="affiliation_update">Enviando datos...</string>
+
+    <string name="affiliation_title">Carga de Afiliación</string>
+    <string name="affiliation_doc_title">Documentación del titular</string>
+    <string name="affiliation_member_title">Documentación del integrante</string>
+    <string name="affiliation_anses_title">OBTENER DESDE ANSES</string>
+
+    <string name="affiliation_first_name">Nombre</string>
+    <string name="affiliation_last_name">Apellido</string>
+    <string name="affiliation_birth_day">Fecha de Nacimiento</string>
+    <string name="affiliation_dni">DNI</string>
+    <string name="affiliation_doc_type">Tipo de doc</string>
+    <string name="affiliation_doc_number">Número</string>
+    <string name="affiliation_sex">Sexo</string>
+    <string name="affiliation_cuit">CUIT/CUIL</string>
+    <string name="affiliation_nationality">Nacionalidad</string>
+
+    <string name="affiliation_titular_data">Datos personales del titular</string>
+    <string name="affiliation_titular_segmento">Segmento</string>
+    <string name="affiliation_titular_forma_ingreso">Forma de ingreso</string>
+    <string name="affiliation_titular_categoria">Categoría</string>
+    <string name="affiliation_titular_entity">Entidad</string>
+    <string name="affiliation_titular_datero_number">Nº Datero</string>
+    <string name="affiliation_titular_civil_status">Estado Civil</string>
+    <string name="affiliation_titular_cobertura">Cobertura proveniente</string>
+    <string name="affiliation_titular_condicion_iva">Condición frente al IVA</string>
+    <string name="affiliation_titular_error_age">La fecha de nacimiento no coincide con la fecha ingresada en la cotización</string>
+    <string name="affiliation_titular_plan_form_code_error">Debe ingresar el código de formulario</string>
+    <string name="affiliation_titular_affinity">Constancia de afinidad</string>
+    <string name="affiliation_titular_group_affinity">Grupo afinidad</string>
+
+    <string name="affiliation_titular_agreement_hint">Convenio</string>
+    <string name="affiliation_titular_agreement_button">Certificado de convenio</string>
+    <string name="affiliation_titular_agreement_button_leyend">Resumen de cuenta, carnet de asociado,\ncopia del padrón, etc - MINIMO 6 MESES</string>
+
+    <string name="affiliation_address_data">Datos domiciliarios del titular</string>
+    <string name="affiliation_alternative_address_data">Datos domiciliarios alternativos</string>
+    <string name="affiliation_address_street">Calle</string>
+    <string name="affiliation_address_orientation">Orientacion</string>
+    <string name="affiliation_address_number">Numero</string>
+    <string name="affiliation_address_floor">Piso</string>
+    <string name="affiliation_address_depto">Depto</string>
+    <string name="affiliation_address_others">Otros datos</string>
+    <string name="affiliation_address_code">Código</string>
+    <string name="affiliation_address_barrio">Barrio</string>
+    <string name="affiliation_address_location">Localidad - Provincia</string>
+    <string name="affiliation_address_zio_code">C.P</string>
+
+    <string name="affiliation_suggested_data">Sugeridos</string>
+    <string name="affiliation_suggested_phone">Fijo</string>
+    <string name="affiliation_suggested_device">Celular</string>
+
+    <string name="affiliation_area_code">Código de área</string>
+    <string name="affiliation_phone">Teléfono fijo</string>
+    <string name="affiliation_device">Teléfono celular</string>
+
+    <string name="affiliation_contact_data">Datos de contacto del titular</string>
+    <string name="affiliation_contact_email">Email</string>
+    <string name="affiliation_contact_add_invoice">Adhiere a e-factura</string>
+    <string name="affiliation_contact_data_to_home">Desea recibir la correspondencia en su domicilo de residencia?</string>
+
+    <string name="affiliation_file_loading">Cargando archivos ...</string>
+    <string name="affiliation_member_loading">Cargando archivos del Miembro ...</string>
+
+    <string name="affiliation_cert_discapacidad">Certificado de discapacidad</string>
+    <string name="affiliation_dni_front">DNI Frente</string>
+    <string name="affiliation_dni_back">DNI Dorso</string>
+    <string name="affiliation_cuil_question">Figura CUIL en el dorso</string>
+    <string name="affiliation_cuil_constancy">CONSTANCIA DE CUIL</string>
+    <string name="affiliation_iva_constancy">CONSTANCIA DE INSCRIPCION</string>
+    <string name="affiliation_coverage_constancy">CONSTANCIA COBERTURA</string>
+    <string name="affiliation_plan_recognition">RECONOCIMIENTO PLAN</string>
+    <string name="affiliation_form_code">Código de formulario</string>
+
+
+    <string name="affiliation_member_data">Datos Personales del Integrante</string>
+    <string name="affiliation_member_father_question">Datos de padres en DNI</string>
+    <string name="affiliation_member_has_disability">Presenta Discapacidad</string>
+    <string name="affiliation_start_date">Fecha inicio del servicio</string>
+    <string name="affiliation_part_nacimiento">PART. NACIMIENTO O\nLIBRETA DE FAMILIA</string>
+    <string name="affiliation_acta_matrimonio">ACTA MATRIMONIO</string>
+
+    <string name="affiliation_aportes_from_titular_quest">El titular aporta\npor esta persona</string>
+
+    <string name="affiliation_cuil_error">Usted debe indicar si figura o no CUIL en el dorso</string>
+    <string name="affiliation_add_invoice_error">Usted debe indicar si adhiere a e-factura</string>
+    <string name="affiliation_data_to_home_error">Usted debe indicar si desea recibir la correspondencia en su domicilio de residencia</string>
+
+    <string name="affiliation_add_member">Agregar Miembro</string>
+    <string name="affiliation_members">Integrantes</string>
+    <string name="affiliation_member_error_age">la edad ingresada no es compatble con el codigo de parentesco ingresado en el cotizador</string>
+
+
+    <string name="affiliation_pago">Pago</string>
+    <string name="affiliation_forma_pago">Forma de Pago</string>
+
+    <string name="affiliation_card_front">Frente Tarjeta</string>
+    <string name="affiliation_card_detect">Detectar Nro de Tarjeta</string>
+    <string name="affiliation_card_number">Número de tarjeta</string>
+    <string name="affiliation_bank">Banco</string>
+    <string name="affiliation_card_validity">Fecha de Vencimiento</string>
+
+    <string name="affiliation_reintegro_number">Acreditación de reintegros</string>
+    <string name="affiliation_cbu_number">Número de CBU</string>
+    <string name="affiliation_cbu_alias">Alias de CBU</string>
+    <string name="affiliation_account_type">Tipo de cuenta</string>
+    <string name="affiliation_alta_type">Tipo de Alta</string>
+    <string name="affiliation_attach_ticket">ADJUNTAR</string>
+
+    <string name="affiliation_cuit_number">CUIT</string>
+    <string name="affiliation_card_same_as_titular_quest">Mismo titular de tarjeta\nque de afiliación</string>
+    <string name="affiliation_cbu_same_as_titular_quest">Mismo titular de CBU\nque de afiliación</string>
+    
+    <string name="affiliation_copago_leyend">Copago a cargo de:</string>
+    <string name="affiliation_copago_company">Empresa</string>
+    <string name="affiliation_copago_associate">Asociado</string>
+
+    <string name="affiliation_ticket_plan_value">Valor del Plan</string>
+    <string name="affiliation_ticket_number">Nº de Ticket</string>
+    <string name="affiliation_ticket_importe">Importe Abonado</string>
+
+    <string name="affiliation_des_number">Nº de DES</string>
+
+    <string name="affiliation_pago_validity">Fecha de Pago</string>
+    <string name="affiliation_card_validity_date">Fecha de vencimiento</string>
+    <string name="affiliation_card_validity_mssg">La tarjeta de crédito vence en menos de 3 meses</string>
+
+    <string name="affiliation_card_validation">VALIDAR TARJETA</string>
+    <string name="affiliation_valid_credit_card">Tarjeta Válida</string>
+    <string name="affiliation_invalid_credit_card">Tarjeta vencida, cambie la tarjeta o recotice con otra forma de pago</string>
+
+    <string name="affiliation_constancia_card">Constancia</string>
+    <string name="affiliation_cbu_comprobante">Comprobante CBU</string>
+    <string name="affiliation_cbu_constancia">Constancia Reintegros</string>
+
+    <string name="affiliation_entity_number">Número de Entidad</string>
+    <string name="affiliation_titular">Titular</string>
+    <string name="affiliation_conyuge">Conyuge</string>
+    <string name="affiliation_suf_titular">Beneficiario SUF del Titular</string>
+    <string name="affiliation_suf_conyuge">Beneficiario SUF del Cónyuge</string>
+    <string name="affiliation_conyuge_form">Formulario del cónyuge</string>
+
+    <string name="add_titular_data">Precargar datos del titular</string>
+    <string name="add_conyuge_data">Precargar datos del conyuge o concubino</string>
+
+    <string name="affiliation_plan_additional">Adicional a pagar</string>
+    <string name="affiliation_plan_detail">Detalle</string>
+    <string name="affiliation_aprove_card">FICHA A APROBACION</string>
+    <string name="affiliation_quote_title">Valor 1er cuota-Alta inmediata</string>
+    <string name="affiliation_edit_ee">GUARDAR</string>
+
+    <string name="affiliation_plan_data">Plan:  %1$s</string>
+
+    <string name="affiliation_emp_number">Nº de Empresa</string>
+    <string name="affiliation_emp_razon_social">Razón Social</string>
+    <string name="affiliation_emp_copago">Forma de Copagos</string>
+
+
+    <string name="affiliation_amss_date">Fecha Ingreso AMSS</string>
+    <string name="affiliation_ticket_data">Ticket de pago anticipado</string>
+    <string name="error_verify_ticket_pago">Error al verificar el ticket de pago anticipado</string>
+
+    <string name="affiliation_emp_data">Empresa con convenio definitivo.\nPodrá cargar y finalizar la afiliación</string>
+
+    <string name="affiliation_ee">Entidad empleadora</string>
+
+    <string name="affiliation_entidad_emps">Entidades empleadoras</string>
+    <string name="affiliation_aportes_values">Remuneración sujeta a aportes</string>
+
+    <string name="affiliation_work_date">Fecha de ingreso al empleo</string>
+    <string name="affiliation_recibo_sueldo">RECIBO SUELDO</string>
+    <string name="affiliation_more_recibos">ADJUNTAR MAS RECIBOS</string>
+
+    <string name="affiliation_unification">Unificación</string>
+    <string name="affiliation_unif_os">Obra social por la que desregula el unificante</string>
+    <string name="affiliation_titular_os">Obra social por la que desregulará el titular</string>
+    <string name="affiliation_titular_os_actual">Obra social por la que actualmente desregula</string>
+    <string name="affiliation_conyuge_os">Obra social por la que desregulará el conyuge</string>
+
+
+    <string name="affiliation_conyuge_os_update_success">La Obra social se actualizo con éxito</string>
+    <string name="affiliation_conyuge_os_update_error">La Obra social no se pudo actualizar</string>
+
+    <string name="affiliation_os">Obra social</string>
+    <string name="affiliation_os_verify_title">VERIFICAR OBRA SOCIAL PROVENIENTE</string>
+    <string name="affiliation_os_verify">Estado de la opción en padrón de opciones - Pag. SSS</string>
+
+    <string name="affiliation_conyuge_data">Datos del cónyuge</string>
+    <string name="affiliation_no_editable_member">No se puede editar un miembro existente</string>
+
+
+    <string name="affiliation_afip_verify_title">VERIFICAR SITUACION PREVISIONAL</string>
+    <string name="affiliation_afip_verify">Consulta de mis aportes en Pag. AFIP</string>
+    <string name="affiliation_afip_veify_aportes">APORTES</string>
+
+    <string name="affiliation_afip_day_aportes">Al día</string>
+    <string name="affiliation_afip_month_aportes">Meses impagos</string>
+    <string name="affiliation_afip_cant_month_value">Cantidad de meses impagos</string>
+    <string name="affiliation_afip_auth_cobranza">AUTORIZACION DE COBRANZAS</string>
+
+    <string name="affiliation_os_state">Estado</string>
+    <string name="affiliation_os_state_alert">No cumplimenta periodo de antigüedad en OS. No se puede efectivizar el traspaso</string>
+
+    <string name="affiliation_os_date">Fecha Ingreso a la obra social</string>
+    <string name="affiliation_os_data">Datos de la obra social</string>
+    <string name="affiliation_os_form_sss">Nº deformulario SSS</string>
+    <string name="affiliation_os_change_option">Opcion de cambio</string>
+    <string name="affiliation_os_accept_form">Form. plan OS / Recibí cartilla</string>
+    <string name="affiliation_os_cert_change_option">Carta poder</string>
+    <string name="affiliation_os_email">Email</string>
+    <string name="affiliation_os_form_5_9">FORMULARIO 5.9</string>
+    <string name="affiliation_os_form_5_3">FORMULARIO 5.3</string>
+    <string name="affiliation_note">NOTA MODELO</string>
+    <string name="affiliation_os_conyuge">Cargar Obra Social del Conyuge</string>
+
+    <string name="affiliation_afip_cant_month_value_error_title">Más de 2 meses de aporte impagos</string>
+    <string name="affiliation_afip_cant_month_value_error">Requiere de autorización de Cobranzas para confirmar el ingreso</string>
+
+    <string name="affiliation_discharge_date">Fecha de alta</string>
+
+    <!-- MONOTRIBUTO -->
+    <string name="affiliation_cond_monotributo">Condición de monotributo</string>
+    <string name="affiliation_cony_cond_monotributo">Condición de monotributo del cónyuge</string>
+
+    <string name="affiliation_form_184">FORMULARIO 184</string>
+    <string name="affiliation_last_months_ticket">Comprobantes de los últ. 3 meses</string>
+    <string name="affiliation_opcion_state">Estado de la opción</string>
+    <string name="affiliation_sss_voucher">Comprobante de la SSS</string>
+    <string name="affiliation_os_desreg">Obra social por la que desregula</string>
+    <string name="affiliation_os_desregulara">Obra social por la que desregulara</string>
+
+    <string name="affiliation_os_other">Opción con otra obra social</string>
+
+    <string name="affiliation_verify_os_code">VERIFICAR CODIGO CON SSS</string>
+    <string name="affiliation_os_code_empadronado">Empadronado</string>
+    <string name="affiliation_os_code_opcion">Por opción</string>
+
+    <string name="affiliation_verify_os_origin">VERIFICAR OBRA SOCIAL PROVENIENTE</string>
+    <string name="affiliation_other_os">Opcion con otra obra social</string>
+
+    <string name="affiliation_update_ticket_pago">Actualizar ticket de Pago</string>
+
+
+    <string name="affiliation_to_aprove">ENVIAR A APROBACIÓN</string>
+    <string name="affiliation_to_close">CERRAR</string>
+    <string name="affiliation_quotation">ACTUALIZAR VALORES</string>
+    <string name="affiliation_card_to_aprove">Ficha enviada  correctamente</string>
+
+    <string name="title_activity_notifications_detail">NotificationsDetailActivity</string>
+    <string name="title_activity_notifications_sended">NotificationsSendedActivity</string>
+    <string name="title_activity_notifications_promoters">NotificationsSelectPromotersActivity</string>
+
+    <string name="title_activity_notification_read_detail">NotificationsReadDetailActivity</string>
+
+    <string name="title_activity_adicionales_optativos">AdicionalesOptativosActivity</string>
+    <string name="title_activity_anses_detail">AnsesDetailActivity</string>
+    <string name="title_activity_web_detail">WebDetailActivity</string>
+
+    <string name="title_os_situacion_prov">Situacion Provicional</string>
+    <string name="title_os_sss_code">Codigo SSS</string>
+    <string name="title_os_origin_title">OS proveniente</string>
+
+    <!-- WORKFLOW  -->
+    <string name="auth_data_loading">Obteniendo datos de Autorización ...</string>
+    <string name="auth_comments">Comentarios</string>
+    <string name="auth_comment">Comentario</string>
+    <string name="auth_last_state">Ultimo Estado:</string>
+
+    <!-- WORKFLOW  PROMOTION -->
+    <string name="verif_auth_promotion_title">Autorización de Promoción</string>
+    <string name="verif_auth_promotion_action">Verificar autorización de Promoción</string>
+    <string name="verif_auth_promotion_loading">Verificando Autorización de promoción ...</string>
+    <string name="auth_promotion_loading">Autorizando promoción ...</string>
+
+    <string name="error_verif_auth_promotion">Error al verificar la autorización de promoción</string>
+    <string name="error_get_auth_promotion">Error al obtener las autorizaciones de promoción</string>
+
+    <string name="promotion_auth_data">Promoción</string>
+    <string name="promotion_requires_auth">Requiere autorización</string>
+    <string name="promotion_no_requires_auth">No requiere autorización</string>
+
+    <string name="error_save_auth_promotion">Error al guardar la autorización de promoción</string>
+    <string name="error_update_auth_promotion">Error al actualizar la autorización de promoción</string>
+    <string name="success_saved_promotion_authorization">la autorización de promoción fue guardada exitosamente</string>
+    <string name="success_update_promotion_authorization">la autorización de promoción fue actualizada exitosamente</string>
+
+
+    <!-- WORKFLOW  COBRANZAS -->
+
+    <string name="verif_auth_cobranza_title">Autorización de Cobranza</string>
+    <string name="verif_auth_cobranza_action">Verificar autorización de Cobranza</string>
+    <string name="verif_auth_cobranza_loading">Verificando Autorización de cobranza ...</string>
+    <string name="auth_cobranza_loading">Autorizando cobranzas ...</string>
+
+    <string name="cobranza_auth_data">Cobranzas</string>
+    <string name="cobranza_requires_auth">Requiere autorización</string>
+    <string name="cobranza_no_requires_auth">No requiere autorización</string>
+
+    <string name="error_verif_auth_cobranza">Error al verificar la autorización de cobranzas</string>
+    <string name="error_get_auth_cobr">Error al obtener las autorizaciones de cobranzas</string>
+
+    <string name="error_save_auth_cobr">Error al guardar la autorización de cobranzas</string>
+    <string name="error_update_auth_cobr">Error al actualizar la autorización de cobranzas</string>
+    <string name="success_saved_cobr_authorization">la autorización de cobranzas fue guardada exitosamente</string>
+    <string name="success_update_cobr_authorization">la autorización de cobranzas fue actualizada exitosamente</string>
+
+    <string name="cobranza_for_ee">Se detectaron entidades empleadoras morosas</string>
+    <string name="cobranza_dni">DNI</string>
+    <string name="cobranza_cuil">CUIL</string>
+    <string name="cobranza_cuil_emp">CUIL del Empleador</string>
+    <string name="cobranza_account_number">Nº de cuenta</string>
+    <string name="cobranza_bajas">Bajas Efectivas</string>
+    <string name="cobranza_deuda">Deuda Actual</string>
+
+
+    <!-- TRACE DATA -->
+    <string name="error_trace_validate_des">Error al validar la DES</string>
+    <string name="error_trace_change_status">Error al cambiar el estado</string>
+
+
+    <string name="trace_request_number">Solicitud</string>
+    <string name="trace_des_number">Nº DES</string>
+    <string name="trace_form_number">Nº formulario de reconocimiento</string>
+    <string name="trace_comment">Comentario</string>
+    <string name="trace_validate">VALIDAR</string>
+    <string name="trace_send">ENVIAR DOCUMENTOS A SOPORTE DE PROMOCIÓN</string>
+
+    <string name="trace_history">Historial de comentarios</string>
+    <string name="tace_des">DES</string>
+    <string name="trace_history_no_content">Sin comentarios</string>
+    <string name="trace_des_no_content">Sin archivos</string>
+
+    <string name="trace_comment_error">Ingrese un comentario</string>
+    <string name="trace_car_error">Debe seleccionar un CAR</string>
+    <string name="trace_des_error">Debe ingresar un nro de DES</string>
+    <string name="trace_form_error">Debe ingresar un nro de Formuario de reconocimiento</string>
+
+    <string name="show_more">Ver más</string>
+
+    <!-- CAR Contact -->
+    <string name="from_date">Desde</string>
+    <string name="to_date">Hasta</string>
+    <string name="get_indicators">OBTENER INDICADORES</string>
+    <string name="indicators_title1">Fichas aprobadas (altas provisorias/definitivas)</string>
+    <string name="indicators_cantidad">Cantidad</string>
+    <string name="indicators_title2">Produccion</string>
+    <string name="indicators_grav">Con altas GRAV</string>
+    <string name="indicators_no_grav">Con altas NO GRAV</string>
+    <string name="indicators_error1">Seleccione un periodo de tiempo</string>
+    <string name="indicators_error2">Error al obtener los indicadores.</string>
+    <string name="indicators_error3">Seleccione asesor comercial</string>
+    <string name="indicators_loading">Obteniendo indicadores...</string>
+
+    <string name="indicators_all_asesor_option">Todos</string>
+
+    <string name="indicators_salesman">Asesor Comercial</string>
+    <string name="indicators_pot_asoc">Potenciales asociados</string>
+    <string name="indicators_temp">Tiempo promedio contacto</string>
+    <string name="indicators_manual_quotation_rate">Tasa de cotizaciones manuales</string>
+    <string name="indicators_pa_schedule">PA sin agendar</string>
+    <string name="indicators_pa_scheduled">PA agendados</string>
+    <string name="indicators_pa_quoted">PA cotizados</string>
+    <string name="indicators_pa_close">PA cerrados</string>
+    <string name="indicators_quote">Cotización</string>
+    <string name="indicators_quote_manual">Tasa de cotizaciones manuales</string>
+    <string name="indicators_carga">Carga</string>
+    <string name="indicators_production_detail">Detalle de producción</string>
+    <string name="indicators_carga_prod_in_record">Producción en fichas</string>
+    <string name="indicators_carga_prod_in_capitas">Producción en cápitas</string>
+    <string name="indicators_carga_tasa_error">Tasa de errores</string>
+    <string name="indicators_carga_tiempo">Tiempo promedio de carga</string>
+    <string name="indicators_carga_grav">Producción GRAV</string>
+    <string name="indicators_carga_nograv">Producción NO GRAV</string>
+    <string name="indicators_carga_afinidad">Producción AFINIDAD</string>
+    <string name="indicators_carga_empresa">Producción EMPRESA</string>
+    <string name="indicators_carga_ind">Producción INDIVIDUAL</string>
+    <string name="indicators_carga_tc">Producción TC</string>
+    <string name="indicators_carga_cbu">Producción CBU</string>
+    <string name="indicators_carga_pf">Producción Pago Fácil</string>
+    <string name="indicators_carga_rce">Producción RCE</string>
+    <string name="indicators_carga_ef">Producción EF</string>
+    <string name="indicators_carga_pa_quoted">PA Cotizados</string>
+    <string name="indicators_carga_records_in_proccess">Fichas en carga en proceso</string>
+    <string name="indicators_carga_records_to_correct">Fichas a Corregir</string>
+    <string name="indicators_carga_records_derived_to_control">Fichas derivadas a control</string>
+    <string name="indicators_trazabilidad">Trazabilidad</string>
+    <string name="indicators_trazabilidad_tasa">Tasa de presentación de fichas</string>
+    <string name="indicators_trazabilidad_doc_error">Documentación presentada con errores</string>
+
+    <string name="close">Cerrar</string>
+    <string name="station_date">Fecha:</string>
+    <string name="station_username">Nombre:</string>
+    <string name="station_comment">Comentario:</string>
+    <string name="subte">Seguimiento</string>
+
+</resources>

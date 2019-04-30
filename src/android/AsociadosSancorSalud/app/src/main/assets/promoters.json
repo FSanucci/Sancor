@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "data": {
+    "promoters": [
+      {
+        "descripcion": "A Todos los Asesores comerciales",
+        "id": "1"
+      },
+      {
+        "descripcion": "Selecionar los Asesores comerciales",
+        "id": "2"
+      }
+    ]
+  },
+  "errorCode": 0,
+  "message": null
+}

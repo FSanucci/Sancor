@@ -1,0 +1,208 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="ar.com.sancorsalud.asociados.fragments.quote.MonotributistaAdditionalDataFragment">
+
+    <ScrollView
+        style="@style/ScrollAppearence"
+        android:layout_above="@+id/add_button_container">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:paddingBottom="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/field_aporte_imp_note"
+                android:text="@string/field_aporte_imp_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:paddingLeft="3dp"
+                android:maxLines="2"
+                android:textColor="@color/colorDisabledText"
+                android:gravity="center_vertical"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/cantidad_integrante_wrapper"
+                style="@style/TextAppearence.TextInputLayout">
+
+                <EditText
+                    android:id="@+id/cantidad_integrante_input"
+                    style="@style/TextAppearence.EditText"
+                    android:inputType="number"
+                    android:hint="@string/field_cantidad_integrantes" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- conyugue data  -->
+            <TextView
+                android:id="@+id/conyuge_section_title"
+                android:text="@string/field_dato_conyuge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:textSize="14sp"
+                android:textColor="@color/colorAccent"/>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/conyuge_dni_wrapper"
+                style="@style/TextAppearence.TextInputLayout">
+
+                <EditText
+                    android:id="@+id/conyuge_dni_input"
+                    style="@style/TextAppearence.EditText"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:hint="@string/field_dni" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- conyugue monotributo  -->
+            <LinearLayout
+                android:id="@+id/conyuge_mono_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="@string/field_aporta_mono"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:paddingLeft="3dp"
+                    android:maxLines="2"
+                    android:textColor="@color/colorDisabledText"
+                    android:gravity="center_vertical"/>
+
+                <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/conyuge_aporta_mono"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginLeft="2dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/conyuge_si_aporta_mono"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="2dp"
+                        android:checked="false"
+                        android:textSize="18sp"
+                        android:textColor="@color/colorDisabledText"
+                        android:text="@string/field_yes" />
+
+                    <RadioButton
+                        android:id="@+id/conyuge_no_aporta_mono"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:textSize="18sp"
+                        android:textColor="@color/colorDisabledText"
+                        android:text="@string/field_no" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/conyuge_aporta_monotributo_error"
+                android:text="@string/seleccione_monotributo_error"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="12sp"
+                android:paddingLeft="3dp"
+                android:visibility="gone"
+                android:textColor="@color/colorRed"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/conyuge_cantidad_integrante_wrapper"
+                style="@style/TextAppearence.TextInputLayout"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/conyuge_cantidad_integrante_input"
+                    style="@style/TextAppearence.EditText"
+                    android:inputType="number"
+                    android:hint="@string/field_cantidad_integrantes" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <!--
+            <RelativeLayout
+                android:id="@+id/conyuge_asociado_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/conyuge_user_data_txt"
+                    style="@style/SectionContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:id="@+id/conyuge_planes_txt"
+                    style="@style/SectionContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/conyuge_user_data_txt"
+                    android:layout_marginTop="8dp" />
+            </RelativeLayout>
+            -->
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/manual_plan_input_wrapper"
+                android:visibility="gone"
+                style="@style/TextAppearence.TextInputLayout">
+
+                <EditText
+                    android:id="@+id/manual_plan_input"
+                    style="@style/TextAppearence.EditText"
+                    android:hint="@string/manual_input_plan" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/manual_plan_price_wrapper"
+                android:visibility="gone"
+                style="@style/TextAppearence.TextInputLayout">
+
+                <EditText
+                    android:id="@+id/manual_plan_price_input"
+                    style="@style/TextAppearence.EditText"
+                    android:inputType="numberDecimal"
+                    android:hint="@string/manual_input_plan_price" />
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/add_button_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/see_quote_button"
+            style="@style/ButtonAppearence"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:layout_weight="2"
+            android:background="@color/colorPrimary"
+            android:text="@string/quote_see_quote" />
+
+    </LinearLayout>
+</RelativeLayout>

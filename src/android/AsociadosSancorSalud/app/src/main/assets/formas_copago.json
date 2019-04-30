@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "data": {
+    "formas": [
+      {
+        "forma_descripcion": "CLAVE BANCARIA UNIFORME",
+        "forma_id": "CBU"
+      },
+      {
+        "forma_descripcion": "TARJETA DE CREDITO",
+        "forma_id": "TC"
+      }
+    ]
+  },
+  "errorCode": 0,
+  "message": null
+}

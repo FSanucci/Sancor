@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <RelativeLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <include
+                android:id="@+id/error_data"
+                layout="@layout/view_error_no_internet_connection"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/all_data"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:id="@+id/header"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/header_list_height"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:background="@color/colorBackground"
+                    android:elevation="1dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/activity_vertical_margin"
+                        android:background="@color/colorAccent">
+
+                        <ImageView
+                            android:id="@+id/quote_icon"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                            android:layout_marginRight="@dimen/activity_horizontal_margin"
+                            android:src="@drawable/ic_quoted" />
+
+                        <TextView
+                            android:id="@+id/quote_type_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/quote_icon"
+                            android:text="@string/quote_type_general"
+                            android:textColor="@color/colorWhite" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+                <ScrollView
+                    android:id="@+id/scroll_box"
+                    style="@style/ScrollAppearence"
+                    android:layout_below="@+id/header"
+                    android:layout_above="@+id/button_container">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                            <TextView
+                                android:id="@+id/plan_price_label"
+                                android:layout_width="72dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                                android:text="@string/plan_price"
+                                android:textColor="@color/colorPrimary" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/activity_horizontal_double_margin"
+                                android:layout_toLeftOf="@+id/plan_price_label"
+                                android:text="@string/plan_title"
+                                android:textAlignment="textStart"
+                                android:textColor="@color/colorPrimary" />
+
+                        </RelativeLayout>
+
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/plan_recycler_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="8dp" />
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+                <LinearLayout
+                    android:id="@+id/button_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <Button
+                        android:id="@+id/save_share_button"
+                        style="@style/ButtonAppearence"
+                        android:layout_weight="0.8"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:background="@color/colorPrimary"
+                        android:textSize="@dimen/quote_button_txt_size"
+                        android:gravity="center"
+                        android:text="@string/quote_save_and_share_data" />
+
+                    <Button
+                        android:layout_weight="1.2"
+                        android:id="@+id/save_button"
+                        style="@style/ButtonAppearence"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                        android:textSize="@dimen/quote_button_txt_size"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:text="@string/quote_save_data" />
+
+
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

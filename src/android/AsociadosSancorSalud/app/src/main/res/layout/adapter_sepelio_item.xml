@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_container"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/colorBackground">
+
+    <TextView
+        android:id="@+id/item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:fontFamily="sans-serif"
+        android:text="Conyuge, 36 años"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="16sp"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/pago"
+        android:lines="1"
+        android:layout_alignParentLeft="true"/>
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/pago"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/opt1Button"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:checked="false"
+            android:text="$450"
+            android:textColor="@color/colorDisabledText"
+            android:textSize="16sp"/>
+
+        <RadioButton
+            android:id="@+id/opt2Button"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="$300"
+            android:textColor="@color/colorDisabledText"
+            android:textSize="16sp"/>
+    </RadioGroup>
+
+</RelativeLayout>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menu_salesman"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/menu_item_add_prospective_client"
+        style="@style/MenuItem">
+
+        <ImageView
+            android:id="@+id/menu_item_add_prospective_client_icon"
+            style="@style/MenuItemIcon"
+            android:src="@drawable/ic_item_menu_add_prospective_client" />
+
+        <TextView
+            android:id="@+id/menu_item_add_prospective_client_txt"
+            style="@style/MenuItemTitle"
+            android:text="@string/menu_item_add_prospective_client" />
+
+        <View style="@style/MenuItemSeparator" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/menu_item_prospective_clients"
+        style="@style/MenuItem">
+
+        <ImageView
+            android:id="@+id/menu_item_prospective_clients_icon"
+            style="@style/MenuItemIcon"
+            android:src="@drawable/ic_menu_person" />
+
+        <TextView
+            android:id="@+id/menu_item_prospective_clients_txt"
+            style="@style/MenuItemTitle"
+            android:text="@string/menu_assigned" />
+
+
+        <TextView
+            android:id="@+id/menu_item_pending_prospective_clients_txt"
+            style="@style/Menu.Badge.Red"
+            android:layout_toLeftOf="@+id/menu_item_prospective_clients_txt"
+            android:text="00" />
+
+
+        <ImageView
+            android:id="@+id/menu_item_card_assigments"
+            style="@style/MenuItemIcon"
+            android:layout_toLeftOf="@+id/menu_item_pending_prospective_clients_txt"
+            android:layout_marginRight="@dimen/activity_horizontal_half_margin"
+            android:src="@drawable/ic_menu_card_assignment" />
+
+
+        <View style="@style/MenuItemSeparator" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/menu_item_schedule"
+        style="@style/MenuItem">
+
+        <ImageView
+            android:id="@+id/menu_item_schedule_icon"
+            style="@style/MenuItemIcon"
+            android:src="@drawable/ic_menu_schedule" />
+
+
+        <TextView
+            android:id="@+id/menu_item_schedule_txt"
+            style="@style/MenuItemTitle"
+            android:text="@string/menu_schedule" />
+
+        <View style="@style/MenuItemSeparator" />
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/menu_item_additional"
+        style="@style/MenuItem">
+
+        <ImageView
+            android:id="@+id/menu_item_additional_icon"
+            style="@style/MenuItemIcon"
+            android:src="@drawable/ic_menu_additional" />
+
+
+        <TextView
+            android:id="@+id/menu_item_additional_txt"
+            style="@style/MenuItemTitle"
+            android:text="@string/menu_additional" />
+
+        <View style="@style/MenuItemSeparator" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/menu_item_transferencia"
+        style="@style/MenuItem">
+
+        <ImageView
+            android:id="@+id/menu_item_transferencia_icon"
+            style="@style/MenuItemIcon"
+            android:src="@drawable/ic_menu_transferencia" />
+
+        <TextView
+            android:id="@+id/menu_item_transferencia_txt"
+            style="@style/MenuItemTitle"
+            android:text="@string/menu_transferencia" />
+
+        <View style="@style/MenuItemSeparator" />
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/menu_item_notification"
+        style="@style/MenuItem">
+
+        <ImageView
+            android:id="@+id/menu_item_notification_icon"
+            style="@style/MenuItemIcon"
+            android:src="@drawable/ic_menu_notification" />
+
+
+        <TextView
+            android:id="@+id/menu_item_notification_txt"
+            style="@style/MenuItemTitle"
+            android:text="@string/menu_notifications" />
+
+        <TextView
+            android:id="@+id/badge_notification_txt"
+            style="@style/Menu.Badge.Red"
+            android:layout_toLeftOf="@+id/menu_item_notification_txt"
+            android:layout_marginRight="8dp"
+            android:visibility="gone"/>
+
+        <View style="@style/MenuItemSeparator" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/menu_item_indicator"
+        style="@style/MenuItem">
+
+        <ImageView
+            android:id="@+id/menu_item_indicator_icon"
+            style="@style/MenuItemIcon"
+            android:src="@drawable/ic_menu_indicator" />
+
+        <TextView
+            android:id="@+id/menu_item_indicator_txt"
+            style="@style/MenuItemTitle"
+            android:text="@string/menu_indicator" />
+
+        <View style="@style/MenuItemSeparator" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/menu_item_logout"
+        style="@style/MenuItem">
+
+        <ImageView
+            android:id="@+id/menu_item_logout_icon"
+            style="@style/MenuItemIcon"
+            android:src="@drawable/ic_menu_logout" />
+
+        <TextView
+            android:id="@+id/menu_item_logout_txt"
+            style="@style/MenuItemTitle"
+            android:text="@string/menu_logout" />
+
+        <View style="@style/MenuItemSeparator" />
+    </RelativeLayout>
+
+</LinearLayout>
+
+
+

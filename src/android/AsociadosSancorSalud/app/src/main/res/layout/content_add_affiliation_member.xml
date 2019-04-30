@@ -1,0 +1,767 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_add_member"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <ScrollView
+        android:id="@+id/scroll"
+        style="@style/ScrollAppearence"
+        android:layout_above="@+id/edit_button_container">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="@string/affiliation_member_data"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_half_margin"
+                android:layout_gravity="center_horizontal">
+
+                <Button
+                    android:id="@+id/qrcode_button"
+                    style="@style/ButtonAppearence"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginBottom="@dimen/activity_vertical_half_margin"
+                    android:background="@drawable/button_background_orange"
+                    android:text="@string/add_contact_dni_qrcode"
+                    android:textSize="@dimen/app_button_txt_size" />
+
+
+                <ImageView
+                    android:id="@+id/photo_button"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_toRightOf="@+id/qrcode_button"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_gallery" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/parentesco_wrapper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/parentesco_input"
+                        style="@style/TextAppearence.EditText"
+                        android:focusable="false"
+                        android:hint="@string/field_parentesco"
+                        android:maxLines="2" />
+                </android.support.design.widget.TextInputLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/lastname_checkBox"
+                    style="@style/ValidateCheck" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/lastname_wrapper"
+                    style="@style/TextAppearence.TextInputLayout"
+                    android:layout_toLeftOf="@+id/lastname_checkBox">
+
+                    <EditText
+                        android:id="@+id/lastname_input"
+                        style="@style/TextAppearence.EditText"
+                        android:hint="@string/affiliation_last_name"
+                        android:maxLength="50" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/firstname_checkBox"
+                    style="@style/ValidateCheck" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/firstname_wrapper"
+                    style="@style/TextAppearence.TextInputLayout"
+                    android:layout_toLeftOf="@+id/firstname_checkBox">
+
+                    <EditText
+                        android:id="@+id/firstname_input"
+                        style="@style/TextAppearence.EditText"
+                        android:hint="@string/affiliation_first_name"
+                        android:maxLength="50" />
+
+                </android.support.design.widget.TextInputLayout>
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/_document_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/doc_type_wrapper"
+                        style="@style/TextAppearence.TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/doc_type_input"
+                            style="@style/TextAppearence.EditText"
+                            android:focusable="false"
+                            android:hint="@string/affiliation_doc_type" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/doc_type_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_alignParentTop="true">
+
+                        <ImageView
+                            style="@style/arrowSpinner"
+                            app:srcCompat="@drawable/ic_expand" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/doc_number_wrapper"
+                    style="@style/TextAppearence.TextInputLayout"
+                    android:layout_marginRight="@dimen/activity_horizontal_half_margin"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:id="@+id/doc_number_input"
+                        style="@style/TextAppearence.EditText"
+                        android:hint="@string/affiliation_doc_number"
+                        android:maxLength="8"
+                        android:inputType="number" />
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/cuit_wrapper"
+                style="@style/TextAppearence.TextInputLayout"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:id="@+id/cuit_input"
+                    style="@style/TextAppearence.EditText"
+                    android:hint="@string/affiliation_cuit"
+                    android:inputType="number"
+                    android:maxLength="12" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/sex_wrapper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/sex_input"
+                        style="@style/TextAppearence.EditText"
+                        android:focusable="false"
+                        android:hint="@string/affiliation_sex" />
+                </android.support.design.widget.TextInputLayout>
+
+                <RelativeLayout
+                    android:id="@+id/sex_button"
+                    style="@style/buttonSpinner">
+
+                    <ImageView
+                        style="@style/arrowSpinner"
+                        app:srcCompat="@drawable/ic_expand" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/birthday_wrapper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/birthday_input"
+                        style="@style/TextAppearence.EditText"
+                        android:focusable="false"
+                        android:hint="@string/add_contact_birth_day" />
+                </android.support.design.widget.TextInputLayout>
+
+                <RelativeLayout
+                    android:id="@+id/birthday_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_alignParentBottom="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/nationality_wrapper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/nationality_input"
+                        style="@style/TextAppearence.EditText"
+                        android:focusable="false"
+                        android:hint="@string/affiliation_nationality" />
+                </android.support.design.widget.TextInputLayout>
+
+                <RelativeLayout
+                    android:id="@+id/nationality_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_alignParentTop="true">
+
+                    <ImageView
+                        style="@style/arrowSpinner"
+                        app:srcCompat="@drawable/ic_expand" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/affiliation_member_has_disability"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp" />
+
+                <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/activity_horizontal_half_margin">
+
+                    <RadioButton
+                        android:id="@+id/yes_disability_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:checked="false"
+                        android:text="@string/option_yes"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp" />
+
+                    <RadioButton
+                        android:id="@+id/no_disability_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="@string/option_no"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+
+            <!-- Doc  Files images -->
+
+            <TextView
+                android:id="@+id/doc_titular_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="@string/affiliation_member_title"
+                android:textColor="@color/colorAccent" />
+
+            <RelativeLayout
+                android:id="@+id/cert_discapacidad_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                android:layout_marginTop="@dimen/activity_vertical_double_margin"
+                android:visibility="gone">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/cert_discapacidad_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cert_discapacidad_recycler_view"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                    <ImageView
+                        android:id="@+id/cert_discapacidad_img"
+                        style="@style/attach_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:src="@drawable/ic_attach" />
+
+                    <ImageView
+                        android:id="@+id/cert_discapacidad_file"
+                        style="@style/attach_img"
+                        android:layout_alignTop="@+id/cert_discapacidad_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/cert_discapacidad_img"
+                        android:src="@drawable/ic_file" />
+
+                    <Button
+                        android:id="@+id/cert_discapacidad_button"
+                        style="@style/attach_button"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/cert_discapacidad_file"
+                        android:text="@string/affiliation_cert_discapacidad" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/dni_front_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                android:layout_marginTop="@dimen/activity_vertical_double_margin">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/dni_front_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dni_front_recycler_view"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                    <ImageView
+                        android:id="@+id/dni_front_img"
+                        style="@style/attach_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:src="@drawable/ic_attach" />
+
+                    <ImageView
+                        android:id="@+id/dni_front_file"
+                        style="@style/attach_img"
+                        android:layout_alignTop="@+id/dni_front_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/dni_front_img"
+                        android:src="@drawable/ic_file" />
+
+                    <Button
+                        android:id="@+id/dni_front_button"
+                        style="@style/attach_button"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/dni_front_file"
+                        android:text="@string/affiliation_dni_front" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/dni_back_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                android:layout_marginTop="@dimen/activity_vertical_double_margin">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/dni_back_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dni_back_recycler_view"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                    <ImageView
+                        android:id="@+id/dni_back_img"
+                        style="@style/attach_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:src="@drawable/ic_attach" />
+
+                    <ImageView
+                        android:id="@+id/dni_back_file"
+                        style="@style/attach_img"
+                        android:layout_alignTop="@+id/dni_back_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/dni_back_img"
+                        android:src="@drawable/ic_file" />
+
+                    <Button
+                        android:id="@+id/dni_back_button"
+                        style="@style/attach_button"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/dni_back_file"
+                        android:text="@string/affiliation_dni_back" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/affiliation_cuil_question"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp" />
+
+                <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/cuil_dorso_option"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/activity_horizontal_half_margin">
+
+                    <RadioButton
+                        android:id="@+id/yes_cuil_dorso_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:checked="false"
+                        android:text="@string/option_yes"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp" />
+
+                    <RadioButton
+                        android:id="@+id/no_cuil_dorso_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="@string/option_no"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/cuil_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                android:layout_marginTop="@dimen/activity_vertical_double_margin">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/cuil_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cuil_recycler_view"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                    <ImageView
+                        android:id="@+id/cuil_img"
+                        style="@style/attach_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:src="@drawable/ic_attach" />
+
+                    <ImageView
+                        android:id="@+id/cuil_file"
+                        style="@style/attach_img"
+                        android:layout_alignTop="@+id/cuil_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/cuil_img"
+                        android:src="@drawable/ic_file" />
+
+                    <Button
+                        android:id="@+id/cuil_button"
+                        style="@style/attach_button"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/cuil_file"
+                        android:text="@string/affiliation_cuil_constancy" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/cuil_anses_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_double_margin"
+                android:text="@string/affiliation_anses_title"
+                android:textColor="@color/colorAccent"
+                android:visibility="gone" />
+
+
+            <LinearLayout
+                android:id="@+id/dni_father_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/activity_vertical_half_margin"
+                    android:gravity="center_vertical"
+                    android:text="@string/affiliation_member_father_question"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp" />
+
+                <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/dni_father_option"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="2dp">
+
+                    <RadioButton
+                        android:id="@+id/dni_father_yes_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:checked="false"
+                        android:text="@string/option_yes"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp" />
+
+                    <RadioButton
+                        android:id="@+id/dni_father_no_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="@string/option_no"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/part_nac_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                android:layout_marginTop="@dimen/activity_vertical_double_margin">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/part_nac_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/part_nac_recycler_view"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                    <ImageView
+                        android:id="@+id/part_nac_img"
+                        style="@style/attach_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:src="@drawable/ic_attach" />
+
+                    <ImageView
+                        android:id="@+id/part_nac_file"
+                        style="@style/attach_img"
+                        android:layout_alignTop="@+id/part_nac_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/part_nac_img"
+                        android:src="@drawable/ic_file" />
+
+                    <Button
+                        android:id="@+id/part_nac_button"
+                        style="@style/attach_button"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/part_nac_file"
+                        android:text="@string/affiliation_part_nacimiento" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/alta_matrim_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                android:layout_marginTop="@dimen/activity_vertical_double_margin">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/acta_matrim_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/acta_matrim_recycler_view"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                    <ImageView
+                        android:id="@+id/acta_matrim_img"
+                        style="@style/attach_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:src="@drawable/ic_attach" />
+
+                    <ImageView
+                        android:id="@+id/acta_matrim_file"
+                        style="@style/attach_img"
+                        android:layout_alignTop="@+id/acta_matrim_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/acta_matrim_img"
+                        android:src="@drawable/ic_file" />
+
+                    <Button
+                        android:id="@+id/acta_matrim_button"
+                        style="@style/attach_button"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/acta_matrim_file"
+                        android:text="@string/affiliation_acta_matrimonio" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/aportes_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/affiliation_aportes_from_titular_quest"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp" />
+
+                <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/aportes_option"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="2dp">
+
+                    <RadioButton
+                        android:id="@+id/aportes_yes_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="2dp"
+                        android:checked="false"
+                        android:text="@string/option_yes"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp" />
+
+                    <RadioButton
+                        android:id="@+id/aportes_no_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="@string/option_no"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp"></View>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/edit_button_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/edit_button"
+            style="@style/ButtonAppearence"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:layout_weight="2"
+            android:background="@color/colorPrimary"
+            android:text="@string/affiliation_edit_member" />
+
+    </LinearLayout>
+
+</RelativeLayout>

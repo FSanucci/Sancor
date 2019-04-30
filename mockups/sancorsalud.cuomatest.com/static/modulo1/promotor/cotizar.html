@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sancor Salud</title>
+  <!-- Material Design fonts -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- Bootstrap Material Design -->
+  <link rel="stylesheet" type="text/css" href="../../assets/css/bootstrap-material-design.css">
+  <link rel="stylesheet" type="text/css" href="../../assets/css/ripples.min.css">
+  <link rel="stylesheet" type="text/css" href="../../assets/css/styles.css">
+</head>
+
+<body>
+  <header class="header">
+    <nav class="menu">
+      <div class="head">
+        <img src="../../assets/images/logo.png" alt="">
+        <h3 class="name">Inés Duarte</h3>
+      </div>
+      <ul>
+        <li class="active"><a href="#"><i class="material-icons">person_add</i>Cargar potencial asociado</a></li>
+        <li><a href="asignados.html"><i class="material-icons">person_add</i>Asignados</a><div class="badge-notification ng-binding">12</div></li>
+        <li><a href="agenda.html"><i class="material-icons">event_note</i>Agenda</a></li>
+        <li><a href="cotizar.html?tipo=solo-adicionales"><i class="material-icons">playlist_add</i>Cotizar adicionales optativos</a></li>
+        <li><a href="cotizar.html?tipo=transferencia"><i class="material-icons">swap_vertical_circle</i>Transferencia de segmento</a></li>
+        <li><a href="notificaciones.html"><i class="material-icons">announcement</i>Notificaciones</a></li>
+        <li><a href="#"><i class="material-icons">exit_to_app</i>Salir</a></li>
+      </ul>
+    </nav>
+    <button type="button" name="button" class="btn btn-menu btn-nav"><i class="material-icons">menu</i> <h3>Cotizar</h3></button>
+    <button type="button" name="button" class="btn btn-menu btn-search"><i class="material-icons">arrow_back</i> <h3>Volver</h3></button>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <form action="#" class="search">
+            <button type="submit" name="button" class="btn hidden-xs"><i class="material-icons">search</i></button>
+            <input type="text" placeholder="Buscar" class="hidden-xs">
+            <input type="text" placeholder="Buscar" class="smart visible-xs">
+          </form>
+          <!-- <div class="filtros dropdown">
+          <button type="button" name="button" class="btn btn-filter dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="material-icons">more_vert</i></button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+          <li><a id="sin-agendar" href="#"><i class="material-icons">event_note</i>Sin agendar</a></li>
+          <li><a id="entrevistados" href="#"><i class="material-icons">assignment_turned_in</i>Entrevistados</a></li>
+          <li><a id="cotizados" href="#"><i class="material-icons">monetization_on</i>Cotizados</a></li>
+        </ul>
+      </div> -->
+    </div>
+  </div>
+</div>
+<button type="button" name="button" class="btn smart-search visible-xs"><i class="material-icons">search</i></button>
+<div class="user hidden-xs">
+  <i class="material-icons">account_circle</i>
+  <div class="name">Inés Duarte</div>
+</div>
+</header>
+
+<div class="bg-menu"></div>
+
+<section id="cotizar" class="cargar content">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="qr visible-xs">
+          <div class="btn btn-qr">LEER CÓDIGO QR</div>
+        </div>
+        <form action="#">
+          <div id="plan">
+            <div class="form-group label-floating">
+              <label for="name" class="control-label">Nombre</label>
+              <input type="text" class="form-control" id="name" name="name" required="required">
+              <!-- <span class="help-block">Este dato es obligatorio</span> -->
+            </div>
+            <div class="form-group label-floating">
+              <label for="dni" class="control-label">DNI</label>
+              <input type="number" class="form-control" id="dni" name="dni" required="required">
+              <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+            </div>
+            <div class="form-group label-floating">
+              <label for="fecha-nacimiento" class="control-label">Fecha de Nacimiento</label>
+              <input type="date" class="form-control" id="fecha-nacimiento" name="fecha-nacimiento" required="required">
+              <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+            </div>
+            <div class="form-group label-floating">
+              <label for="cod-postal" class="control-label">Código Postal</label>
+              <input type="text" class="form-control" id="cod-postal" name="cod-postal" max="99999" required="required">
+              <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+            </div>
+            <div class="form-group label-floating select-group">
+              <select class="cobertura" name="cobertura" required="required">
+                <option value="">Cobertura proveniente</option>
+                <option value="2 ACA SALUD">ACA SALUD (2)</option>
+                <option value="3 AMUR">AMUR (3)</option>
+                <option value="316 CONSOLIDAR">CONSOLIDAR (316)</option>
+                <option value="102 GALENO">GALENO (102)</option>
+                <option value="317 HOSPITAL BRITANICO">HOSPITAL BRITANICO (317)</option>
+                <option value="101 HOSPITAL ITALIANO">HOSPITAL ITALIANO (101)</option>
+                <option value="116 HOSPITAL ALEMAN">HOSPITAL ALEMAN (116)</option>
+                <option value="64 MEDICUS">MEDICUS (64)</option>
+                <option value="272 MEDILIFE">MEDIFE (272)</option>
+                <option value="5 MUTUAL FEDERADA 25 DE JUNIO">MUTUAL FEDERADA 25 DE JUNIO (5)</option>
+                <option value="109 OMINT">OMINT (109)</option>
+                <option value="9 OSDE">OSDE (9)</option>
+                <option value="221 SWISS MEDICAL">SWISS MEDICAL (221)</option>
+                <option value="350 PROTEXIA">PROTEXIA (350)</option>
+                <option value="346 IOSEP">IOSEP (346)</option>
+              </select>
+              <div class="arrow"><i class="material-icons">keyboard_arrow_down</i></div>
+            </div>
+            <div class="form-group label-floating select-group">
+              <select class="cat" name="cat" required="required">
+                <option value="">Categoría</option>
+                <option value="adherente">Adherente</option>
+                <option value="activo">Activo</option>
+              </select>
+              <div class="arrow"><i class="material-icons">keyboard_arrow_down</i></div>
+            </div>
+            <div class="form-group label-floating select-group">
+              <select class="iva" name="iva" required="required">
+                <option value="">Condición frente al IVA</option>
+                <option value="consumidor final">Consumidor final</option>
+                <option value="responsable inscripto">Responsable Inscripto</option>
+                <option value="monotributo">Monotributo</option>
+              </select>
+              <div class="arrow"><i class="material-icons">keyboard_arrow_down</i></div>
+            </div>
+            <div class="form-group label-floating select-group">
+              <select class="segmento" name="segmento" required="required">
+                <option value="">Segmento</option>
+                <option value="autonomo">Autónomo</option>
+                <option value="desregulado">Desregulado</option>
+                <option value="monotributista">Monotributista</option>
+              </select>
+              <div class="arrow"><i class="material-icons">keyboard_arrow_down</i></div>
+            </div>
+            <div class="form-group label-floating select-group">
+              <select class="ingreso" name="ingreso" required="required">
+                <option value="">Forma de ingreso</option>
+                <option value="individual">Individual</option>
+                <option value="empresa">Empresa</option>
+                <option value="grupo">Grupo Afinidad</option>
+              </select>
+              <div class="arrow"><i class="material-icons">keyboard_arrow_down</i></div>
+            </div>
+            <div class="form-group label-floating numero-ingreso" style="display:none;">
+              <label for="numero-ingreso" class="control-label">Número o nombre de afinidad</label>
+              <input type="text" class="form-control" id="numero-ingreso" name="numero-ingreso" required="required">
+              <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+            </div>
+            <div class="divisor">
+              Datos de integrantes:
+            </div>
+            <div id="integrantes-nuevos"></div>
+            <!-- <div class="int-nuevo">
+            <i class="material-icons">person</i><p>Cónyuge, 36 años, DNI 26.567.850</p>
+            <div class="cerrar"></div>
+            <div class="clearfix"></div>
+          </div> -->
+          <div class="form-group label-floating select-group">
+            <select id="parent" class="parent" name="parent" required="required">
+              <option value="">Parentesco</option>
+              <option value="0 TITULAR">0 TITULAR</option>
+              <option value="1 CONYUGE">1 CONYUGE</option>
+              <option value="2 CONCUBINO/A">2 CONCUBINO/A</option>
+              <option value="3 HIJO SOLTERO MENOR DE 21 AÑOS">3 HIJO SOLTERO MENOR DE 21 AÑOS</option>
+              <option value="4 HIJO SOLTERO DE 21 A 25 AÑOS CURSANDO ESTUDIOS REGULARES">4 HIJO SOLTERO DE 21 A 25 AÑOS CURSANDO ESTUDIOS REGULARES</option>
+              <option value="5 HIJO DEL CONYUGE SOLTERO MENOR DE 21 AÑOS">5 HIJO DEL CONYUGE SOLTERO MENOR DE 21 AÑOS</option>
+              <option value="6 HIJO DEL CONYUGE SOLTERO DE 21 A 25 AÑOS CURSANDO ESTUDIOS REGULARES">6 HIJO DEL CONYUGE SOLTERO DE 21 A 25 AÑOS CURSANDO ESTUDIOS REGULARES</option>
+              <option value="7 MENOR BAJO GUARDA Y TUTTELA O NIETO A CARGO">7 MENOR BAJO GUARDA Y TUTTELA O NIETO A CARGO</option>
+              <option value="8 FAMILIAR A CARGO: PADRE, SUEGRO, HERMANO DISCAPACITADO">8 FAMILIAR A CARGO: PADRE, SUEGRO, HERMANO DISCAPACITADO</option>
+              <option value="9 MAYOR DE 25 AÑOS DISCAPACITADO">9 MAYOR DE 25 AÑOS DISCAPACITADO</option>
+            </select>
+            <div class="arrow"><i class="material-icons">keyboard_arrow_down</i></div>
+          </div>
+          <div class="form-group label-floating">
+            <label for="edad" class="control-label">Edad</label>
+            <input type="number" class="form-control" id="edad" name="edad" required="required">
+            <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+          </div>
+          <div class="form-group label-floating">
+            <label for="dni-int" class="control-label">DNI</label>
+            <input type="number" class="form-control" id="dni-int" name="dni-int" required="required">
+            <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+          </div>
+          <button id="sumar-integrante" type="button" name="button" class="btn btn-int">SUMAR INTEGRANTE</button>
+          <div class="clearfix"></div>
+        </div>
+
+        <!-- PASO 2 -->
+        <div id="step-2">
+          <div class="form-header">
+            <i class="material-icons">add_box</i>
+            Planes de Salud
+          </div>
+          <div id="ingreso">
+            <div class="form-group label-floating select-group individual empresa grupo">
+              <select class="pago" name="pago" required="required">
+                <option value="">Forma de pago</option>
+                <option value="TC">TC</option>
+                <option value="CBU">CBU</option>
+                <option value="PGF">PGF</option>
+                <option value="RCE">RCE</option>
+                <option value="ECR">ECR</option>
+                <option value="PROD">PROD</option>
+              </select>
+              <div class="arrow"><i class="material-icons">keyboard_arrow_down</i></div>
+            </div>
+            <div class="form-group label-floating select-group disabled individual grupo">
+              <select id="tarjeta" name="tarjeta" disabled>
+                <option value="">Tarjeta</option>
+                <option value="VISA">VISA </option>
+                <option value="CABAL">CABAL </option>
+                <option value="MASTERCARD">MASTERCARD </option>
+                <option value="NARANJA">NARANJA </option>
+                <option value="SUCRÉDITO">SUCRÉDITO </option>
+                <option value="NEVADA">NEVADA </option>
+                <option value="CREDI GUIA">CREDI GUIA</option>
+                <option value="TALOR">TALOR </option>
+                <option value="CLUBCRED">CLUBCRED </option>
+                <option value="MARCOS JUAREZ">MARCOS JUAREZ</option>
+              </select>
+              <div class="arrow"><i class="material-icons">keyboard_arrow_down</i></div>
+            </div>
+            <div class="form-group label-floating individual grupo">
+              <label for="banco" class="control-label">Banco</label>
+              <input type="text" class="form-control" id="banco" name="banco" disabled>
+              <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+            </div>
+            <div class="form-group individual empresa grupo">
+              <div class="checkbox form-inline">
+                <label class="control-label">Copagos</label>
+                <div class="form-group individual empresa grupo">
+                  <input type="radio" name="usuario" value="1" id="con">
+                  <label for="con">Con</label>
+                </div>
+                <div class="form-group individual empresa grupo">
+                  <input type="radio" name="usuario" value="1" id="sin">
+                  <label for="sin">Sin</label>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="form-group empresa">
+              <p class="empresa">Cotización con convenio pendiente de firma<br> o tambíen puede ser Cotización con convenio firmado</p>
+            </div>
+          </div>
+
+          <!-- Bloque Desregulado -->
+          <div id="desregulado">
+            <div class="form-group label-floating select-group">
+              <select class="calculo" name="calculo" required="required">
+                <option value="">Cálculo del aporte legal</option>
+                <option value="Aporte obra social">Aporte obra social</option>
+                <option value="Remuneración bruta">Remuneración bruta</option>
+              </select>
+              <div class="arrow"><i class="material-icons">keyboard_arrow_down</i></div>
+            </div>
+            <div class="form-group label-floating">
+              <label for="monto" class="control-label">Monto $</label>
+              <input type="number" class="form-control" id="monto" name="monto" required="required">
+              <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+            </div>
+            <div class="form-group label-floating calc">
+              <label for="calc-remuneracion" class="control-label calc-remuneracion">Remuneración bruta</label>
+              <input type="text" class="form-control calc-remuneracion" id="calc-remuneracion" name="calc-remuneracion" value="$0" required="required">
+
+              <label for="calc-aporte" class="control-label calc-aporte">Aporte obra social</label>
+              <input type="text" class="form-control calc-aporte" id="calc-aporte" name="calc-aporte" value="$0" required="required">
+              <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+            </div>
+            <div class="form-group label-floating select-group">
+              <select class="obra-desregula" name="obra-desregula" required="required">
+                <option value="">Obra social por la que desregula</option>
+                <option value="ASE">ASE </option>
+                <option value="OSPERSAAMS">OSPERSAAMS </option>
+                <option value="OSCONARA">OSCONARA </option>
+                <option value="OSMB">OSMB </option>
+                <option value="OSIM">OSIM </option>
+                <option value="OSME">OSME </option>
+                <option value="OSUTI">OSUTI </option>
+                <option value="OSSACRA">OSSACRA</option>
+                <option value="OSJERA">OSJERA </option>
+                <option value="OSEADI">OSEADI</option>
+                <option value="OSTVLA">OSTVLA </option>
+                <option value="OSTELEF">OSTELEF </option>
+                <option value="OSDEPYM">OSDEPYM </option>
+                <option value="OSHOPE">OSHOPE </option>
+                <option value="OSMEDICA">OSMEDICA </option>
+                <option value="OSCERAMISTA">OSCERAMISTA </option>
+                <option value="OSPAT">OSPAT</option>
+              </select>
+              <div class="arrow"><i class="material-icons">keyboard_arrow_down</i></div>
+            </div>
+            <div class="form-group">
+              <div class="checkbox form-inline">
+                <label class="control-label">Precibe otra remuneración</label>
+                <div class="form-group">
+                  <input type="radio" name="otra-remuneracion" value="1" id="otra-remuneracion-si">
+                  <label for="otra-remuneracion-si">Si</label>
+                </div>
+                <div class="form-group">
+                  <input type="radio" name="otra-remuneracion" value="1" id="otra-remuneracion-no" checked="checked">
+                  <label for="otra-remuneracion-no">No</label>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="form-group">
+              <div class="checkbox form-inline">
+                <label class="control-label">Aporta a Monotributo</label>
+                <div class="form-group">
+                  <input type="radio" name="aporta-monotributo" value="1" id="aporta-monotributo-si">
+                  <label for="aporta-monotributo-si">Si</label>
+                </div>
+                <div class="form-group">
+                  <input type="radio" name="aporta-monotributo" value="1" id="aporta-monotributo-no" checked="checked">
+                  <label for="aporta-monotributo-no">No</label>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="form-group">
+              <div class="checkbox form-inline">
+                <label class="control-label">Unifica aportes</label>
+                <div class="form-group">
+                  <input type="radio" name="unifica-aportes" value="1" id="unifica-aportes-si">
+                  <label for="unifica-aportes-si">Si</label>
+                </div>
+                <div class="form-group">
+                  <input type="radio" name="unifica-aportes" value="1" id="unifica-aportes-no">
+                  <label for="unifica-aportes-no">No</label>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="divisor">
+              Datos del cónyuge:
+            </div>
+            <div class="form-group label-floating">
+              <label for="conyuge-dni" class="control-label">DNI</label>
+              <input type="number" class="form-control" id="conyuge-dni" name="conyuge-dni" required="required">
+              <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+            </div>
+            <div class="form-group label-floating select-group">
+              <select class="tipo-unificacion" name="tipo-unificacion" required="required">
+                <option value="">Tipo de unificación</option>
+                <option value="Titular nuevo con conyuge nuevo">Titular nuevo con conyuge nuevo</option>
+                <option value="Titular nuevo con conyuge asociado">Titular nuevo con conyuge asociado</option>
+              </select>
+              <div class="arrow"><i class="material-icons">keyboard_arrow_down</i></div>
+            </div>
+            <div class="form-group label-floating select-group">
+              <select class="conyuge-segmento" name="conyuge-segmento" required="required">
+                <option value="">Segmento</option>
+                <option value="Desregulado">Desregulado</option>
+                <option value="Monotributista">Monotributista</option>
+                <option value="Empleada dómestica">Empleada doméstica</option>
+              </select>
+              <div class="arrow"><i class="material-icons">keyboard_arrow_down</i></div>
+            </div>
+            <div class="form-group label-floating select-group">
+              <select class="conyuge-calculo" name="conyuge-calculo" required="required">
+                <option value="">Cálculo de aporte legal</option>
+                <option value="Desregulado">Aporte obra social</option>
+                <option value="Remuneración bruta">Remuneración bruta</option>
+              </select>
+              <div class="arrow"><i class="material-icons">keyboard_arrow_down</i></div>
+            </div>
+            <div class="form-group label-floating">
+              <label for="conyuge-monto" class="control-label">Monto $</label>
+              <input type="number" class="form-control" id="conyuge-monto" name="conyuge-monto" required="required">
+              <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+            </div>
+            <div class="form-group label-floating select-group">
+              <select class="conyuge-obra" name="conyuge-obra" required="required">
+                <option value="">Obra social por la que desregula</option>
+              </select>
+              <div class="arrow"><i class="material-icons">keyboard_arrow_down</i></div>
+            </div>
+            <div class="divisor">
+              Familiares a cargo:
+            </div>
+            <div class="int-nuevo">
+              <i class="material-icons">person</i>
+              <p>Padre, 84 años</p>
+              <div class="checkbox">
+                <input type="checkbox" name="familiar-nuevo[]" value="1" id="familiar1" required="required">
+                <label for="familiar1"></label>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="int-nuevo">
+              <i class="material-icons">person</i><p>Nieto, 5 años</p>
+              <div class="checkbox">
+                <input type="checkbox" name="familiar-nuevo[]" value="1" id="familiar2" required="required">
+                <label for="familiar2"></label>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="form-group label-floating">
+              <label for="familiar-monto" class="control-label">Monto $</label>
+              <input type="number" class="form-control" id="familiar-monto" name="familiar-monto" required="required">
+              <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+            </div>
+          </div>
+          <!-- END BLOQUE DESREGULADO -->
+
+          <!-- BLOQUE MONOTRIBUTO -->
+          <div id="monotributo">
+            <div class="form-group label-floating select-group">
+              <select class="aportantes" name="aportantes">
+                <option value="">Aportantes del grupo</option>
+                <option value="Igual al número de integrantes">Igual al número de integrantes</option>
+                <option value="Menor al número de integrantes">Menor al número de integrantes </option>
+              </select>
+              <div class="arrow"><i class="material-icons">keyboard_arrow_down</i></div>
+            </div>
+            <div class="form-group label-floating">
+              <label class="control-label" style="font-size:16px;">IMPORTANTE<br>No incluir el aporta del cónyuge en caso que unifique aportes</label>
+            </div>
+            <div class="form-group label-floating">
+              <label for="integrantes-aporta" class="control-label">Integrantes por los que aporta</label>
+              <input type="number" class="form-control" id="integrantes-aporta" name="integrantes-aporta" required="required">
+              <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+            </div>
+            <div class="form-group">
+              <div class="checkbox form-inline">
+                <label class="control-label">Unificar aportes</label>
+                <div class="form-group">
+                  <input type="radio" name="unifica-aportes-monotributo" value="1" id="unifica-aportes-monotributo-si" required="required">
+                  <label for="unifica-aportes-monotributo-si">Si</label>
+                </div>
+                <div class="form-group">
+                  <input type="radio" name="unifica-aportes-monotributo" value="1" id="unifica-aportes-monotributo-no" required="required">
+                  <label for="unifica-aportes-monotributo-no">No</label>
+                </div>
+              </div>
+              <div class="form-group label-floating">
+                <label for="monotributo-dni" class="control-label">DNI</label>
+                <input type="number" class="form-control" id="monotributo-dni" name="monotributo-dni" required="required">
+                <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+              </div>
+              <div class="form-group label-floating select-group">
+                <select class="tipo-unificacion" name="tipo-unificacion" required="required">
+                  <option value="">Tipo de unificación</option>
+                  <option value="Titular nuevo con cónyuge nuevo">Titular nuevo con cónyuge nuevo</option>
+                  <option value="Titular nuevo con cónyuge asociado">Titular nuevo con cónyuge asociado</option>
+                </select>
+                <div class="arrow"><i class="material-icons">keyboard_arrow_down</i></div>
+              </div>
+            </div>
+            <div class="form-group label-floating select-group">
+              <select class="segmento-monotributo" name="segmento-monotributo" required="required">
+                <option value="">Segmento</option>
+                <option value="Desregulado">Desregulado</option>
+                <option value="Monotributista">Monotributista</option>
+              </select>
+              <div class="arrow"><i class="material-icons">keyboard_arrow_down</i></div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <!-- END BLOQUE MONOTRIBUTO -->
+        </div>
+
+        <!-- ADICIONALES -->
+        <div id="adicional">
+          <div class="form-header">
+            <i class="material-icons">playlist_add</i>
+            Adicionales optativos
+          </div>
+          <div class="step-1">
+            <div class="form-group label-floating">
+              <label for="solo-adicional-dni" class="control-label">DNI</label>
+              <input type="number" class="form-control" id="solo-adicional-dni" name="solo-adicional-dni" required="required">
+              <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+            </div>
+            <div class="form-group label-floating">
+              <label for="solo-adicional-nombre" class="control-label">Nombre</label>
+              <input type="text" class="form-control" id="solo-adicional-nombre" name="solo-adicional-nombre" required="required">
+              <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+            </div>
+            <div class="form-group label-floating">
+              <label for="solo-adicional-edad" class="control-label">Edad</label>
+              <input type="text" class="form-control" id="solo-adicional-edad" name="solo-adicional-edad" required="required">
+              <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+            </div>
+            <div class="form-group label-floating">
+              <label for="solo-adicional-codigo-postal" class="control-label">Código postal</label>
+              <input type="text" class="form-control" id="solo-adicional-codigo-postal" name="solo-adicional-codigo-postal" required="required">
+              <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+            </div>
+            <div class="form-group label-floating">
+              <label for="solo-adicional-fecha-inicio" class="control-label">Fecha de inicio del servicio</label>
+              <input type="text" class="form-control" id="solo-adicional-fecha-inicio" name="solo-adicional-fecha-inicio" required="required">
+              <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+            </div>
+            <div class="form-group label-floating">
+              <label for="solo-adicional-categoria" class="control-label">Categoría</label>
+              <input type="text" class="form-control" id="solo-adicional-categoria" name="solo-adicional-categoria" required="required">
+              <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+            </div>
+            <div class="divisor">Integrantes</div>
+            <div class="int-nuevo">
+              <i class="material-icons">person</i><p>Juliana Di Tello, Cónyuge, 36 años</p>
+              <div class="cerrar"></div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="int-nuevo">
+              <i class="material-icons">person</i><p>Luis Pelourinho, Hijo, 10 años</p>
+              <div class="cerrar"></div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="int-nuevo">
+              <i class="material-icons">person</i><p>Julieta Pelourinho, Hija, 14 años</p>
+              <div class="cerrar"></div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="form-group label-floating">
+              <label for="solo-adicional-pago" class="control-label">Forma de pago</label>
+              <input type="text" class="form-control" id="solo-adicional-pago" name="solo-adicional-pago" value="Tarjeta de crédito, Banco Francés" required="required">
+            </div>
+            <div class="form-group label-floating">
+              <label for="solo-adicional-categoria" class="control-label">Valor del plan de salud activo</label>
+              <input type="text" class="form-control" id="solo-adicional-categoria" name="solo-adicional-categoria" value="SanCor 2000 - $3580" required="required">
+            </div>
+          </div>
+          <div class="step-2">
+            <div class="divisor">
+              Emergencias
+            </div>
+            <div class='int-nuevo adicional'>
+              <div class="checkbox">
+                <input type="checkbox" name="adicional-familiar" value="1" id="adicional-familiar-1">
+                <label for="adicional-familiar-1"></label>
+              </div>
+              <p>Conyuge, 36 años - $250</p>
+              <div class='clearfix'></div>
+            </div>
+            <div class='int-nuevo adicional'>
+              <div class="checkbox">
+                <input type="checkbox" name="adicional-familiar" value="2" id="adicional-familiar-2">
+                <label for="adicional-familiar-2"></label>
+              </div>
+              <p>Hijo, 10 años - $150</p>
+              <div class='clearfix'></div>
+            </div>
+            <div class='int-nuevo adicional'>
+              <div class="checkbox">
+                <input type="checkbox" name="adicional-familiar" value="3" id="adicional-familiar-3">
+                <label for="adicional-familiar-3"></label>
+              </div>
+              <p>Hija, 14 años - $150</p>
+              <div class='clearfix'></div>
+            </div>
+            <!-- Supra salud -->
+            <div class="divisor">
+              Supra salud
+            </div>
+            <div class="form-group label-floating select-group">
+              <select class="adicional-servicio" name="adicional-servicio" required="required">
+                <option value="">Servicio</option>
+                <option value="S10">S10</option>
+                <option value="S20">S20</option>
+              </select>
+              <div class="arrow"><i class="material-icons">keyboard_arrow_down</i></div>
+            </div>
+            <div class='int-nuevo adicional'>
+              <div class="checkbox">
+                <input type="radio" name="adicional-supra" value="1" id="adicional-supra-1">
+                <label for="adicional-supra-1"></label>
+              </div>
+              <p>Titular - $150</p>
+              <div class='clearfix'></div>
+            </div>
+            <div class='int-nuevo adicional'>
+              <div class="checkbox">
+                <input type="radio" name="adicional-supra" value="2" id="adicional-supra-2">
+                <label for="adicional-supra-2"></label>
+              </div>
+              <p>Titular + cónyuge - $350</p>
+              <div class='clearfix'></div>
+            </div>
+            <div class='int-nuevo adicional'>
+              <div class="checkbox">
+                <input type="radio" name="adicional-supra" value="3" id="adicional-supra-3">
+                <label for="adicional-supra-3"></label>
+              </div>
+              <p>Titular + hijo/a - $250</p>
+              <div class='clearfix'></div>
+            </div>
+            <div class="form-group label-floating select-group" style="margin-left:50px;">
+              <select class="adicional-servicio" name="adicional-servicio">
+                <option value="">Seleccionar hijo/a</option>
+                <option value="Hijo, 10 años">Hijo, 10 años</option>
+                <option value="Hija, 14 años">Hija, 14 años</option>
+              </select>
+              <div class="arrow"><i class="material-icons">keyboard_arrow_down</i></div>
+            </div>
+            <div class='int-nuevo adicional'>
+              <div class="checkbox">
+                <input type="radio" name="adicional-supra" value="4" id="adicional-supra-4">
+                <label for="adicional-supra-4"></label>
+              </div>
+              <p>Grupo familiar - $450</p>
+              <div class='clearfix'></div>
+            </div>
+            <div class='int-nuevo adicional'>
+              <div class="checkbox">
+                <input type="checkbox" name="adicional-ssac" value="Mantener SSAC" id="adicional-ssac">
+                <label for="adicional-ssac"></label>
+              </div>
+              <p>Mantener SSAC</p>
+              <div class='clearfix'></div>
+            </div>
+            <!-- Sepelio -->
+            <div class="divisor">
+              Subsidio y sepelio
+            </div>
+            <div class="form-group checkbox">
+              <label class="control-label dark"></label>
+              <p>Grupo</p>
+              <p>Individual</p>
+            </div>
+            <div class="form-group">
+              <div class="checkbox form-inline">
+                <label class="control-label dark">Cónyuge, 36 años</label>
+                <div class="form-group">
+                  <input type="radio" name="adicional-sepelio-1" value="1" id="adicional-sepelio-integral-1">
+                  <label for="adicional-sepelio-integral-1">$450</label>
+                </div>
+                <div class="form-group">
+                  <input type="radio" name="adicional-sepelio-1" value="1" id="adicional-sepelio-basico-1">
+                  <label for="adicional-sepelio-basico-1">$450</label>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="form-group">
+              <div class="checkbox form-inline">
+                <label class="control-label dark">Hijo, 10 años</label>
+                <div class="form-group">
+                  <input type="radio" name="adicional-sepelio-2" value="1" id="adicional-sepelio-integral-2">
+                  <label for="adicional-sepelio-integral-2">$450</label>
+                </div>
+                <div class="form-group">
+                  <input type="radio" name="adicional-sepelio-2" value="1" id="adicional-sepelio-basico-2">
+                  <label for="adicional-sepelio-basico-2">$450</label>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="form-group">
+              <div class="checkbox form-inline">
+                <label class="control-label dark">Hija, 14 años</label>
+                <div class="form-group">
+                  <input type="radio" name="adicional-sepelio-3" value="1" id="adicional-sepelio-integral-3">
+                  <label for="adicional-sepelio-integral-3">$450</label>
+                </div>
+                <div class="form-group">
+                  <input type="radio" name="adicional-sepelio-3" value="1" id="adicional-sepelio-basico-3">
+                  <label for="adicional-sepelio-basico-3">$450</label>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+
+        </div>
+        <!-- </div> -->
+
+        <!-- Transferencia de segmento -->
+        <div id="transferencia">
+          <div class="form-header">
+            <i class="material-icons">swap_vertical_circle</i>
+            Transferencia de segmento
+          </div>
+          <div class="form-group label-floating">
+            <label for="segmento-dni" class="control-label">DNI</label>
+            <input type="text" class="form-control" id="segmento-dni" name="segmento-dni" required="required">
+          </div>
+          <div class="divisor">
+            Titular
+          </div>
+          <div class="lista">
+            <ul>
+              <li>Juan Pablo Pelourinho</li>
+              <li>CP</li>
+              <li>Edad</li>
+              <li>Ingreso</li>
+              <li>Cobertura proveniente</li>
+              <li>Categoría</li>
+              <li>Condición de IVA</li>
+            </ul>
+          </div>
+          <hr>
+          <div class="divisor">
+            Integrantes
+          </div>
+          <div class="lista">
+            <ul>
+              <li>Juliana Di Tello</li>
+              <li>Conyuge, 36 años</li>
+              <li>26.589.850</li>
+            </ul>
+          </div>
+          <hr>
+          <div class="lista">
+            <ul>
+              <li>Luis Pelourinho</li>
+              <li>Hijo, 10 años</li>
+              <li>26.589.850</li>
+            </ul>
+          </div>
+          <hr>
+          <div class="lista">
+            <ul>
+              <li>Julieta Pelourinho</li>
+              <li>Hija, 14 años</li>
+              <li>26.589.850</li>
+            </ul>
+          </div>
+          <hr>
+          <div class="divisor">
+            Plan
+          </div>
+          <div class="lista">
+            <ul>
+              <li>SanCor 3500</li>
+            </ul>
+          </div>
+          <hr>
+          <div class="form-group label-floating select-group">
+            <select class="adicional-servicio" name="segmento-nuevo" required="required">
+              <option value="">Segmento al que se traspasa</option>
+              <option value="autonomo">Autonomo</option>
+              <option value="desregulado">Desregulado</option>
+              <option value="monotributo">Monotributo</option>
+            </select>
+            <div class="arrow"><i class="material-icons">keyboard_arrow_down</i></div>
+          </div>
+          <div class="form-group label-floating select-group">
+            <select class="adicional-servicio" name="ingreso-nuevo" required="required">
+              <option value="">Forma de ingreso</option>
+              <option value="individual">Individual</option>
+              <option value="grupo">Grupo afinidad</option>
+              <option value="empresa">Empresa</option>
+            </select>
+            <div class="arrow"><i class="material-icons">keyboard_arrow_down</i></div>
+          </div>
+        </div>
+
+        <div class="btn-ver">
+          <button id="ver-cotizacion" type="button" name="button" class="btn">Ver Cotización</button>
+        </div>
+
+        <div class="next">
+          <div class="pagination">
+            <div class="dot selected"></div>
+            <div class="dot"></div>
+          </div>
+          <button class="button btn next right">SIGUIENTE<i class="material-icons">keyboard_arrow_right</i></button>
+          <div class="button btn prev left"><i class="material-icons">keyboard_arrow_left</i>ANTERIOR</div>
+          <div class="clearfix"></div>
+        </div>
+
+
+      </form>
+      <div class="clearfix"></div>
+
+
+
+    </div>
+  </div>
+</div>
+</section>
+
+<div id="integrante" class="modal fade" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p>Vas a agregar a:</p>
+        <p class="integrante"></p>
+        <a id="acepta-integrante" href="#" class="btn btn-int">Aceptar</a>
+        <a href="#" class="btn btn-int cerrar">Cancelar</a>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="cotizacion-fin" class="modal fade" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p>Vas a cotizar para un Potencial Asociado, ofrecele <strong>Productos adicionales optativos</strong></p>
+        <p class="integrante"></p>
+        <a id="acepta-adicionales" href="#" class="btn btn-int">Aceptar</a>
+        <a id="no-adicionales" href="#" class="btn btn-int cerrar">NO, GRACIAS</a>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="alert-tc-cbu" class="modal fade" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p>Para poder efectivizar la afiliación deberá modificar la forma de pago a <strong>TC</strong> o <strong>CBU</strong></p>
+        <p class="integrante"></p>
+        <a href="#" class="btn btn-int cerrar">Entendido</a>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="cotizar-modal" class="modal fade asignados" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-header">
+      <h3>Juan Carlos Pelourinho</h3>
+      <h5>Cotización general</h5>
+    </div>
+    <div class="modal-content">
+      <div class="modal-body">
+        <form action="#" id="guardar">
+          <div class="titulo">Plan</div>
+          <div class="costo">Costo</div>
+          <div class="plan">
+            <div class="checkbox">
+              <input type="checkbox" name="plan-modal[]" value="1" id="plan-modal1">
+              <label for="plan-modal1">Sancor 500</label>
+            </div>
+            <div class="costo m11">$2000</div>
+            <div class="arrow"></div>
+            <div class="clearfix"></div>
+            <div class="descripcion">
+              <p>Valor del plan <input type="text" placeholder="$2000" disabled></p>
+              <p>Bonificación afinidad <input type="text" placeholder="($287)" disabled></p>
+              <p>Bonificación aporte <span>($1289)</span></p>
+              <p>Adicionales optativos <span>$1050</span></p>
+            </div>
+          </div><!-- fin plan -->
+          <div class="plan">
+            <div class="checkbox">
+              <input type="checkbox" name="plan-modal[]" value="1" id="plan-modal2">
+              <label for="plan-modal2">Sancor 1000</label>
+            </div>
+            <div class="costo m11">$2250</div>
+            <div class="arrow"></div>
+            <div class="clearfix"></div>
+            <div class="descripcion">
+              <p>Valor del plan <input type="text" placeholder="$2250" disabled></p>
+              <p>Bonificación afinidad <input type="text" placeholder="($287)" disabled></p>
+              <p>Bonificación aporte <span>($1289)</span></p>
+              <p>Adicionales optativos <span>$1050</span></p>
+            </div>
+          </div><!-- fin plan -->
+          <div class="plan">
+            <div class="checkbox">
+              <input type="checkbox" name="plan-modal[]" value="1" id="plan-modal3">
+              <label for="plan-modal3">Sancor 2000</label>
+            </div>
+            <div class="costo m11">$2450</div>
+            <div class="arrow"></div>
+            <div class="clearfix"></div>
+            <div class="descripcion">
+              <p>Valor del plan <input type="text" placeholder="$2450" disabled></p>
+              <p>Bonificación afinidad <input type="text" placeholder="($287)" disabled></p>
+              <p>Bonificación aporte <span>($1289)</span></p>
+              <p>Adicionales optativos <span>$1050</span></p>
+            </div>
+          </div><!-- fin plan -->
+          <div class="plan">
+            <div class="checkbox">
+              <input type="checkbox" name="plan-modal[]" value="1" id="plan-modal4">
+              <label for="plan-modal4">Sancor 2500</label>
+            </div>
+            <div class="costo m11">$2600</div>
+            <div class="arrow"></div>
+            <div class="clearfix"></div>
+            <div class="descripcion">
+              <p>Valor del plan <input type="text" placeholder="$2600" disabled></p>
+              <p>Bonificación afinidad <input type="text" placeholder="($287)" disabled></p>
+              <p>Bonificación aporte <span>($1289)</span></p>
+              <p>Adicionales optativos <span>$1050</span></p>
+            </div>
+          </div><!-- fin plan -->
+          <div class="plan">
+            <div class="checkbox">
+              <input type="checkbox" name="plan-modal[]" value="1" id="plan-modal5">
+              <label for="plan-modal5">Sancor 3000</label>
+            </div>
+            <div class="costo m11">$3150</div>
+            <div class="arrow"></div>
+            <div class="clearfix"></div>
+            <div class="descripcion">
+              <p>Valor del plan <input type="text" placeholder="$3150" disabled></p>
+              <p>Bonificación afinidad <input type="text" placeholder="($287)" disabled></p>
+              <p>Bonificación aporte <span>($1289)</span></p>
+              <p>Adicionales optativos <span>$1050</span></p>
+            </div>
+          </div><!-- fin plan -->
+          <div class="divisor">
+            Adicionales optativos (cotizados en el plan)
+          </div>
+          <div class="plan">
+            <div class="adicional-modal">Emergencias</div>
+            <div class="arrow"></div>
+            <div class="clearfix"></div>
+            <div class="descripcion w100">
+              <div>
+                <div class="checkbox">
+                  <input type="checkbox" name="plan-modal[]" value="1" id="adicional-modal1" checked="checked">
+                  <label for="adicional-modal1">Juan Pelourinho</label>
+                </div>
+                <div class="costo m11">$250</div>
+              </div>
+              <div>
+                <div class="checkbox">
+                  <input type="checkbox" name="plan-modal[]" value="1" id="adicional-modal2" checked="checked">
+                  <label for="adicional-modal2">Cónyuge, 36 años</label>
+                </div>
+                <div class="costo m11">$250</div>
+              </div>
+              <div>
+                <div class="checkbox">
+                  <input type="checkbox" name="plan-modal[]" value="1" id="adicional-modal3" checked="checked">
+                  <label for="adicional-modal3">Hijo, 10 años</label>
+                </div>
+                <div class="costo m11">$150</div>
+              </div>
+              <div>
+                <div class="checkbox">
+                  <input type="checkbox" name="plan-modal[]" value="1" id="adicional-modal4" checked="checked">
+                  <label for="adicional-modal4">Hija, 14 años</label>
+                </div>
+                <div class="costo m11">$150</div>
+              </div>
+            </div>
+          </div><!-- fin plan -->
+          <div class="plan">
+            <div class="adicional-modal">Supra Salud</div>
+            <div class="arrow"></div>
+            <div class="clearfix"></div>
+            <div class="descripcion w100">
+              <div>
+                <div class="checkbox">
+                  <input type="checkbox" name="plan-modal[]" value="1" id="supra-modal1" checked="checked">
+                  <label for="supra-modal1">Titular</label>
+                </div>
+                <div class="costo m11">$150</div>
+              </div>
+              <div>
+                <div class="checkbox">
+                  <input type="checkbox" name="plan-modal[]" value="1" id="supra-modal2" checked="checked">
+                  <label for="supra-modal2">Titular + Cónyuge</label>
+                </div>
+                <div class="costo m11">$350</div>
+              </div>
+              <div>
+                <div class="checkbox">
+                  <input type="checkbox" name="plan-modal[]" value="1" id="supra-modal3" checked="checked">
+                  <label for="supra-modal3">Titular + Hijo/a</label>
+                </div>
+                <div class="costo m11">$250</div>
+              </div>
+              <div>
+                <div class="checkbox">
+                  <input type="checkbox" name="plan-modal[]" value="1" id="supra-modal4" checked="checked">
+                  <label for="supra-modal4">Grupo familiar</label>
+                </div>
+                <div class="costo m11">$450</div>
+              </div>
+            </div>
+          </div><!-- fin plan -->
+          <div class="plan">
+            <div class="adicional-modal">Subsidio y sepelio</div>
+            <div class="arrow"></div>
+            <div class="clearfix"></div>
+            <div class="descripcion w100">
+              <div>
+                <div class="checkbox">
+                  <input type="checkbox" name="plan-modal[]" value="1" id="subsidio-modal1" checked="checked">
+                  <label for="subsidio-modal1">Cónyuge, 36 años</label>
+                </div>
+                <div class="costo m11">$450</div>
+              </div>
+              <div>
+                <div class="checkbox">
+                  <input type="checkbox" name="plan-modal[]" value="1" id="subsidio-modal2" checked="checked">
+                  <label for="subsidio-modal2">Hijo, 10 años</label>
+                </div>
+                <div class="costo m11">$450</div>
+              </div>
+              <div>
+                <div class="checkbox">
+                  <input type="checkbox" name="plan-modal[]" value="1" id="subsidio-modal3" checked="checked">
+                  <label for="subsidio-modal3">Hija, 14 años</label>
+                </div>
+                <div class="costo m11">$450</div>
+              </div>
+            </div>
+          </div><!-- fin plan -->
+          <p class="leyenda">La presente cotización realizada en el día de la fecha queda expresamente sujeta a variaciones conforme las actualizaciones, aumentos o ajustes que pudiera autorizar la Superintendencia de servicios de Salud, los cuales serán aplicados al mes que la misma indique.</p>
+
+        </form>
+        <a id="guardar-cotizacion" href="#" class="btn btn-int">Guardar cotización</a>
+        <a href="#" class="btn btn-int cerrar">Cancelar</a>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="../../assets/js/material.js"></script>
+<script src="../../assets/js/ripples.js"></script>
+<script src="../../assets/js/main.js"></script>
+<script src="../../assets/js/cotizar.js"></script>
+</body>
+
+</html>

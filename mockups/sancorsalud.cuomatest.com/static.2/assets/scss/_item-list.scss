@@ -1,0 +1,100 @@
+.item-list {
+  position: relative;
+  &::before {
+    bottom: 0;
+    box-shadow: 0 -1px 0 #e0e0e0,0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);
+    content: '';
+    display: block;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .item {
+    padding: 10px 25px;
+    min-height: 50px;
+    background: #fff;
+    border-bottom: 1px solid #dadada;
+    display: flex;
+    align-items: center;
+    &:hover {
+      background: #f1f1f1;
+    }
+    .nombre {
+      font-size: 16px;
+      color: #212121;
+      font-weight: bold;
+    }
+    .datos {
+      font-size: 14px;
+    }
+    .descripcion {
+      font-size: 14px;
+      color: #666;
+      span {
+        color: $color-rojo;
+        text-transform: uppercase;
+      }
+    }
+    .item-text {
+      // width: calc(100% - 80px);
+      flex-grow: 1;
+      cursor: pointer;
+    }
+    .item-icons {
+      width: 80px;
+      text-align: right;
+      color: $color-azul;
+    }
+    .icon-recotizar{
+      margin-right: 20px;
+      color: $color-azul;
+      &.error{
+        color: $color-rojo;
+      }
+    }
+    .cant p{
+      margin-bottom: 0;
+      font-size: 12px;
+      font-weight: 800;
+      color: $color-celeste;
+      span{
+        color: $color-rojo;
+      }
+    }
+    button {
+      background: none;
+      display: inline-block;
+      border: none;
+    }
+  }
+}
+#recotizar{
+  .item-text{
+    cursor: default;
+  }
+}
+#notificaciones{
+  .item{
+    .item-text{
+      .descripcion{
+        &:after{
+          content: '....';
+        }
+      }
+    }
+    .item-icons{
+      p{
+        color: $color-celeste;
+        margin: 0;
+      }
+    }
+    &.read{
+        .nombre, .descripcion, p{
+          color: #666;
+        }
+
+    }
+  }
+}

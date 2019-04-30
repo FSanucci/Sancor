@@ -1,0 +1,199 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ar.com.sancorsalud.asociados.fragments.quote.QuoteMembersNoAutonomoFragment">
+
+    <ScrollView
+        android:id="@+id/scroll"
+        style="@style/ScrollAppearence"
+        android:layout_above="@+id/add_button_container">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:maxLines="2"
+                    android:paddingLeft="3dp"
+                    android:text="@string/field_aporte_unificados"
+                    android:textColor="@color/colorDisabledText"
+                    android:textSize="18sp" />
+
+                <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/aporte_unificados"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/si_aporte_unificados"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="2dp"
+                        android:checked="false"
+                        android:text="@string/field_yes"
+                        android:textColor="@color/colorDisabledText"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/no_aporte_unificados"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="@string/field_no"
+                        android:textColor="@color/colorDisabledText"
+                        android:textSize="18sp" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/unifica_error"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/activity_vertical_half_margin"
+                android:paddingLeft="3dp"
+                android:text="@string/seleccione_unifica_error"
+                android:textColor="@color/colorRed"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/main_affiliation_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_half_margin"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/main_affiliation_text"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:maxLines="2"
+                    android:paddingLeft="3dp"
+                    android:text="@string/filed_titular_main_affilliation"
+                    android:textColor="@color/colorDisabledText"
+                    android:textSize="18sp" />
+
+                <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/main_affiliation_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/si_main_affiliation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="2dp"
+                        android:checked="false"
+                        android:text="@string/field_yes"
+                        android:textColor="@color/colorDisabledText"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/no_main_affiliation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="@string/field_no"
+                        android:textColor="@color/colorDisabledText"
+                        android:textSize="18sp" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/main_affiliation_error"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/titular_main_affiliation_box"
+                android:paddingLeft="3dp"
+                android:text="@string/seleccione_main_affilliation_error"
+                android:textColor="@color/colorRed"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+
+
+            <RelativeLayout
+                android:id="@+id/conyuge_asociado_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/conyuge_user_data_txt"
+                    style="@style/SectionContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:id="@+id/conyuge_planes_txt"
+                    style="@style/SectionContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/conyuge_user_data_txt"
+                    android:layout_marginTop="8dp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/members_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_half_margin"
+                android:text="@string/quote_members_data"
+                android:textColor="@color/colorAccent" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="@dimen/activity_vertical_half_margin" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/add_button_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/add_button"
+            style="@style/ButtonAppearence"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:layout_weight="2"
+            android:background="@color/colorPrimary"
+            android:text="@string/quote_add_member2" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

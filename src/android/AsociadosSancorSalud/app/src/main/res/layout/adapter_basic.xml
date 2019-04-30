@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_box"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite">
+
+    <TextView
+        android:id="@+id/item_title"
+        style="@style/ListItemTitle"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_half_margin"
+        android:text="Title"
+        android:maxLines="3"
+        android:layout_toStartOf="@+id/remove_button" />
+
+    <TextView
+        android:id="@+id/item_subtitle"
+        style="@style/ListItemSubtitle"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_half_margin"
+        android:layout_below="@+id/item_title"
+        android:text="Subtitle"
+        android:layout_toStartOf="@+id/remove_button" />
+
+
+    <TextView
+        android:id="@+id/item_separator"
+        style="@style/ListItemSeparator"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_below="@+id/item_subtitle" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_remove"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:id="@+id/remove_button" />
+
+</RelativeLayout>

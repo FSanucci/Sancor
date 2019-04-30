@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#303F9F</color>
+    <color name="colorPrimaryDark">#283593</color>
+    <color name="colorAccent">#0091ea</color>
+
+    <color name="colorTransparent">#00000000</color>
+    <color name="colorRed">#e53935</color> <!-- FD4138  c8563c -->
+    <color name="colorGreen">#43a047</color> <!-- 46a948  6fa95e-->
+    <color name="colorOrange">#fb8c00</color>
+    <color name="colorDarkOrange">#FFCC80</color>
+
+    <color name="colorDarkGrey">#767676</color>
+    <color name="colorLightGrey">#cccccc</color>
+
+    <color name="colorLoginGrey">#535353</color>
+
+
+
+    <color name="colorBackground">#e5e5e5</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorDarkBlue">#283593</color>
+
+    <color name="colorBlack">#000000</color>
+    <color name="colorPrimaryText">#dd000000</color>
+    <color name="colorSecondaryText">#8a000000</color>
+    <color name="colorDisabledText">#62000000</color>
+    <color name="colorDividers">#1b000000</color>
+
+    <color name="colorMenu">@color/colorSecondaryText</color>
+    <color name="colorNoData">#999999</color>
+    <color name="colorNoDataBackground">#eeeeee</color>
+
+
+
+
+
+
+</resources>

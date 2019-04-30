@@ -1,0 +1,325 @@
+.modal {
+  margin-top: 170px;
+  p {
+    color: #666;
+    font-size: 16px;
+    &.fecha{
+      font-size: 14px;
+      color: $color-celeste;
+    }
+  }
+  .botones {
+    text-align: right;
+    .btn {
+      color: $color-celeste;
+    }
+  }
+  &.asignados {
+    padding-top: 10px;
+    margin-top: 0;
+    .modal-header {
+      background-color: $color-celeste;
+      h3 {
+        color: #fff;
+        font-size: 25px;
+        margin-top: 60px;
+      }
+      h5{
+        color: #fff;
+        margin-top: 20px;
+      }
+      .edit{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background:none;
+        border: none;
+        color: #fff;
+      }
+    }
+    .modal-content {
+      position: relative;
+      &.open-modal:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,.3);
+      }
+      .modal-body{
+        padding-bottom: 0;
+      }
+    }
+    .item {
+      position: relative;
+      width: 100%;
+      padding: 20px;
+      p {
+        font-size: 16px;
+        color: #212121;
+        float: right;
+        width: 85%;
+        margin: 0;
+        span {
+          display: block;
+          width: 100%;
+          font-size: 14px;
+          color: #757575;
+        }
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 1px;
+        background-color: #dadada;
+        width: 83%;
+      }
+      &.last {
+        &:before {
+          display: none;
+        }
+      }
+    }
+    .icono {
+      display: inline-block;
+      float: left;
+      margin-right: 40px;
+      i {
+        color: $color-azul;
+      }
+    }
+    form {
+      border-top: 1px solid #dadada;
+      padding: 20px;
+      padding-bottom: 0;
+      .icono {
+        padding: 20px 0;
+      }
+      .is-empty input[type=date] {
+        color: transparent;
+      }
+      input[type=date]:focus {
+        color: #555;
+      }
+      .is-empty input[type=time] {
+        color: transparent;
+      }
+      input[type=time]:focus {
+        color: #555;
+      }
+    }
+    .form-group {
+      float: right;
+      width: 85%;
+      margin: 20px 0;
+    }
+    .botones {
+      display: flex;
+      text-align: center;
+      background-color: #eaeaea;
+      button{
+        flex-grow: 1;
+        padding: 15px;
+      }
+      .btn {
+        display: inline-block;
+        margin: 0;
+        color: $color-azul;
+        border-radius: 0;
+        font-size: 10px;
+        i{
+          font-size: 36px;
+          margin-bottom: 5px;
+          display: block;
+          width: 100%;
+          text-align: center;
+        }
+        &.cerrar-caso {
+          // background-color: $color-azul;
+        }
+        &.cotizar,
+        &.modificar, &.ver-cotizacion {
+          // background-color: $color-celeste;
+        }
+      }
+    }
+    .cotizar-modal {
+      position: absolute;
+      bottom: 150px;
+      left: 50px;
+      right: 50px;
+      background-color: #fff;
+      padding: 20px;
+      z-index: 200;
+      &::before {
+        bottom: 0;
+        box-shadow: 0 -1px 0 #e0e0e0,0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);
+        content: '';
+        display: block;
+        left: 0;
+        pointer-events: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .form-group {
+        width: 100%;
+      }
+      p {
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 20px;
+      }
+      .btn {
+        float: right;
+        color: $color-azul;
+      }
+    }
+  }
+}
+#asignar{
+  p{
+    font-size: 16px;
+    color: #666;
+  }
+  .btn {
+    color: $color-celeste;
+    float: right;
+    font-weight: 400;
+  }
+}
+#cotizar{
+  .modal-dialog{
+    background-color: $color-celeste;
+    text-align: center;
+    padding: 50px 0;
+  }
+  a{
+    color: #fff;
+    margin: 0;
+    padding-top: 20px;
+    i{
+      font-size: 40px;
+    }
+    &:hover{
+      background-color: transparent;
+      opacity: .8;
+    }
+  }
+  p{
+    font-size: 12px;
+    color: #fff;
+    padding-bottom: 10px;
+  }
+}
+#cotizar-modal{
+  &.asignados{
+    .titulo{
+      float: left;
+      width: calc(100% - 110px);
+      font-size: 13px;
+    }
+    .costo{
+      width: 80px;
+      float: left;
+      font-size: 13px;
+    }
+    form{
+      border: 0;
+      .plan{
+        border-bottom: 1px solid #d2d2d2;
+        margin-top: 10px;
+        .checkbox{
+          width: calc(100% - 110px);
+          float: left;
+          .costo{
+            font-size: 13px;
+            color: #BDBDBD;
+          }
+          label{
+            font-size: 13px;
+            color: #212121;
+          }
+          [type="checkbox"]:checked + label:after, .checkbox [type="checkbox"]:not(:checked) + label:after{
+            font-size: 13px;
+            top: 4px;
+            left: 0;
+          }
+        }
+        .arrow{
+          width: 24px;
+          cursor: pointer;
+          float: right;
+          margin-top: 3px;
+          height: 24px;
+          position: relative;
+          &:after{
+            content: 'keyboard_arrow_down';
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-family: 'Material Icons';
+            font-size: 24px;
+          }
+        }
+        .descripcion{
+          max-width: 300px;
+          margin: 0 auto;
+          overflow: hidden;
+          max-height: 0;
+          transition: max-height .3s;
+          &.w100{
+            max-width: 100%;
+          }
+          p{
+            color: #231F20;
+            font-size: 12px;
+            position: relative;
+            span{
+              position: absolute;
+              right: 0;
+            }
+            input{
+              position: absolute;
+              right: 0;
+              font-size: 12px;
+              max-width: 45px;
+              border: none;
+              text-align: right;
+            }
+          }
+        }
+        .adicional-modal{
+          font-size: 13px;
+          color: #212121;
+          width: calc(100% - 25px);
+          margin: 12px 0;
+          float: left;
+        }
+      }
+      .leyenda{
+        font-size: 14px;
+        color: #231F20;
+        margin-top: 40px;
+      }
+
+      .plan.open{
+        .arrow{
+          &:after{
+            content: 'keyboard_arrow_up';
+          }
+        }
+        .descripcion{
+          max-height: 400px;
+        }
+      }
+    }
+  }
+  .m11{
+    margin: 11px 0;
+  }
+}

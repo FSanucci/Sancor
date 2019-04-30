@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <ScrollView
+        style="@style/ScrollAppearence"
+        android:layout_above="@+id/add_button_container">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:paddingBottom="10dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/aporte_legal_container">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/aporte_legal_wrapper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/aporte_legal_input"
+                        style="@style/TextAppearence.EditText"
+                        android:focusable="false"
+                        android:hint="@string/field_aporte_legal" />
+                </android.support.design.widget.TextInputLayout>
+
+                <RelativeLayout
+                    android:id="@+id/aporte_legal_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_alignParentTop="true">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        app:srcCompat="@drawable/ic_expand" />
+                </RelativeLayout>
+
+
+                <ImageView
+                    android:id="@+id/aporte_help"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/aporte_legal_button"
+                    android:layout_alignBottom="@+id/aporte_legal_button"
+                    android:layout_marginRight="@dimen/help_hor_margin"
+                    android:layout_marginBottom="@dimen/help_vert_margin"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_info"/>
+
+            </RelativeLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/monto_wrapper"
+                style="@style/TextAppearence.TextInputLayout">
+
+                <EditText
+                    android:id="@+id/monto_input"
+                    style="@style/TextAppearence.EditText"
+                    android:inputType="numberDecimal"
+                    android:hint="@string/field_monto" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/remuneracion_bruta_wrapper"
+                style="@style/TextAppearence.TextInputLayout"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/remuneracion_bruta_input"
+                    style="@style/TextAppearence.EditText"
+                    android:inputType="numberDecimal"
+                    android:enabled="false"
+                    android:hint="@string/field_remuneracion_bruta" />
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/add_button_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/add_salary"
+            style="@style/ButtonAppearence"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:layout_weight="2"
+            android:background="@color/colorPrimary"
+            android:text="@string/quote_add_salary" />
+
+    </LinearLayout>
+</RelativeLayout>

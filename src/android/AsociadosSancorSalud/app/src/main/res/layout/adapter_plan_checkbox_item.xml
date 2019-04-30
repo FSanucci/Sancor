@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_container"
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/activity_vertical_margin">
+
+        <RelativeLayout
+            android:id="@+id/quote_box"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+
+            <RelativeLayout
+                android:id="@+id/quote_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_alignParentRight="true"
+                    app:srcCompat="@drawable/ic_expand" />
+            </RelativeLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/quote_wrapper"
+                style="@style/TextAppearence.TextInputLayout"
+                android:layout_marginTop="2dp">
+
+                <EditText
+                    android:id="@+id/quote_input"
+                    style="@style/TextAppearence.TextPrice"
+                    android:text="$0" />
+            </android.support.design.widget.TextInputLayout>
+
+
+        </RelativeLayout>
+
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/quote_box"
+            android:fontFamily="sans-serif"
+            android:text="Plan id"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/item_separator"
+        style="@style/ListItemSeparator"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>
+

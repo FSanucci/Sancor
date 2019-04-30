@@ -1,0 +1,56 @@
+<div class="bg-menu"></div>
+
+<section class="content">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="filtro">
+          <div class="sin-agendar">
+            <i class="material-icons">event_note</i>Sin agendar
+            <div class="cerrar">Limpiar filtro
+              <i class="material-icons">close</i>
+            </div>
+          </div>
+          <div class="entrevistados">
+            <i class="material-icons">assignment_turned_in</i>Entrevistados
+            <div class="cerrar">Limpiar filtro
+              <i class="material-icons">close</i>
+            </div>
+          </div>
+          <div class="cotizados">
+            <i class="material-icons">monetization_on</i>Cotizados
+            <div class="cerrar">Limpiar filtro
+              <i class="material-icons">close</i>
+            </div>
+          </div>
+        </div>
+
+        <div class="item-list" id="lista">
+
+          <div class="row">
+            <div class="col-xs-12">
+              <p ng-if="loading"><i class="fa fa-refresh fa-spin"></i> Cargando la lista de promotores...</p>
+              <p ng-if="!loading && promoterList.length == 0">No hay ningún promotor.</p>
+
+              <div ng-repeat="promoter in promoterList | filter: filterSearchedData">
+
+                <article class="item">
+                  <div class="item-text">
+                    <div class="nombre">{{promoter.nombre}} {{promoter.apellido}} - {{promoter.nro_zona}}</div>
+                    <div class="datos">{{promoter.edad}} </div>
+                  </div>
+                  <div class="cant">
+                    <p><span>{{promoter.pot_asignados}}</span> - {{promoter.pot_historica}}</p>
+                  </div>
+                </article>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,595 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ar.com.sancorsalud.asociados.fragments.affiliation.AffiliationTitularDataFragment">
+
+    <ScrollView
+        android:id="@+id/scroll"
+        style="@style/ScrollAppearence"
+        android:layout_above="@+id/add_button">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <!-- PAGO -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="@string/affiliation_pago"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/pago_wrapper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/pago_input"
+                        style="@style/TextAppearence.EditText"
+                        android:focusable="false"
+                        android:hint="@string/affiliation_forma_pago" />
+                </android.support.design.widget.TextInputLayout>
+
+<!--
+                <RelativeLayout
+                    android:id="@+id/pago_button"
+                    style="@style/buttonSpinner">
+
+                    <ImageView
+                        style="@style/arrowSpinner"
+                        app:srcCompat="@drawable/ic_expand" />
+                </RelativeLayout>
+-->
+
+            </RelativeLayout>
+
+            <!-- FROMA PAGO : TC -->
+            <RelativeLayout
+                android:id="@+id/card_box"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                android:layout_marginTop="@dimen/activity_vertical_double_margin">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/card_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/card_recycler_view"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                    <ImageView
+                        android:id="@+id/card_img"
+                        style="@style/attach_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:src="@drawable/ic_attach" />
+
+                    <ImageView
+                        android:id="@+id/card_file"
+                        style="@style/attach_img"
+                        android:layout_alignTop="@+id/card_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/card_img"
+                        android:src="@drawable/ic_file" />
+
+                    <Button
+                        android:id="@+id/card_button"
+                        style="@style/attach_button"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/card_file"
+                        android:text="@string/affiliation_card_front" />
+
+                    <Button
+                        android:id="@+id/card_detect_button"
+                        style="@style/attach_button"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:text="@string/affiliation_card_detect"
+                        android:layout_below="@+id/card_file"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <!-- CARD NUMBR-->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/card_number_wrapper"
+                style="@style/TextAppearence.TextInputLayout"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/card_number_input"
+                    style="@style/TextAppearence.EditText"
+                    android:hint="@string/affiliation_card_number"
+                    android:inputType="number" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- CARD TYPE-->
+            <RelativeLayout
+                android:id="@+id/card_type_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/card_type_wrapper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/card_type_input"
+                        style="@style/TextAppearence.EditText"
+                        android:focusable="false"
+                        android:hint="@string/field_card" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/card_type_button"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_alignParentTop="true">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        app:srcCompat="@drawable/ic_expand" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <!-- CARD BANK-->
+            <RelativeLayout
+                android:id="@+id/banco_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/banco_wrapper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/banco_input"
+                        style="@style/TextAppearence.EditText"
+                        android:focusable="false"
+                        android:hint="@string/field_banco" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/banco_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_alignParentTop="true">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        app:srcCompat="@drawable/ic_expand" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <!-- CARD VALIDITY-->
+            <RelativeLayout
+                android:id="@+id/card_validity_date_box"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/card_validity_date_wrapper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/card_validity_date_input"
+                        style="@style/TextAppearence.EditText"
+                        android:focusable="false"
+                        android:hint="@string/affiliation_card_validity_date" />
+                </android.support.design.widget.TextInputLayout>
+
+                <RelativeLayout
+                    android:id="@+id/card_validity_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp" />
+
+            </RelativeLayout>
+
+            <!-- CARD VALIDITY BUTTON-->
+            <Button
+                android:id="@+id/card_check_validation_button"
+                style="@style/ButtonAppearence"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@drawable/button_background_accent"
+                android:text="@string/affiliation_card_validation"
+                android:visibility="gone"/>
+
+            <!-- CARD AFFLILIATION QUESTION-->
+            <LinearLayout
+                android:id="@+id/card_affilliation_box"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/affiliation_card_same_as_titular_quest"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp" />
+
+                <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/card_affiliation_option"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="2dp">
+
+                    <RadioButton
+                        android:id="@+id/card_yes_affiliation_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="2dp"
+                        android:checked="false"
+                        android:text="@string/option_yes"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp" />
+
+                    <RadioButton
+                        android:id="@+id/card_no_affiliation_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="@string/option_no"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <!-- CONSTANCIA_CARD (NO AFFILLITAION RESP)-->
+            <RelativeLayout
+                android:id="@+id/constancia_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                android:layout_marginTop="@dimen/activity_vertical_double_margin"
+                android:visibility="gone">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/constancia_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/constancia_recycler_view"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                    <ImageView
+                        android:id="@+id/constancia_img"
+                        style="@style/attach_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:src="@drawable/ic_attach" />
+
+                    <ImageView
+                        android:id="@+id/constancia_file"
+                        style="@style/attach_img"
+                        android:layout_alignTop="@+id/constancia_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/constancia_img"
+                        android:src="@drawable/ic_file" />
+
+                    <Button
+                        android:id="@+id/constancia_button"
+                        style="@style/attach_button"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/constancia_file"
+                        android:text="@string/affiliation_constancia_card" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <!-- FORMA PAGO ALL:  show cbu or reintegros dinamically change hint  -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/cbu_number_wrapper"
+                style="@style/TextAppearence.TextInputLayout"
+                android:visibility="visible">
+
+                <EditText
+                    android:id="@+id/cbu_number_input"
+                    style="@style/TextAppearence.EditText"
+                    android:inputType="number"
+                    android:hint=""
+                    android:maxLength="22" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!--  FORMA PAGO ALL: CBU BANK  -->
+            <RelativeLayout
+                android:id="@+id/cbu_banco_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/cbu_banco_wrapper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/cbu_banco_input"
+                        style="@style/TextAppearence.EditText"
+                        android:focusable="false"
+                        android:hint="@string/field_banco" />
+                </android.support.design.widget.TextInputLayout>
+
+                <RelativeLayout
+                    android:id="@+id/cbu_banco_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_alignParentTop="true">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        app:srcCompat="@drawable/ic_expand" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <!-- FORMA PAGO ALL: ACCOUNT TYPE -->
+            <RelativeLayout
+                android:id="@+id/account_type_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/account_wrapper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/account_input"
+                        style="@style/TextAppearence.EditText"
+                        android:hint="@string/affiliation_account_type" />
+                </android.support.design.widget.TextInputLayout>
+
+                <RelativeLayout
+                    android:id="@+id/account_button"
+                    style="@style/buttonSpinner">
+
+                    <ImageView
+                        style="@style/arrowSpinner"
+                        app:srcCompat="@drawable/ic_expand" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <!-- CBU CONSTANCIA FILES (REINTEGROS)-->
+            <RelativeLayout
+                android:id="@+id/cbu_constancia_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                android:layout_marginTop="@dimen/activity_vertical_double_margin">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/cbu_constancia_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cbu_constancia_recycler_view"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                    <ImageView
+                        android:id="@+id/cbu_constancia_img"
+                        style="@style/attach_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:src="@drawable/ic_attach" />
+
+                    <ImageView
+                        android:id="@+id/cbu_constancia_file"
+                        style="@style/attach_img"
+                        android:layout_alignTop="@+id/cbu_constancia_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/cbu_constancia_img"
+                        android:src="@drawable/ic_file" />
+
+                    <Button
+                        android:id="@+id/cbu_constancia_button"
+                        style="@style/attach_button"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/cbu_constancia_file"
+                        android:text="@string/affiliation_cbu_constancia" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <!-- forma pago CBU :  CBU COMPROBANTE FILES -->
+            <RelativeLayout
+                android:id="@+id/cbu_comprobante_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                android:layout_marginTop="@dimen/activity_vertical_double_margin"
+                android:visibility="gone">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/cbu_comprobante_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cbu_comprobante_recycler_view"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                    <ImageView
+                        android:id="@+id/cbu_comprobante_img"
+                        style="@style/attach_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:src="@drawable/ic_attach" />
+
+                    <ImageView
+                        android:id="@+id/cbu_comprobante_file"
+                        style="@style/attach_img"
+                        android:layout_alignTop="@+id/cbu_comprobante_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/cbu_comprobante_img"
+                        android:src="@drawable/ic_file" />
+
+                    <Button
+                        android:id="@+id/cbu_comprobante_button"
+                        style="@style/attach_button"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/cbu_comprobante_file"
+                        android:text="@string/affiliation_cbu_comprobante" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <!-- FROMA PAGO : ALL-->
+            <LinearLayout
+                android:id="@+id/cbu_affilliation_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_half_margin"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/affiliation_cbu_same_as_titular_quest"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp" />
+
+                <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/cbu_affiliation_option"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="2dp">
+
+                    <RadioButton
+                        android:id="@+id/cbu_yes_affiliation_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="2dp"
+                        android:checked="false"
+                        android:text="@string/option_yes"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp" />
+
+                    <RadioButton
+                        android:id="@+id/cbu_no_affiliation_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="@string/option_no"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <!-- FOR ALL CBU PERSONAL DATA CUIT -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/cuit_number_wrapper"
+                style="@style/TextAppearence.TextInputLayout">
+
+                <EditText
+                    android:id="@+id/cuit_number_input"
+                    style="@style/TextAppearence.EditText"
+                    android:hint="@string/affiliation_cuit"
+                    android:inputType="number"
+                    android:maxLength="11" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- FOR ALL CBU PERSONAL DATA FIRST NAME -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/first_name_wrapper"
+                style="@style/TextAppearence.TextInputLayout">
+
+                <EditText
+                    android:id="@+id/first_name_input"
+                    style="@style/TextAppearence.EditText"
+                    android:hint="@string/affiliation_first_name" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- FOR ALL CBU PERSONAL DATA LAST NAME -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/last_name_wrapper"
+                style="@style/TextAppearence.TextInputLayout">
+
+                <EditText
+                    android:id="@+id/last_name_input"
+                    style="@style/TextAppearence.EditText"
+                    android:hint="@string/affiliation_last_name" />
+            </android.support.design.widget.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp"></View>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+</FrameLayout>

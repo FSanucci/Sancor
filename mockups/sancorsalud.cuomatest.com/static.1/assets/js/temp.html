@@ -1,0 +1,29 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+
+var datos = {"apellido":"Perez","nombre":"Juan","dni":20999776,"fecha_nac":"1945-05-20T12:00:00:00.000Z","cp":"2400","tel":"3306447758","cel":"3306644799","mail":"juanperez@hotmail.com","nro_zona":17,"calle":"Cabrera","puerta":4058,"piso":4,"departamento":"F","comentario":"Esto es un comentario","referente_id":5,"promotor_id":7,"canal":3,"es_empresa":"S"}
+
+var datos2 = {"nombre":"NOM","apellido":"nonono","dni":2321322,"fecha_nac":"1999-12-12T02:00:00.000Z","cp":1212,"tel":121,"cel":87677,"mail":"mail@mmm.com","nro_zona":17,"calle":"12121","puerta":"86","piso":"7676","departamento":"76","comentario":"767","es_empresa":"S"};
+
+$.ajax({
+	type : "post",
+	contentType : "application/json",
+	url : "https://testservicios.sancorsalud.com.ar/asociados/api/PotencialAsociado_Agregar",
+	headers : {
+		token : "eyJhbGciOiJIUzI1NiJ9.eyJ6b25hIjoxNywic3ViIjoicHJvbW90b3IiLCJ1c3VhcmlvX2lkIjoyNDE2LCJpc3MiOiJzYW5jb3JzYWx1ZC5jb20uYXIiLCJyb2xfaWQiOjMsImV4cCI6MTQ5NjI4NjAwMCwicm9sIjoicHJvbW90b3IifQ.rtaiO74ih0AUUG7nEndb0a25F8_kjFaC35i74m1_J3c"
+	},
+	data: JSON.stringify(datos),
+    dataType : "json",
+    success : function(data){
+    	console.log(data);
+    },
+    error : function(a,b,c){
+    	console.log(a);
+    	console.log(b);
+    	console.log(c);
+    }
+
+});
+
+
+</script>

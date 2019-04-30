@@ -1,0 +1,221 @@
+<div class="bg-menu"></div>
+
+<section class="content">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="supervisor-mensaje">{{welcomeMessage}}</div>
+      </div>
+      <div class="col-md-12">
+        <div class="filtro">
+          <div class="sin-agendar">
+            <i class="material-icons">event_note</i>Sin agendar
+            <div class="cerrar">Limpiar filtro
+              <i class="material-icons">close</i>
+            </div>
+          </div>
+          <div class="entrevistados">
+            <i class="material-icons">assignment_turned_in</i>Agendados
+            <div class="cerrar">Limpiar filtro
+              <i class="material-icons">close</i>
+            </div>
+          </div>
+          <div class="cotizados">
+            <i class="material-icons">monetization_on</i>Cotizados
+            <div class="cerrar">Limpiar filtro
+              <i class="material-icons">close</i>
+            </div>
+          </div>
+        </div>
+
+        <div class="item-list">
+
+          <div class="row">
+            <div class="col-xs-12">
+              <p ng-if="loading"><i class="fa fa-refresh fa-spin"></i> Cargando la lista de potenciales asociados
+                asingados...</p>
+              <p ng-if="!loading && associatedPotentialList.length == 0">No tienes ningun potencial asignado aún, por
+                favor solicitale a tu supervisor.</p>
+
+              <div ng-repeat="associatedPotential in associatedPotentialList | filter: filterSearchedData">
+
+                <article class="item" data-filter="{{getState(associatedPotential)}}">
+                  <div class="item-text" data-modalnum="asignado1"
+                       ng-click="setSelectedAssociatedPotencial(associatedPotential)">
+                    <div class="nombre">{{associatedPotential.nombre}} {{associatedPotential.apellido}}</div>
+                    <div class="datos">{{associatedPotential.edad}} años</div>
+                    <div class="descripcion"><span>{{getDetailsMessage(associatedPotential)}}</span></div>
+                  </div>
+                  <div class="item-icons">
+                    <i ng-show="showIconWarningExpiredDate(associatedPotential)" class="material-icons error">report_problem</i>
+                    <button ng-show="showIconAgenda(associatedPotential)===false" type="button" class="btn-cal"><i
+                      class="material-icons">event_note</i></button>
+                    <button ng-show="showIconAgenda(associatedPotential)===true" type="button" class="btn-cal"><i
+                      class="material-icons">assignment_turned_in</i></button>
+                    <button ng-show="showIconValued(associatedPotential)" type="button" class="btn-cal"><i
+                      class="material-icons">monetization_on</i></button>
+                  </div>
+                </article>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div id="message-dialog" class="modal fade" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p>{{userMessage}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="asignado1" class="modal fade asignados" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-header">
+      <h3></h3>
+    </div>
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="item" style="display: none">
+          <div class="icono"><i class="material-icons">edad</i></div>
+          <p>{{selectedAssociatedPotencial.edad}} años<span>Edad</span></p>
+          <div class="clearfix"></div>
+        </div>
+        <div class="item">
+          <div class="icono"><i class="material-icons">phone</i></div>
+          <p>{{selectedAssociatedPotencial.perfil.celular}} <span>Móvil</span></p>
+          <p>{{selectedAssociatedPotencial.perfil.tel}} <span>Casa</span></p>
+          <div class="clearfix"></div>
+        </div>
+        <div class="item">
+          <div class="icono"><i class="material-icons">email</i></div>
+          <p>{{selectedAssociatedPotencial.perfil.mail}} <span>Personal</span></p>
+          <div class="clearfix"></div>
+        </div>
+        <div class="item">
+          <div class="icono"><i class="material-icons">place</i></div>
+          <p>{{selectedAssociatedPotencial.direccion}}<br> <span>Home</span></p>
+          <div class="clearfix"></div>
+        </div>
+        <form action="#">
+          <div class="icono"><i class="material-icons">event_note</i></div>
+          <div class="form-group label-floating">
+            <label for="fecha-entrevista" class="control-label">Fecha de Entrevista</label>
+            <input value="{{getDateDescription(selectedAssociatedPotencial.fecha_agenda)}}" type="date"
+                   class="form-control" id="fecha-entrevista" name="fecha-entrevista" required="required">
+            <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+          </div>
+          <div class="clearfix"></div>
+
+          <div class="icono"><i class="material-icons">alarm</i></div>
+          <div class="form-group label-floating">
+            <label for="hora-entrevista" class="control-label">Hora de Entrevista</label>
+            <input value="{{getTimeDescription(selectedAssociatedPotencial.fecha_agenda)}}" type="time"
+                   class="form-control" id="hora-entrevista" name="hora-entrevista" required="required">
+            <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+          </div>
+          <div class="clearfix"></div>
+
+          <div class="icono"><i class="material-icons">place</i></div>
+          <div class="form-group label-floating">
+            <label for="direccion" class="control-label">Dirección de Entrevista</label>
+            <input type="text" ng-model="selectedAssociatedPotencial.direccion_encuentro" class="form-control"
+                   id="direccion" name="direccion" required="required">
+            <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+          </div>
+          <div class="clearfix"></div>
+
+          <div class="icono"><i class="material-icons">assignment</i></div>
+          <div class="form-group label-floating">
+            <label for="notas" class="control-label">Notas</label>
+            <input ng-model="selectedAssociatedPotencial.notas" type="text" class="form-control" id="notas"
+                   name="notas">
+            <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+          </div>
+          <div class="clearfix"></div>
+
+          <div class="icono" ng-show="showIconValued(selectedAssociatedPotencial)===true"><i class="material-icons">assignment</i>
+          </div>
+          <div class="form-group label-floating" ng-show="showIconValued(selectedAssociatedPotencial)===true">
+            <label for="plan" class="control-label">Plan</label>
+            <input type="text" class="form-control" id="plan" name="plan">
+            <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+          </div>
+          <div class="clearfix"></div>
+
+          <div class="icono" ng-show="showIconValued(selectedAssociatedPotencial)===true"><i class="material-icons">monetization_on</i>
+          </div>
+          <div class="form-group label-floating" ng-show="showIconValued(selectedAssociatedPotencial)===true">
+            <label for="costo" class="control-label">Costo</label>
+            <input type="text" class="form-control" id="costo" name="costo">
+            <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+          </div>
+          <div class="clearfix"></div>
+        </form>
+        <div class="botones">
+          <button class="cerrar-caso btn" onclick="$('#close-dialog').modal('toggle');">Cerrar Caso</button>
+          <button class="btn cotizar">Cotizar</button>
+          <button class="btn modificar" ng-click="saveAssociatedPotentialAgenda()">Aceptar</button>
+        </div>
+        <div class="cotizar-modal" style="display:none;">
+          <p>Vas a cotizar para <span class="name"></span></p>
+          <div class="form-group label-floating">
+            <label for="plan" class="control-label">Plan</label>
+            <input type="text" ng-model="valuation.plan" class="form-control" id="plan-value" name="plan-value"
+                   required="required">
+            <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+          </div>
+          <div class="form-group label-floating">
+            <label for="costo" class="control-label">Costo $</label>
+            <input type="text" ng-model="valuation.value" class="form-control" id="costo-value" name="costo-value"
+                   required="required">
+            <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+          </div>
+          <button class="btn cotizar-ok" ng-click="valuedAssociatedPotential()">Aceptar</button>
+          <button class="btn cerrar">Cerrar</button>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="close-dialog" class="modal fade" tabindex="-1" style="">
+  <div class="modal-content">
+    <div class="modal-body">
+      <div class="row">
+        <div class="col-md-12">
+          <p>Indica un motivo por el cual desea cerrar el caso:</p>
+
+          <div class="form-group label-floating">
+            <form action="#">
+
+              <select class="form-control" name="motive" id="motive" ng-model="selectedAssociatedPotencial.motive"
+                      required="required">
+                <option value="">--Select--</option>
+                <option ng-repeat="option in motives" value="{{option.id}}">{{option.motivo}}</option>
+              </select>
+            </form>
+
+
+            <button class="btn cerrar" onclick="$('#close-dialog').modal('toggle');">Cancelar</button>
+            <button class="btn cerrar" ng-click="closeAssociatedPotential()">Confirmar</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

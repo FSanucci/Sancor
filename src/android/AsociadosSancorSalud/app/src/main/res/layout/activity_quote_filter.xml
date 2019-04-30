@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_container"
+    android:background="@color/colorAccent">
+
+
+        <LinearLayout
+            android:id="@+id/row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:weightSum="3"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/plan_salud"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:alpha="1">
+
+                <ImageView
+                    android:id="@+id/plan_salud_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_plan" />
+
+                <TextView
+                    android:id="@+id/plan_salud_txt"
+                    style="@style/FilterTitle"
+                    android:text="@string/filter_plan_salud" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/additional_opt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:alpha="1">
+
+                <ImageView
+                    android:id="@+id/additional_opt_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_additional" />
+
+                <TextView
+                    android:id="@+id/additional_opt_txt"
+                    style="@style/FilterTitle"
+                    android:text="@string/filter_adicionales_opt" />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/manual_quote"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:alpha="1">
+
+                <ImageView
+                    android:id="@+id/manual_quote_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_edit" />
+
+                <TextView
+                    android:id="@+id/manual_quote_txt"
+                    style="@style/FilterTitle"
+                    android:text="@string/filter_manual_quote" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    <ImageView
+        android:id="@+id/close_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:padding="@dimen/activity_vertical_margin"
+        android:src="@drawable/ic_close" />
+
+</RelativeLayout>

@@ -1,0 +1,798 @@
+{
+  "status": "success",
+  "data": {
+    "forma_de_ingresos": [
+      {
+        "descripcion": "Afinidad",
+        "id": 3
+      },
+      {
+        "descripcion": "Empresa",
+        "id": 2
+      },
+      {
+        "descripcion": "Individual",
+        "id": 1
+      }
+    ],
+    "categorias": [
+      {
+        "descripcion": "Activo",
+        "id": 1
+      },
+      {
+        "descripcion": "Adherente",
+        "id": 3
+      }
+    ],
+    "os_desregula": [
+      {
+        "descripcion": "OSPERSAAMS-Salud",
+        "tipo": "S",
+        "id": 23
+      },
+      {
+        "descripcion": "OSMB Salud",
+        "tipo": "S",
+        "id": 36
+      },
+      {
+        "descripcion": "OSIM",
+        "tipo": "D",
+        "id": 39
+      },
+      {
+        "descripcion": "OSME Salud",
+        "tipo": "S",
+        "id": 74
+      },
+      {
+        "descripcion": "ASE-Salud",
+        "tipo": "D",
+        "id": 17
+      },
+      {
+        "descripcion": "OSUTI Salud",
+        "tipo": "D",
+        "id": 40
+      },
+      {
+        "descripcion": "OSCONARA",
+        "tipo": "S",
+        "id": 89
+      }
+    ],
+    "condiciones_iva": [
+      {
+        "descripcion": "Inscripto",
+        "id": 1
+      },
+      {
+        "descripcion": "Consumidor Final",
+        "id": 3
+      },
+      {
+        "descripcion": "Monotributista",
+        "id": 6
+      }
+    ],
+    "orientacion": [
+      {
+        "descripcion": "Norte",
+        "id": "N"
+      },
+      {
+        "descripcion": "Sur",
+        "id": "S"
+      },
+      {
+        "descripcion": "Este",
+        "id": "E"
+      },
+      {
+        "descripcion": "Oeste",
+        "id": "O"
+      }
+    ],
+    "estados_civiles": [
+      {
+        "descripcion": "SOLTERO",
+        "id": "S"
+      },
+      {
+        "descripcion": "CASADO",
+        "id": "C"
+      },
+      {
+        "descripcion": "VIUDO",
+        "id": "V"
+      },
+      {
+        "descripcion": "DIVORCIADO",
+        "id": "D"
+      },
+      {
+        "descripcion": "SEPARADO LEGAL",
+        "id": "L"
+      },
+      {
+        "descripcion": "SEPARADO DE HECHO",
+        "id": "H"
+      },
+      {
+        "descripcion": "CONVIVENCIA",
+        "id": "N"
+      },
+      {
+        "descripcion": "U. DE HECHO",
+        "id": "U"
+      },
+      {
+        "descripcion": "OTROS",
+        "id": "O"
+      }
+    ],
+    "nacionalidades": [
+      {
+        "descripcion": "ARGENTINA",
+        "id": 54
+      },
+      {
+        "descripcion": "BOLIVIA",
+        "id": 55
+      },
+      {
+        "descripcion": "Extranjero",
+        "id": 999
+      },
+      {
+        "descripcion": "PERU",
+        "id": 56
+      },
+      {
+        "descripcion": "PARAGUAY",
+        "id": 57
+      },
+      {
+        "descripcion": "BRASIL",
+        "id": 58
+      },
+      {
+        "descripcion": "CANADA",
+        "id": 59
+      },
+      {
+        "descripcion": "CHILE",
+        "id": 60
+      },
+      {
+        "descripcion": "URUGUAY",
+        "id": 61
+      },
+      {
+        "descripcion": "FRANCIA",
+        "id": 62
+      },
+      {
+        "descripcion": "SUECIA",
+        "id": 63
+      },
+      {
+        "descripcion": "ITALIA",
+        "id": 64
+      },
+      {
+        "descripcion": "COLOMBIA",
+        "id": 65
+      },
+      {
+        "descripcion": "GRECIA",
+        "id": 66
+      },
+      {
+        "descripcion": "TAIWAN",
+        "id": 67
+      },
+      {
+        "descripcion": "MEXICO",
+        "id": 68
+      },
+      {
+        "descripcion": "AUSTRIA",
+        "id": 69
+      },
+      {
+        "descripcion": "ESPAÑA",
+        "id": 70
+      },
+      {
+        "descripcion": "VENEZUELA",
+        "id": 71
+      },
+      {
+        "descripcion": "ESTADOS UNIDOS",
+        "id": 72
+      },
+      {
+        "descripcion": "BELGICA",
+        "id": 73
+      },
+      {
+        "descripcion": "HOLANDA",
+        "id": 74
+      },
+      {
+        "descripcion": "PUERTO RICO",
+        "id": 75
+      },
+      {
+        "descripcion": "ALEMANIA",
+        "id": 76
+      },
+      {
+        "descripcion": "COREA DE SUR",
+        "id": 77
+      },
+      {
+        "descripcion": "CHINA",
+        "id": 78
+      },
+      {
+        "descripcion": "NORUEGA",
+        "id": 79
+      },
+      {
+        "descripcion": "REP. DOMINICANA",
+        "id": 80
+      },
+      {
+        "descripcion": "PORTUGAL",
+        "id": 81
+      },
+      {
+        "descripcion": "LIBANO",
+        "id": 82
+      },
+      {
+        "descripcion": "ECUADOR",
+        "id": 83
+      },
+      {
+        "descripcion": "UCRANIA",
+        "id": 84
+      },
+      {
+        "descripcion": "GUATEMALA",
+        "id": 85
+      },
+      {
+        "descripcion": "BULGARIA",
+        "id": 86
+      },
+      {
+        "descripcion": "CUBA",
+        "id": 87
+      },
+      {
+        "descripcion": "ISRAEL",
+        "id": 88
+      },
+      {
+        "descripcion": "POLONIA",
+        "id": 89
+      },
+      {
+        "descripcion": "SUIZA",
+        "id": 90
+      },
+      {
+        "descripcion": "AUSTRALIA",
+        "id": 91
+      },
+      {
+        "descripcion": "RUSA",
+        "id": 92
+      },
+      {
+        "descripcion": "INGLATERRA",
+        "id": 93
+      },
+      {
+        "descripcion": "HAITI",
+        "id": 94
+      },
+      {
+        "descripcion": "JORDANIA",
+        "id": 95
+      },
+      {
+        "descripcion": "ARMENIA",
+        "id": 96
+      },
+      {
+        "descripcion": "COSTA RICA",
+        "id": 97
+      },
+      {
+        "descripcion": "JAMAICA",
+        "id": 98
+      },
+      {
+        "descripcion": "PANAMA",
+        "id": 99
+      },
+      {
+        "descripcion": "GRAN BRETAÑA",
+        "id": 100
+      },
+      {
+        "descripcion": "FINLANDIA",
+        "id": 101
+      },
+      {
+        "descripcion": "IRLANDA",
+        "id": 102
+      },
+      {
+        "descripcion": "MOLDOVA",
+        "id": 103
+      },
+      {
+        "descripcion": "GHANESA",
+        "id": 104
+      },
+      {
+        "descripcion": "NIGERIA",
+        "id": 105
+      },
+      {
+        "descripcion": "TAILANDIA",
+        "id": 106
+      },
+      {
+        "descripcion": "NEOCELANDESA",
+        "id": 107
+      },
+      {
+        "descripcion": "ARABE",
+        "id": 108
+      },
+      {
+        "descripcion": "HUNGARO",
+        "id": 109
+      },
+      {
+        "descripcion": "IRANI",
+        "id": 110
+      },
+      {
+        "descripcion": "COSTA DE MARFIL",
+        "id": 11
+      },
+      {
+        "descripcion": "HONDURAS",
+        "id": 111
+      },
+      {
+        "descripcion": "VIETNAM",
+        "id": 112
+      },
+      {
+        "descripcion": "ZAIREÑA",
+        "id": 113
+      },
+      {
+        "descripcion": "SIRIA",
+        "id": 114
+      },
+      {
+        "descripcion": "SUDAFRICA",
+        "id": 115
+      },
+      {
+        "descripcion": "AZERBAIYAN",
+        "id": 116
+      },
+      {
+        "descripcion": "EL SALVADOR",
+        "id": 117
+      },
+      {
+        "descripcion": "NICARAGUA",
+        "id": 118
+      },
+      {
+        "descripcion": "INDIO",
+        "id": 119
+      },
+      {
+        "descripcion": "CROACIA",
+        "id": 120
+      }
+    ],
+    "segmento": [
+      {
+        "descripcion": "Autónomo",
+        "id": 1
+      },
+      {
+        "descripcion": "Desregulado",
+        "id": 2
+      },
+      {
+        "descripcion": "Monotributo",
+        "id": 3
+      }
+    ],
+    "tipos_documentos_asociados": [
+      {
+        "descripcion": "DNI",
+        "id": 1
+      },
+      {
+        "descripcion": "Constancia de CUIL",
+        "id": 2
+      },
+      {
+        "descripcion": "Foto",
+        "id": 3
+      },
+      {
+        "descripcion": "Constancia de inscripción",
+        "id": 4
+      },
+      {
+        "descripcion": "Comprobante de cobertura proveniente",
+        "id": 5
+      },
+      {
+        "descripcion": "Formulario de reconocimiento del plan",
+        "id": 6
+      },
+      {
+        "descripcion": "Partida de nacimiento",
+        "id": 8
+      },
+      {
+        "descripcion": "Acta de matrimonio",
+        "id": 7
+      },
+      {
+        "descripcion": "Constancia de iva",
+        "id": 9
+      },
+      {
+        "descripcion": "Formulario 184",
+        "id": 10
+      },
+      {
+        "descripcion": "Pagos últimos 6 meses",
+        "id": 11
+      },
+      {
+        "descripcion": "Certificado de discapacidad",
+        "id": 12
+      }
+    ],
+    "atributos_domicilio": [
+      {
+        "descripcion": "ACCESO",
+        "id": 26
+      },
+      {
+        "descripcion": "AREA",
+        "id": 33
+      },
+      {
+        "descripcion": "BLOCK",
+        "id": 20
+      },
+      {
+        "descripcion": "BLOQUE",
+        "id": 22
+      },
+      {
+        "descripcion": "CASA",
+        "id": 2
+      },
+      {
+        "descripcion": "CHACRA",
+        "id": 4
+      },
+      {
+        "descripcion": "DUPLEX",
+        "id": 18
+      },
+      {
+        "descripcion": "EDIF",
+        "id": 16
+      },
+      {
+        "descripcion": "ESC",
+        "id": 31
+      },
+      {
+        "descripcion": "ESCA",
+        "id": 5
+      },
+      {
+        "descripcion": "ETAPA",
+        "id": 24
+      },
+      {
+        "descripcion": "FRACCION",
+        "id": 39
+      },
+      {
+        "descripcion": "GALERIA",
+        "id": 23
+      },
+      {
+        "descripcion": "KM",
+        "id": 6
+      },
+      {
+        "descripcion": "LATERAL",
+        "id": 29
+      },
+      {
+        "descripcion": "LOCA",
+        "id": 7
+      },
+      {
+        "descripcion": "LOTE",
+        "id": 3
+      },
+      {
+        "descripcion": "MACI",
+        "id": 9
+      },
+      {
+        "descripcion": "MEDIDOR",
+        "id": 38
+      },
+      {
+        "descripcion": "MODULO",
+        "id": 34
+      },
+      {
+        "descripcion": "MONO",
+        "id": 11
+      },
+      {
+        "descripcion": "MZA",
+        "id": 10
+      },
+      {
+        "descripcion": "NUDO",
+        "id": 25
+      },
+      {
+        "descripcion": "OFICINA",
+        "id": 27
+      },
+      {
+        "descripcion": "PARCELA",
+        "id": 12
+      },
+      {
+        "descripcion": "PASAJE",
+        "id": 28
+      },
+      {
+        "descripcion": "PASILLO",
+        "id": 32
+      },
+      {
+        "descripcion": "PEATONAL",
+        "id": 8
+      },
+      {
+        "descripcion": "PILAR",
+        "id": 30
+      },
+      {
+        "descripcion": "PISO",
+        "id": 17
+      },
+      {
+        "descripcion": "PUERTA",
+        "id": 40
+      },
+      {
+        "descripcion": "PUESTO",
+        "id": 36
+      },
+      {
+        "descripcion": "QUINTA",
+        "id": 35
+      },
+      {
+        "descripcion": "RUTA",
+        "id": 19
+      },
+      {
+        "descripcion": "SECC",
+        "id": 13
+      },
+      {
+        "descripcion": "SECTOR",
+        "id": 21
+      },
+      {
+        "descripcion": "SOLAR",
+        "id": 42
+      },
+      {
+        "descripcion": "TIMBRE",
+        "id": 37
+      },
+      {
+        "descripcion": "TIRA",
+        "id": 14
+      },
+      {
+        "descripcion": "TORR",
+        "id": 15
+      },
+      {
+        "descripcion": "UF",
+        "id": 41
+      }
+    ],
+    "tipos_documentos": [
+      {
+        "descripcion": "Documento de identid",
+        "id": 96
+      },
+      {
+        "descripcion": "Pasaporte",
+        "id": 94
+      },
+      {
+        "descripcion": "CEDULA EXTRANJERIA",
+        "id": 95
+      }
+    ],
+    "parentescos": [
+      {
+        "descripcion": "Concubino/a",
+        "id": 2
+      },
+      {
+        "descripcion": "Conyuge",
+        "id": 1
+      },
+      {
+        "descripcion": "Familiar a cargo",
+        "id": 8
+      },
+      {
+        "descripcion": "Hijo conyuge soltero menor 21",
+        "id": 5
+      },
+      {
+        "descripcion": "Hijo soltero menor de 21 años",
+        "id": 3
+      },
+      {
+        "descripcion": "Hijo soltero 21-25 años, Estud",
+        "id": 4
+      },
+      {
+        "descripcion": "Mayor de 25 años discapacitado",
+        "id": 9
+      },
+      {
+        "descripcion": "Menor bajo guarda y tutela",
+        "id": 7
+      },
+      {
+        "descripcion": "Titular",
+        "id": 0
+      }
+    ],
+    "os_estados": [
+      {
+        "descripcion": "No existe opción activa",
+        "id": 1
+      },
+      {
+        "descripcion": "Opción con otra obra social",
+        "id": 2
+      },
+      {
+        "descripcion": "Opción activa en la obra social a ingresar",
+        "id": 3
+      }
+    ],
+    "sexo": [
+      {
+        "descripcion": "Masculino",
+        "id": "M"
+      },
+      {
+        "descripcion": "Femenino",
+        "id": "F"
+      }
+    ],
+    "coberturas": [
+      {
+        "nombre_os": "A.C.A. SALUD",
+        "codigo_os": 2
+      },
+      {
+        "nombre_os": "A.M.U.R.",
+        "codigo_os": 3
+      },
+      {
+        "nombre_os": "CONSOLIDAR",
+        "codigo_os": 316
+      },
+      {
+        "nombre_os": "GALENO",
+        "codigo_os": 102
+      },
+      {
+        "nombre_os": "HOSPITAL ALEMAN",
+        "codigo_os": 116
+      },
+      {
+        "nombre_os": "HOSPITAL BRITANICO (BS AS)",
+        "codigo_os": 317
+      },
+      {
+        "nombre_os": "HOSPITAL ITALIANO BS.AS.",
+        "codigo_os": 101
+      },
+      {
+        "nombre_os": "IOSEPE",
+        "codigo_os": 346
+      },
+      {
+        "nombre_os": "JERARQUICO SALUD",
+        "codigo_os": 271
+      },
+      {
+        "nombre_os": "MEDICUS",
+        "codigo_os": 64
+      },
+      {
+        "nombre_os": "MEDIFE",
+        "codigo_os": 272
+      },
+      {
+        "nombre_os": "MUTUAL FEDERADA 25 DE JUNIO",
+        "codigo_os": 5
+      },
+      {
+        "nombre_os": "O.M.I.N.T.",
+        "codigo_os": 109
+      },
+      {
+        "nombre_os": "O.S.D.E.",
+        "codigo_os": 9
+      },
+      {
+        "nombre_os": "PROTEXIA",
+        "codigo_os": 350
+      },
+      {
+        "nombre_os": "SWISS MEDICAL",
+        "codigo_os": 221
+      }
+    ],
+    "regimen": [
+      {
+        "descripcion": "General",
+        "id": 1
+      },
+      {
+        "descripcion": "Monotributo",
+        "id": 2
+      }
+    ]
+  },
+  "errorCode": 0,
+  "message": null
+}

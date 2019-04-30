@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <ScrollView
+        android:id="@+id/main_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="255dp"
+            android:layout_height="900dp"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <!-- auto 255x900 -->
+            <!-- des 255x977 -->
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:src="@drawable/subte_desregulado2" />
+
+            <LinearLayout
+                android:id="@+id/comienzo"
+                android:tag="comienzo"
+                android:onClick="showPopup"
+                style="@style/station"
+                android:layout_marginLeft="90dp"
+                android:layout_marginTop="68dp"/>
+
+            <LinearLayout
+                android:id="@+id/asignado_referente"
+                style="@style/station"
+                android:tag="asignado_referente"
+                android:onClick="showPopup"
+                android:layout_marginLeft="90dp"
+                android:layout_marginTop="116dp"/>
+
+            <LinearLayout
+                android:id="@+id/asignado_promotor"
+                style="@style/station"
+                android:tag="asignado_promotor"
+                android:onClick="showPopup"
+                android:layout_marginLeft="90dp"
+                android:layout_marginTop="155dp"/>
+
+            <LinearLayout
+                android:id="@+id/cotizado"
+                style="@style/station"
+                android:tag="cotizado"
+                android:onClick="showPopup"
+                android:layout_marginLeft="90dp"
+                android:layout_marginTop="245dp"/>
+
+            <LinearLayout
+                android:id="@+id/carga_proceso"
+                style="@style/station"
+                android:tag="carga_proceso"
+                android:onClick="showPopup"
+                android:layout_marginLeft="90dp"
+                android:layout_marginTop="285dp"/>
+
+            <LinearLayout
+                android:id="@+id/enviado_aprobacion"
+                style="@style/station"
+                android:tag="enviado_aprobacion"
+                android:onClick="showPopup"
+                android:layout_marginLeft="90dp"
+                android:layout_marginTop="325dp"/>
+
+            <LinearLayout
+                android:id="@+id/alta_provisoria"
+                style="@style/station"
+                android:tag="alta_provisoria"
+                android:onClick="showPopup"
+                android:layout_marginLeft="90dp"
+                android:layout_marginTop="396dp"/>
+
+            <LinearLayout
+                android:id="@+id/consistencia_inconsistencia"
+                style="@style/station"
+                android:tag="consistencia_inconsistencia"
+                android:onClick="showPopup"
+                android:layout_marginLeft="90dp"
+                android:layout_marginTop="437dp"/>
+
+            <LinearLayout
+                android:id="@+id/alta_definitiva"
+                style="@style/station"
+                android:tag="alta_definitiva"
+                android:onClick="showPopup"
+                android:layout_marginLeft="90dp"
+                android:layout_marginTop="477dp"/>
+
+            <LinearLayout
+                android:id="@+id/credencial_entregada"
+                style="@style/station"
+                android:tag="credencial_entregada"
+                android:onClick="showPopup"
+                android:layout_marginLeft="90dp"
+                android:layout_marginTop="518dp"/>
+
+            <LinearLayout
+                android:id="@+id/fin2"
+                style="@style/station"
+                android:tag="fin2"
+                android:onClick="showPopup"
+                android:layout_marginLeft="90dp"
+                android:layout_marginTop="558dp"/>
+
+            <LinearLayout
+                android:id="@+id/cerrado"
+                style="@style/station"
+                android:tag="cerrado"
+                android:onClick="showPopup"
+                android:layout_marginLeft="46dp"
+                android:layout_marginTop="330dp"/>
+
+            <LinearLayout
+                android:id="@+id/fin1"
+                style="@style/station"
+                android:tag="fin1"
+                android:onClick="showPopup"
+                android:layout_marginLeft="46dp"
+                android:layout_marginTop="380dp"/>
+
+            <LinearLayout
+                android:id="@+id/pendiente_envio_car"
+                style="@style/station"
+                android:tag="pendiente_envio_car"
+                android:onClick="showPopup"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="750dp"/>
+
+            <LinearLayout
+                android:id="@+id/enviada_aprobacion_car"
+                style="@style/station"
+                android:tag="enviada_aprobacion_car"
+                android:onClick="showPopup"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="790dp"/>
+
+            <LinearLayout
+                android:id="@+id/derivada_soporte_promocion"
+                style="@style/station"
+                android:tag="derivada_soporte_promocion"
+                android:onClick="showPopup"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="829dp"/>
+
+            <LinearLayout
+                android:id="@+id/enviada_archivo"
+                style="@style/station"
+                android:tag="enviada_archivo"
+                android:onClick="showPopup"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="869dp"/>
+
+            <LinearLayout
+                android:id="@+id/archivada"
+                style="@style/station"
+                android:tag="archivada"
+                android:onClick="showPopup"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="909dp"/>
+
+            <LinearLayout
+                android:id="@+id/fin"
+                style="@style/station"
+                android:tag="fin"
+                android:onClick="showPopup"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="947dp"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

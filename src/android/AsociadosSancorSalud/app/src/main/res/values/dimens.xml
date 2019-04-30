@@ -1,0 +1,78 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_horizontal_half_margin">8dp</dimen>
+    <dimen name="activity_vertical_half_margin">8dp</dimen>
+
+    <dimen name="activity_horizontal_double_margin">32dp</dimen>
+    <dimen name="activity_vertical_double_margin">32dp</dimen>
+
+    <dimen name="activity_arrow_margin">4dp</dimen>
+
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="primary_title_size">16sp</dimen>
+
+    <dimen name="footer_txt_size">12sp</dimen>
+
+    <dimen name="filter_txt_size">16sp</dimen>
+
+    <!-- help -->
+    <dimen name="help_hor_margin">50dp</dimen>
+    <dimen name="help_vert_margin">10dp</dimen>
+
+    <!-- MENU -->
+    <dimen name="menu_header_box_height">180dp</dimen>
+    <dimen name="menu_header_padding">16dp</dimen>
+    <dimen name="menu_header_label_size">17sp</dimen>
+    <dimen name="menu_item_icon_size">26dp</dimen>
+    <dimen name="menu_item_icon_margin_left">16dp</dimen>
+    <dimen name="menu_item_title_margin_left">60dp</dimen>
+    <dimen name="menu_item_separator_margin">10dp</dimen>
+    <dimen name="menu_item_margin_top">16dp</dimen>
+    <dimen name="menu_item_margin_bottom">15dp</dimen>
+    <dimen name="menu_item_title_size">16sp</dimen>
+    <dimen name="menu_item_separator_margin_right">15dp</dimen>
+    <dimen name="badge_text_size">16sp</dimen>
+    <dimen name="badge_size">35dp</dimen>
+
+
+    <!-- List -->
+    <dimen name="list_item_title_size">16sp</dimen>
+    <dimen name="list_item_subtitle_size">14sp</dimen>
+    <dimen name="list_item_info_size">12sp</dimen>
+    <dimen name="list_item_date_size">22sp</dimen>
+    <dimen name="list_item_month_size">12sp</dimen>
+
+    <dimen name="list_item_margin_top">8dp</dimen>
+    <dimen name="list_item_icon_margin_top">10dp</dimen>
+    <dimen name="list_item_text_margin_top">4dp</dimen>
+    <dimen name="list_item_text_margin_left">72dp</dimen>
+    <dimen name="list_item_icon_size">26dp</dimen>
+    <dimen name="list_empty_element_size">18sp</dimen>
+    <dimen name="list_item_accesory_text_size">12sp</dimen>
+    <dimen name="list_item_min_height">50dp</dimen>
+
+
+    <!-- List header-->
+    <dimen name="header_list_height">80dp</dimen>
+    <dimen name="header_list_text_size">16sp</dimen>
+    <dimen name="header_list_height_50">50dp</dimen>
+
+
+    <!-- Button -->
+    <dimen name="app_button_txt_size">14sp</dimen>
+    <dimen name="app_button_padding">12dp</dimen>
+
+    <!-- No Data -->
+    <dimen name="no_data_title_size">20sp</dimen>
+    <dimen name="no_data_button_size">15dp</dimen>
+    <dimen name="no_data_margin">12dp</dimen>
+
+    <dimen name="quote_button_txt_size">12sp</dimen>
+    <dimen name="price_margin_bottom">6dp</dimen>
+</resources>

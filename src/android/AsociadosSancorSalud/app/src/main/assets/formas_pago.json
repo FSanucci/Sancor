@@ -1,0 +1,25 @@
+{
+  "status": "success",
+  "data": {
+    "formas": [
+      {
+        "forma_descripcion": "CLAVE BANCARIA UNIFORME",
+        "forma_id": "CBU"
+      },
+      {
+        "forma_descripcion": "PAGO FACIL",
+        "forma_id": "PGF"
+      },
+      {
+        "forma_descripcion": "RECIBO COBRO ENTIDAD",
+        "forma_id": "RCE"
+      },
+      {
+        "forma_descripcion": "TARJETA DE CREDITO",
+        "forma_id": "TC"
+      }
+    ]
+  },
+  "errorCode": 0,
+  "message": null
+}

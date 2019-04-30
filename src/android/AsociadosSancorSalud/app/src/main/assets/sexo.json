@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "data": {
+    "sexo": [
+      {
+        "descripcion": "Masculino",
+        "id": "M"
+      },
+      {
+        "descripcion": "Femenino",
+        "id": "F"
+      }
+    ]
+  },
+  "errorCode": 0,
+  "message": null
+}

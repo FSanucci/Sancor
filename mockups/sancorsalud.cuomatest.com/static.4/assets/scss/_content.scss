@@ -1,0 +1,402 @@
+.content {
+  width: 100%;
+  margin: 0 auto;
+  transition: all 0.3s ease-in;
+  margin-top: 80px;
+  margin-left: 0;
+  float: left;
+  position: relative;
+  z-index: 0;
+  .filtro {
+    > div {
+      display: none;
+      padding: 10px 25px;
+      min-height: 45px;
+      line-height: 26px;
+      margin: 20px 0;
+      border-radius: 5px;
+      color: #fff;
+      background-color: $color-celeste;
+    }
+    i {
+      float: left;
+      margin-right: 20px;
+      color: #fff;
+    }
+    .cerrar {
+      float: right;
+      color: #fff;
+      cursor: pointer;
+      i {
+        float: right;
+        margin-right: 0;
+        margin-left: 10px;
+      }
+    }
+  }
+  &.agenda {
+    .row {
+      margin-bottom: 10px;
+    }
+  }
+  .fecha {
+    font-size: 23px;
+    span {
+      font-size: 10px;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+  }
+}
+
+.container {
+  width: 100%;
+  position: relative;
+  padding-bottom: 60px;
+}
+.open-menu {
+  .menu {
+    left: 0 !important;
+  }
+}
+
+.cargar {
+  .container {
+    overflow-x: hidden;
+  }
+  .qr {
+    text-align: center;
+  }
+  .btn-qr {
+    background-color: $color-naranja;
+    color: #fff;
+    &:hover {
+      background-color: lighten($color-naranja, 15%)!important;
+    }
+  }
+  .btn-enviar {
+    color: #fff;
+    background-color: $color-celeste;
+    float: right;
+    &:hover {
+      background-color: lighten($color-celeste, 15%)!important;
+    }
+  }
+  form {
+    .is-empty input[type=date] {
+      color: transparent;
+    }
+    input[type=date]:focus {
+      color: #555;
+    }
+  }
+}
+.form-header{
+  background-color: $color-celeste;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 14px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  i{
+    color: #fff;
+    font-size: 28px;
+    margin-right: 10px;
+  }
+}
+#cotizar{
+  #plan, #step-2, #desregulado, #monotributo, #adicional, #transferencia{
+    display: none;
+  }
+  #step-2{
+    p.empresa{
+      font-size: 16px;
+      color: #969696;
+      text-align: center;
+      font-family: 'Roboto', serif;
+      font-weight: 800
+    }
+  }
+  .checkbox{
+    width: auto;
+    .form-group{
+      margin-top: 14px;
+      margin-right: 10px;
+      min-width: 90px;
+    }
+    .control-label{
+      margin-right: 40px;
+    }
+    label{
+      float: left;
+      font-size: 16px;
+      font-weight: 400;
+      &.dark{
+        color: #000;
+        font-weight: 300;
+        min-width: 250px;
+      }
+    }
+    [type="radio"]:checked + label:after,
+    [type="radio"]:not(:checked) + label:after {
+      font-family: 'Material Icons';
+      content: 'radio_button_unchecked';
+      position: absolute;
+      top: 5px;
+      left: 0px;
+      font-size: 16px;
+      line-height: 0.8;
+      color: $color-azul;
+      transition: all 0.2s;
+    }
+    p{
+      display: inline-block;
+      min-width: 90px;
+      color: #000;
+      padding: 0;
+      margin: 0;
+      font-size: 16px;
+      padding-left: 5px;
+    }
+  }
+  .next{
+    background-color: #e0e0e0;
+    text-align: center;
+    position: relative;
+    .btn{
+      font-size: 14px;
+      color: #666;
+      position: relative;
+      i{
+        margin-top: -2px;
+        font-size: 30px;
+      }
+      &.right{
+        float: right;
+      }
+      &.left{
+        float: left;
+        display: none;
+      }
+    }
+    .pagination{
+      display: inline-block;
+      margin: 25px 0 0;
+      position: absolute;
+      left: calc(50% - 40px);
+      // padding-left: 150px;
+      .dot{
+        width: 15px;
+        height: 15px;
+        float: left;
+        margin-right: 5px;
+        position: relative;
+        &:after{
+          content: '';
+          width: 10px;
+          height: 10px;
+          background-color: #666;
+          border-radius: 50%;
+          position: absolute;
+          top: 2px;
+        }
+        &.selected{
+          &:after{
+            background-color: $color-celeste;
+            width: 15px;
+            height: 15px;
+            top: 0;
+          }
+        }
+      }
+    }
+  }
+  .lista{
+    ul{
+      list-style-type: none;
+      padding: 0;
+      margin-top: 20px;
+      li{
+        font-size: 16px;
+        color: #212121;
+      }
+    }
+  }
+}
+.checkbox {
+  width: 40px;
+  /* Base for label styling */
+  [type="checkbox"]:checked,
+  [type="checkbox"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+  }
+  [type="checkbox"]:checked + label,
+  [type="checkbox"]:not(:checked) + label {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+  }
+  /* checkbox aspect */
+  [type="checkbox"]:checked + label:before,
+  [type="checkbox"]:not(:checked) + label:before {
+    font-family: 'Material Icons';
+    content: 'check_box_outline_blank';
+    position: absolute;
+    left: 0;
+    top: 0;
+    // width: 17px;
+    // height: 17px;
+    // border: 1px solid #aaa;
+    // background: #f8f8f8;
+    border-radius: 3px;
+    box-shadow: none;
+  }
+  [type="checkbox"]:checked + label:before{
+    color: $color-azul;
+  }
+  /* checked mark aspect */
+  [type="checkbox"]:checked + label:after,
+  [type="checkbox"]:not(:checked) + label:after {
+    font-family: 'Material Icons';
+    content: 'check_box';
+    position: absolute;
+    top: 8px;
+    left: 2px;
+    font-size: 18px;
+    line-height: 0.8;
+    color: $color-azul;
+    transition: all 0.2s;
+  }
+  /* checked mark aspect changes */
+  [type="checkbox"]:not(:checked) + label:after {
+    opacity: 0;
+    transform: scale(0);
+  }
+  [type="checkbox"]:checked + label:after {
+    opacity: 1;
+    transform: scale(1);
+  }
+  /* disabled checkbox */
+  [type="checkbox"]:disabled:checked + label:before,
+  [type="checkbox"]:disabled:not(:checked) + label:before {
+    box-shadow: none;
+    color: #999;
+    // border-color: #bbb;
+    // background-color: #ddd;
+  }
+  [type="checkbox"]:disabled:checked + label:after {
+    color: #999;
+  }
+  [type="checkbox"]:disabled + label {
+    color: #aaa;
+  }
+  /* accessibility */
+  [type="checkbox"]:checked:focus + label:before,
+  [type="checkbox"]:not(:checked):focus + label:before {
+    // border: 1px dotted blue;
+  }
+  /* hover style just for information */
+  [type="checkbox"]:not(:disabled) + label:hover:before {
+    // border: 1px solid #4778d9!important;
+    color: $color-azul!important;
+  }
+  // RADIO
+  [type="radio"]:checked,
+  [type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+  }
+  [type="radio"]:checked + label,
+  [type="radio"]:not(:checked) + label {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+  }
+  /* radio aspect */
+  [type="radio"]:checked + label:before,
+  [type="radio"]:not(:checked) + label:before {
+    font-family: 'Material Icons';
+    content: 'radio_button_unchecked';
+    position: absolute;
+    left: 0;
+    top: 0;
+    // width: 17px;
+    // height: 17px;
+    // border: 1px solid #aaa;
+    // background: #f8f8f8;
+    border-radius: 3px;
+    box-shadow: none;
+  }
+  [type="radio"]:checked + label:before{
+    color: $color-azul;
+  }
+  /* checked mark aspect */
+  [type="radio"]:checked + label:after,
+  [type="radio"]:not(:checked) + label:after {
+    font-family: 'Material Icons';
+    content: 'radio_button_checked';
+    position: absolute;
+    top: 8px;
+    left: 2px;
+    font-size: 18px;
+    line-height: 0.8;
+    color: $color-azul;
+    transition: all 0.2s;
+  }
+  /* checked mark aspect changes */
+  [type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    transform: scale(0);
+  }
+  [type="radio"]:checked + label:after {
+    opacity: 1;
+    transform: scale(1);
+  }
+  /* disabled radio */
+  [type="radio"]:disabled:checked + label:before,
+  [type="radio"]:disabled:not(:checked) + label:before {
+    box-shadow: none;
+    color: #999;
+    // border-color: #bbb;
+    // background-color: #ddd;
+  }
+  [type="radio"]:disabled:checked + label:after {
+    color: #999;
+  }
+  [type="radio"]:disabled + label {
+    color: #aaa;
+  }
+  /* accessibility */
+  [type="radio"]:checked:focus + label:before,
+  [type="radio"]:not(:checked):focus + label:before {
+    // border: 1px dotted blue;
+  }
+  /* hover style just for information */
+  [type="radio"]:not(:disabled) + label:hover:before {
+    // border: 1px solid #4778d9!important;
+    color: $color-azul!important;
+  }
+  label{
+    font-size: 22px;
+  }
+}
+#adicional{
+  .step-1{
+    display: none;
+  }
+}
+#desregulado{
+  .checkbox.form-inline{
+    .control-label{
+      min-width: 190px;
+    }
+  }
+  .calc, .calc-remuneracion, .calc-aporte{
+    display: none;
+  }
+}
+#transferencia{
+  padding-bottom: 40px;
+}

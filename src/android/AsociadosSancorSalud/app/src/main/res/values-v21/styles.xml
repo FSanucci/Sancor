@@ -1,0 +1,11 @@
+<resources>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <!-- Hago que el filter bar y el toolbar tengan el mismo color
+            <item firstname="android:statusBarColor">@android:color/transparent</item>
+            -->
+    </style>
+</resources>

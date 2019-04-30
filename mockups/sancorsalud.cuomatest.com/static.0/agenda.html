@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sancor Salud</title>
+  <!-- Material Design fonts -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- Bootstrap Material Design -->
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-material-design.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/ripples.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+</head>
+
+<body>
+  <header class="header">
+    <nav class="menu">
+      <div class="head">
+        <img src="assets/images/logo.png" alt="">
+        <h3 class="name">Inés Duarte</h3>
+      </div>
+      <ul>
+        <li><a href="cargar-asociado.html"><i class="material-icons">person_add</i>Cargar potencial asociado</a></li>
+        <li><a href="asignados.html"><i class="material-icons">person_add</i>Asignados</a></li>
+        <li class="active"><a href="#"><i class="material-icons">event_note</i>Agenda</a></li>
+        <li><a href="#"><i class="material-icons">exit_to_app</i>Salir</a></li>
+      </ul>
+    </nav>
+    <button type="button" name="button" class="btn btn-menu btn-nav"><i class="material-icons">menu</i> <h3>Asignados</h3></button>
+    <button type="button" name="button" class="btn btn-menu btn-search"><i class="material-icons">arrow_back</i> <h3>Volver</h3></button>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <form action="#" class="search">
+            <button type="submit" name="button" class="btn hidden-xs"><i class="material-icons">search</i></button>
+            <input type="text" placeholder="Buscar" class="hidden-xs">
+            <input type="text" placeholder="Buscar" class="smart visible-xs">
+          </form>
+          <div class="filtros dropdown">
+            <button type="button" name="button" class="btn btn-filter dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="material-icons">more_vert</i></button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><a id="sin-agendar" href="#"><i class="material-icons">event_note</i>Sin agendar</a></li>
+              <li><a id="entrevistados" href="#"><i class="material-icons">assignment_turned_in</i>Entrevistados</a></li>
+              <li><a id="cotizados" href="#"><i class="material-icons">monetization_on</i>Cotizados</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button type="button" name="button" class="btn smart-search visible-xs"><i class="material-icons">search</i></button>
+    <div class="user hidden-xs">
+      <i class="material-icons">account_circle</i>
+      <div class="name">Inés Duarte</div>
+    </div>
+  </header>
+
+    <div class="bg-menu"></div>
+
+  <section class="content agenda">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-1">
+          <div class="fecha">31 <span>oct</span></div>
+        </div>
+        <div class="col-md-11">
+
+          <div class="item-list">
+            <article class="item" data-filter="sin-agendar">
+              <div class="item-text">
+                <div class="nombre">Juan Carlos Pelourinho</div>
+                <div class="datos">18:00hs</div>
+                <div class="descripcion">Bar Finisterre - Uriarte 1358, Palermo </div>
+              </div>
+              <div class="item-icons">
+                <!-- <i class="material-icons error">report_problem</i> -->
+                <button type="button" class="btn-cal"><i class="material-icons">place</i></button>
+              </div>
+            </article>
+            <article class="item" data-filter="sin-agendar">
+              <div class="item-text">
+                <div class="nombre">María Anabella Repetto</div>
+                <div class="datos">19:00hs</div>
+                <div class="descripcion">Martín Fierro 899, Wilde. Casa</div>
+              </div>
+              <div class="item-icons">
+                <!-- <i class="material-icons error">report_problem</i> -->
+                <button type="button" class="btn-cal"><i class="material-icons">place</i></button>
+              </div>
+            </article>
+            <article class="item" data-filter="sin-agendar">
+              <div class="item-text">
+                <div class="nombre">Juan Pablo Punx</div>
+                <div class="datos">20:30hs</div>
+                <div class="descripcion">Rivadavia 357, 1º A, Quilmes</div>
+              </div>
+              <div class="item-icons">
+                <button type="button" class="btn-cal"><i class="material-icons">place</i></button>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1">
+          <div class="fecha">1 <span>nov</span></div>
+        </div>
+        <div class="col-md-11">
+
+          <div class="item-list">
+            <article class="item" data-filter="entrevistados">
+              <div class="item-text">
+                <div class="nombre">Aldana Estevez</div>
+                <div class="datos">18:00hs</div>
+                <div class="descripcion">Monterroso 450, 7º 3, Villa Domínico</div>
+              </div>
+              <div class="item-icons">
+                <!-- <i class="material-icons error">report_problem</i> -->
+                <button type="button" class="btn-cal"><i class="material-icons">place</i></button>
+              </div>
+            </article>
+            <article class="item" data-filter="cotizados">
+              <div class="item-text">
+                <div class="nombre">Diego Armando Espinoza</div>
+                <div class="datos">16:30hs</div>
+                <div class="descripcion">Bar el 10, Segurola y La Habana, Villa Domínico</div>
+              </div>
+              <div class="item-icons">
+                <!-- <i class="material-icons error">report_problem</i> -->
+                <button type="button" class="btn-cal"><i class="material-icons">place</i></button>
+              </div>
+            </article>
+            <article class="item" data-filter="cotizados">
+              <div class="item-text">
+                <div class="nombre">Juan Domingo Rocchia</div>
+                <div class="datos">19:00hs</div>
+                <div class="descripcion">Av. Acoyte 550, 5º B, Avellaneda</div>
+              </div>
+              <div class="item-icons">
+                <!-- <i class="material-icons error">report_problem</i> -->
+                <button type="button" class="btn-cal"><i class="material-icons">place</i></button>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="assets/js/material.js"></script>
+  <script src="assets/js/ripples.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

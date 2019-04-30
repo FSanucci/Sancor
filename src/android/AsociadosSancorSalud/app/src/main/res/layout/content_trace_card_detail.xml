@@ -1,0 +1,142 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context="ar.com.sancorsalud.asociados.activity.TraceCardActivity">
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scroll"
+        style="@style/ScrollAppearence"
+        android:layout_above="@+id/add_button">
+
+        <RelativeLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/edit_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:orientation="vertical">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/request_wrapper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/request_number_input"
+                        style="@style/TextAppearence.EditText"
+                        android:inputType="number"
+                        android:enabled="false"
+                        android:hint="@string/trace_request_number" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/des_number_wrapper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/des_number_input"
+                        style="@style/TextAppearence.EditText"
+                        android:inputType="number"
+                        android:hint="@string/trace_des_number" />
+                </android.support.design.widget.TextInputLayout>
+
+                <RelativeLayout
+                    android:id="@+id/button_validate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_half_margin"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/validate_button"
+                        style="@style/ButtonAppearence"
+                        android:layout_margin="@dimen/activity_horizontal_margin"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:text="@string/trace_validate" />
+
+                </RelativeLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/comment_wrapper"
+                    style="@style/TextAppearence.TextInputLayout"
+                    android:layout_marginTop="20dp">
+
+                    <EditText
+                        android:id="@+id/comment_input"
+                        style="@style/TextAppearence.EditText"
+                        android:hint="@string/trace_comment"
+                        android:maxLength="100" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/button_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/send_button"
+                        style="@style/ButtonAppearence"
+                        android:layout_margin="@dimen/activity_horizontal_margin"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:text="@string/trace_send" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/history_title"
+                android:layout_below="@+id/edit_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/SectionTitle"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:text="@string/trace_history"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/history"
+                android:layout_below="@+id/history_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/history_no_content"
+                android:layout_below="@+id/history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                style="@style/SectionNoContentTitle"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:text="@string/trace_history_no_content"/>
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+</FrameLayout>

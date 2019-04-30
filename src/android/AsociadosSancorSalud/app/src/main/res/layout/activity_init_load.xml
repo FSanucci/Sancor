@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+
+    <RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <android.support.design.widget.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="?attr/colorPrimary" />
+
+            </android.support.design.widget.AppBarLayout>
+
+            <LinearLayout
+                android:id="@+id/load_data_box"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/init_date_wrapper"
+                        style="@style/TextAppearence.TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/fecha_carga_input"
+                            android:focusable="false"
+                            style="@style/TextAppearence.EditText"
+                            android:hint="@string/init_load_date" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/fecha_carga_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/activity_horizontal_margin"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <Button
+                        android:id="@+id/des_button"
+                        style="@style/ButtonAppearence"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:layout_weight="0.7"
+                        android:background="@drawable/button_background_accent"
+                        android:gravity="center"
+                        android:text="@string/init_load_des" />
+
+                    <Button
+                        android:id="@+id/affiliation_button"
+                        style="@style/ButtonAppearence"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:layout_weight="0.3"
+                        android:background="@drawable/button_background_accent"
+                        android:gravity="center"
+                        android:text="@string/init_load_affiliation" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,536 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ar.com.sancorsalud.asociados.fragments.affiliation.AffiliationTitularDataFragment">
+
+    <ScrollView
+        android:id="@+id/scroll"
+        style="@style/ScrollAppearence"
+        android:layout_above="@+id/add_button">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/segmento_wrapper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/segmento_input"
+                        style="@style/TextAppearence.EditText"
+                        android:focusable="false"
+                        android:hint="@string/affiliation_titular_segmento" />
+                </android.support.design.widget.TextInputLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/forma_ingreso_wrapper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/forma_ingreso_input"
+                        style="@style/TextAppearence.EditText"
+                        android:focusable="false"
+                        android:hint="@string/affiliation_titular_forma_ingreso" />
+                </android.support.design.widget.TextInputLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/categoria_wrapper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/categoria_input"
+                        style="@style/TextAppearence.EditText"
+                        android:focusable="false"
+                        android:hint="@string/affiliation_titular_categoria" />
+                </android.support.design.widget.TextInputLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/entity_wrapper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/entity_input"
+                        style="@style/TextAppearence.EditText"
+                        android:hint="@string/affiliation_titular_entity" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/datero_number_wrapper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/datero_number_input"
+                        style="@style/TextAppearence.EditText"
+                        android:hint="@string/affiliation_titular_datero_number" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="@string/affiliation_titular_data"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/lastname_checkBox"
+                    style="@style/ValidateCheck" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/lastname_wrapper"
+                    style="@style/TextAppearence.TextInputLayout"
+                    android:layout_toLeftOf="@+id/lastname_checkBox">
+
+                    <EditText
+                        android:id="@+id/lastname_input"
+                        style="@style/TextAppearence.EditText"
+                        android:hint="@string/affiliation_last_name"
+                        android:maxLength="50" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/firstname_checkBox"
+                    style="@style/ValidateCheck" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/firstname_wrapper"
+                    style="@style/TextAppearence.TextInputLayout"
+                    android:layout_toLeftOf="@+id/firstname_checkBox">
+
+                    <EditText
+                        android:id="@+id/firstname_input"
+                        style="@style/TextAppearence.EditText"
+                        android:hint="@string/affiliation_first_name"
+                        android:maxLength="50" />
+
+                </android.support.design.widget.TextInputLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/sex_wrapper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/sex_input"
+                        style="@style/TextAppearence.EditText"
+                        android:focusable="false"
+                        android:hint="@string/affiliation_sex" />
+                </android.support.design.widget.TextInputLayout>
+
+                <RelativeLayout
+                    android:id="@+id/sex_button"
+                    style="@style/buttonSpinner">
+
+                    <ImageView
+                        style="@style/arrowSpinner"
+                        app:srcCompat="@drawable/ic_expand" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/_document_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/doc_type_wrapper"
+                        style="@style/TextAppearence.TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/doc_type_input"
+                            style="@style/TextAppearence.EditText"
+                            android:focusable="false"
+                            android:hint="@string/affiliation_doc_type" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/doc_type_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_alignParentTop="true">
+
+                        <ImageView
+                            style="@style/arrowSpinner"
+                            app:srcCompat="@drawable/ic_expand" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/doc_number_wrapper"
+                    style="@style/TextAppearence.TextInputLayout"
+                    android:layout_marginRight="@dimen/activity_horizontal_half_margin"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:id="@+id/doc_number_input"
+                        style="@style/TextAppearence.EditText"
+                        android:hint="@string/affiliation_doc_number"
+                        android:inputType="number"
+                        android:maxLength="8" />
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/birthday_wrapper"
+                    style="@style/TextAppearence.TextInputLayout"
+                    android:layout_marginTop="8dp">
+
+                    <EditText
+                        android:id="@+id/birthday_input"
+                        style="@style/TextAppearence.EditText"
+                        android:focusable="false"
+                        android:hint="@string/affiliation_birth_day"
+                        android:maxLength="50" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <RelativeLayout
+                    android:id="@+id/birthday_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp" />
+
+            </RelativeLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/cuit_wrapper"
+                style="@style/TextAppearence.TextInputLayout"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:id="@+id/cuit_input"
+                    style="@style/TextAppearence.EditText"
+                    android:hint="@string/affiliation_cuit"
+                    android:inputType="number"
+                    android:maxLength="12" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/civil_status_wrapper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/civil_status_input"
+                        style="@style/TextAppearence.EditText"
+                        android:focusable="false"
+                        android:hint="@string/affiliation_titular_civil_status" />
+                </android.support.design.widget.TextInputLayout>
+
+                <RelativeLayout
+                    android:id="@+id/civil_status_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_alignParentTop="true">
+
+                    <ImageView
+                        style="@style/arrowSpinner"
+                        app:srcCompat="@drawable/ic_expand" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/nationality_wrapper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/nationality_input"
+                        style="@style/TextAppearence.EditText"
+                        android:focusable="false"
+                        android:hint="@string/affiliation_nationality" />
+                </android.support.design.widget.TextInputLayout>
+
+                <RelativeLayout
+                    android:id="@+id/nationality_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_alignParentTop="true">
+
+                    <ImageView
+                        style="@style/arrowSpinner"
+                        app:srcCompat="@drawable/ic_expand" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/condicion_iva_wrapper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/condicion_iva_input"
+                        style="@style/TextAppearence.EditText"
+                        android:focusable="false"
+                        android:hint="@string/affiliation_titular_condicion_iva" />
+                </android.support.design.widget.TextInputLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/cobertura_wrapper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/cobertura_input"
+                        style="@style/TextAppearence.EditText"
+                        android:focusable="false"
+                        android:hint="@string/affiliation_titular_cobertura" />
+                </android.support.design.widget.TextInputLayout>
+
+            </RelativeLayout>
+
+            <!-- GRUPO AFINIDAD -->
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/group_afinity_wraper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/group_afinity_input"
+                        style="@style/TextAppearence.EditText"
+                        android:visibility="gone"
+                        android:focusable="false"
+                        android:enabled="false"
+                        android:hint="@string/affiliation_titular_group_affinity" />
+                </android.support.design.widget.TextInputLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/affinity_constancy_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+                <TextView
+                    android:id="@+id/affinity_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="14sp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/constancia_afinidad_recycler_view"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp">
+
+                    <ImageView
+                        android:id="@+id/affinity_attach_img"
+                        style="@style/attach_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:src="@drawable/ic_attach" />
+
+                    <ImageView
+                        android:id="@+id/affinity_attach_file"
+                        style="@style/attach_img"
+                        android:layout_alignTop="@+id/affinity_attach_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/affinity_attach_img"
+                        android:src="@drawable/ic_file" />
+
+                    <Button
+                        android:id="@+id/affinity_add_button"
+                        style="@style/attach_button"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/affinity_attach_file"
+                        android:text="@string/affiliation_titular_affinity" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <!-- CONVENIO -->
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/agreement_wraper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/agreement_input"
+                        style="@style/TextAppearence.EditText"
+                        android:visibility="gone"
+                        android:focusable="false"
+                        android:hint="@string/affiliation_titular_agreement_hint" />
+                </android.support.design.widget.TextInputLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/agreement_certificate_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+                <TextView
+                    android:id="@+id/agreement_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="14sp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/agreement_certificate_recycler_view"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp">
+
+                    <ImageView
+                        android:id="@+id/agreement_attach_img"
+                        style="@style/attach_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:src="@drawable/ic_attach" />
+
+                    <ImageView
+                        android:id="@+id/agreement_attach_file"
+                        style="@style/attach_img"
+                        android:layout_alignTop="@+id/agreement_attach_img"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/agreement_attach_img"
+                        android:src="@drawable/ic_file" />
+
+                    <Button
+                        android:id="@+id/agreement_add_button"
+                        style="@style/attach_button"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_toRightOf="@+id/agreement_attach_img"
+                        android:text="@string/affiliation_titular_agreement_button_leyend"
+                        android:textAllCaps="false"
+                        android:textSize="12sp"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp"></View>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+</FrameLayout>

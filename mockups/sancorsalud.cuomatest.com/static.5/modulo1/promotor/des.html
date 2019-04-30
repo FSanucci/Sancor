@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sancor Salud</title>
+  <!-- Material Design fonts -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- Bootstrap Material Design -->
+  <link rel="stylesheet" type="text/css" href="../../assets/css/bootstrap-material-design.css">
+  <link rel="stylesheet" type="text/css" href="../../assets/css/ripples.min.css">
+  <link rel="stylesheet" type="text/css" href="../../assets/css/styles.css">
+</head>
+
+<body>
+  <header class="header">
+    <nav class="menu">
+      <div class="head">
+        <img src="../../assets/images/logo.png" alt="">
+        <h3 class="name">Inés Duarte</h3>
+      </div>
+      <ul>
+        <li><a href="cargar-asociado.html"><i class="material-icons">person_add</i>Cargar potencial asociado</a></li>
+        <li class="active"><a href="#"><i class="material-icons">person_add</i>Asignados</a></li>
+        <li><a href="agenda.html"><i class="material-icons">event_note</i>Agenda</a></li>
+        <li><a href="cotizar.html?tipo=solo-adicionales"><i class="material-icons">playlist_add</i>Cotizar adicionales optativos</a></li>
+        <li><a href="cotizar.html?tipo=transferencia"><i class="material-icons">swap_vertical_circle</i>Transferencia de segmento</a></li>
+        <li><a href="notificaciones.html"><i class="material-icons">announcement</i>Notificaciones</a></li>
+        <li><a href="#"><i class="material-icons">exit_to_app</i>Salir</a></li>
+      </ul>
+    </nav>
+    <button type="button" name="button" class="btn btn-menu btn-nav"><i class="material-icons">menu</i> <h3>Inicio de carga</h3></button>
+    <button type="button" name="button" class="btn btn-menu btn-search"><i class="material-icons">arrow_back</i> <h3>Volver</h3></button>
+    <div class="container">
+      <div class="row">
+        <!-- <div class="col-md-12">
+        <form action="#" class="search">
+        <button type="submit" name="button" class="btn hidden-xs"><i class="material-icons">search</i></button>
+        <input type="text" placeholder="Buscar" class="hidden-xs">
+        <input type="text" placeholder="Buscar" class="smart visible-xs">
+      </form>
+      <div class="filtros dropdown">
+      <button type="button" name="button" class="btn btn-filter dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="material-icons">more_vert</i></button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+      <li><a id="sin-agendar" href="#"><i class="material-icons">event_note</i>Sin agendar</a></li>
+      <li><a id="entrevistados" href="#"><i class="material-icons">assignment_turned_in</i>Entrevistados</a></li>
+      <li><a id="cotizados" href="#"><i class="material-icons">monetization_on</i>Cotizados</a></li>
+    </ul>
+  </div>
+</div> -->
+</div>
+</div>
+
+<button type="button" name="button" class="btn smart-search visible-xs"><i class="material-icons">search</i></button>
+<div class="user hidden-xs">
+  <i class="material-icons">account_circle</i>
+  <div class="name">Inés Duarte</div>
+</div>
+</header>
+
+<div class="bg-menu"></div>
+
+<section id="des" class="content">
+  <div class="container">
+    <div class="row">
+      <form action="#">
+        <div class="form-group label-floating">
+          <label for="fecha-inicio" class="control-label">Fecha de Inicio</label>
+          <input type="date" class="form-control" id="fecha-inicio" name="fecha-inicio" required="required">
+          <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+        </div>
+        <div class="divisor">
+          Cálculo de IMC (Índice de masa coproral):
+        </div>
+        <div class="int-nuevo combo">
+          <i class="material-icons">person</i><p>Luis Pelourinho, Hijo, 10 años</p>
+          <div class="arrow"></div>
+          <div class="clearfix"></div>
+          <div class="imc">
+            <div class="form-group label-floating half">
+              <label for="peso1" class="control-label">Peso</label>
+              <input type="number" class="form-control peso" id="peso1" name="peso1" required="required">
+            </div>
+            <div class="form-group label-floating half">
+              <label for="altura1" class="control-label">Altura (ej. 1.70)</label>
+              <input type="number" class="form-control altura" id="altura1" name="altura1" required="required">
+            </div>
+            <div class="clearfix"></div>
+            <div class="form-group">
+              <button class="btn">Calcular IMC</button>
+            </div>
+            <div class="form-group label-floating">
+              <label for="calculo-total" class="control-label">IMC</label>
+              <input type="text" class="form-control total" id="calculo-total" placeholder="" disabled="">
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="int-nuevo combo">
+          <i class="material-icons">person</i><p>Luis Pelourinho, Hijo, 10 años</p>
+          <div class="arrow"></div>
+          <div class="clearfix"></div>
+          <div class="imc">
+            <div class="form-group label-floating half">
+              <label for="peso2" class="control-label">Peso</label>
+              <input type="number" class="form-control peso" id="peso2" name="peso2" required="required">
+            </div>
+            <div class="form-group label-floating half">
+              <label for="altura2" class="control-label">Altura (ej. 1.70)</label>
+              <input type="number" class="form-control altura" id="altura2" name="altura2" required="required">
+            </div>
+            <div class="clearfix"></div>
+            <div class="form-group">
+              <button class="btn">Calcular IMC</button>
+            </div>
+            <div class="form-group label-floating">
+              <label for="calculo-total" class="control-label">IMC</label>
+              <input type="text" class="form-control total" id="calculo-total" placeholder="" disabled="">
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="form-group">
+          <div class="checkbox form-inline">
+            <label class="control-label">El grupo presenta PP (según formulario)</label>
+            <div class="form-group">
+              <input type="radio" name="pp" value="1" id="pp-si">
+              <label for="pp-si">Si</label>
+            </div>
+            <div class="form-group">
+              <input type="radio" name="pp" value="1" id="pp-no">
+              <label for="pp-no">No</label>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="int-nuevo">
+          <i class="material-icons">assignment</i>
+          <div class="form-group label-floating">
+            <label for="notas-generales" class="control-label">Notas generales sobre el caso</label>
+            <input type="text" class="form-control" id="notas-generales" placeholder="">
+          </div>
+        </div>
+        <div class="form-group input-group">
+          <input type="file" name="file-des" id="file-des" class="inputfile" />
+          <label for="file-des" class="title"><span>Adjuntar DES</span></label>
+          <label for="file-des" class="name"><span>Adjuntar DES</span></label>
+          <div class="remove"><i class="material-icons">close</i></div>
+        </div>
+        <div class="form-group label-floating">
+          <label for="numero-des" class="control-label">Nº de DES</label>
+          <input type="number" class="form-control" id="numero-des" name="numero-des" required="required">
+          <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+        </div>
+        <a href="#" id="derivar" class="btn">Derivar DES a Auditoría</a>
+
+        <div class="form-group input-group">
+          <input type="file" name="file-adjuntar" id="file-adjuntar" class="inputfile" />
+          <label for="file-adjuntar" class="title"><span>Adjuntar Archivo</span></label>
+          <label for="file-adjuntar" class="name"><span>Adjuntar Archivo</span></label>
+          <div class="remove"><i class="material-icons">close</i></div>
+        </div>
+        <a href="#" id="enviar-medico" class="btn">Enviar a Medico</a>
+
+        <div class="form-group input-group">
+          <input type="file" name="file-anexo3" id="file-anexo3" class="inputfile" />
+          <label for="file-anexo3" class="title"><span>Adjuntar Anexo III</span></label>
+          <label for="file-anexo3" class="name"><span>Adjuntar Anexo III</span></label>
+          <div class="remove"><i class="material-icons">close</i></div>
+        </div>
+      </form>
+
+      <div class="next">
+        <!-- <div class="pagination">
+          <div class="dot selected"></div>
+          <div class="dot"></div>
+        </div> -->
+        <button class="button btn next right">Terminar DES<i class="material-icons">keyboard_arrow_right</i></button>
+        <div class="clearfix"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="../../assets/js/material.js"></script>
+<script src="../../assets/js/ripples.js"></script>
+<script src="../../assets/js/main.js"></script>
+<script src="../../assets/js/modulo3.js"></script>
+<script>
+$(document).ready(function() {
+  var today = new Date();
+  var day = ("0" + today.getDate()).slice(-2);
+  var month = ("0" + (today.getMonth() + 1)).slice(-2);
+
+  // var currentDate = (day)+"/"+(month)+"/"+today.getFullYear() ;
+  var currentDate = today.getFullYear()+"-"+(month)+"-"+(day) ;
+  console.log(currentDate);
+
+  $('#fecha-inicio').val(currentDate);
+  $('#fecha-inicio').parent().removeClass('is-empty');
+});
+</script>
+</body>
+</html>

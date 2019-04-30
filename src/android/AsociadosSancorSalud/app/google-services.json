@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "125788717457",
+    "firebase_url": "https://sancor-salud.firebaseio.com",
+    "project_id": "sancor-salud",
+    "storage_bucket": "sancor-salud.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:125788717457:android:7465d3e25d9c0093",
+        "android_client_info": {
+          "package_name": "ar.com.sacorsalud.asociados"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "125788717457-pha04gsbeue47ukhrken5rq08tj1f799.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ar.com.sacorsalud.asociados",
+            "certificate_hash": "e9a888c69e436349db0db6937851ce6bd9bfb4ed"
+          }
+        },
+        {
+          "client_id": "125788717457-pbordd4ok81bn46teqbiuc564kou1eft.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUlN6N5lCZXdr_6uUh3Ech9bJoPd9P6q4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "125788717457-pbordd4ok81bn46teqbiuc564kou1eft.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:125788717457:android:2496bc3b4dd7405e",
+        "android_client_info": {
+          "package_name": "ar.com.sancorsalud.asociados"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "125788717457-j1nhn1db4ihdrt93vq0loob2aj4r75gu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ar.com.sancorsalud.asociados",
+            "certificate_hash": "b187d78e19cde4b8410d8c3de6bcae755b99390e"
+          }
+        },
+        {
+          "client_id": "125788717457-pbordd4ok81bn46teqbiuc564kou1eft.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUlN6N5lCZXdr_6uUh3Ech9bJoPd9P6q4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "125788717457-pbordd4ok81bn46teqbiuc564kou1eft.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

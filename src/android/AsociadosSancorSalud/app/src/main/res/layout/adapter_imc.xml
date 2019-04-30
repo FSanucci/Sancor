@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/item_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_menu_person"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true" />
+
+    <ImageView
+        android:id="@+id/item_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        app:srcCompat="@drawable/ic_expand" />
+
+    <TextView
+        android:id="@+id/item_title"
+        style="@style/ListItemSubtitle"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:layout_centerVertical="true"
+        android:text="Reynaldo Sietecase, Hijo, 10 años"
+        android:maxLines="1"
+        android:layout_toRightOf="@+id/item_img"
+        android:layout_toLeftOf="@+id/item_arrow"/>
+
+</RelativeLayout>

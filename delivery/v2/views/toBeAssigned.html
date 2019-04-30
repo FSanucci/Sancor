@@ -1,0 +1,108 @@
+<div class="bg-menu"></div>
+
+<section class="content">
+  <div class="container">
+    <div id="confirmar">
+      <i class="material-icons step1">check</i>
+      <i class="material-icons step2" style="display:none">check</i>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="supervisor-mensaje">
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="filtro">
+          <div class="sin-agendar">
+            <i class="material-icons">event_note</i>Sin agendar
+            <div class="cerrar">Limpiar filtro
+              <i class="material-icons">close</i>
+            </div>
+          </div>
+          <div class="entrevistados">
+            <i class="material-icons">assignment_turned_in</i>Entrevistados
+            <div class="cerrar">Limpiar filtro
+              <i class="material-icons">close</i>
+            </div>
+          </div>
+          <div class="cotizados">
+            <i class="material-icons">monetization_on</i>Cotizados
+            <div class="cerrar">Limpiar filtro
+              <i class="material-icons">close</i>
+            </div>
+          </div>
+        </div>
+
+        <div class="item-list" id="lista">
+
+          <div class="row">
+            <div class="col-xs-12">
+              <p ng-if="loading"><i class="fa fa-refresh fa-spin"></i> Cargando lista de potenciales asociados...</p>
+              <p ng-if="!loading && associatedPotentialList.length == 0">No tienes ningun potencial asociado para asignar</p>
+
+              <div ng-repeat="associatedPotential in associatedPotentialList | filter: filterSearchedData">
+
+                <article class="item" data-filter="{{getState(associatedPotential)}}">
+                  <div class="checkbox">
+                    <input ng-if="isAssigned(associatedPotential)===false" type="checkbox" name="asignar[]" value="{{associatedPotential.potencial_id}}"
+                           id="check{{associatedPotential.potencial_id}}">
+                    <input ng-if="isAssigned(associatedPotential)===true" type="checkbox" name="asignar[]" value="{{associatedPotential.potencial_id}}"
+                           id="check{{associatedPotential.potencial_id}}" checked disabled="">
+                    <label style="font-size: 22px;" for="check{{associatedPotential.potencial_id}}"></label>
+
+                  </div>
+                  <div class="item-text" data-modalnum="asignado1">
+                    <div class="nombre">{{associatedPotential.nombre}} {{associatedPotential.apellido}}</div>
+                    <div class="datos">{{associatedPotential.edad}} años </div>
+                    <div class="descripcion"><span>{{getDateToExpireMessage(associatedPotential)}}</span></div>
+                  </div>
+                  <div class="item-icons">
+                    <!-- <i class="material-icons error">report_problem</i> -->
+                    <button type="button" class="btn-cal"><i class="material-icons error">flag</i></button>
+                  </div>
+                </article>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div id="lista-promotor" class="item-list">
+          <div ng-repeat="promoter in promoterList">
+            <article class="item">
+              <div class="checkbox">
+                <input type="radio" name="usuario" value="{{promoter.nombre}} {{promoter.apellido}}" id="check-promotor{{promoter.promotor_id}}" data-name="{{promoter.nombre}} {{promoter.apellido}}">
+                <label for="check-promotor{{promoter.promotor_id}}"></label>
+              </div>
+              <div class="item-text">
+                <div class="nombre">{{promoter.nombre}} {{promoter.apellido}} - {{promoter.nro_zona}}</div>
+                <div class="datos">{{promoter.edad}} </div>
+              </div>
+              <div class="cant">
+                <p><span>{{promoter.pot_asignados}}</span> - {{promoter.pot_historica}}</p>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="asignar" class="modal fade asignados" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p>Vas a cotizar para <span class="name"></span></p>
+        <button class="btn cotizar-ok" ng-click="assignAssociatedPotentials()">Aceptar</button>
+        <button class="btn cerrar">Cancelar</button>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+</div>
+

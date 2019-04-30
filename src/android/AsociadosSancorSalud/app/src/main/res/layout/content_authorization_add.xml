@@ -1,0 +1,128 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ar.com.sancorsalud.asociados.fragments.affiliation.AffiliationTitularDataFragment">
+
+    <RelativeLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/scroll"
+            style="@style/ScrollAppearence"
+            android:layout_above="@+id/send_box"
+            android:layout_marginTop="@dimen/header_list_height_50">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/promotion_auth_data"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="14sp" />
+
+
+                <RelativeLayout
+                    android:id="@+id/files_box"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_double_margin">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/files_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/files_recycler_view"
+                        android:layout_marginBottom="@dimen/activity_vertical_margin"
+                        android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                        <ImageView
+                            android:id="@+id/file_img"
+                            style="@style/attach_img"
+                            android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                            android:src="@drawable/ic_attach" />
+
+                        <ImageView
+                            android:id="@+id/a_file"
+                            style="@style/attach_img"
+                            android:layout_alignTop="@+id/file_img"
+                            android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                            android:layout_toRightOf="@+id/file_img"
+                            android:src="@drawable/ic_file" />
+
+                        <Button
+                            android:id="@+id/file_button"
+                            style="@style/attach_button"
+                            android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                            android:layout_toRightOf="@+id/a_file"
+                            android:text="@string/button_attach" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/comments_wrapper"
+                    style="@style/TextAppearence.TextInputLayout"
+                    android:layout_marginTop="8dp">
+
+                    <EditText
+                        android:id="@+id/comments_input"
+                        style="@style/TextAppearence.EditText"
+                        android:hint="@string/auth_comments" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"></View>
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/send_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/send_button"
+                style="@style/ButtonAppearence"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:layout_weight="2"
+                android:background="@color/colorPrimary"
+                android:text="@string/button_send" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+</FrameLayout>

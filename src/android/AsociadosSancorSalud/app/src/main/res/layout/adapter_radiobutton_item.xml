@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_container"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/colorBackground">
+
+    <RadioButton
+        android:id="@+id/radiobutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Conyuge, 36 años"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="9dp"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif"
+        android:layout_centerVertical="true"/>
+
+
+    <TextView
+        android:id="@+id/item_separator"
+        style="@style/ListItemSeparator"
+        android:layout_alignLeft="@+id/checkBox"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

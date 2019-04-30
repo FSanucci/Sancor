@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
+    <RelativeLayout
+        android:id="@+id/buttons_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorLightGrey">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+
+            <LinearLayout
+                android:id="@+id/close_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_background_grey"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/close_img"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_footer_close" />
+
+                <TextView
+                    android:id="@+id/close_txt"
+                    style="@style/DetailFooter"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:text="@string/button_close_case" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/card_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_background_grey"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_footer_card" />
+
+                <TextView
+                    style="@style/DetailFooter"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:text="@string/button_card" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/subte_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_background_grey"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_subte" />
+
+                <TextView
+                    style="@style/DetailFooter"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:text="@string/subte" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/buttons_box"
+        android:orientation="vertical">
+
+    <ScrollView
+        style="@style/ScrollAppearence"
+        android:id="@+id/scroll"
+        android:layout_above="@+id/buttons_box">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/segment_wrapper"
+                style="@style/TextAppearence.TextInputLayout"
+                android:layout_marginTop="20dp">
+
+                <EditText
+                    android:id="@+id/segment_input"
+                    style="@style/TextAppearence.EditText"
+                    android:hint="@string/pa_card_segment"
+                    android:focusable="false"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/group_wrapper"
+                style="@style/TextAppearence.TextInputLayout">
+
+                <EditText
+                    android:id="@+id/group_input"
+                    style="@style/TextAppearence.EditText"
+                    android:hint="@string/pa_card_group"
+                    android:focusable="false"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/fecha_carga_wrapper"
+                style="@style/TextAppearence.TextInputLayout">
+
+                <EditText
+                    android:id="@+id/fecha_carga_input"
+                    style="@style/TextAppearence.EditText"
+                    android:hint="@string/pa_card_load_date"
+                    android:inputType="number"
+                    android:focusable="false"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/fecha_inicio_wrapper"
+                style="@style/TextAppearence.TextInputLayout">
+
+                <EditText
+                    android:id="@+id/fecha_inicio_input"
+                    style="@style/TextAppearence.EditText"
+                    android:hint="@string/pa_card_validity_date"
+                    android:inputType="number"
+                    android:focusable="false"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:id="@+id/plan_id_input"
+                style="@style/TextAppearence.TextInputLayout"
+                android:textSize="18sp" />
+
+            <!--
+            <TextView
+                android:id="@+id/plan_value_input"
+                style="@style/TextAppearence.TextInputLayout"
+                android:textSize="32sp" />
+             -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp">
+            </View>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    </LinearLayout>
+
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>
+
+
+

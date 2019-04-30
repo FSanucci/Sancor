@@ -1,0 +1,128 @@
+<div class="bg-menu"></div>
+
+<section class="cargar content">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="qr visible-xs">
+          <div class="btn btn-qr">LEER CÓDIGO QR</div>
+        </div>
+        <form id="supervisor-cargar">
+          <div class="form-group label-floating">
+            <label for="name" class="control-label">Nombre</label>
+            <input type="text" class="form-control" id="name" ng-model="newAssociatedPotential.nombre" name="name" required="required">
+            <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+          </div>
+          <div class="form-group label-floating">
+            <label for="lastName" class="control-label">Apellido</label>
+            <input type="text" class="form-control" id="lastName" ng-model="newAssociatedPotential.apellido" name="apellido" required="required">
+            <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+          </div>
+          <div class="form-group label-floating">
+            <label for="dni" class="control-label">DNI</label>
+            <input type="number" class="form-control" maxlength="8" ng-change="validateDocumentNumber()" id="dni" ng-model="newAssociatedPotential.dni" max="99999999"  name="dni" required="required">
+            <span class="help">{{documentNumberValidationMessage}}</span>
+          </div>
+          <div class="form-group label-floating">
+            <label for="fecha-nacimiento" class="control-label">Fecha de Nacimiento</label>
+            <input type="date" class="form-control" id="fecha-nacimiento" ng-model="newAssociatedPotential.fecha_nac" name="fecha-nacimiento" required="required">
+            <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+          </div>
+          <div class="form-group label-floating">
+            <label for="cod-postal" class="control-label">Código Postal</label>
+            <input type="text" class="form-control" id="cod-postal" ng-model="newAssociatedPotential.cp" name="cod-postal" required="required">
+            <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+          </div>
+          <div class="form-group label-floating">
+            <label for="tel" class="control-label">Número de teléfono fijo</label>
+            <input type="text" class="form-control" id="tel" ng-model="newAssociatedPotential.tel" name="tel" required="required">
+            <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+          </div>
+          <div class="form-group label-floating">
+            <label for="cel" class="control-label">Número de teléfono celular</label>
+            <input type="text" class="form-control" id="cel" ng-model="newAssociatedPotential.cel" name="cel" required="required">
+            <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+          </div>
+          <div class="form-group label-floating">
+            <label for="mail" class="control-label">Mail</label>
+            <input type="mail" class="form-control" id="mail" ng-model="newAssociatedPotential.mail" name="mail" max="99999" required="required">
+            <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+          </div>
+          <div class="form-group label-floating">
+            <label for="zone" class="control-label">Nro de Zona</label>
+            <select class="form-control" name="zone" id="zone" ng-model="newAssociatedPotential.nro_zona" required="required">
+              <option value="">--Select--</option>
+              <option ng-repeat="option in zones" value="{{option.zona_id}}">{{option.descripcion_zona}} ({{option.zona_id}})</option>
+            </select>
+            <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+          </div>
+          <div class="form-group label-floating">
+            <label for="street" class="control-label">Calle</label>
+            <input type="text" class="form-control" id="street" ng-model="newAssociatedPotential.calle" name="street" >
+            <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+          </div>
+          <div class="form-group label-floating">
+            <label for="door" class="control-label">Puerta</label>
+            <input type="number" class="form-control" id="door" ng-model="newAssociatedPotential.puerta" max="999999" name="door" >
+            <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+          </div>
+          <div class="form-group label-floating">
+            <label for="floor" class="control-label">Piso</label>
+            <input type="number" class="form-control" id="floor" ng-model="newAssociatedPotential.piso" max="99" name="floor" >
+            <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+          </div>
+          <div class="form-group label-floating">
+            <label for="department" class="control-label">Departamento</label>
+            <input type="text" class="form-control" id="department" ng-model="newAssociatedPotential.departamento" name="department" >
+            <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+          </div>
+          <div class="form-group label-floating">
+            <label for="company" class="control-label">Es Empresa</label>
+            <input type="checkbox" class="form-control" id="company" ng-model="newAssociatedPotential.es_empresa_boolean" name="company" >
+            <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+          </div>
+          <div class="form-group label-floating">
+            <label for="comment" class="control-label">Comentario</label>
+            <input type="text" class="form-control" id="comment" ng-model="newAssociatedPotential.comentario" name="comment" >
+            <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+          </div>
+
+          <button type="submit" class="btn btn-enviar">Cargar</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div id="message-dialog" class="modal fade" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p>{{userMessage}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="form-dialog" class="modal fade" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p>Vas a cargar como potencial asociado a</p>
+        <p class="nombre" style="font-weight:800;"></p>
+        <p class="dni"></p>
+        <p class="fecha-nacimiento"></p>
+        <p class="cod-postal"></p>
+        <p class="tel"></p>
+        <p class="cel"></p>
+        <p class="mail"></p>
+        <div class="botones">
+          <div class="btn cerrar">cancelar</div>
+          <div ng-click="createAssociatedPotential()" class="btn enviar">aceptar</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

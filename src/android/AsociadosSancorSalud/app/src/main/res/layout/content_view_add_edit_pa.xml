@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <include
+        android:id="@+id/error_data"
+        layout="@layout/view_error_no_internet_connection"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/all_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/add_button"
+            style="@style/ButtonAppearence"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/button_background_accent"
+            android:text="@string/add_contact_save" />
+
+
+        <ScrollView
+            style="@style/ScrollAppearence"
+            android:layout_above="@+id/add_button">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+                    <Button
+                        android:id="@+id/qrcode_button"
+                        style="@style/ButtonAppearence"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:layout_marginBottom="@dimen/activity_vertical_half_margin"
+                        android:background="@drawable/button_background_orange"
+                        android:text="@string/add_contact_dni_qrcode"
+                        android:textSize="@dimen/app_button_txt_size" />
+
+
+                    <ImageView
+                        android:id="@+id/photo_button"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_toRightOf="@+id/qrcode_button"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_gallery" />
+
+                </RelativeLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/first_name_wrapper"
+                    style="@style/TextAppearence.TextInputLayout"
+                    android:layout_marginTop="20dp">
+
+                    <EditText
+                        android:id="@+id/firstname_input"
+                        style="@style/TextAppearence.EditText"
+                        android:maxLength="100"
+                        android:hint="@string/add_contact_first_name" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/last_name_wrapper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/lastname_input"
+                        style="@style/TextAppearence.EditText"
+                        android:maxLength="50"
+                        android:hint="@string/add_contact_last_name" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/dni_wrapper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/dni_input"
+                        style="@style/TextAppearence.EditText"
+                        android:maxLength="8"
+                        android:hint="@string/add_contact_dni"
+                        android:inputType="number" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/birth_day_wrapper"
+                        style="@style/TextAppearence.TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/birthday_input"
+                            style="@style/TextAppearence.EditText"
+                            android:hint="@string/add_contact_birth_day" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/birthday_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_alignParentBottom="true"/>
+
+                </RelativeLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/loction_wrapper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/location_input"
+                        style="@style/TextAppearence.EditText"
+                        android:hint="@string/add_contact_city" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/email_wrapper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/email_input"
+                        style="@style/TextAppearence.EditText"
+                        android:hint="@string/add_contact_email"
+                        android:maxLength="100"
+                        android:inputType="textEmailAddress" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/phone_wrapper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/phone_input"
+                        style="@style/TextAppearence.EditText"
+                        android:hint="@string/add_contact_phone"
+                        android:maxLength="30"
+                        android:inputType="phone" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/cellphone_wrapper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/cellphone_input"
+                        style="@style/TextAppearence.EditText"
+                        android:hint="@string/add_contact_cellphone"
+                        android:maxLength="30"
+                        android:inputType="phone" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/address_wrapper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/address_input"
+                        style="@style/TextAppearence.EditText"
+                        android:maxLength="60"
+                        android:hint="@string/add_contact_address" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/address_number_wrapper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/address_number_input"
+                        style="@style/TextAppearence.EditText"
+                        android:hint="@string/add_contact_address_number"
+                        android:maxLength="5"
+                        android:inputType="number" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/address_floor_wrapper"
+                        style="@style/TextAppearence.TextInputLayout"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1">
+
+                        <EditText
+                            android:id="@+id/address_floor_input"
+                            style="@style/TextAppearence.EditText"
+                            android:maxLength="5"
+                            android:hint="@string/add_contact_address_floor"
+                            android:inputType="number" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/address_dpto_wrapper"
+                        style="@style/TextAppearence.TextInputLayout"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1">
+
+                        <EditText
+                            android:id="@+id/address_dpto_input"
+                            style="@style/TextAppearence.EditText"
+                            android:maxLength="2"
+                            android:hint="@string/add_contact_address_dpto" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <!--
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/postal_code_wrapper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/zip_input"
+                        style="@style/TextAppearence.EditText"
+                        android:hint="@string/add_contact_postal_code" />
+
+                </android.support.design.widget.TextInputLayout>
+                -->
+
+                <RelativeLayout
+                    android:id="@+id/zone_container"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/zone_code_wrapper"
+                        style="@style/TextAppearence.TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/zone_input"
+                            style="@style/TextAppearence.EditText"
+                            android:hint="@string/add_contact_zone"
+                            android:inputType="number"
+                            android:focusable="false"/>
+
+                    </android.support.design.widget.TextInputLayout>
+                    <RelativeLayout
+                        android:id="@+id/zone_button"
+                        android:layout_height="40dp"
+                        android:layout_width="match_parent"
+                        android:layout_alignParentBottom="true">
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/company_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/add_contact_company" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

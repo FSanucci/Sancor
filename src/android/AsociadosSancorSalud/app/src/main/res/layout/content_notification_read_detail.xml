@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:background="@color/colorBackground">
+
+    <ScrollView
+        style="@style/ScrollAppearence">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/priority_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/ic_priority" />
+
+                <TextView
+                    android:id="@+id/priority_txt"
+                    style="@style/ListItemAccesoryText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="14dp"
+                    android:layout_toLeftOf="@+id/priority_img"
+                    android:text="PRIORIDAD BAJA"
+                    android:textColor="@color/colorAccent" />
+
+                <TextView
+                    android:id="@+id/title_txt"
+                    style="@style/ListItemTitle"
+                    android:layout_below="@+id/priority_txt"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_vertical"
+                    android:maxLines="3"
+                    android:minHeight="@dimen/list_item_min_height"
+                    android:text="title"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/separator_item"
+                style="@style/ListItemSeparator" />
+
+            <TextView
+                android:id="@+id/owner_txt"
+                style="@style/ListItemSubtitle"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin" />
+
+            <TextView
+                android:id="@+id/date_txt"
+                style="@style/ListItemSubtitle"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_vertical_half_margin"
+                android:text="20 dic -14:47"
+                android:textColor="@color/colorAccent"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/text_txt"
+                style="@style/ListItemSubtitle"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:maxLines="100" />
+
+            <TextView
+                android:id="@+id/link_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="@string/notification_link"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
+
+
+

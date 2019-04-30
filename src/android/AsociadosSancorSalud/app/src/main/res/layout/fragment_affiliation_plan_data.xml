@@ -1,0 +1,393 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ar.com.sancorsalud.asociados.fragments.affiliation.AffiliationTitularDataFragment">
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/scroll"
+            style="@style/ScrollAppearence"
+            android:layout_above="@+id/aprove_buton_box">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/date_box"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/plan_value">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/date_wrapper"
+                        style="@style/TextAppearence.TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/date_input"
+                            style="@style/TextAppearence.EditText"
+                            android:focusable="false"
+                            android:hint="@string/affiliation_discharge_date" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/date_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"/>
+
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/quotation_button"
+                    style="@style/ButtonAppearence"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:background="@drawable/button_background_accent"
+                    android:text="@string/affiliation_quotation" />
+
+
+                <LinearLayout
+                    android:id="@+id/detail_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/title1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:text="@string/affiliation_plan_additional"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/plan_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:text=""
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/plan_dif"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/colorDarkGrey"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/title2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:text="@string/affiliation_plan_detail"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="14sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/container1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                        <TextView
+                            android:id="@+id/plan_desc2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_toStartOf="@+id/plan_value"
+                            android:text=""
+                            android:textColor="@color/colorBlack"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/plan_value"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="3dp"
+                            android:text=""
+                            android:textColor="@color/colorBlack"
+                            android:textSize="16sp" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/line"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/container1"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@color/colorDividers"
+                        android:orientation="horizontal" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/plan_details_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/line"
+                        android:layout_marginBottom="@dimen/activity_vertical_margin" />
+                </LinearLayout>
+
+
+                <!-- TICKET SECTION -->
+                <LinearLayout
+                    android:id="@+id/ticket_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <!-- ALTA TICKET -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:text="@string/affiliation_ticket_data"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="14sp" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/alta_type_wrapper"
+                            style="@style/TextAppearence.TextInputLayout">
+
+                            <EditText
+                                android:id="@+id/alta_type_input"
+                                style="@style/TextAppearence.EditText"
+                                android:hint="@string/affiliation_alta_type" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/alta_type_button"
+                            style="@style/buttonSpinner">
+
+                            <ImageView
+                                style="@style/arrowSpinner"
+                                app:srcCompat="@drawable/ic_expand" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/ticket_plan_wrapper"
+                        style="@style/TextAppearence.TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/ticket_plan_value"
+                            style="@style/TextAppearence.EditText"
+                            android:hint="@string/affiliation_ticket_plan_value"
+                            android:inputType="numberDecimal" />
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <!-- TICKET ATTACH BOX -->
+                    <RelativeLayout
+                        android:id="@+id/ticket_box"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                        android:layout_marginTop="@dimen/activity_vertical_double_margin">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/ticket_recycler_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ticket_recycler_view"
+                            android:layout_marginBottom="@dimen/activity_vertical_margin"
+                            android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                            <ImageView
+                                android:id="@+id/ticket_img"
+                                style="@style/attach_img"
+                                android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                                android:src="@drawable/ic_attach" />
+
+                            <ImageView
+                                android:id="@+id/ticket_file"
+                                style="@style/attach_img"
+                                android:layout_alignTop="@+id/ticket_img"
+                                android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                                android:layout_toRightOf="@+id/ticket_img"
+                                android:src="@drawable/ic_file" />
+
+                            <Button
+                                android:id="@+id/ticket_button"
+                                style="@style/attach_button"
+                                android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                                android:layout_toRightOf="@+id/ticket_file"
+                                android:text="@string/affiliation_attach_ticket" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/ticket_number_wrapper"
+                        style="@style/TextAppearence.TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/ticket_number"
+                            style="@style/TextAppearence.EditText"
+                            android:hint="@string/affiliation_ticket_number"
+                            android:inputType="number" />
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/pago_validity_date_box"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/pago_validity_date_wrapper"
+                            style="@style/TextAppearence.TextInputLayout">
+
+                            <EditText
+                                android:id="@+id/pago_validity_date_input"
+                                style="@style/TextAppearence.EditText"
+                                android:focusable="false"
+                                android:hint="@string/affiliation_pago_validity"
+                                android:inputType="number" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/pago_validity_date_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp" />
+                    </RelativeLayout>
+
+
+                    <!-- Importe -->
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/ticket_importe_wrapper"
+                        style="@style/TextAppearence.TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/ticket_importe"
+                            style="@style/TextAppearence.EditText"
+                            android:hint="@string/affiliation_ticket_importe"
+                            android:enabled="false"
+                            android:inputType="numberDecimal" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <!-- DES -->
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/des_number_wrapper"
+                        style="@style/TextAppearence.TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/des_number"
+                            style="@style/TextAppearence.EditText"
+                            android:hint="@string/affiliation_des_number"
+                            android:inputType="number" />
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <!-- PLAN -->
+                    <TextView
+                        android:id="@+id/plan_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:text="@string/affiliation_quote_title"
+                        android:textColor="@color/colorAccent" />
+
+
+                    <TextView
+                        android:id="@+id/pago_plan_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:text="Plan XXX"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/pago_plan_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$ 0"
+                        android:textColor="@color/colorDarkGrey"
+                        android:textSize="24sp" />
+
+
+                    <Button
+                        android:id="@+id/update_ticket_button"
+                        style="@style/ButtonAppearence"
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin"
+                        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                        android:background="@color/colorAccent"
+                        android:text="@string/affiliation_update_ticket_pago" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+        <LinearLayout
+            android:id="@+id/aprove_buton_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/aprove_button"
+                style="@style/ButtonAppearence"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:text="@string/affiliation_to_aprove"
+               />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+</RelativeLayout>

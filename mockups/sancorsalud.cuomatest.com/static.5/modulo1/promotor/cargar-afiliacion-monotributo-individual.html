@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sancor Salud</title>
+  <!-- Material Design fonts -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- Bootstrap Material Design -->
+  <link rel="stylesheet" type="text/css" href="../../assets/css/bootstrap-material-design.css">
+  <link rel="stylesheet" type="text/css" href="../../assets/css/ripples.min.css">
+  <link rel="stylesheet" type="text/css" href="../../assets/css/styles.css">
+</head>
+
+<body>
+  <header class="header">
+    <nav class="menu">
+      <div class="head">
+        <img src="../../assets/images/logo.png" alt="">
+        <h3 class="name">Inés Duarte</h3>
+      </div>
+      <ul>
+        <li><a href="cargar-asociado.html"><i class="material-icons">person_add</i>Cargar potencial asociado</a></li>
+        <li class="active"><a href="#"><i class="material-icons">person_add</i>Asignados</a></li>
+        <li><a href="agenda.html"><i class="material-icons">event_note</i>Agenda</a></li>
+        <li><a href="cotizar.html?tipo=solo-adicionales"><i class="material-icons">playlist_add</i>Cotizar adicionales optativos</a></li>
+        <li><a href="cotizar.html?tipo=transferencia"><i class="material-icons">swap_vertical_circle</i>Transferencia de segmento</a></li>
+        <li><a href="notificaciones.html"><i class="material-icons">announcement</i>Notificaciones</a></li>
+        <li><a href="#"><i class="material-icons">exit_to_app</i>Salir</a></li>
+      </ul>
+    </nav>
+    <button type="button" name="button" class="btn btn-menu btn-nav"><i class="material-icons">menu</i> <h3>Cargar Afiliación</h3></button>
+    <button type="button" name="button" class="btn btn-menu btn-search"><i class="material-icons">arrow_back</i> <h3>Volver</h3></button>
+    <div class="container">
+      <div class="row">
+        <!-- <div class="col-md-12">
+        <form action="#" class="search">
+        <button type="submit" name="button" class="btn hidden-xs"><i class="material-icons">search</i></button>
+        <input type="text" placeholder="Buscar" class="hidden-xs">
+        <input type="text" placeholder="Buscar" class="smart visible-xs">
+      </form>
+      <div class="filtros dropdown">
+      <button type="button" name="button" class="btn btn-filter dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="material-icons">more_vert</i></button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+      <li><a id="sin-agendar" href="#"><i class="material-icons">event_note</i>Sin agendar</a></li>
+      <li><a id="entrevistados" href="#"><i class="material-icons">assignment_turned_in</i>Entrevistados</a></li>
+      <li><a id="cotizados" href="#"><i class="material-icons">monetization_on</i>Cotizados</a></li>
+    </ul>
+  </div>
+</div> -->
+</div>
+</div>
+
+<button type="button" name="button" class="btn smart-search visible-xs"><i class="material-icons">search</i></button>
+<div class="user hidden-xs">
+  <i class="material-icons">account_circle</i>
+  <div class="name">Inés Duarte</div>
+</div>
+</header>
+
+<div class="bg-menu"></div>
+
+<section id="afiliacion" class="content monotributo-individual">
+  <div class="container">
+    <div class="row">
+      <form action="#">
+        <div class="pasos paso-1">
+          <div class="form-group label-floating">
+            <label for="segmento" class="control-label">Segmento</label>
+            <input type="text" class="form-control" id="segmento" name="segmento" required="required" value="Segmento precargado">
+            <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+          </div>
+          <div class="form-group label-floating">
+            <label for="forma-ingreso" class="control-label">Forma de ingreso</label>
+            <input type="text" class="form-control" id="forma-ingreso" name="forma-ingreso" required="required" value="Forma de ingreso precargado">
+            <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+          </div>
+          <div class="form-group label-floating">
+            <label for="categoria" class="control-label">Categoría</label>
+            <input type="text" class="form-control" id="categoria" name="categoria" required="required" value="Categoría precargado">
+            <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+          </div>
+          <div class="form-group label-floating select-group">
+            <select class="entidad" name="entidad" required="required">
+              <option value="">Entidad</option>
+            </select>
+            <div class="arrow"><i class="material-icons">keyboard_arrow_down</i></div>
+          </div>
+
+          <div class="divisor">
+            Datos personales del titular
+          </div>
+          <div class="form-group label-floating">
+            <label for="apellido" class="control-label">Apellido</label>
+            <input type="text" class="form-control" id="apellido" name="apellido" required="required" value="Pelourinhio">
+            <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+            <div class="checkbox validar">
+              <div class="form-group">
+                <input type="checkbox" name="validar-apellido" value="1" id="validar-apellido">
+                <label for="validar-apellido">Validar</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group label-floating">
+            <label for="nombres" class="control-label">Nombres</label>
+            <input type="text" class="form-control" id="nombres" name="nombres" required="required" value="Juan Carlos">
+            <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+            <div class="checkbox validar">
+              <div class="form-group">
+                <input type="checkbox" name="validar-nombre" value="1" id="validar-nombre">
+                <label for="validar-nombre">Validar</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group label-floating select-group">
+            <select class="entidad" name="sexo" required="required">
+              <option value="">Sexo</option>
+              <option value="Masculino">Masculino</option>
+              <option value="Femenino">Femenino</option>
+            </select>
+            <div class="arrow"><i class="material-icons">keyboard_arrow_down</i></div>
+          </div>
+          <div class="documento">
+            <div class="form-group label-floating select-group half">
+              <select class="entidad" name="tipo-documento" required="required">
+                <option value="">Tipo de documento</option>
+                <option value="DOCUMENTO NACIONAL DE IDENTIDAD">DOCUMENTO NACIONAL DE IDENTIDAD</option>
+                <option value="DOCUMENTO EN TRÁMITE">DOCUMENTO EN TRÁMITE</option>
+                <option value="LIBRETA DE ENROLAMIENTO">LIBRETA DE ENROLAMIENTO</option>
+                <option value="LIBRETA CÍVICA">LIBRETA CÍVICA</option>
+                <option value="PASAPORTE">PASAPORTE</option>
+                <option value="CÉDULA EXTRANJERA">CÉDULA EXTRANJERA</option>
+                <option value="OTROS DOCUMENTOS">OTROS DOCUMENTOS</option>
+                <option value="DOCUMENTO DE IDENTIDAD">DOCUMENTO DE IDENTIDAD</option>
+                <option value="CÉDULA DE IDENTIDAD">CÉDULA DE IDENTIDAD</option>
+              </select>
+              <div class="arrow"><i class="material-icons">keyboard_arrow_down</i></div>
+            </div>
+            <div class="form-group label-floating half">
+              <label for="dni" class="control-label">DNI</label>
+              <input type="number" class="form-control" id="dni" name="dni" required="required">
+              <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <div class="form-group label-floating">
+            <label for="fecha-nacimiento" class="control-label">Fecha de nacimiento</label>
+            <input type="date" class="form-control" id="fecha-nacimiento" name="fecha-nacimiento" required="required">
+            <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+            <div class="checkbox validar">
+              <div class="form-group">
+                <input type="checkbox" name="validar-nacimiento" value="1" id="validar-nacimiento">
+                <label for="validar-nacimiento">Validar</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group label-floating">
+            <label for="cuit" class="control-label">CUIT/CUIL</label>
+            <input type="number" class="form-control" id="cuit" name="cuit" required="required">
+            <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+          </div>
+          <div class="form-group label-floating select-group">
+            <select class="entidad" name="estado-civil" required="required">
+              <option value="">Estado Civil</option>
+              <option value="SOLTERO">SOLTERO</option>
+              <option value="CASADO">CASADO</option>
+              <option value="VIUDO">VIUDO</option>
+              <option value="SEPARACIÓN DE HECHO">SEPARACIÓN DE HECHO</option>
+              <option value="SEPARACIÓN LEGAL">SEPARACIÓN LEGAL</option>
+              <option value="CONVIVENCIA">CONVIVENCIA</option>
+              <option value="DIVORCIADO">DIVORCIADO</option>
+            </select>
+            <div class="arrow"><i class="material-icons">keyboard_arrow_down</i></div>
+          </div>
+          <div class="form-group label-floating">
+            <label for="nacionalidad" class="control-label">Nacionalidad</label>
+            <input type="text" class="form-control" id="nacionalidad" name="nacionalidad" required="required">
+          </div>
+          <div class="form-group label-floating">
+            <label for="condicion-iva" class="control-label">Condición frente al IVA</label>
+            <input type="text" class="form-control" id="condicion-iva" name="condicion-iva" required="required">
+          </div>
+          <div class="form-group label-floating">
+            <label for="cobertura" class="control-label">Cobertura proviniente</label>
+            <input type="text" class="form-control" id="cobertura" name="cobertura" required="required" value="Nº precargado">
+          </div>
+        </div><!-- end paso 1 -->
+        <div class="pasos paso-2">
+          <div class="divisor">
+            Datos domiciliarios del titular
+          </div>
+          <div class="form-group label-floating">
+            <label for="calle" class="control-label">Calle</label>
+            <input type="text" class="form-control" id="calle" name="calle" required="required" value="Calle precargada editable">
+          </div>
+            <div class="form-group label-floating select-group">
+              <select class="entidad" name="orientacion" required="required">
+                <option value="">Orientación</option>
+              </select>
+              <div class="arrow"><i class="material-icons">keyboard_arrow_down</i></div>
+            </div>
+          <div class="form-group label-floating">
+            <label for="calle-numero" class="control-label">Número</label>
+            <input type="number" class="form-control" id="calle-numero" name="calle-numero" required="required" value="1785">
+          </div>
+          <div class="form-group label-floating">
+            <label for="calle-piso" class="control-label">Piso</label>
+            <input type="number" class="form-control" id="calle-piso" name="calle-piso" required="required" value="8">
+          </div>
+          <div class="form-group label-floating">
+            <label for="calle-depto" class="control-label">Depto.</label>
+            <input type="text" class="form-control" id="calle-depto" name="calle-depto" required="required" value="C">
+          </div>
+          <div class="otros-1">
+            <div class="form-group label-floating select-group half">
+              <select class="entidad" name="otros-select-1" required="required">
+                <option value="">Otros datos</option>
+                <option value="ÁREA">ÁREA</option>
+                <option value="CASA">CASA</option>
+                <option value="CIRCUNSCRIPCIÓN">CIRCUNSCRIPCIÓN</option>
+                <option value="CHACRA">CHACRA</option>
+                <option value="ESCALERA">ESCALERA</option>
+                <option value="KM">KM</option>
+                <option value="LOCAL">LOCAL</option>
+                <option value="LOTE">LOTE</option>
+                <option value="MACISO">MACISO</option>
+                <option value="MANZANA">MANZANA</option>
+                <option value="MONOBLOCK">MONOBLOCK</option>
+                <option value="PARCELA">PARCELA</option>
+                <option value="SECCIÓN">SECCIÓN</option>
+                <option value="TIRA">TIRA</option>
+              </select>
+              <div class="arrow"><i class="material-icons">keyboard_arrow_down</i></div>
+            </div>
+            <div class="form-group label-floating half">
+              <label for="otros-text-1" class="control-label">Otros datos</label>
+              <input type="text" class="form-control" id="otros-text-1" name="otros-text-1" required="required">
+              <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+            </div>
+          </div>
+          <div class="otros-2">
+            <div class="form-group label-floating select-group half">
+              <select class="entidad" name="otros-select-2" required="required">
+                <option value="">Otros datos</option>
+                <option value="ÁREA">ÁREA</option>
+                <option value="CASA">CASA</option>
+                <option value="CIRCUNSCRIPCIÓN">CIRCUNSCRIPCIÓN</option>
+                <option value="CHACRA">CHACRA</option>
+                <option value="ESCALERA">ESCALERA</option>
+                <option value="KM">KM</option>
+                <option value="LOCAL">LOCAL</option>
+                <option value="LOTE">LOTE</option>
+                <option value="MACISO">MACISO</option>
+                <option value="MANZANA">MANZANA</option>
+                <option value="MONOBLOCK">MONOBLOCK</option>
+                <option value="PARCELA">PARCELA</option>
+                <option value="SECCIÓN">SECCIÓN</option>
+                <option value="TIRA">TIRA</option>
+              </select>
+              <div class="arrow"><i class="material-icons">keyboard_arrow_down</i></div>
+            </div>
+            <div class="form-group label-floating half">
+              <label for="otros-text-2" class="control-label">Otros datos</label>
+              <input type="text" class="form-control" id="otros-text-2" name="otros-text-2" required="required">
+              <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <div class="form-group label-floating">
+            <label for="codigo" class="control-label">Código</label>
+            <input type="number" class="form-control" id="codigo" name="codigo" required="required" value="005">
+          </div>
+          <div class="form-group label-floating">
+            <label for="barrio" class="control-label">Barrio</label>
+            <input type="text" class="form-control" id="barrio" name="barrio" required="required">
+          </div>
+          <div class="form-group label-floating">
+            <label for="cod-postal" class="control-label">C.P.</label>
+            <input type="text" class="form-control" id="cod-postal" name="cod-postal" required="required" value="C1416CLA precargado">
+          </div>
+          <div class="form-group label-floating">
+            <label for="localidad" class="control-label">Localidad</label>
+            <input type="text" class="form-control" id="localidad" name="localidad" required="required" >
+          </div>
+          <div class="form-group label-floating">
+            <label for="provincia" class="control-label">Provincia</label>
+            <input type="text" class="form-control" id="provincia" name="provincia" required="required" >
+          </div>
+
+        </div><!-- end paso 2 -->
+        <div class="pasos paso-3">
+          <div class="divisor">
+            Datos de contacto del titular
+          </div>
+          <div class="tel-group">
+            <div class="form-group label-floating cod">
+              <label for="cod-area-1" class="control-label">Código de área</label>
+              <input type="number" class="form-control" id="cod-area-1" name="cod-area-1" required="required" value="011">
+              <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+            </div>
+            <div class="form-group label-floating tel">
+              <label for="tel-1" class="control-label">Teléfono fijo</label>
+              <input type="number" class="form-control" id="tel-1" name="tel-1" required="required" value="49020987">
+              <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+            </div>
+          </div>
+          <div class="tel-group">
+            <div class="form-group label-floating cod">
+              <label for="cod-area-2" class="control-label">Código de área</label>
+              <input type="number" class="form-control" id="cod-area-2" name="cod-area-2" required="required" value="011">
+              <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+            </div>
+            <div class="form-group label-floating tel">
+              <label for="tel-2" class="control-label">Teléfono celular</label>
+              <input type="number" class="form-control" id="tel-2" name="tel-2" required="required" value="54575635">
+              <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <div class="form-group label-floating">
+            <label for="email" class="control-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required="required" value="carlos@pelourinhio.com">
+          </div>
+          <div class="form-group mt0">
+            <div class="checkbox form-inline">
+              <label class="control-label dark">Adhiere a e-factura</label>
+              <div class="form-group">
+                <input type="radio" name="efactura" value="si" id="efactura-si">
+                <label for="efactura-si">SI</label>
+              </div>
+              <div class="form-group">
+                <input type="radio" name="efactura" value="no" id="efactura-no">
+                <label for="efactura-no">NO</label>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="form-group mt0">
+            <div class="checkbox form-inline">
+              <label class="control-label dark">Desea recibir en su domicilio de residencia</label>
+              <div class="form-group">
+                <input type="radio" name="factura-domicilio" value="si" id="factura-domicilio-si">
+                <label for="factura-domicilio-si">SI</label>
+              </div>
+              <div class="form-group">
+                <input type="radio" name="factura-domicilio" value="no" id="factura-domicilio-no">
+                <label for="factura-domicilio-no">NO</label>
+              </div>
+            </div>
+
+            <div class="clearfix"></div>
+          </div>
+          <div class="datos-domicilio" style="display:none;">
+            <div class="divisor">
+              Datos domiciliarios del titular
+            </div>
+            <div class="form-group label-floating">
+              <label for="calle-alt" class="control-label">Calle</label>
+              <input type="text" class="form-control" id="calle-alt" name="calle-alt">
+            </div>
+            <div class="form-group label-floating ">
+              <label for="orientacion-alt" class="control-label">Orientación</label>
+              <input type="text" class="form-control" id="orientacion-alt" name="orientacion-alt" required="required">
+            </div>
+            <div class="form-group label-floating">
+              <label for="calle-numero-alt" class="control-label">Número</label>
+              <input type="number" class="form-control" id="calle-numero-alt" name="calle-numero-alt" >
+            </div>
+            <div class="form-group label-floating">
+              <label for="calle-piso-alt" class="control-label">Piso</label>
+              <input type="number" class="form-control" id="calle-piso-alt" name="calle-piso-alt" >
+            </div>
+            <div class="form-group label-floating">
+              <label for="calle-depto-alt" class="control-label">Depto.</label>
+              <input type="text" class="form-control" id="calle-depto-alt" name="calle-depto-alt" >
+            </div>
+            <div class="otros-1">
+              <div class="form-group label-floating select-group half">
+                <select class="entidad" name="otros-select-1-alt">
+                  <option value="">Otros datos</option>
+                  <option value="ÁREA">ÁREA</option>
+                  <option value="CASA">CASA</option>
+                  <option value="CIRCUNSCRIPCIÓN">CIRCUNSCRIPCIÓN</option>
+                  <option value="CHACRA">CHACRA</option>
+                  <option value="ESCALERA">ESCALERA</option>
+                  <option value="KM">KM</option>
+                  <option value="LOCAL">LOCAL</option>
+                  <option value="LOTE">LOTE</option>
+                  <option value="MACISO">MACISO</option>
+                  <option value="MANZANA">MANZANA</option>
+                  <option value="MONOBLOCK">MONOBLOCK</option>
+                  <option value="PARCELA">PARCELA</option>
+                  <option value="SECCIÓN">SECCIÓN</option>
+                  <option value="TIRA">TIRA</option>
+                </select>
+                <div class="arrow"><i class="material-icons">keyboard_arrow_down</i></div>
+              </div>
+              <div class="form-group label-floating half">
+                <label for="otros-text-1-alt" class="control-label">Otros datos</label>
+                <input type="text" class="form-control" id="otros-text-1-alt" name="otros-text-1-alt" required="required">
+                <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+              </div>
+            </div>
+            <div class="otros-2">
+              <div class="form-group label-floating select-group half">
+                <select class="entidad" name="otros-select-2" required="required">
+                  <option value="">Otros datos</option>
+                  <option value="ÁREA">ÁREA</option>
+                  <option value="CASA">CASA</option>
+                  <option value="CIRCUNSCRIPCIÓN">CIRCUNSCRIPCIÓN</option>
+                  <option value="CHACRA">CHACRA</option>
+                  <option value="ESCALERA">ESCALERA</option>
+                  <option value="KM">KM</option>
+                  <option value="LOCAL">LOCAL</option>
+                  <option value="LOTE">LOTE</option>
+                  <option value="MACISO">MACISO</option>
+                  <option value="MANZANA">MANZANA</option>
+                  <option value="MONOBLOCK">MONOBLOCK</option>
+                  <option value="PARCELA">PARCELA</option>
+                  <option value="SECCIÓN">SECCIÓN</option>
+                  <option value="TIRA">TIRA</option>
+                </select>
+                <div class="arrow"><i class="material-icons">keyboard_arrow_down</i></div>
+              </div>
+              <div class="form-group label-floating half">
+                <label for="otros-text-2-alt" class="control-label">Otros datos</label>
+                <input type="text" class="form-control" id="otros-text-2-alt" name="otros-text-2-alt" required="required">
+                <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+              </div>
+            </div>
+            <div class="form-group label-floating">
+              <label for="codigo-alt" class="control-label">Código</label>
+              <input type="number" class="form-control" id="codigo-alt" name="codigo-alt" required="required" value="005">
+            </div>
+            <div class="form-group label-floating">
+              <label for="barrio-alt" class="control-label">Barrio</label>
+              <input type="text" class="form-control" id="barrio-alt" name="barrio-alt" required="required">
+            </div>
+            <div class="form-group label-floating">
+              <label for="cod-postal-alt" class="control-label">C.P.</label>
+              <input type="text" class="form-control" id="cod-postal-alt" name="cod-postal-alt" required="required" value="C1416CLA precargado">
+            </div>
+            <div class="form-group label-floating">
+              <label for="localidad-alt" class="control-label">Localidad</label>
+              <input type="text" class="form-control" id="localidad-alt" name="localidad-alt" required="required" >
+            </div>
+            <div class="form-group label-floating">
+              <label for="provincia-alt" class="control-label">Provincia</label>
+              <input type="text" class="form-control" id="provincia-alt" name="provincia-alt" required="required" >
+            </div>
+
+          </div>
+
+        </div><!-- end paso 3 -->
+        <div class="pasos paso-4">
+          <div class="divisor">
+            Documentación del titular
+          </div>
+          <div class="form-group input-group">
+            <input type="file" name="file-dni-frente" id="file-dni-frente" class="inputfile" />
+            <label for="file-dni-frente" class="title"><span>DNI Frente</span></label>
+            <label for="file-dni-frente" class="name"><span>DNI Frente</span></label>
+            <div class="remove"><i class="material-icons">close</i></div>
+          </div>
+          <div class="form-group input-group">
+            <input type="file" name="file-dni-dorso" id="file-dni-dorso" class="inputfile" />
+            <label for="file-dni-dorso" class="title"><span>DNI Dorso</span></label>
+            <label for="file-dni-dorso" class="name"><span>DNI Dorso</span></label>
+            <div class="remove"><i class="material-icons">close</i></div>
+          </div>
+          <div class="form-group mt0">
+            <div class="checkbox form-inline">
+              <label class="control-label dark">Figura CUIL en el dorso</label>
+              <div class="form-group">
+                <input type="radio" name="cuil-dorso" value="si" id="cuil-dorso-si">
+                <label for="cuil-dorso-si">SI</label>
+              </div>
+              <div class="form-group">
+                <input type="radio" name="cuil-dorso" value="no" id="cuil-dorso-no">
+                <label for="cuil-dorso-no">NO</label>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="form-group input-group">
+            <input type="file" name="file-constancia-cuil" id="file-constancia-cuil" class="inputfile" />
+            <label for="file-constancia-cuil" class="title"><span>Constancia CUIL</span></label>
+            <label for="file-constancia-cuil" class="name"><span>Constancia CUIL</span></label>
+            <div class="remove"><i class="material-icons">close</i></div>
+          </div>
+          <a href="#" class="btn invert">Obtener desde ANSES</a>
+          <div class="form-group input-group">
+            <input type="file" name="file-constancia-iva" id="file-constancia-iva" class="inputfile" />
+            <label for="file-constancia-iva" class="title"><span>Constancia IVA</span></label>
+            <label for="file-constancia-iva" class="name"><span>Constancia IVA</span></label>
+            <div class="remove"><i class="material-icons">close</i></div>
+          </div>
+          <div class="form-group input-group">
+            <input type="file" name="file-constancia-cobertura" id="file-constancia-cobertura" class="inputfile" />
+            <label for="file-constancia-cobertura" class="title"><span>Constancia Cobertura</span></label>
+            <label for="file-constancia-cobertura" class="name"><span>Constancia Cobertura</span></label>
+            <div class="remove"><i class="material-icons">close</i></div>
+          </div>
+          <div class="form-group input-group">
+            <input type="file" name="file-plan" id="file-plan" class="inputfile" />
+            <label for="file-plan" class="title"><span>Reconocimiento plan</span></label>
+            <label for="file-plan" class="name"><span>Reconocimiento plan</span></label>
+            <div class="remove"><i class="material-icons">close</i></div>
+          </div>
+
+
+        </div><!-- end paso 4 -->
+        <div class="pasos paso-5">
+          <div class="divisor">
+            Integrantes
+          </div>
+          <div class="int-nuevo combo">
+            <i class="material-icons">person</i><p><sup>Código</sup>04</p>
+            <div class="arrow"></div>
+            <div class="clearfix"></div>
+            <div class="imc">
+              <div class="form-group label-floating">
+                <label for="apellido-int-1" class="control-label">Apellido</label>
+                <input type="text" class="form-control" id="apellido-int-1" name="apellido-int-1" required="required" value="Di Tello">
+                <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+                <div class="checkbox validar">
+                  <div class="form-group">
+                    <input type="checkbox" name="validar-apellido-int-1" value="1" id="validar-apellido-int-1">
+                    <label for="validar-apellido-int-1">Validar</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group label-floating">
+                <label for="nombres-int-1" class="control-label">Nombres</label>
+                <input type="text" class="form-control" id="nombres-int-1" name="nombres-int-1" required="required" value="Juliana">
+                <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+                <div class="checkbox validar">
+                  <div class="form-group">
+                    <input type="checkbox" name="validar-nombre-int-1" value="1" id="validar-nombre-int-1">
+                    <label for="validar-nombre-int-1">Validar</label>
+                  </div>
+                </div>
+              </div>
+              <div class="documento">
+                <div class="form-group label-floating select-group half">
+                  <select class="entidad" name="tipo-int-1" required="required">
+                    <option value="">Tipo de documento</option>
+                    <option value="DOCUMENTO NACIONAL DE IDENTIDAD">DOCUMENTO NACIONAL DE IDENTIDAD</option>
+                    <option value="DOCUMENTO EN TRÁMITE">DOCUMENTO EN TRÁMITE</option>
+                    <option value="LIBRETA DE ENROLAMIENTO">LIBRETA DE ENROLAMIENTO</option>
+                    <option value="LIBRETA CÍVICA">LIBRETA CÍVICA</option>
+                    <option value="PASAPORTE">PASAPORTE</option>
+                    <option value="CÉDULA EXTRANJERA">CÉDULA EXTRANJERA</option>
+                    <option value="OTROS DOCUMENTOS">OTROS DOCUMENTOS</option>
+                    <option value="DOCUMENTO DE IDENTIDAD">DOCUMENTO DE IDENTIDAD</option>
+                    <option value="CÉDULA DE IDENTIDAD">CÉDULA DE IDENTIDAD</option>
+                  </select>
+                  <div class="arrow"><i class="material-icons">keyboard_arrow_down</i></div>
+                </div>
+                <div class="form-group label-floating half">
+                  <label for="dni-int-1" class="control-label">DNI</label>
+                  <input type="number" class="form-control" id="dni-int-1" name="dni-int-1" required="required">
+                  <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+                </div>
+              </div>
+              <div class="clearfix"></div>
+              <div class="form-group label-floating ">
+                <label for="cuit-int-1" class="control-label">CUIT/CUIL</label>
+                <input type="number" class="form-control" id="cuit-int-1" name="cuit-int-1" required="required">
+                <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+              </div>
+              <div class="form-group label-floating select-group">
+                <select class="entidad" name="sexo-int-1" required="required">
+                  <option value="">Sexo</option>
+                  <option value="Masculino">Masculino</option>
+                  <option value="Femenino">Femenino</option>
+                </select>
+                <div class="arrow"><i class="material-icons">keyboard_arrow_down</i></div>
+              </div>
+              <div class="form-group label-floating">
+                <label for="fecha-nacimiento-int-1" class="control-label">Fecha de nacimiento</label>
+                <input type="date" class="form-control" id="fecha-nacimiento-int-1" name="fecha-nacimiento-int-1" required="required">
+                <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+                <div class="checkbox validar">
+                  <div class="form-group">
+                    <input type="checkbox" name="validar-nacimiento-int-1" value="1" id="validar-nacimiento-int-1">
+                    <label for="validar-nacimiento-int-1">Validar</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group label-floating">
+                <label for="nacionalidad-int-1" class="control-label">Nacionalidad</label>
+                <input type="text" class="form-control" id="nacionalidad-int-1" name="nacionalidad-int-1" required="required" >
+              </div>
+              <div class="form-group">
+                <div class="checkbox form-inline" style="position:relative;">
+                  <label class="control-label dark">Presenta discapacidad</label>
+                  <div class="form-group">
+                    <input type="radio" name="discapacidad-int-1" value="si" id="discapacidad-int-1-si">
+                    <label for="discapacidad-int-1-si">SI</label>
+                  </div>
+                  <div class="form-group">
+                    <input type="radio" name="discapacidad-int-1" value="no" id="discapacidad-int-1-no">
+                    <label for="discapacidad-int-1-no">NO</label>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div class="divisor">
+                Documentación del integrante
+              </div>
+              <div class="form-group input-group">
+                <input type="file" name="file-dni-frente-int-1" id="file-dni-frente-int-1" class="inputfile" />
+                <label for="file-dni-frente-int-1" class="title"><span>DNI Frente</span></label>
+                <label for="file-dni-frente-int-1" class="name"><span>DNI Frente</span></label>
+                <div class="remove"><i class="material-icons">close</i></div>
+              </div>
+              <div class="form-group input-group">
+                <input type="file" name="file-dni-dorso-int-1" id="file-dni-dorso-int-1" class="inputfile" />
+                <label for="file-dni-dorso-int-1" class="title"><span>DNI Dorso</span></label>
+                <label for="file-dni-dorso-int-1" class="name"><span>DNI Dorso</span></label>
+                <div class="remove"><i class="material-icons">close</i></div>
+              </div>
+              <div class="form-group">
+                <div class="checkbox form-inline" style="position:relative;">
+                  <label class="control-label dark">Datos de padres en DNI</label>
+                  <div class="form-group">
+                    <input type="radio" name="padres-dni-int-1" value="si" id="padres-dni-int-1-si">
+                    <label for="padres-dni-int-1-si">SI</label>
+                  </div>
+                  <div class="form-group">
+                    <input type="radio" name="padres-dni-int-1" value="no" id="padres-dni-int-1-no">
+                    <label for="padres-dni-int-1-no">NO</label>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div class="form-group input-group">
+                <input type="file" name="file-part-nacimiento-int-1" id="file-part-nacimiento-int-1" class="inputfile" />
+                <label for="file-part-nacimiento-int-1" class="title"><span>Part. Nacimiento</span></label>
+                <label for="file-part-nacimiento-int-1" class="name"><span>Part. Nacimiento</span></label>
+                <div class="remove"><i class="material-icons">close</i></div>
+              </div>
+              <div class="form-group input-group">
+                <input type="file" name="file-acta-matrimonio-int-1" id="file-acta-matrimonio-int-1" class="inputfile" />
+                <label for="file-acta-matrimonio-int-1" class="title"><span>Acta matrimonio</span></label>
+                <label for="file-acta-matrimonio-int-1" class="name"><span>Acta matrimonio</span></label>
+                <div class="remove"><i class="material-icons">close</i></div>
+              </div>
+
+            </div>
+            <div class="clearfix"></div>
+          </div><!-- end integrante -->
+          <div class="int-nuevo combo">
+            <i class="material-icons">person</i><p><sup>Código</sup>07</p>
+            <div class="arrow"></div>
+            <div class="clearfix"></div>
+            <div class="imc">
+              <div class="form-group label-floating">
+                <label for="apellido-int-2" class="control-label">Apellido</label>
+                <input type="text" class="form-control" id="apellido-int-2" name="apellido-int-2" required="required" value="Di Tello">
+                <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+                <div class="checkbox validar">
+                  <div class="form-group">
+                    <input type="checkbox" name="validar-apellido-int-2" value="1" id="validar-apellido-int-2">
+                    <label for="validar-apellido-int-2">Validar</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group label-floating">
+                <label for="nombres-int-2" class="control-label">Nombres</label>
+                <input type="text" class="form-control" id="nombres-int-2" name="nombres-int-2" required="required" value="Juliana">
+                <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+                <div class="checkbox validar">
+                  <div class="form-group">
+                    <input type="checkbox" name="validar-nombre-int-2" value="1" id="validar-nombre-int-2">
+                    <label for="validar-nombre-int-2">Validar</label>
+                  </div>
+                </div>
+              </div>
+              <div class="documento">
+                <div class="form-group label-floating select-group half">
+                  <select class="entidad" name="tipo-int-2" required="required">
+                    <option value="">Tipo de documento</option>
+                    <option value="DOCUMENTO NACIONAL DE IDENTIDAD">DOCUMENTO NACIONAL DE IDENTIDAD</option>
+                    <option value="DOCUMENTO EN TRÁMITE">DOCUMENTO EN TRÁMITE</option>
+                    <option value="LIBRETA DE ENROLAMIENTO">LIBRETA DE ENROLAMIENTO</option>
+                    <option value="LIBRETA CÍVICA">LIBRETA CÍVICA</option>
+                    <option value="PASAPORTE">PASAPORTE</option>
+                    <option value="CÉDULA EXTRANJERA">CÉDULA EXTRANJERA</option>
+                    <option value="OTROS DOCUMENTOS">OTROS DOCUMENTOS</option>
+                    <option value="DOCUMENTO DE IDENTIDAD">DOCUMENTO DE IDENTIDAD</option>
+                    <option value="CÉDULA DE IDENTIDAD">CÉDULA DE IDENTIDAD</option>
+                  </select>
+                  <div class="arrow"><i class="material-icons">keyboard_arrow_down</i></div>
+                </div>
+                <div class="form-group label-floating half">
+                  <label for="dni-int-2" class="control-label">DNI</label>
+                  <input type="number" class="form-control" id="dni-int-2" name="dni-int-2" required="required">
+                  <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+                </div>
+              </div>
+              <div class="clearfix"></div>
+              <div class="form-group label-floating ">
+                <label for="cuit-int-2" class="control-label">CUIT/CUIL</label>
+                <input type="number" class="form-control" id="cuit-int-2" name="cuit-int-2" required="required">
+                <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+              </div>
+              <div class="form-group label-floating select-group">
+                <select class="entidad" name="sexo-int-2" required="required">
+                  <option value="">Sexo</option>
+                  <option value="Masculino">Masculino</option>
+                  <option value="Femenino">Femenino</option>
+                </select>
+                <div class="arrow"><i class="material-icons">keyboard_arrow_down</i></div>
+              </div>
+              <div class="form-group label-floating">
+                <label for="fecha-nacimiento-int-2" class="control-label">Fecha de nacimiento</label>
+                <input type="date" class="form-control" id="fecha-nacimiento-int-2" name="fecha-nacimiento-int-2" required="required">
+                <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+                <div class="checkbox validar">
+                  <div class="form-group">
+                    <input type="checkbox" name="validar-nacimiento-int-2" value="1" id="validar-nacimiento-int-2">
+                    <label for="validar-nacimiento-int-2">Validar</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group label-floating">
+                <label for="nacionalidad-int-2" class="control-label">Nacionalidad</label>
+                <input type="text" class="form-control" id="nacionalidad-int-2" name="nacionalidad-int-2" required="required" >
+              </div>
+              <div class="form-group">
+                <div class="checkbox form-inline" style="position:relative;">
+                  <label class="control-label dark">Presenta discapacidad</label>
+                  <div class="form-group">
+                    <input type="radio" name="discapacidad-int-2" value="si" id="discapacidad-int-2-si">
+                    <label for="discapacidad-int-2-si">SI</label>
+                  </div>
+                  <div class="form-group">
+                    <input type="radio" name="discapacidad-int-2" value="no" id="discapacidad-int-2-no">
+                    <label for="discapacidad-int-2-no">NO</label>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div class="divisor">
+                Documentación del integrante
+              </div>
+              <div class="form-group input-group">
+                <input type="file" name="file-dni-frente-int-2" id="file-dni-frente-int-2" class="inputfile" />
+                <label for="file-dni-frente-int-2" class="title"><span>DNI Frente</span></label>
+                <label for="file-dni-frente-int-2" class="name"><span>DNI Frente</span></label>
+                <div class="remove"><i class="material-icons">close</i></div>
+              </div>
+              <div class="form-group input-group">
+                <input type="file" name="file-dni-dorso-int-2" id="file-dni-dorso-int-2" class="inputfile" />
+                <label for="file-dni-dorso-int-2" class="title"><span>DNI Dorso</span></label>
+                <label for="file-dni-dorso-int-2" class="name"><span>DNI Dorso</span></label>
+                <div class="remove"><i class="material-icons">close</i></div>
+              </div>
+              <div class="form-group">
+                <div class="checkbox form-inline" style="position:relative;">
+                  <label class="control-label dark">Datos de padres en DNI</label>
+                  <div class="form-group">
+                    <input type="radio" name="padres-dni-int-2" value="si" id="padres-dni-int-2-si">
+                    <label for="padres-dni-int-2-si">SI</label>
+                  </div>
+                  <div class="form-group">
+                    <input type="radio" name="padres-dni-int-2" value="no" id="padres-dni-int-2-no">
+                    <label for="padres-dni-int-2-no">NO</label>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div class="form-group input-group">
+                <input type="file" name="file-part-nacimiento-int-2" id="file-part-nacimiento-int-2" class="inputfile" />
+                <label for="file-part-nacimiento-int-2" class="title"><span>Part. Nacimiento</span></label>
+                <label for="file-part-nacimiento-int-2" class="name"><span>Part. Nacimiento</span></label>
+                <div class="remove"><i class="material-icons">close</i></div>
+              </div>
+              <div class="form-group input-group">
+                <input type="file" name="file-acta-matrimonio-int-2" id="file-acta-matrimonio-int-2" class="inputfile" />
+                <label for="file-acta-matrimonio-int-2" class="title"><span>Acta matrimonio</span></label>
+                <label for="file-acta-matrimonio-int-2" class="name"><span>Acta matrimonio</span></label>
+                <div class="remove"><i class="material-icons">close</i></div>
+              </div>
+
+            </div>
+            <div class="clearfix"></div>
+          </div><!-- end integrante -->
+        </div><!-- end paso 5 -->
+        <!--  PAGOS CAMBIA SEGUN CASO -->
+        <div class="pasos paso-6">
+          <div class="divisor">
+            Pago
+          </div>
+          <div class="form-group label-floating select-group">
+            <select class="entidad" name="forma-pago" required="required">
+              <option value="">Forma de pago</option>
+              <option value="TC">TC</option>
+              <option value="CBU">CBU</option>
+              <option value="PR">PR</option>
+              <option value="ECR">ECR</option>
+            </select>
+            <div class="arrow"><i class="material-icons">keyboard_arrow_down</i></div>
+          </div>
+          <div class="form-group input-group tc">
+            <input type="file" name="file-tarjeta-frente" id="file-tarjeta-frente" class="inputfile" />
+            <label for="file-tarjeta-frente" class="title"><span>Frente tarjeta</span></label>
+            <label for="file-tarjeta-frente" class="name"><span>Frente tarjeta</span></label>
+            <div class="remove"><i class="material-icons">close</i></div>
+          </div>
+          <div class="form-group label-floating tc">
+            <label for="tarjeta-num" class="control-label">Número de tarjeta</label>
+            <input type="number" class="form-control" id="tarjeta-num" name="tarjeta-num" required="required">
+            <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+          </div>
+          <div class="form-group label-floating tc">
+            <label for="banco" class="control-label">Banco</label>
+            <input type="text" class="form-control" id="banco" name="banco" required="required">
+            <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+          </div>
+          <div class="form-group label-floating tc">
+            <label for="fecha-vencimiento-int-1" class="control-label">Fecha de vencimiento</label>
+            <input type="date" class="form-control" id="fecha-vencimiento-int-1" name="fecha-vencimiento-int-1" required="required">
+          </div>
+          <div class="form-group tc">
+            <div class="checkbox form-inline" style="position:relative;">
+              <label class="control-label dark">Mismo titular de tarjeta que de afiliación</label>
+              <div class="form-group">
+                <input type="radio" name="titular-tarjeta" value="si" id="titular-tarjeta-si">
+                <label for="titular-tarjeta-si">SI</label>
+              </div>
+              <div class="form-group">
+                <input type="radio" name="titular-tarjeta" value="no" id="titular-tarjeta-no">
+                <label for="titular-tarjeta-no">NO</label>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+
+          <div class="form-group label-floating cbu">
+            <label for="cbu-num" class="control-label">Número de CBU</label>
+            <input type="number" class="form-control" id="cbu-num" name="cbu-num" required="required">
+            <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+          </div>
+          <div class="form-group label-floating select-group cbu">
+            <select class="entidad" name="tipo-cbu" required="required">
+              <option value="">Tipo de cuenta</option>
+              <option value="Cuenta Corriente">Cuenta Corriente</option>
+              <option value="Caja de Ahorro">Caja de Ahorro</option>
+            </select>
+            <div class="arrow"><i class="material-icons">keyboard_arrow_down</i></div>
+          </div>
+          <div class="form-group label-floating pr">
+            <label for="tambo-num" class="control-label">Número de Tambo</label>
+            <input type="number" class="form-control" id="tambo-num" name="tambo-num" required="required">
+            <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+          </div>
+
+          <div class="form-group label-floating ecr">
+            <label for="entidad-num" class="control-label">Número de Entidad</label>
+            <input type="number" class="form-control" id="entidad-num" name="entidad-num" required="required">
+            <!-- <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span> -->
+          </div>
+          <div class="divisor">
+            Entidad empleadora
+          </div>
+          <div class="form-group label-floating">
+            <label for="entidad-razon-social" class="control-label">Razón social</label>
+            <input type="number" class="form-control" id="entidad-razon-social" name="entidad-razon-social" required="required" value="307970">
+          </div>
+          <div class="divisor">
+            Unificación
+          </div>
+          <div class="form-group label-floating">
+            <label for="unifica-razon-social" class="control-label">Razón social</label>
+            <input type="number" class="form-control" id="unifica-razon-social" name="unifica-razon-social" required="required" value="307970">
+          </div>
+          <div class="divisor">
+            Condición de monotributo
+          </div>
+          <div class="form-group input-group">
+            <input type="file" name="file-form-184" id="file-form-184" class="inputfile" />
+            <label for="file-form-184" class="title"><span>Formulario 184</span></label>
+            <label for="file-form-184" class="name"><span>Formulario 184</span></label>
+            <div class="remove"><i class="material-icons">close</i></div>
+          </div>
+          <div class="form-group input-group">
+            <input type="file" name="file-pagos-6-meses" id="file-pagos-6-meses" class="inputfile" />
+            <label for="file-pagos-6-meses" class="title"><span>Pagos últimos 6 meses</span></label>
+            <label for="file-pagos-6-meses" class="name"><span>Pagos últimos 6 meses</span></label>
+            <div class="remove"><i class="material-icons">close</i></div>
+          </div>
+          <div class="form-group label-floating">
+            <label for="codigo-obra-social" class="control-label">Código obra social</label>
+            <input type="number" class="form-control" id="codigo-obra-social" name="codigo-obra-social" required="required">
+          </div>
+          <a href="#" class="btn invert">Verificar código con SSS</a>
+          <div class="form-group input-group">
+            <input type="file" name="file-codigo-obra-social" id="file-codigo-obra-social" class="inputfile" />
+            <label for="file-codigo-obra-social" class="title"><span>Código obra social</span></label>
+            <label for="file-codigo-obra-social" class="name"><span>Código obra social</span></label>
+            <div class="remove"><i class="material-icons">close</i></div>
+          </div>
+          <div class="form-group mt0">
+            <div class="checkbox form-inline" style="position:relative;">
+              <div class="form-group">
+                <input type="radio" name="monotributo" value="si" id="monotributo-si">
+                <label for="monotributo-si">Empadronado</label>
+              </div>
+              <div class="form-group">
+                <input type="radio" name="monotributo" value="no" id="monotributo-no">
+                <label for="monotributo-no">Por opción</label>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="form-group label-floating">
+            <label for="obra-social-desregula" class="control-label">Obra social por la que desregula</label>
+            <input type="text" class="form-control" id="obra-social-desregula" name="obra-social-desregula" required="required" value="OSPERSAAMS">
+          </div>
+          <a href="#" class="btn invert">Verificar obra social proveniente</a>
+          <div class="form-group input-group">
+            <input type="file" name="file-comprobante-sss" id="file-comprobante-sss" class="inputfile" />
+            <label for="file-comprobante-sss" class="title"><span>Comprobante SSS</span></label>
+            <label for="file-comprobante-sss" class="name"><span>Comprobante SSS</span></label>
+            <div class="remove"><i class="material-icons">close</i></div>
+          </div>
+          <div class="form-group label-floating select-group">
+            <select class="entidad" name="forma-pago" required="required">
+              <option value="">Opción con otra obra social</option>
+              <option value="OSPERSAAMS">OSPERSAAMS </option>
+              <option value="MERCEDES BENZ">MERCEDES BENZ </option>
+              <option value="OSME">OSME </option>
+              <option value="OSUTI">OSUTI</option>
+            </select>
+            <div class="arrow"><i class="material-icons">keyboard_arrow_down</i></div>
+          </div>
+          <div class="form-group label-floating">
+            <label for="fecha-ingreso-obra-social" class="control-label">Fecha de ingreso a la obra social</label>
+            <input type="date" class="form-control" id="fecha-ingreso-obra-social" name="fecha-ingreso-obra-social" required="required">
+          </div>
+        </div><!-- end paso 6 -->
+        <div class="pasos paso-7">
+          <div class="divisor">
+            Servicio contratado
+          </div>
+          <div class="plan">Plan SanCor 3000</div>
+          <div class="precio">$3550,00</div>
+          <div class="divisor">
+            Detalle
+          </div>
+          <ul class="detalle">
+            <li>SanCor 3000 <span>$3550</span> </li>
+            <li>Valor del plan <span>$2000</span> </li>
+            <li>Bonificaión de afinidad <span>($287)</span> </li>
+            <li>Bonificación de aporte <span>($1289)</span> </li>
+            <li>Adicionales optativos <span>$1050</span> </li>
+            <li>Módulo de patología preexistente <span>$1000</span> </li>
+          </ul>
+          <a href="#" class="btn">Ficha a aprobación</a>
+        </div><!-- end paso 7 -->
+        <div class="clearfix"></div>
+      </form>
+
+      <div class="next">
+        <div class="pagination">
+          <div class="dot selected"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+        <button class="button btn prev left"><i class="material-icons">keyboard_arrow_left</i>ANTERIOR</button>
+        <button class="button btn next right">Siguiente<i class="material-icons">keyboard_arrow_right</i></button>
+        <div class="clearfix"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div id="alert-efactura" class="modal fade" tabindex="-1">
+  <div class="modal-dialog" style="max-width:400px;">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p>Indicaste adherir a e-factura.<br>El campo <strong>E-mail</strong> es obligatorio.</p>
+        <p class="integrante"></p>
+        <a href="#" class="btn btn-int cerrar">Aceptar</a>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="../../assets/js/material.js"></script>
+<script src="../../assets/js/ripples.js"></script>
+<script src="../../assets/js/main.js"></script>
+<script src="../../assets/js/modulo3.js"></script>
+<script>
+$(document).ready(function() {
+  var today = new Date();
+  var day = ("0" + today.getDate()).slice(-2);
+  var month = ("0" + (today.getMonth() + 1)).slice(-2);
+
+  // var currentDate = (day)+"/"+(month)+"/"+today.getFullYear() ;
+  var currentDate = today.getFullYear()+"-"+(month)+"-"+(day) ;
+  console.log(currentDate);
+
+  $('#fecha-inicio').val(currentDate);
+  $('#fecha-inicio').parent().removeClass('is-empty');
+});
+</script>
+</body>
+</html>

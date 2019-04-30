@@ -1,0 +1,711 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ar.com.sancorsalud.asociados.fragments.salesman.SalesmanIndicatorFragment">
+
+    <ScrollView
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/salesman_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/activity_horizontal_half_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_weight="1">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/salesman_wrapper"
+                    style="@style/TextAppearence.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/salesman_input"
+                        style="@style/TextAppearence.EditText"
+                        android:focusable="false"
+                        android:hint="@string/indicators_salesman" />
+                </android.support.design.widget.TextInputLayout>
+
+                <RelativeLayout
+                    android:id="@+id/arrow0"
+                    style="@style/buttonSpinner">
+
+                    <ImageView
+                        style="@style/arrowSpinner"
+                        app:srcCompat="@drawable/ic_expand" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/salesman_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/dates"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:weightSum="2">
+
+
+                <RelativeLayout
+                    android:id="@+id/from_date_box"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/activity_horizontal_half_margin"
+                    android:layout_weight="1">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/from_date_wrapper"
+                        style="@style/TextAppearence.TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/from_date_input"
+                            style="@style/TextAppearence.EditText"
+                            android:focusable="false"
+                            android:hint="@string/from_date" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/arrow1"
+                        style="@style/buttonSpinner">
+
+                        <ImageView
+                            style="@style/arrowSpinner"
+                            app:srcCompat="@drawable/ic_expand" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/from_date_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/to_date_box"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                    android:layout_weight="1">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/to_date_wrapper"
+                        style="@style/TextAppearence.TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/to_date_input"
+                            style="@style/TextAppearence.EditText"
+                            android:focusable="false"
+                            android:hint="@string/to_date" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/arrow2"
+                        style="@style/buttonSpinner">
+
+                        <ImageView
+                            style="@style/arrowSpinner"
+                            app:srcCompat="@drawable/ic_expand" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/to_date_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button"
+                style="@style/ButtonAppearence"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@drawable/button_background_accent"
+                android:text="@string/get_indicators" />
+
+
+            <LinearLayout
+                android:id="@+id/indicator_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="18dp"
+                android:paddingTop="18dp"
+                android:visibility="gone">
+
+                <!--<RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/indicators_pot_asoc"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/menu_header_label_size" />
+
+                    <ImageView
+                        android:id="@+id/btn_arrow_more_less_PA"
+                        style="@style/arrowSpinner"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/ic_expand" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/PA_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:animateLayoutChanges="true"
+                    android:orientation="vertical">
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/indicators_temp_wrapper"
+                        style="@style/TextAppearence.TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/indicators_temp"
+                            style="@style/TextAppearence.EditText"
+                            android:focusable="false"
+                            android:hint="@string/indicators_temp" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/indicators_pa_schedule_wrapper"
+                            style="@style/TextAppearence.TextInputLayout"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/indicators_pa_schedule"
+                                style="@style/TextAppearence.EditText"
+                                android:focusable="false"
+                                android:hint="@string/indicators_pa_schedule" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/iindicators_pa_scheduled_wrapper"
+                            style="@style/TextAppearence.TextInputLayout"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/indicators_pa_scheduled"
+                                style="@style/TextAppearence.EditText"
+                                android:focusable="false"
+                                android:hint="@string/indicators_pa_scheduled" />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/indicators_pa_quoted_wrapper"
+                            style="@style/TextAppearence.TextInputLayout"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/indicators_pa_quoted"
+                                style="@style/TextAppearence.EditText"
+                                android:focusable="false"
+                                android:hint="@string/indicators_pa_quoted" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/indicators_pa_close_wrapper"
+                            style="@style/TextAppearence.TextInputLayout"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/indicators_pa_close"
+                                style="@style/TextAppearence.EditText"
+                                android:focusable="false"
+                                android:hint="@string/indicators_pa_close" />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/PA_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="3px"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/colorDividers"></View> -->
+
+
+                <!--RelativeLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/indicators_quote"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/menu_header_label_size" />
+
+                    <ImageView
+                        android:id="@+id/btn_arrow_more_less_quote"
+                        style="@style/arrowSpinner"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/ic_expand" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/quote_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:animateLayoutChanges="true"
+                    android:orientation="vertical">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/indicators_quote_manual_wrapper"
+                        style="@style/TextAppearence.TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/indicators_quote_manual"
+                            style="@style/TextAppearence.EditText"
+                            android:focusable="false"
+                            android:hint="@string/indicators_manual_quotation_rate" />
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+
+                <View
+                    android:visibility="gone"
+                    android:id="@+id/quote_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="3px"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/colorDividers"></View-->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/indicators_production_detail"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/menu_header_label_size" />
+
+                    <ImageView
+                        android:id="@+id/btn_arrow_more_less_charge"
+                        style="@style/arrowSpinner"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/ic_expand" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/charge_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:animateLayoutChanges="true"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/indicators_carga_prod_wrapper"
+                            style="@style/TextAppearence.TextInputLayout"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/indicators_carga_prod"
+                                style="@style/TextAppearence.EditText"
+                                android:focusable="false"
+                                android:hint="@string/indicators_carga_prod_in_record" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/indicators_carga_prod_in_capitas_wrapper"
+                            style="@style/TextAppearence.TextInputLayout"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/indicators_carga_prod_in_capitas"
+                                style="@style/TextAppearence.EditText"
+                                android:focusable="false"
+                                android:hint="@string/indicators_carga_prod_in_capitas" />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/indicators_carga_tasa_error_wrapper"
+                            style="@style/TextAppearence.TextInputLayout"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/indicators_carga_tasa_error"
+                                style="@style/TextAppearence.EditText"
+                                android:focusable="false"
+                                android:hint="@string/indicators_carga_tasa_error" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/indicators_carga_tiempo_wrapper"
+                            style="@style/TextAppearence.TextInputLayout"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/indicators_carga_tiempo"
+                                style="@style/TextAppearence.EditText"
+                                android:focusable="false"
+                                android:hint="@string/indicators_carga_tiempo" />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/indicators_carga_grav_wrapper"
+                            style="@style/TextAppearence.TextInputLayout"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/indicators_carga_grav"
+                                style="@style/TextAppearence.EditText"
+                                android:focusable="false"
+                                android:hint="@string/indicators_carga_grav" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/indicators_carga_nograv_wrapper"
+                            style="@style/TextAppearence.TextInputLayout"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/indicators_carga_nograv"
+                                style="@style/TextAppearence.EditText"
+                                android:focusable="false"
+                                android:hint="@string/indicators_carga_nograv" />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextAppearence.TextInputLayout"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/indicators_carga_afinidad"
+                                style="@style/TextAppearence.EditText"
+                                android:focusable="false"
+                                android:hint="@string/indicators_carga_afinidad" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextAppearence.TextInputLayout"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/indicators_carga_empresa"
+                                style="@style/TextAppearence.EditText"
+                                android:focusable="false"
+                                android:hint="@string/indicators_carga_empresa" />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextAppearence.TextInputLayout"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/indicators_carga_ind"
+                                style="@style/TextAppearence.EditText"
+                                android:focusable="false"
+                                android:hint="@string/indicators_carga_ind" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextAppearence.TextInputLayout"
+                            android:layout_marginRight="@dimen/activity_horizontal_half_margin"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/indicators_carga_tc"
+                                style="@style/TextAppearence.EditText"
+                                android:focusable="false"
+                                android:hint="@string/indicators_carga_tc" />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextAppearence.TextInputLayout"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/indicators_carga_cbu"
+                                style="@style/TextAppearence.EditText"
+                                android:focusable="false"
+                                android:hint="@string/indicators_carga_cbu" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextAppearence.TextInputLayout"
+                            android:layout_marginRight="@dimen/activity_horizontal_half_margin"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/indicators_carga_pf"
+                                style="@style/TextAppearence.EditText"
+                                android:focusable="false"
+                                android:hint="@string/indicators_carga_pf" />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <!-- Producción RCE y EF no van por ahora, en caso que lo pidan: solo quitar la property visibility -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:weightSum="2">
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextAppearence.TextInputLayout"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/indicators_carga_rce"
+                                style="@style/TextAppearence.EditText"
+                                android:focusable="false"
+                                android:hint="@string/indicators_carga_rce" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextAppearence.TextInputLayout"
+                            android:layout_marginRight="@dimen/activity_horizontal_half_margin"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/indicators_carga_ef"
+                                style="@style/TextAppearence.EditText"
+                                android:focusable="false"
+                                android:hint="@string/indicators_carga_ef" />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextAppearence.TextInputLayout"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/indicators_carga_pa_quoted"
+                                style="@style/TextAppearence.EditText"
+                                android:focusable="false"
+                                android:hint="@string/indicators_carga_pa_quoted" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextAppearence.TextInputLayout"
+                            android:layout_marginRight="@dimen/activity_horizontal_half_margin"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/indicators_carga_in_proccess"
+                                style="@style/TextAppearence.EditText"
+                                android:focusable="false"
+                                android:hint="@string/indicators_carga_records_in_proccess" />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextAppearence.TextInputLayout"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/indicators_carga_records_to_correct"
+                                style="@style/TextAppearence.EditText"
+                                android:focusable="false"
+                                android:hint="@string/indicators_carga_records_to_correct" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextAppearence.TextInputLayout"
+                            android:layout_marginRight="@dimen/activity_horizontal_half_margin"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/indicators_carga_derived_to_control"
+                                style="@style/TextAppearence.EditText"
+                                android:focusable="false"
+                                android:hint="@string/indicators_carga_records_derived_to_control" />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/charge_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="3px"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/colorDividers"></View>
+
+                <!--<RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/indicators_trazabilidad"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/menu_header_label_size" />
+
+                    <ImageView
+                        android:id="@+id/btn_arrow_more_less_trazabilidad"
+                        style="@style/arrowSpinner"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/ic_expand" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/trazabilidad_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:animateLayoutChanges="true"
+                    android:orientation="vertical">
+
+                    <android.support.design.widget.TextInputLayout style="@style/TextAppearence.TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/indicators_trazabilidad_tasa"
+                            style="@style/TextAppearence.EditText"
+                            android:focusable="false"
+                            android:hint="@string/indicators_trazabilidad_tasa" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        style="@style/TextAppearence.TextInputLayout"
+                        android:layout_marginBottom="@dimen/activity_vertical_double_margin">
+
+                        <EditText
+                            android:id="@+id/indicators_trazabilidad_doc_error"
+                            style="@style/TextAppearence.EditText"
+                            android:focusable="false"
+                            android:hint="@string/indicators_trazabilidad_doc_error" />
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>-->
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Login progress -->
+    <ProgressBar
+        android:id="@+id/progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

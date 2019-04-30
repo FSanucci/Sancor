@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sancor Salud</title>
+  <!-- Material Design fonts -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- Bootstrap Material Design -->
+  <link rel="stylesheet" type="text/css" href="../../assets/css/bootstrap-material-design.css">
+  <link rel="stylesheet" type="text/css" href="../../assets/css/ripples.min.css">
+  <link rel="stylesheet" type="text/css" href="../../assets/css/styles.css">
+</head>
+
+<body>
+  <header class="header">
+    <nav class="menu">
+      <div class="head">
+        <img src="../../assets/images/logo.png" alt="">
+        <h3 class="name">Esteban Bodoni</h3>
+      </div>
+      <ul>
+        <li class="active"><a href="#"><i class="material-icons">check_box</i>Asignaciones</a></li>
+        <li><a href="cargar-asociado.html"><i class="material-icons">person_add</i>Cargar potencial asociado</a></li>
+        <li><a href="listado-promotores.html"><i class="material-icons">group</i>Listado de promotores</a></li>
+        <li><a href="#"><i class="material-icons">assignment</i>Reportes</a></li>
+        <li><a href="#"><i class="material-icons">list</i>Motivos de eliminación</a></li>
+        <li><a href="#"><i class="material-icons">monetization_on</i>Cotización manual</a></li>
+        <li><a href="#"><i class="material-icons">exit_to_app</i>Salir</a></li>
+      </ul>
+    </nav>
+    <button type="button" name="button" class="btn btn-menu btn-nav"><i class="material-icons">menu</i> <h3>Asignaciones</h3></button>
+    <button type="button" name="button" class="btn btn-menu btn-search"><i class="material-icons">arrow_back</i> <h3>Volver</h3></button>
+    <button type="button" name="button" class="btn btn-menu btn-back blanco"><i class="material-icons">arrow_back</i> <h3>Asignaciones</h3></button>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <form action="#" class="search">
+            <button type="submit" name="button" class="btn hidden-xs"><i class="material-icons">search</i></button>
+            <input type="text" placeholder="Buscar" class="hidden-xs">
+            <input type="text" placeholder="Buscar" class="smart visible-xs">
+          </form>
+          <div class="filtros dropdown">
+            <button type="button" name="button" class="btn btn-filter dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="material-icons">more_vert</i></button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><a id="sin-agendar" href="#"><i class="material-icons">event_note</i>Sin agendar</a></li>
+              <li><a id="entrevistados" href="#"><i class="material-icons">assignment_turned_in</i>Entrevistados</a></li>
+              <li><a id="cotizados" href="#"><i class="material-icons">monetization_on</i>Cotizados</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button type="button" name="button" class="btn smart-search visible-xs"><i class="material-icons">search</i></button>
+    <div class="user hidden-xs">
+      <i class="material-icons">account_circle</i>
+      <div class="name">Esteban Bodoni</div>
+    </div>
+  </header>
+
+  <div class="bg-menu"></div>
+
+  <section id="supervisor" class="content">
+    <div class="container">
+      <div id="confirmar">
+        <i class="material-icons step1">check</i>
+        <i class="material-icons step2" style="display:none">check</i>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="supervisor-mensaje">
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="filtro">
+            <div class="sin-agendar">
+              <i class="material-icons">event_note</i>Sin agendar
+              <div class="cerrar">Limpiar filtro
+                <i class="material-icons">close</i>
+              </div>
+            </div>
+            <div class="entrevistados">
+              <i class="material-icons">assignment_turned_in</i>Entrevistados
+              <div class="cerrar">Limpiar filtro
+                <i class="material-icons">close</i>
+              </div>
+            </div>
+            <div class="cotizados">
+              <i class="material-icons">monetization_on</i>Cotizados
+              <div class="cerrar">Limpiar filtro
+                <i class="material-icons">close</i>
+              </div>
+            </div>
+          </div>
+
+          <div class="item-list" id="lista">
+            <article class="item" data-filter="sin-agendar">
+              <div class="checkbox">
+                <input type="checkbox" name="asignar[]" value="1" id="check1">
+                <label for="check1"></label>
+              </div>
+              <div class="item-text" data-modalnum="asignado1">
+                <div class="nombre">Juan Carlos Pelourinho</div>
+                <div class="datos">27 años - Wilde</div>
+                <div class="descripcion">2 días</div>
+              </div>
+              <div class="item-icons">
+                <!-- <i class="material-icons error">report_problem</i> -->
+                <button type="button" class="btn-cal"><i class="material-icons error">flag</i></button>
+              </div>
+            </article>
+            <article class="item" data-filter="sin-agendar">
+              <div class="checkbox">
+                <input type="checkbox" name="asignar[]" value="1" id="check2">
+                <label for="check2"></label>
+              </div>
+              <div class="item-text">
+                <div class="nombre">Juan Pablo Punx</div>
+                <div class="datos">28 años - Avellaneda</div>
+                <div class="descripcion">2 días</div>
+              </div>
+              <div class="item-icons">
+                <!-- <i class="material-icons error">report_problem</i> -->
+                <button type="button" class="btn-cal"><i class="material-icons error">flag</i></button>
+              </div>
+            </article>
+            <article class="item" data-filter="sin-agendar">
+              <div class="checkbox">
+                <input type="checkbox" name="asignar[]" value="1" id="check3">
+                <label for="check3"></label>
+              </div>
+              <div class="item-text">
+                <div class="nombre">María Anabella Repetto</div>
+                <div class="datos">32 años - Sarandí</div>
+                <div class="descripcion">REASIGNADO - 2 días</div>
+              </div>
+              <div class="item-icons">
+                <!-- <i class="material-icons error">report_problem</i> -->
+                <button type="button" class="btn-cal"><i class="material-icons">sync</i></button>
+              </div>
+            </article>
+            <article class="item" data-filter="entrevistados">
+              <div class="checkbox">
+                <input type="checkbox" name="asignar[]" value="1" id="check4" checked="" disabled="">
+                <label for="check4"></label>
+              </div>
+              <div class="item-text">
+                <div class="nombre">Aldana Estevez</div>
+                <div class="datos">Miércoles 28, 16:00hs</div>
+                <div class="descripcion">A Matías Alfonsín - 25 días</div>
+              </div>
+              <div class="item-icons">
+                <!-- <i class="material-icons error">report_problem</i> -->
+                <!-- <button type="button" class="btn-cal"><i class="material-icons">assignment_turned_in</i></button> -->
+              </div>
+            </article>
+            <article class="item" data-filter="cotizados">
+              <div class="checkbox">
+                <input type="checkbox" name="asignar[]" value="1" id="check5" checked="" disabled="">
+                <label for="check5"></label>
+              </div>
+              <div class="item-text">
+                <div class="nombre">Diego Armando Espinoza</div>
+                <div class="datos">29 años - Villa Domínico</div>
+                <div class="descripcion">A Matías Alfonsín - 22 días</div>
+              </div>
+              <div class="item-icons">
+                <!-- <i class="material-icons error">report_problem</i> -->
+                <!-- <button type="button" class="btn-cal"><i class="material-icons">monetization_on</i></button> -->
+              </div>
+            </article>
+          </div>
+
+          <div id="lista-promotor" class="item-list">
+            <article class="item">
+              <div class="checkbox">
+                <input type="radio" name="usuario" value="1" id="check-promotor1" data-name="Reinaldo Sietecase">
+                <label for="check-promotor1"></label>
+              </div>
+              <div class="item-text">
+                <div class="nombre">Reinaldo Sietecase</div>
+                <div class="datos">29 años - Villa Domínico</div>
+              </div>
+              <div class="cant">
+                <p class="error" data-toggle="tooltip" data-placement="top" title="Tooltip on top">25</p><p data-toggle="tooltip" data-placement="bottom" title="Tooltip on top">895</p>
+              </div>
+            </article>
+            <article class="item">
+              <div class="checkbox">
+                <input type="radio" name="usuario" value="1" id="check-promotor2" data-name="Matías Alfonsín">
+                <label for="check-promotor2"></label>
+              </div>
+              <div class="item-text">
+                <div class="nombre">Matías Alfonsín</div>
+                <div class="datos">29 años - Villa Domínico</div>
+              </div>
+              <div class="cant">
+                <p class="error">15</p><p>1116</p>
+              </div>
+            </article>
+            <article class="item">
+              <div class="checkbox">
+                <input type="radio" name="usuario" value="1" id="check-promotor3" data-name="Adrián Martínez">
+                <label for="check-promotor3"></label>
+              </div>
+              <div class="item-text">
+                <div class="nombre">Adrián Martínez</div>
+                <div class="datos">29 años - Villa Domínico</div>
+              </div>
+              <div class="cant">
+                <p class="error">20</p><p>730</p>
+              </div>
+            </article>
+            <article class="item">
+              <div class="checkbox">
+                <input type="radio" name="usuario" value="1" id="check-promotor4" data-name="Juan Guillermo Cocinero">
+                <label for="check-promotor4"></label>
+              </div>
+              <div class="item-text">
+                <div class="nombre">Juan Guillermo Cocinero</div>
+                <div class="datos">29 años - Villa Domínico</div>
+              </div>
+              <div class="cant">
+                <p class="error">21</p><p>180</p>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="asignar" class="modal fade asignados" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <p>Vas a cotizar para <span class="name"></span></p>
+          <button class="btn cotizar-ok">Aceptar</button>
+          <button class="btn cerrar">Cancelar</button>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="../../assets/js/material.js"></script>
+  <script src="../../assets/js/ripples.js"></script>
+  <script src="../../assets/js/main.js"></script>
+</body>
+
+</html>

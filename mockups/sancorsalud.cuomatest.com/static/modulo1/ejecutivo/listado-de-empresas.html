@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sancor Salud</title>
+  <!-- Material Design fonts -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- Bootstrap Material Design -->
+  <link rel="stylesheet" type="text/css" href="../../assets/css/bootstrap-material-design.css">
+  <link rel="stylesheet" type="text/css" href="../../assets/css/ripples.min.css">
+  <link rel="stylesheet" type="text/css" href="../../assets/css/styles.css">
+</head>
+
+<body>
+  <header class="header">
+    <nav class="menu">
+      <div class="head">
+        <img src="../../assets/images/logo.png" alt="">
+        <h3 class="name">Inés Duarte</h3>
+      </div>
+      <ul>
+        <li><a href="cargar-empresa.html"><i class="material-icons">add_circle</i>Cargar empresa</a></li>
+        <li class="active"><a href="#"><i class="material-icons">view_list</i>Listado de empresas</a></li>
+        <li><a href="#"><i class="material-icons">exit_to_app</i>Salir</a></li>
+      </ul>
+    </nav>
+    <button type="button" name="button" class="btn btn-menu btn-nav"><i class="material-icons">menu</i> <h3>Ejecutivo de cuentas</h3></button>
+    <button type="button" name="button" class="btn btn-menu btn-search"><i class="material-icons">arrow_back</i> <h3>Volver</h3></button>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <form action="#" class="search">
+            <button type="submit" name="button" class="btn hidden-xs"><i class="material-icons">search</i></button>
+            <input type="text" placeholder="Buscar" class="hidden-xs">
+            <input type="text" placeholder="Buscar" class="smart visible-xs">
+          </form>
+          <div class="filtros dropdown">
+            <button type="button" name="button" class="btn btn-filter dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="material-icons">more_vert</i></button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><a id="provisorios" href="#"><i class="material-icons">assignment_return</i>Convenios en provisorio</a></li>
+              <li><a id="definitivos" href="#"><i class="material-icons">assignment</i>Convenios en definitivo</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button type="button" name="button" class="btn smart-search visible-xs"><i class="material-icons">search</i></button>
+    <div class="user hidden-xs">
+      <i class="material-icons">account_circle</i>
+      <div class="name">Inés Duarte</div>
+    </div>
+  </header>
+
+  <div class="bg-menu"></div>
+
+  <section id="afiliacion" class="content monotributo-empresa">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="item-list empresas">
+            <article class="item" data-filter="sin-agendar">
+              <div class="item-text" >
+                <div class="nombre">Empresa 1</div>
+              </div>
+              <div class="item-icons">
+                <button type="button" class="btn-cal"><i class="material-icons">keyboard_arrow_down</i></button>
+              </div>
+            </article>
+            <article class="item" data-filter="sin-agendar">
+              <div class="item-text" >
+                <div class="nombre">Empresa 2</div>
+              </div>
+              <div class="item-icons">
+                <button type="button" class="btn-cal"><i class="material-icons">keyboard_arrow_down</i></button>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="alert-empresa" class="modal fade" tabindex="-1">
+    <div class="modal-dialog" style="max-width:400px;">
+      <div class="modal-content">
+        <div class="modal-body">
+          <p>Indicaste adherir a e-factura.<br>El campo <strong>E-mail</strong> es obligatorio.</p>
+          <p class="integrante"></p>
+          <a href="#" class="btn btn-int cerrar">Aceptar</a>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="../../assets/js/material.js"></script>
+  <script src="../../assets/js/ripples.js"></script>
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/ejecutivo.js"></script>
+  <script>
+  $(document).ready(function() {
+    var today = new Date();
+    var day = ("0" + today.getDate()).slice(-2);
+    var month = ("0" + (today.getMonth() + 1)).slice(-2);
+
+    // var currentDate = (day)+"/"+(month)+"/"+today.getFullYear() ;
+    var currentDate = today.getFullYear()+"-"+(month)+"-"+(day) ;
+    console.log(currentDate);
+
+    $('#fecha-inicio').val(currentDate);
+    $('#fecha-inicio').parent().removeClass('is-empty');
+  });
+  </script>
+</body>
+</html>

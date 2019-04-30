@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+
+    <ImageView
+        android:id="@+id/close_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:padding="@dimen/activity_vertical_margin"
+        android:src="@drawable/ic_close" />
+
+    <LinearLayout
+        android:id="@+id/imc_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/input_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/imc_weight_wrapper"
+                    style="@style/TextAppearence.TextInputLayout"
+                    android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_half_margin"
+                    android:layout_marginTop="2dp">
+
+                    <EditText
+                        android:id="@+id/imc_weight_input"
+                        style="@style/TextAppearence.TextIMC"
+                        android:hint="@string/des_imc_weight"
+                        android:maxLength="6"
+                        android:inputType="numberDecimal" />
+                </android.support.design.widget.TextInputLayout>
+
+                <TextView
+                    style="@style/TextAppearence.TextIMC"
+                    android:layout_width="wrap_content"
+                    android:layout_alignBottom="@+id/imc_weight_wrapper"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="@dimen/activity_horizontal_half_margin"
+                    android:text="@string/des_kg" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/imc_height_wrapper"
+                    style="@style/TextAppearence.TextInputLayout"
+                    android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_half_margin"
+                    android:layout_marginTop="2dp"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:id="@+id/imc_height_input"
+                        style="@style/TextAppearence.TextIMC"
+                        android:hint="@string/des_imc_height"
+                        android:maxLength="6"
+                        android:inputType="numberDecimal" />
+                </android.support.design.widget.TextInputLayout>
+
+                <TextView
+                    style="@style/TextAppearence.TextIMC"
+                    android:layout_width="wrap_content"
+                    android:layout_alignBottom="@+id/imc_height_wrapper"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="@dimen/activity_horizontal_half_margin"
+                    android:text="@string/des_mts" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/imc_button"
+            style="@style/ButtonAppearence"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:text="@string/des_imc_calculation" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/imc_result_wrapper"
+            style="@style/TextAppearence.TextInputLayout"
+            android:layout_marginLeft="@dimen/activity_horizontal_half_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_half_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/imc_result"
+                style="@style/TextAppearence.TextIMC"
+                android:focusable="false"
+                android:hint="@string/des_imc" />
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

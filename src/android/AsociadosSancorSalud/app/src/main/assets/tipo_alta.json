@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "data": {
+    "tipo_alta": [
+      {
+        "descripcion": "Alta Inmediata",
+        "id": "I"
+      },
+      {
+        "descripcion": "Alta 1er día hábil",
+        "id": "P"
+      }
+    ]
+  },
+  "errorCode": 0,
+  "message": null
+}

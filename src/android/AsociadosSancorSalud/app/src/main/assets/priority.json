@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "data": {
+    "priority": [
+      {
+        "descripcion": "ALTA",
+        "id": "1"
+      },
+      {
+        "descripcion": "MEDIA",
+        "id": "2"
+      },
+      {
+        "descripcion": "BAJA",
+        "id": "3"
+      }
+    ]
+  },
+  "errorCode": 0,
+  "message": null
+}

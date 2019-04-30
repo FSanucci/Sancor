@@ -1,0 +1,21 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/header_container"
+    style="@style/HeaderList"
+    android:elevation="2dp">
+
+    <ImageView
+        android:id="@+id/header_icon"
+        android:src="@drawable/ic_check"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:visibility="gone"
+        style="@style/HeaderListIcon"/>
+
+    <TextView
+        android:id="@+id/header_text"
+        style="@style/HeaderListText"
+        android:layout_toRightOf="@+id/header_icon"
+        android:layout_toEndOf="@+id/header_icon" />
+
+</RelativeLayout>
